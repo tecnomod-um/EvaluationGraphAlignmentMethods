@@ -1,11 +1,5 @@
 # eCommerceCSV2RDF
 
-## Pipeline OpenEA
-
-![Entity Alignment OpenEA Pipeline](../Figures/pipelineAlignmentOpenEA.JPG "Entity Alignment OpenEA Pipeline")
-
-[Scripts](../../../../../Testing/software/Scripts/GraphAlignment/)
-
 ## Datasets and Ontologies
 
 ![Counts data20K.csv](../Figures/count_data20k.JPG "Counts data20K.csv")
@@ -23,28 +17,29 @@
 * The "InvoiceNo" field should have a 1 to 1 relationship with the "InvoiceDate" field.
 * The "StockCode" field should have a 1 to 1 relationship with the "Description" field and vice versa
 
-1. Datasets
-    * [data.csv](../../../data.csv)
-        * 541909 rows x 8 columns
-    * [data_proper_encoding_bad_columns.csv](../../../data_proper_encoding_bad_columns.csv)
-        * 541909 rows x 8 columns
-        * Removal of the pound sign
-        * Removal of quotes
-    * [data50K.csv](../../../data50K.csv)
-        * 50000 rows x 8 columns
-        * From above, selection of the first 50000 rows
-        * Removal of extra commas in the "Description" field
-    * [data20K.csv](../../../data20K.csv)
-        * 20000 rows x 8 columns
-        * From above, selection of the first 20000 rows
-        * Replacement of "United Kingdom" by "United_Kingdom"
-2. Ontologies
-    * [Basic](../../../Ontologies/eCommerceOntology.owl)
-    * [LLM](../../../Ontologies/eCommerceOntologyLLM.owl)
-    * [Gold standard](../../../Ontologies/eCommerceOntologyII.owl)
-    * [Materials](../../../../../../Ontology/materials_anony_v2.owl)
+## Datasets
 
-![Ontologies Description](../Figures/classesAttributesRelationships.JPG "Ontologies Description")
+* [data.csv](../../../data.csv)
+  * 541909 rows x 8 columns
+* [data_proper_encoding_bad_columns.csv](../../../data_proper_encoding_bad_columns.csv)
+  * 541909 rows x 8 columns
+  * Removal of the pound sign
+  * Removal of quotes
+* [data50K.csv](../../../data50K.csv)
+  * 50000 rows x 8 columns
+  * From above, selection of the first 50000 rows
+  * Removal of extra commas in the "Description" field
+* [data20K.csv](../../../data20K.csv)
+  * 20000 rows x 8 columns
+  * From above, selection of the first 20000 rows
+  * Replacement of "United Kingdom" by "United_Kingdom"
+
+## Ontologies
+
+* [Basic](../../../Ontologies/eCommerceOntology.owl)
+* [LLM](../../../Ontologies/eCommerceOntologyLLM.owl)
+* [Gold standard](../../../Ontologies/eCommerceOntologyII.owl)
+* [Materials](../../../../../../Ontology/materials_anony_v2.owl)
 
 ## Mapping
 
