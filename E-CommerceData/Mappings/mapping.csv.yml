@@ -1,0 +1,97 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  vocab: https://vocab.um.es/
+  um: https://data.um.es/
+
+
+mappings:
+  country:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(Country)
+    po:
+      - [a, schema:Country]
+  customer:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(CustomerID)
+    po:
+      - [a, vocab:Customer]
+      - p: vocab:hasCountry
+        o:
+          mapping: country
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Country), s]
+              - [str2, $(Country), o]
+  product:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(StockCode)
+    po:
+      - [a, schema:Product]
+      - [vocab:descriptionProduct, $(Description), xsd:string]
+  unitPriceSpecification:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(InvoiceNo)_$(StockCode)_$(UnitPrice)
+    po:
+      - [a, schema:UnitPriceSpecification]
+      - [schema:price, $(UnitPrice), xsd:double]
+      - [schema:priceCurrency, "GBP", xsd:string]
+  salesArticle:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(InvoiceNo)_$(StockCode)
+    po:
+      - [a, mt:salesArticle]
+      - [vocab:quantity, $(Quantity), xsd:integer]
+      - p: vocab:hasProduct
+        o:
+          mapping: product
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(StockCode), s]
+              - [str2, $(StockCode), o]
+      - p: schema:PriceSpecification
+        o:
+          mapping: unitPriceSpecification
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(InvoiceNo)_$(StockCode)_$(UnitPrice), s]
+              - [str2, $(InvoiceNo)_$(StockCode)_$(UnitPrice), o]
+  invoice:
+    sources:
+      - ['data20K.csv~csv']
+    s: um:$(InvoiceNo)
+    po:
+      - [a, schema:Invoice]
+      - [vocab:date, $(InvoiceDate), xsd:string]
+      - p: vocab:hasCustomer
+        o:
+          mapping: customer
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(CustomerID), s]
+              - [str2, $(CustomerID), o]
+      - p: purl:ThasSalesArticle
+        o:
+          mapping: salesArticle
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(InvoiceNo)_$(StockCode), s]
+              - [str2, $(InvoiceNo)_$(StockCode), o]            
+     

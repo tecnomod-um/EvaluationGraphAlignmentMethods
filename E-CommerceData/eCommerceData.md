@@ -1,25 +1,12 @@
-# eCommerceCSV2RDF
+# E-Commerce Data
 
-## Datasets and Ontologies
-
-![Counts data20K.csv](../Figures/count_data20k.JPG "Counts data20K.csv")
-
-* The "Description" and "CustomerID" fields are the only fields that have null values
-* No field has only unique values
-
-![Fields cardinality data20K.csv](../Figures/fields_data20k.JPG "Fields cardinality data20K.csv")
-
-* (0,0) No relationship between values in the row and column fields
-* (0,1) One value in the row field is related to at most one value in the column field
-* (0,2) One value in the row field can be related to none, one or several values in the column field
-* (1,1) One value in the row filed is only related to one value in the column field
-* (1,2) One value in the row field can be related to one or several values in the column field 
-* The "InvoiceNo" field should have a 1 to 1 relationship with the "InvoiceDate" field.
-* The "StockCode" field should have a 1 to 1 relationship with the "Description" field and vice versa
+* URL: https://www.kaggle.com/datasets/carrie1/ecommerce-data
+* Format: CSV
+* Description: This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
 
 ## Datasets
 
-* [data.csv](../../../data.csv)
+* [data.csv](./SourceFiles/data.csv)
   * 541909 rows x 8 columns
 * [data_proper_encoding_bad_columns.csv](../../../data_proper_encoding_bad_columns.csv)
   * 541909 rows x 8 columns
@@ -36,10 +23,10 @@
 
 ## Ontologies
 
-* [Basic](../../../Ontologies/eCommerceOntology.owl)
-* [LLM](../../../Ontologies/eCommerceOntologyLLM.owl)
-* [Gold standard](../../../Ontologies/eCommerceOntologyII.owl)
-* [Materials](../../../../../../Ontology/materials_anony_v2.owl)
+* [Basic](./Ontologies/eCommerceOntology.owl)
+* [LLM](./Ontologies/eCommerceOntologyLLM.owl)
+* [Gold standard](./Ontologies/eCommerceOntologyII.owl)
+* [Materials](./Ontology/materials_anony_v2.owl)
 
 ## Mapping
 
