@@ -1,0 +1,106 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  vocab: https://vocab.um.es/
+  um: https://data.um.es/
+  ecddt: https://vocab.um.es/data/ecd/
+  ecd: https://vocab.um.es/ontology/ecd/
+
+sources:
+  data20K : ['data40K.csv~csv']
+
+mappings:
+  country:
+    sources: data20K
+    s: ecddt:country_$(Country_pro)
+    po:
+      - [a, ecd:Country]
+      - [ecd:nameCountry, $(Country), xsd:string]      
+  customer:
+    sources: data20K
+    s: ecddt:customer_$(CustomerID)
+    po:
+      - [a, ecd:Customer]
+      - [ecd:customerID, ($CustomerID), xsd:string]      
+      - p: ecd:hasCountry
+        o:
+          mapping: country
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Country_pro), s]
+              - [str2, $(Country_pro), o]
+  product:
+    sources: data20K
+    s: ecddt:product_$(StockCode_pro)
+    po:
+      - [a, ecd:Product]
+      - [ecd:productNo, $(StockCode), xsd:string]
+      - [ecd:descriptionProduct, $(Description), xsd:string]      
+  salesSpecification:
+    sources: data20K
+    s: ecddt:salesSpecification_$(Quantity_UnitPrice_Quantity_pro)
+    po:
+      - [a, ecd:SalesSpecification]
+      - [ecd:priceArticle, $(UnitPrice), xsd:double]
+      - [ecd:quantityArticle, $(Quantity), xsd:integer]
+  salesArticle:
+    sources: data20K
+    s: ecddt:salesArticle_$(InvoiceNo_StockCode_pro)
+    po:
+      - [a, ecd:salesArticle]
+      - p: ecd:hasProduct
+        o:
+          mapping: product
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(StockCode), s]
+              - [str2, $(StockCode), o]
+      - p: ecd:hasSalesSpecification
+        o:
+          mapping: salesSpecification
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Quantity_UnitPrice_Quantity_pro), s]
+              - [str2, $(Quantity_UnitPrice_Quantity_pro), o]
+  invoice:
+    sources: data20K
+    s: ecddt:invoice_$(InvoiceNo)
+    po:
+      - [a, ecd:Invoice]
+      - [ecd:invoiceDate, $(InvoiceDate), xsd:string]
+      - [ecd:invoiceNo, $(InvoiceNo), xsd:string]      
+      - p: ecd:hasCustomer
+        o:
+          mapping: customer
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(CustomerID), s]
+              - [str2, $(CustomerID), o]
+      - p: ecd:hasSalesArticle
+        o:
+          mapping: salesArticle
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(InvoiceNo_StockCode_pro), s]
+              - [str2, $(InvoiceNo_StockCode_pro), o]
+      - p: ecd:hasSalesCountry
+        o:
+          mapping: country
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Country_pro), s]
+              - [str2, $(Country_pro), o]                          
+     

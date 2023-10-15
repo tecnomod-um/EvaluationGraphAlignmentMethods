@@ -1,0 +1,31 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  um: https://vocab.um.es/
+  ecddt: https://vocab.um.es/data/ecd/
+  ecd: https://vocab.um.es/ontology/ecd/
+
+sources:
+  data20K : ['data40K.csv~csv']
+
+mappings:
+  invoice:
+    sources: data20K
+    s: ecddt:invoice_$(InvoiceNo)
+    po:
+      - [a, ecd:Invoice]
+      - [ecd:invoiceNo, $(InvoiceNo), xsd:string]
+      - [ecd:invoiceDate, $(InvoiceDate), xsd:string]
+      - [ecd:quantity, $(Quantity), xsd:integer]
+      - [ecd:price, $(UnitPrice), xsd:double]
+      - [ecd:product, $(StockCode), xsd:string]
+      - [ecd:descriptionProduct, $(Description), xsd:string]
+      - [ecd:customer, $(CustomerID), xsd:string]
+      - [ecd:country, $(Country), xsd:string]
