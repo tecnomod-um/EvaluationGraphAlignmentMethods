@@ -1,0 +1,48 @@
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py:62: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
+of pandas will change to not sort by default.
+
+To accept the future behavior, pass 'sort=False'.
+
+To retain the current behavior and silence the warning, pass 'sort=True'.
+
+  ent_mapping = pd.concat([ent_mapping, rev_e_m], ignore_index=True)
+/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py:63: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
+of pandas will change to not sort by default.
+
+To accept the future behavior, pass 'sort=False'.
+
+To retain the current behavior and silence the warning, pass 'sort=True'.
+
+  rel_mapping = pd.concat([rel_mapping, rev_r_m], ignore_index=True)
+Traceback (most recent call last):
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/lib/arraysetops.py", line 283, in unique
+    consolidated = ar.view(dtype)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/core/_internal.py", line 459, in _view_is_safe
+    raise TypeError("Cannot change data-type for object array.")
+TypeError: Cannot change data-type for object array.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main_from_args.py", line 94, in <module>
+    model.init()
+  File "/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py", line 229, in init
+    self.sample_paths()
+  File "/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py", line 139, in sample_paths
+    rtlist = np.unique(kb[['r_id', 't_id']].values, axis=0)
+  File "<__array_function__ internals>", line 6, in unique
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/lib/arraysetops.py", line 294, in unique
+    raise TypeError(msg.format(dt=ar.dtype))
+TypeError: The axis argument to unique is not supported for dtype object

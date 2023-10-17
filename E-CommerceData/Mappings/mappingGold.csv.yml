@@ -14,7 +14,7 @@ prefixes:
   ecd: https://vocab.um.es/ontology/ecd/
 
 sources:
-  data20K : ['data40K.csv~csv']
+  data20K : ['data20K.csv~csv']
 
 mappings:
   country:
@@ -28,7 +28,7 @@ mappings:
     s: ecddt:customer_$(CustomerID)
     po:
       - [a, ecd:Customer]
-      - [ecd:customerID, ($CustomerID), xsd:string]      
+      - [ecd:customerID, $(CustomerID), xsd:string]      
       - p: ecd:hasCountry
         o:
           mapping: country

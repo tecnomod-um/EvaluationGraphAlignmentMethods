@@ -1,0 +1,39 @@
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1651, in create_block_manager_from_blocks
+    placement=slice(0, len(axes[0])))]
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 3095, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/blocks.py", line 87, in __init__
+    '{mgr}'.format(val=len(self.values), mgr=len(self.mgr_locs)))
+ValueError: Wrong number of items passed 1, placement implies 3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main_from_args.py", line 94, in <module>
+    model.init()
+  File "/home/galmagro/OpenEA/src/openea/approaches/alinet.py", line 719, in init
+    two_hop_triples1 = generate_2hop_triples(self.kg1, linked_ents=self.linked_ents)
+  File "/home/galmagro/OpenEA/src/openea/approaches/alinet.py", line 255, in generate_2hop_triples
+    triple_df = pd.DataFrame(triple_df, columns=['h', 'r', 't'])
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/frame.py", line 424, in __init__
+    copy=copy)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/construction.py", line 167, in init_ndarray
+    return create_block_manager_from_blocks([values], [columns, index])
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1660, in create_block_manager_from_blocks
+    construction_error(tot_items, blocks[0].shape[1:], axes, e)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/pandas/core/internals/managers.py", line 1689, in construction_error
+    raise ValueError("Empty data passed with indices specified.")
+ValueError: Empty data passed with indices specified.
