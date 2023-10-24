@@ -1,0 +1,83 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  um: https://vocab.um.es/
+  bbpdt: https://vocab.um.es/data/bbp/
+  bbp: https://vocab.um.es/ontology/bbp/
+  
+sources:
+  bigbasket : ['processed_data.csv~csv']
+
+mappings:
+  category:
+    sources: bigbasket
+    s: bbpdt:category_$(Category_pro)
+    po:
+      - [a, bbp:Category]
+      - [bbp:categoryName, $(Category), xsd:string]
+  subcategory:
+    sources: bigbasket
+    s: bbpdt:subcategory_$(SubCategory_pro)
+    po:
+      - [a, bbp:SubCategory]
+      - [bbp:subCategoryName, $(SubCategory) , xsd:string]
+      - p: rdfs:subClassOf
+        o:
+          mapping: category
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Category), s]
+              - [str2, $(Category), o]
+  product:
+    sources: bigbasket
+    s: bbpdt:product_$(ProductName_Brand_pro)
+    po:
+      - [a, bbp:Product]
+      - [bbp:productName, $(ProductName), xsd:string]
+      - [bbp:brandName, $(Brand), xsd:string]
+  salesSpecification:
+    sources: bigbasket
+    s: bbpdt:salesSpecification_$(Price_DiscountPrice_pro)
+    po:
+      - [a, bbp:SalesSpecification]
+      - [bbp:priceArticle, $(Price), xsd:double]
+      - [bbp:discount_price, $(DiscountPrice), xsd:double]
+  salesProduct:
+    sources:
+    s: $(Absolute_Url)
+    po:
+      - [a, bbp:salesArticle]
+      - [bbp:image, $(Image_Url), xsd:anyURI]
+      - [bbp:productQuantity, $(Quantity), xsd:string]
+      - [bbp:url, $(Absolute_Url), xsd:anyURI]    
+      - p: bbp:belongsToSubCategory
+        o:
+          mapping: subcategory
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(SubCategory), s]
+              - [str2, $(SubCategory), o]
+      - p: bbp:hasProduct
+        o:
+          mapping: product
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(ProductName_Brand_pro), s]
+              - [str2, $(ProductName_Brand_pro), o]
+      - p: bbp:hasSalesSpecification
+        o:
+          mapping: salesSpecification
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Price_DiscountPrice_pro), s]
+              - [str2, $(Price_DiscountPrice_pro), o]
+    

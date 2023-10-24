@@ -1,0 +1,32 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  um: https://vocab.um.es/
+  bbpdt: https://vocab.um.es/data/bbp/
+  bbp: https://vocab.um.es/ontology/bbp/
+  
+sources:
+  bigbasket : ['processed_data.csv~csv']
+
+mappings:
+  ProductName:
+    sources: bigbasket
+    s: $(Absolute_Url)
+    po:
+      - [a, bbp:sales_product]
+      - [bbp:productName, $(ProductName), xsd:string]
+      - [bbp:brandName, $(Brand), xsd:string]
+      - [bbp:price, $(Price), xsd:double]
+      - [bbp:discount_price, $(DiscountPrice), xsd:double]
+      - [bbp:image, $(Image_Url), xsd:anyURI]
+      - [bbp:productQuantity, $(Quantity)]
+      - [bbp:subcategory, $(SubCategory), xsd:string]
+      - [bbp:category, $(Category), xsd:string]
+      - [bbp:url, $(Absolute_Url), xsd:anyURI]    
+
+    
