@@ -1,0 +1,117 @@
+2023-10-19 19:19:25.352146: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2023-10-19 19:19:25.666396: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2023-10-19 19:19:25.666508: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:150] kernel driver does not appear to be running on this host (semantics.inf.um.es): /proc/driver/nvidia/version does not exist
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+2023-10-19 19:19:34.304237: E tensorflow/core/common_runtime/executor.cc:623] Executor failed to create kernel. Invalid argument: Conv2DCustomBackpropInputOp only supports NHWC.
+	 [[{{node triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput}} = Conv2DBackpropInput[T=DT_FLOAT, data_format="NCHW", dilations=[1, 1, 1, 1], padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:CPU:0"](triple_loss/gradients/cnn/conv2d/Conv2D_grad/ShapeN, cnn/conv2d/kernel/read, triple_loss/gradients/batch_normalization_1/FusedBatchNorm_grad/transpose_2, ^triple_loss/gradients/cnn/conv2d/BiasAdd_grad/BiasAddGrad)]]
+Traceback (most recent call last):
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Conv2DCustomBackpropInputOp only supports NHWC.
+	 [[{{node triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput}} = Conv2DBackpropInput[T=DT_FLOAT, data_format="NCHW", dilations=[1, 1, 1, 1], padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:CPU:0"](triple_loss/gradients/cnn/conv2d/Conv2D_grad/ShapeN, cnn/conv2d/kernel/read, triple_loss/gradients/batch_normalization_1/FusedBatchNorm_grad/transpose_2, ^triple_loss/gradients/cnn/conv2d/BiasAdd_grad/BiasAddGrad)]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main_from_args.py", line 95, in <module>
+    model.run()
+  File "/home/galmagro/OpenEA/src/openea/models/neural/proje.py", line 106, in run
+    self.launch_training_1epo(i, triple_steps, steps_tasks, training_batch_queue, None, None)
+  File "/home/galmagro/OpenEA/src/openea/models/basic_model.py", line 207, in launch_training_1epo
+    self.launch_triple_training_1epo(epoch, triple_steps, steps_tasks, training_batch_queue, neighbors1, neighbors2)
+  File "/home/galmagro/OpenEA/src/openea/models/neural/proje.py", line 90, in launch_triple_training_1epo
+    self.pos_ts: [x[2] for x in batch_pos]})
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Conv2DCustomBackpropInputOp only supports NHWC.
+	 [[node triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput (defined at /home/galmagro/OpenEA/src/openea/modules/base/optimizers.py:6)  = Conv2DBackpropInput[T=DT_FLOAT, data_format="NCHW", dilations=[1, 1, 1, 1], padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:CPU:0"](triple_loss/gradients/cnn/conv2d/Conv2D_grad/ShapeN, cnn/conv2d/kernel/read, triple_loss/gradients/batch_normalization_1/FusedBatchNorm_grad/transpose_2, ^triple_loss/gradients/cnn/conv2d/BiasAdd_grad/BiasAddGrad)]]
+
+Caused by op 'triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput', defined at:
+  File "main_from_args.py", line 94, in <module>
+    model.init()
+  File "/home/galmagro/OpenEA/src/openea/models/neural/conve.py", line 30, in init
+    self._define_embed_graph()
+  File "/home/galmagro/OpenEA/src/openea/models/neural/conve.py", line 79, in _define_embed_graph
+    opt=self.args.optimizer)
+  File "/home/galmagro/OpenEA/src/openea/modules/base/optimizers.py", line 6, in generate_optimizer
+    grads_and_vars = optimizer.compute_gradients(loss, var_list=var_list)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/training/optimizer.py", line 519, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 630, in gradients
+    gate_gradients, aggregation_method, stop_gradients)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 408, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 814, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/nn_grad.py", line 517, in _Conv2DGrad
+    data_format=data_format),
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 1229, in conv2d_backprop_input
+    dilations=dilations, name=name)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1770, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+...which was originally created as op 'cnn/conv2d/Conv2D', defined at:
+  File "main_from_args.py", line 94, in <module>
+    model.init()
+[elided 0 identical lines from previous traceback]
+  File "/home/galmagro/OpenEA/src/openea/models/neural/conve.py", line 30, in init
+    self._define_embed_graph()
+  File "/home/galmagro/OpenEA/src/openea/models/neural/conve.py", line 57, in _define_embed_graph
+    padding='same', use_bias=True, data_format='channels_first')
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/layers/convolutional.py", line 417, in conv2d
+    return layer.apply(inputs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/keras/engine/base_layer.py", line 817, in apply
+    return self.__call__(inputs, *args, **kwargs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/layers/base.py", line 374, in __call__
+    outputs = super(Layer, self).__call__(inputs, *args, **kwargs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/keras/engine/base_layer.py", line 757, in __call__
+    outputs = self.call(inputs, *args, **kwargs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/keras/layers/convolutional.py", line 194, in call
+    outputs = self._convolution_op(inputs, self.kernel)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/nn_ops.py", line 868, in __call__
+    return self.conv_op(inp, filter)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/nn_ops.py", line 520, in __call__
+    return self.call(inp, filter)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/nn_ops.py", line 204, in __call__
+    name=self.name)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 957, in conv2d
+    data_format=data_format, dilations=dilations, name=name)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+
+InvalidArgumentError (see above for traceback): Conv2DCustomBackpropInputOp only supports NHWC.
+	 [[node triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput (defined at /home/galmagro/OpenEA/src/openea/modules/base/optimizers.py:6)  = Conv2DBackpropInput[T=DT_FLOAT, data_format="NCHW", dilations=[1, 1, 1, 1], padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:CPU:0"](triple_loss/gradients/cnn/conv2d/Conv2D_grad/ShapeN, cnn/conv2d/kernel/read, triple_loss/gradients/batch_normalization_1/FusedBatchNorm_grad/transpose_2, ^triple_loss/gradients/cnn/conv2d/BiasAdd_grad/BiasAddGrad)]]
+
