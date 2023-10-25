@@ -1,0 +1,97 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/eCommerceData/', 'dataset_division': '721_5fold', 'embedding_module': 'BootEA_TransH', 'alignment_module': 'swapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss': 'limited', 'loss_norm': 'L2', 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'pos_margin': 0.01, 'neg_margin': 2.0, 'neg_margin_balance': 0.2, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.9, 'truncated_freq': 10, 'batch_threads_num': 4, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False, 'sim_th': 0.7, 'k': 10, 'likelihood_slice': 10, 'sub_epoch': 10}
+BootEA_TransH
+<openea.modules.args.args_hander.ARGs object at 0x7fdece8da780>
+read relation triples: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/attr_triples_2
+read links: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/721_5fold/1/test_links
+Number of rt_dict: 3553
+Number of hr_dict: 2618
+entity relations dict: 3553
+Number of av_dict: 3346
+entity attributes dict: 3346
+
+KG statistics:
+Number of entities: 3556
+Number of relations: 3
+Number of attributes: 6
+Number of relation triples: 27366
+Number of attribute triples: 15798
+Number of local relation triples: 27366
+Number of local attribute triples: 15798
+
+Number of rt_dict: 3553
+Number of hr_dict: 2618
+entity relations dict: 3553
+Number of av_dict: 3346
+entity attributes dict: 3346
+
+KG statistics:
+Number of entities: 3556
+Number of relations: 3
+Number of attributes: 6
+Number of relation triples: 27366
+Number of attribute triples: 15798
+Number of local relation triples: 27366
+Number of local attribute triples: 15798
+
+Number of rt_dict: 3553
+Number of hr_dict: 2618
+entity relations dict: 3553
+Number of av_dict: 3346
+entity attributes dict: 3346
+
+KG statistics:
+Number of entities: 3556
+Number of relations: 3
+Number of attributes: 6
+Number of relation triples: 27366
+Number of attribute triples: 15798
+Number of local relation triples: 27366
+Number of local attribute triples: 15798
+
+Number of rt_dict: 3553
+Number of hr_dict: 2618
+entity relations dict: 3553
+Number of av_dict: 3346
+entity attributes dict: 3346
+
+KG statistics:
+Number of entities: 3556
+Number of relations: 3
+Number of attributes: 6
+Number of relation triples: 27366
+Number of attribute triples: 15798
+Number of local relation triples: 27366
+Number of local attribute triples: 15798
+
+supervised relation triples: 25280, 25280
+supervised attribute triples: 7950, 7950
+../../output/results/Paper/eCommerceData/ ../../datasets/Ontologies/Paper/eCommerceData/LLM-LLM/ ['..', '..', 'datasets', 'Ontologies', 'Paper', 'eCommerceData', 'LLM-LLM'] 721_5fold/1/ BootEA_TransH
+results output folder: ../../output/results/Paper/eCommerceData/BootEA_TransH/LLM-LLM/721_5fold/1/20231020224346/
+
+iteration 1
+epoch 1, avg. triple loss: 2.1910, cost time: 31.3372s
+epoch 2, avg. triple loss: 1.7753, cost time: 30.6945s
+epoch 3, avg. triple loss: 1.6819, cost time: 30.3374s
+epoch 4, avg. triple loss: 1.6180, cost time: 31.4078s
+epoch 5, avg. triple loss: 1.5632, cost time: 31.3028s
+epoch 6, avg. triple loss: 1.5148, cost time: 32.0730s
+epoch 7, avg. triple loss: 1.4687, cost time: 29.2583s
+epoch 8, avg. triple loss: 1.4298, cost time: 28.2234s
+epoch 9, avg. triple loss: 1.3933, cost time: 28.8964s
+epoch 10, avg. triple loss: 1.3646, cost time: 27.3243s
+after filtering by sim threshold, right alignment: 3/6=0.500
+after filtering by sim and nearest k, right alignment: 3/6=0.500
+graph via graph_tool <Graph object, directed, with 9 vertices and 6 edges at 0x7fdebff7add8>
+after mwgm, right alignment: 1/3=0.333
+mwgm costs time: 3.435 s
+selecting potential alignment costs time: 3.579 s
+update wrongly:  0 greedy update wrongly:  0
+after editing (<-), right alignment: 1/3=0.333
+after editing (->), right alignment: 1/3=0.333
+newly triples: 811, 843
+alignment_loss = 1.646, time = 0.240 s
