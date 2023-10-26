@@ -13,12 +13,12 @@
   * 20000 rows x 13 columns
   * From above, selection of the first 20000 rows
   * Processing of identifiers for four classes
-![Counts data20K.csv](./Figures/count_fields.JPG "Counts data20K.csv")
+![Counts data20K.csv](./Figures/counts_data.JPG "Counts data20K.csv")
 
 * The "Description" and "CustomerID" fields are the only fields that have null values
 * No field has only unique values
 
-![Fields cardinality data20K.csv](./Figures/card_fields.JPG "Fields cardinality data20K.csv")
+![Fields cardinality data20K.csv](./Figures/counts_data.JPG "Fields cardinality data20K.csv")
 
 * (0,0) No relationship between values in the row and column fields
 * (0,1) One value in the row field is related to at most one value in the column field
@@ -46,7 +46,7 @@
 
 ## [Gold - Basic](./Experiments/EntityAlignment/Gold-Basic/)
 
-![Graph Gold-Basic](./Figures/eCommerce-Gold-Basic.png "Graph Gold-Basic")
+![Graph Gold-Basic](./Figures/bigBasketProducts-Gold-Basic.png "Graph Gold-Basic")
 
 ### [Input](./Experiments/EntityAlignment/Gold-Basic/Input/)
 
@@ -91,7 +91,7 @@
 
 ## [Gold - LLM](./Experiments/EntityAlignment/Gold-LLM/)
 
-![Graph Gold-LLM](./Figures/eCommerce-Gold-LLM.png "Graph Gold-LLM")
+![Graph Gold-LLM](./Figures/bigBasketProducts-Gold-LLM.png "Graph Gold-LLM")
 
 ### [Input](./Experiments/EntityAlignment/Gold-LLM/Input/)
 
@@ -138,7 +138,7 @@
 
 ## [Basic - LLM](./Experiments/EntityAlignment/Basic-LLM/)
 
-![Graph Basic-LLM](./Figures/eCommerce-Basic-LLM.png "Graph Basic-LLM")
+![Graph Basic-LLM](./Figures/bigBasketProducts-Basic-LLM.png "Graph Basic-LLM")
 
 ## Metrics
 
