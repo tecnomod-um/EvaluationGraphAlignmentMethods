@@ -1,0 +1,284 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix schema: <https://schema.org/>.
+@prefix mt: <https://purl.org/ontologies/MT/>. 
+@prefix um: <https://vocab.um.es/>.
+@prefix um_vocab: <https://vocab.um.es#>.
+@prefix : <https://transform.um.es/>.
+
+
+<#CustomerComplaintMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/CustomerComplaint#{Complaint ID}";
+		rr:class um_vocab:CustomerComplaint
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_identifier;
+		rr:objectMap [
+			rml:reference "Complaint ID";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_date_received;
+		rr:objectMap [
+			rml:reference "Date received";
+			rr:termType rr:Literal;
+			rr:datatype xsd:dataTime
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_description;
+		rr:objectMap [
+			rml:reference "Consumer complaint narrative";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_tags;
+		rr:objectMap [
+			rml:reference "Tags";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_consense;
+		rr:objectMap [
+			rml:reference "Consumer consent provided?";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:submitted_by;
+		rr:objectMap [
+			rml:reference "Submitted via";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_date_sent_to_company;
+		rr:objectMap [
+			rml:reference "Date sent to company";
+			rr:termType rr:Literal;
+			rr:datatype xsd:dateTime
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_product;
+		rr:objectMap [
+			rr:parentTriplesMap <#ProductMapping> ;
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_company_resonse;
+		rr:objectMap [
+			rr:parentTriplesMap <#CompanyResponseMapping> ;
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:relates_to_problem;
+		rr:objectMap [
+			rr:parentTriplesMap <#ProblemOfComplaintMapping> ;
+		]
+	].
+
+<#ProductMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/Product#{Product}_{Sub-product}";
+		rr:class um_vocab:Product
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_name;
+		rr:objectMap [
+			rml:reference "Product";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_subcategory;
+		rr:objectMap [
+			rr:parentTriplesMap <#SubProductMapping> ;
+		]
+	].
+
+<#SubProductMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/SubProduct#{Sub-product}";
+		rr:class um_vocab:SubProduct
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_name;
+		rr:objectMap [
+			rml:reference "Sub-product";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	].
+
+<#ProblemOfComplaintMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/ProblemOfComplaint#{Issue}_{Sub-issue}";
+		rr:class um_vocab:ProblemOfComplaint
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_description;
+		rr:objectMap [
+			rml:reference "Issue";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_subcategory;
+		rr:objectMap [
+			rr:parentTriplesMap <#ProblemSubCategoryMapping> ;
+		]
+	].
+
+<#ProblemSubCategoryMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/ProblemSubCategory#{Sub-issue}";
+		rr:class um_vocab:ProblemSubCategory
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_description;
+		rr:objectMap [
+			rml:reference "Sub-issue";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	].
+
+<#CompanyResponseMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/CompanyResponse#{Complaint ID}";
+		rr:class um_vocab:CompanyResponse
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_response;
+		rr:objectMap [
+			rml:reference "Company response to consumer";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_public_response;
+		rr:objectMap [
+			rml:reference "Company public response";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_consumer_disputed;
+		rr:objectMap [
+			rml:reference "Consumer disputed?";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:timely_response;
+		rr:objectMap [
+			rml:reference "Timely response?";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	].
+
+<#CompanyMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/Company#{Company}";
+		rr:class um_vocab:Company
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_name;
+		rr:objectMap [
+			rml:reference "Company";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:performs;
+		rr:objectMap [
+			rr:parentTriplesMap <#CompanyResponseMapping> ;
+		]
+	].
+
+<#CustomerMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../CustomerComplaint_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/Customer#{Complaint ID}";
+		rr:class um_vocab:Customer
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_state;
+		rr:objectMap [
+			rml:reference "State";
+			rr:termType rr:Literal;
+			rr:datatype xsd:string
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_zipcode;
+		rr:objectMap [
+			rml:reference "ZIP code";
+			rr:termType rr:Literal;
+			rr:datatype xsd:integer
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:performs;
+		rr:objectMap [
+			rr:parentTriplesMap <#CustomerComplaintMapping> ;
+		]
+	].

@@ -1,0 +1,216 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix schema: <https://schema.org/>.
+@prefix mt: <https://purl.org/ontologies/MT/>. 
+@prefix um: <https://vocab.um.es/>.
+@prefix morph-kgc: <https://github.com/morph-kgc/morph-kgc/function/built-in.ttl#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix um_vocab: <https://vocab.um.es#>.
+@prefix : <https://transform.um.es/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+
+<#CustomerFeedbackMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	
+	rr:subjectMap [
+		rr:template "https://data.um.es/AirlinesCustomerSatisfation#{CustomerSatisfationID}";
+		rr:class um_vocab:AirlinesCustomerSatisfation;
+	];
+    	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_customer_satisfaction;
+                rr:objectMap [
+                      rml:reference "satisfaction";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_gender;
+		rr:objectMap [
+		      rml:reference "Gender";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_type;
+		rr:objectMap [
+		      rml:reference "Customer Type";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_age;
+		rr:objectMap [
+		      rml:reference "Age";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_flight_class;
+		rr:objectMap [
+		      rml:reference "Class";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_flight_distance;
+		rr:objectMap [
+		      rml:reference "Flight Distance";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_type_of_travel;
+		rr:objectMap [
+		      rml:reference "Type of Travel";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_arrival_delay_in_minutes;
+		rr:objectMap [
+		      rml:reference "Arrival Delay in Minutes";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_departure_delay_in_minutes;
+		rr:objectMap [
+		      rml:reference "Departure Delay in Minutes";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_seat_comfort_score;
+		rr:objectMap [
+		      rml:reference "Seat comfort";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_departure-arrival_time_convenient_score;
+		rr:objectMap [
+		      rml:reference "Departure/Arrival time convenient";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_food_and_drink_score;
+		rr:objectMap [
+		      rml:reference "Food and drink";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_gate_location_score;
+		rr:objectMap [
+		      rml:reference "Gate location";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_inflight_wifi_service_score;
+		rr:objectMap [
+		      rml:reference "Inflight wifi service";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_inflight_entertainment_score;
+		rr:objectMap [
+		      rml:reference "Inflight entertainment";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_online_support_score;
+		rr:objectMap [
+		      rml:reference "Online support";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_online_booking_ease_score;
+		rr:objectMap [
+		      rml:reference "Ease of Online booking";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_on-board_service_score;
+		rr:objectMap [
+		      rml:reference "On-board service";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_leg_room_service_score;
+		rr:objectMap [
+		      rml:reference "Leg room service";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_baggage_handling_score;
+		rr:objectMap [
+		      rml:reference "Baggage handling";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_checkin_service_score;
+		rr:objectMap [
+		      rml:reference "Checkin service";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_cleanliness_score;
+		rr:objectMap [
+		      rml:reference "Cleanliness";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_online_boarding_score;
+		rr:objectMap [
+		      rml:reference "Online boarding";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+	].

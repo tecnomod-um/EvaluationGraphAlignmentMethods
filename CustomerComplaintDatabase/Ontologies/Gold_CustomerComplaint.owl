@@ -1,0 +1,215 @@
+@prefix : <https://vocab.um.es#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://vocab.um.es> .
+
+<https://vocab.um.es> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://vocab.um.es#has_company_response
+:has_company_response rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CustomerComplaint ;
+                      rdfs:range :CompanyResponse ;
+                      rdfs:label "has company response"@en .
+
+
+###  https://vocab.um.es#has_product
+:has_product rdf:type owl:ObjectProperty ;
+             rdfs:domain :CustomerComplaint ;
+             rdfs:range :Product ;
+             rdfs:label "has product"@en .
+
+
+###  https://vocab.um.es#has_subcategory
+:has_subcategory rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ProblemOfComplaint ,
+                             :Product ;
+                 rdfs:range :ProblemSubCategory ,
+                            :SubProduct ;
+                 rdfs:label "has subcategory"@en .
+
+
+###  https://vocab.um.es#performs
+:performs rdf:type owl:ObjectProperty ;
+          rdfs:domain :Company ,
+                      :Customer ;
+          rdfs:range :CompanyResponse ,
+                     :CustomerComplaint ;
+          rdfs:label "performs"@en .
+
+
+###  https://vocab.um.es#relates_to_problem
+:relates_to_problem rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CustomerComplaint ;
+                    rdfs:range :ProblemOfComplaint ;
+                    rdfs:label "relates to problem"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://vocab.um.es#has_consumer_disputed
+:has_consumer_disputed rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :CompanyResponse ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Indicates whether the consumer disputed the company's response."@en ;
+                       rdfs:label "has consumer disputed"@en .
+
+
+###  https://vocab.um.es#has_customer_consense
+:has_customer_consense rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :CustomerComplaint ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Indicates whether the consumer provided consent for their complaint to be published"@en ;
+                       rdfs:label "has customer consense"@en .
+
+
+###  https://vocab.um.es#has_customer_response
+:has_customer_response rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :CompanyResponse ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "has customer response"@en .
+
+
+###  https://vocab.um.es#has_customer_state
+:has_customer_state rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Customer ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has customer state"@en .
+
+
+###  https://vocab.um.es#has_customer_zipcode
+:has_customer_zipcode rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Customer ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "The ZIP code of the consumer's location."@en ;
+                      rdfs:label "has customer zip code"@en .
+
+
+###  https://vocab.um.es#has_date_received
+:has_date_received rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CustomerComplaint ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "The date when the consumer complaint was received."@en ;
+                   rdfs:label "has date received"@en .
+
+
+###  https://vocab.um.es#has_date_sent_to_company
+:has_date_sent_to_company rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :CustomerComplaint ;
+                          rdfs:range xsd:dateTime ;
+                          rdfs:label "has date sent to company"@en .
+
+
+###  https://vocab.um.es#has_description
+:has_description rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :CustomerComplaint ,
+                             :ProblemOfComplaint ,
+                             :ProblemSubCategory ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "has description"@en .
+
+
+###  https://vocab.um.es#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Company ,
+                      :Product ,
+                      :SubProduct ;
+          rdfs:range xsd:string ;
+          rdfs:label "has name"@en .
+
+
+###  https://vocab.um.es#has_public_response
+:has_public_response rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :CompanyResponse ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has public response"@en .
+
+
+###  https://vocab.um.es#has_tags
+:has_tags rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CustomerComplaint ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Any additional tags or labels associated with the complaint."@en ;
+          rdfs:label "has tags"@en .
+
+
+###  https://vocab.um.es#identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CustomerComplaint ;
+            rdfs:range xsd:integer ;
+            rdfs:label "has identifier"@en .
+
+
+###  https://vocab.um.es#submitted_by
+:submitted_by rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CustomerComplaint ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The channel or method through which the complaint was submitted."@en ;
+              rdfs:label "submitted by"@en .
+
+
+###  https://vocab.um.es#timely_response
+:timely_response rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :CompanyResponse ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Indicates whether the company provided a timely response to the complaint."@en ;
+                 rdfs:label "timely response"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://vocab.um.es#Company
+:Company rdf:type owl:Class ;
+         rdfs:label "company"@en .
+
+
+###  https://vocab.um.es#CompanyResponse
+:CompanyResponse rdf:type owl:Class ;
+                 rdfs:label "company response"@en .
+
+
+###  https://vocab.um.es#Customer
+:Customer rdf:type owl:Class ;
+          rdfs:label "customer"@en .
+
+
+###  https://vocab.um.es#CustomerComplaint
+:CustomerComplaint rdf:type owl:Class ;
+                   rdfs:label "customer complaint"@en .
+
+
+###  https://vocab.um.es#ProblemOfComplaint
+:ProblemOfComplaint rdf:type owl:Class ;
+                    rdfs:comment "The main issue or problem described in the consumer complaint."@en ;
+                    rdfs:label "problem of complaint"@en .
+
+
+###  https://vocab.um.es#ProblemSubCategory
+:ProblemSubCategory rdf:type owl:Class ;
+                    rdfs:comment "Additional details or sub-category related to the main issue."@en ;
+                    rdfs:label "problem subcategory"@en .
+
+
+###  https://vocab.um.es#Product
+:Product rdf:type owl:Class ;
+         rdfs:comment "The specific financial product or service associated with the complaint."@en ;
+         rdfs:label "product"@en .
+
+
+###  https://vocab.um.es#SubProduct
+:SubProduct rdf:type owl:Class ;
+            rdfs:comment "Further sub-categorization of the product or service, if applicable."@en ;
+            rdfs:label "subproduct"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,188 @@
+@prefix : <https://vocab.um.es#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vocab: <https://vocab.um.es#> .
+@base <https://vocab.um.es#> .
+
+<https://vocab.um.es#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://vocab.um.es#hasCustomer
+vocab:hasCustomer rdf:type owl:ObjectProperty ;
+                  rdfs:domain vocab:SalesOrder ;
+                  rdfs:range vocab:Customer ;
+                  dc:creator "ChatGPT Ontology Team" ;
+                  dc:date "2023-10-11" ;
+                  rdfs:comment "This property connects a sales order to the customer who placed it."@en ;
+                  rdfs:isDefinedBy "Relates a sales order to its associated customer."@en ;
+                  rdfs:label "belongsToCustomer"@en ,
+                             "customerOfOrder"@en ,
+                             "hasCustomer"@en ,
+                             "isOrderedBy"@en ,
+                             "orderCustomerRelation"@en ,
+                             "orderPlacedBy"@en ;
+                  rdfs:seeAlso vocab:UserID .
+
+
+###  https://vocab.um.es#hasProduct
+vocab:hasProduct rdf:type owl:ObjectProperty ;
+                 rdfs:domain vocab:SalesOrder ;
+                 rdfs:range vocab:SalesArticle ;
+                 dc:creator "ChatGPT Ontology Team" ;
+                 dc:date "2023-10-11" ;
+                 rdfs:comment "This property connects a sales order to the products associated with it."@en ;
+                 rdfs:isDefinedBy "Relates a sales order to its associated product."@en ;
+                 rdfs:label "containsProduct"@en ,
+                            "hasProduct"@en ,
+                            "includesProduct"@en ,
+                            "orderContains"@en ,
+                            "orderProductRelation"@en ,
+                            "productOfOrder"@en ;
+                 rdfs:seeAlso vocab:ProductID .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://vocab.um.es#ProductID
+vocab:ProductID rdf:type owl:DatatypeProperty ;
+                rdfs:domain vocab:SalesArticle ;
+                rdfs:range xsd:string ;
+                dc:creator "ChatGPT Ontology Team" ;
+                dc:date "2023-10-11" ;
+                rdfs:comment "Unique identifier associated with a sales article or product in the system."@en ;
+                rdfs:isDefinedBy "A string-based representation of the unique identity of a sales article or product."@en ;
+                rdfs:label "ArticleID"@en ,
+                           "ArticleNumber"@en ,
+                           "ItemID"@en ,
+                           "ProductID"@en ,
+                           "ProductNumber"@en ,
+                           "SKU"@en .
+
+
+###  https://vocab.um.es#Rating
+vocab:Rating rdf:type owl:DatatypeProperty ;
+             rdfs:domain vocab:SalesOrder ;
+             rdfs:range xsd:double ;
+             dc:creator "ChatGPT Ontology Team" ;
+             dc:date "2023-10-11" ;
+             rdfs:comment "Represents the rating given to a sales order by the customer or a review system."@en ;
+             rdfs:isDefinedBy "Numerical representation of the quality or satisfaction of a sales order."@en ;
+             rdfs:label "CustomerScore"@en ,
+                        "FeedbackScore"@en ,
+                        "OrderRating"@en ,
+                        "Rating"@en ,
+                        "ReviewRating"@en ,
+                        "Score"@en .
+
+
+###  https://vocab.um.es#Timestamp
+vocab:Timestamp rdf:type owl:DatatypeProperty ;
+                rdfs:domain vocab:SalesOrder ;
+                rdfs:range xsd:integer ;
+                dc:creator "ChatGPT Ontology Team" ;
+                dc:date "2023-10-11" ;
+                rdfs:comment "Represents the time at which the sales order was placed or processed."@en ;
+                rdfs:isDefinedBy "Exact time representation of when a sales order was processed."@en ;
+                rdfs:label "OrderDateStamp"@en ,
+                           "OrderTime"@en ,
+                           "OrderTimestamp"@en ,
+                           "PurchaseTime"@en ,
+                           "SalesOrderTime"@en ,
+                           "Timestamp"@en .
+
+
+###  https://vocab.um.es#UserID
+vocab:UserID rdf:type owl:DatatypeProperty ;
+             rdfs:domain vocab:Customer ;
+             rdfs:range xsd:string ;
+             dc:creator "ChatGPT Ontology Team" ;
+             dc:date "2023-10-11" ;
+             rdfs:comment "Unique identifier associated with a customer in the system."@en ;
+             rdfs:isDefinedBy "A string-based representation of the unique identity of a customer."@en ;
+             rdfs:label "AccountID"@en ,
+                        "ClientID"@en ,
+                        "CustomerID"@en ,
+                        "CustomerNumber"@en ,
+                        "UserID"@en ,
+                        "UserIdentifier"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://vocab.um.es#Customer
+vocab:Customer rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty vocab:hasCustomer ;
+                                 owl:someValuesFrom vocab:SalesOrder
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty vocab:hasCustomer ;
+                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty vocab:UserID ;
+                                 owl:someValuesFrom xsd:string
+                               ] .
+
+
+###  https://vocab.um.es#SalesArticle
+vocab:SalesArticle rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty vocab:hasProduct ;
+                                     owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                     owl:onClass vocab:SalesOrder
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty vocab:ProductID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] .
+
+
+###  https://vocab.um.es#SalesOrder
+vocab:SalesOrder rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty vocab:hasCustomer ;
+                                   owl:someValuesFrom vocab:Customer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty vocab:hasProduct ;
+                                   owl:someValuesFrom vocab:SalesArticle
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty vocab:Rating ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:double
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty vocab:Timestamp ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

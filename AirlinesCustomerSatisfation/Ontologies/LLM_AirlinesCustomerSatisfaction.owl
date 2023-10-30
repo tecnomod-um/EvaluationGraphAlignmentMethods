@@ -1,0 +1,605 @@
+@prefix dc: <http://purl.org/dc/elements/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix airline: <https://vocab.um.es#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/alternative
+dcterms:alternative rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#altLabel
+rdfs:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#description
+rdfs:description rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#alternativeName
+owl:alternativeName rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  https://vocab.um.es#alternativeLabel
+airline:alternativeLabel rdf:type owl:AnnotationProperty .
+
+
+###  https://vocab.um.es#alternativeName
+airline:alternativeName rdf:type owl:AnnotationProperty .
+
+
+###  https://vocab.um.es#description
+airline:description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://vocab.um.es#gaveFeedbackOn
+airline:gaveFeedbackOn rdf:type owl:ObjectProperty ;
+                       rdfs:domain airline:Customer ;
+                       rdfs:range airline:CustomerFeedback ;
+                       rdfs:comment "This property relates a customer to the specific evaluation item they provided feedback on." ;
+                       rdfs:description "The property that connects a customer to the specific aspect or feature of the service they evaluated or commented on." ;
+                       rdfs:isDefinedBy <https://vocab.um.es> ;
+                       rdfs:label "gave feedback on" ;
+                       rdfs:seeAlso <http://example.org/related_documentation_or_resources> ;
+                       skos:altLabel "commented on" ,
+                                     "evaluated feature" ,
+                                     "provided feedback for" ,
+                                     "rated item" ,
+                                     "reviewed aspect" .
+
+
+###  https://vocab.um.es#hasTravelDetails
+airline:hasTravelDetails rdf:type owl:ObjectProperty ;
+                         rdfs:domain airline:Customer ;
+                         rdfs:range airline:TravelDetails ;
+                         dc:creator "OpenAI Ontology Team"@en ;
+                         dc:date "2023-10-13" ;
+                         dc:description "This property establishes a relationship between a customer and the specifics of their travel, such as flight distance, type of travel, and flight class."@en ;
+                         rdfs:altLabel "containsTravelDetails"@en ,
+                                       "holdsTravelDetails"@en ,
+                                       "maintainsTravelDetails"@en ,
+                                       "ownsTravelDetails"@en ,
+                                       "possessesTravelDetails"@en ;
+                         rdfs:comment "A property that links a customer to their specific travel details."@en ;
+                         rdfs:label "Detalles del Viaje"@es ,
+                                    "Détails du Voyage"@fr ,
+                                    "Reisedetails"@de ,
+                                    "Travel Details"@en ,
+                                    "旅行详情"@zh ;
+                         owl:versionInfo "Version 1.1" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://vocab.um.es#hasAge
+airline:hasAge rdf:type owl:DatatypeProperty ;
+               rdfs:domain airline:Customer ;
+               rdfs:range xsd:integer ;
+               dc:creator "UM Ontology Team"@en ;
+               dc:date "2023-10-13"@en ;
+               dc:source "UM Airline Ontology"@en ;
+               rdfs:comment "Specifies the age of a customer in years."@en ;
+               rdfs:description "The age property signifies the number of years since the birth of a customer."@en ;
+               rdfs:isDefinedBy airline: ;
+               rdfs:label "Age"@en ;
+               skos:altLabel "AgeInYears"@en ,
+                             "CustomerAge"@en ,
+                             "NumberofYears"@en ,
+                             "YearsOld"@en ,
+                             "YearsSinceBirth"@en ;
+               skos:prefLabel "Age"@en .
+
+
+###  https://vocab.um.es#hasArrivalDelayInMinutes
+airline:hasArrivalDelayInMinutes rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain airline:TravelDetails ;
+                                 rdfs:range xsd:float ;
+                                 rdfs:comment "The amount of time a flight is delayed upon arrival, measured in minutes." ;
+                                 rdfs:label "Ankunftsverspätung (Minuten)"@de ,
+                                            "Arrival Delay (Minutes)"@en ,
+                                            "Retard d'arrivée (Minutes)"@fr ,
+                                            "Retraso de Llegada (Minutos)"@es ,
+                                            "到达延迟（分钟）"@zh ;
+                                 airline:alternativeName "Flight Arrival Lateness" ;
+                                 airline:description "The duration by which a flight's arrival is postponed beyond its scheduled time, specified in minutes." .
+
+
+###  https://vocab.um.es#hasBaggageHandlingRating
+airline:hasBaggageHandlingRating rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain airline:CustomerFeedback ;
+                                 rdfs:range xsd:integer ;
+                                 rdfs:comment "The rating given by a customer regarding the handling and management of baggage during their travel experience." ;
+                                 rdfs:label "Baggage Handling Rating"@en ,
+                                            "Gepäckabfertigung Bewertung"@de ,
+                                            "Valoración de Manejo de Equipaje"@es ,
+                                            "Évaluation de la gestion des bagages"@fr ,
+                                            "行李处理评级"@zh ;
+                                 airline:alternativeName "Luggage Handling Evaluation" ;
+                                 airline:description "The score assigned by a passenger based on the effectiveness and care in managing their luggage during the journey." .
+
+
+###  https://vocab.um.es#hasCheckinServiceRating
+airline:hasCheckinServiceRating rdf:type owl:DatatypeProperty ;
+                                rdfs:domain airline:CustomerFeedback ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "The rating given by a customer regarding the check-in service during their travel experience." ;
+                                rdfs:label "Check-in Service Bewertung"@de ,
+                                           "Check-in Service Rating"@en ,
+                                           "Valoración del Servicio de Check-in"@es ,
+                                           "Évaluation du service d'enregistrement"@fr ,
+                                           "登机服务评级"@zh ;
+                                airline:alternativeName "Registration Service Evaluation" ;
+                                airline:description "The score assigned by a passenger based on the efficiency and experience during the check-in or registration process." .
+
+
+###  https://vocab.um.es#hasClass
+airline:hasClass rdf:type owl:DatatypeProperty ;
+                 rdfs:domain airline:TravelDetails ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The seating or service class of a flight segment, such as 'economy', 'business', or 'first class'." ;
+                 rdfs:label "Clase de Viaje"@es ,
+                            "Classe de voyage"@fr ,
+                            "Reiseklasse"@de ,
+                            "Travel Class"@en ,
+                            "旅行类别"@zh ;
+                 airline:alternativeName "Flight Seating Category" ;
+                 airline:description "The specific category of service provided on a flight, often linked with cabin amenities and seat arrangements." .
+
+
+###  https://vocab.um.es#hasCleanlinessRating
+airline:hasCleanlinessRating rdf:type owl:DatatypeProperty ;
+                             rdfs:domain airline:CustomerFeedback ;
+                             rdfs:range xsd:integer ;
+                             rdfs:comment "The rating given by a customer regarding the cleanliness of the airline's facilities and services." ;
+                             rdfs:label "Cleanliness Rating"@en ,
+                                        "Sauberkeitsbewertung"@de ,
+                                        "Valoración de Limpieza"@es ,
+                                        "Évaluation de propreté"@fr ,
+                                        "清洁度评级"@zh ;
+                             airline:alternativeName "Hygiene Evaluation" ;
+                             airline:description "The score assigned by a passenger based on the perceived cleanliness and hygiene standards maintained by the airline during the travel." .
+
+
+###  https://vocab.um.es#hasCustomerType
+airline:hasCustomerType rdf:type owl:DatatypeProperty ;
+                        rdfs:domain airline:Customer ;
+                        rdfs:range xsd:string ;
+                        dc:creator "ChatGPT Ontology Team" ;
+                        dc:date "2023-10-13" ;
+                        dc:description "This property is used to specify the type of customer, such as \"Regular\", \"Business\", \"First-Time\", \"VIP\", etc., based on the airline's categorization." ;
+                        rdfs:comment "A property representing the type or category of a customer in the airline context." ;
+                        rdfs:label "airlineClientType" ,
+                                   "clientType" ,
+                                   "customerCategory" ,
+                                   "hasCustomerType" ,
+                                   "passengerClassification" ,
+                                   "typeOfCustomer" ;
+                        skos:altLabel "Client Classification" .
+
+
+###  https://vocab.um.es#hasDepartureDelayInMinutes
+airline:hasDepartureDelayInMinutes rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain airline:TravelDetails ;
+                                   rdfs:range xsd:integer ;
+                                   rdfs:comment "The amount of time a flight is delayed during departure, measured in minutes." ;
+                                   rdfs:label "Abflugverspätung (Minuten)"@de ,
+                                              "Departure Delay (Minutes)"@en ,
+                                              "Retard de départ (Minutes)"@fr ,
+                                              "Retraso de Salida (Minutos)"@es ,
+                                              "出发延迟（分钟）"@zh ;
+                                   airline:alternativeName "Flight Departure Lateness" ;
+                                   airline:description "The duration by which a flight's departure is postponed beyond its scheduled time, specified in minutes." .
+
+
+###  https://vocab.um.es#hasFlightDistance
+airline:hasFlightDistance rdf:type owl:DatatypeProperty ;
+                          rdfs:domain airline:TravelDetails ;
+                          rdfs:range xsd:integer ;
+                          rdfs:comment "The total distance covered by a flight measured in kilometers or miles." ;
+                          rdfs:label "Distance de vol"@fr ,
+                                     "Distancia del Vuelo"@es ,
+                                     "Flight Distance"@en ,
+                                     "Flugentfernung"@de ,
+                                     "飞行距离"@zh ;
+                          airline:alternativeName "Travel Span" ;
+                          airline:description "The measured length of a journey taken by an aircraft between two points." .
+
+
+###  https://vocab.um.es#hasFoodAndDrinkRating
+airline:hasFoodAndDrinkRating rdf:type owl:DatatypeProperty ;
+                              rdfs:domain airline:CustomerFeedback ;
+                              rdfs:range xsd:integer ;
+                              dc:creator "Airline Ontology Team"@en ;
+                              dc:date "2023-10-13"@en ;
+                              dc:description "A numerical value representing the satisfaction level of the customer about the food and drinks offered during their flight. It is generally used to evaluate the quality, variety, taste, and presentation of the meals and beverages."@en ;
+                              rdfs:comment "Rating given by the customer regarding the quality and taste of the food and drinks provided during the flight."@en ;
+                              rdfs:label "Food and Drink Quality Rating"@en ;
+                              rdfs:seeAlso airline:CustomerFeedback ;
+                              skos:altLabel "AirlineFoodScore"@en ,
+                                            "BeverageQualityScore"@en ,
+                                            "DrinkTasteRating"@en ,
+                                            "InflightMealRating"@en ,
+                                            "MealQualityRating"@en ,
+                                            "MealSatisfactionScore"@en .
+
+
+###  https://vocab.um.es#hasGateLocationRating
+airline:hasGateLocationRating rdf:type owl:DatatypeProperty ;
+                              rdfs:domain airline:CustomerFeedback ;
+                              rdfs:range xsd:integer ;
+                              dc:creator "Airline Ontology Team"@en ;
+                              dc:date "2023-10-13"@en ;
+                              dc:source "https://vocab.um.es/airline-ontology"@en ;
+                              rdfs:comment "Rating given by a customer regarding the location and convenience of the gate from which they boarded their flight."@en ;
+                              rdfs:description "A numeric rating that indicates the customer's satisfaction level with the location of the boarding gate, where higher values indicate greater satisfaction."@en ;
+                              rdfs:label "Gate Location Rating"@en ;
+                              airline:alternativeLabel "Airport Gate Rating"@en ,
+                                                       "Boarding Gate Score"@en ,
+                                                       "Gate Location Score"@en ,
+                                                       "Gate Position Rating"@en ,
+                                                       "Terminal Gate Feedback"@en ;
+                              airline:alternativeName "BoardingGateLocationRating"@en .
+
+
+###  https://vocab.um.es#hasGender
+airline:hasGender rdf:type owl:DatatypeProperty ;
+                  rdfs:domain airline:Customer ;
+                  rdfs:range xsd:string ;
+                  dc:creator "OpenAI"@en ;
+                  dc:date "2023-10-13"@en ;
+                  rdfs:comment "Specifies the gender of a customer. It can be male, female, or other."@en ;
+                  rdfs:description "This property indicates the gender classification of the customer. It is a broad categorization based on societal and biological factors."@en ;
+                  rdfs:isDefinedBy airline: ;
+                  rdfs:label "Gender"@en ;
+                  owl:versionInfo "Version 1.0"@en ;
+                  skos:altLabel "Gender Category"@en ,
+                                "Gender Classification"@en ,
+                                "Gender Identity"@en ,
+                                "Gender Type"@en ,
+                                "Sex"@en .
+
+
+###  https://vocab.um.es#hasInflightEntertainmentRating
+airline:hasInflightEntertainmentRating rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain airline:CustomerFeedback ;
+                                       rdfs:range xsd:integer ;
+                                       rdfs:altLabel "Airborne Entertainment Grade" ,
+                                                     "Entertainment in Air Rating" ,
+                                                     "Flight Entertainment Rating" ,
+                                                     "In-flight Entertainment Score" ,
+                                                     "Onboard Movie and Music Rating" ;
+                                       rdfs:comment "Rating given by the customer based on the in-flight entertainment services provided during the flight."@en ;
+                                       rdfs:label "Bordunterhaltung Bewertung"@de ,
+                                                  "Calificación de Entretenimiento a Bordo"@es ,
+                                                  "In-flight Entertainment Rating"@en ,
+                                                  "Évaluation du divertissement en vol"@fr ,
+                                                  "机上娱乐评级"@zh .
+
+
+###  https://vocab.um.es#hasInflightWifiServiceRating
+airline:hasInflightWifiServiceRating rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain airline:CustomerFeedback ;
+                                     rdfs:range xsd:integer ;
+                                     dc:creator "Airline Feedback System"@en ;
+                                     dc:date "2023-10-13"@en ;
+                                     dcterms:description "A property that captures the customer's satisfaction rating about the inflight wifi service offered during their flight."@en ;
+                                     rdfs:comment "Rating given by the customer regarding the quality and performance of the inflight wifi service provided by the airline."@en ;
+                                     rdfs:label "Bewertung des WLAN-Dienstes an Bord"@de ,
+                                                "Calificación del Servicio de Wifi en Vuelo"@es ,
+                                                "Inflight Wifi Service Rating"@en ,
+                                                "Note du Service Wifi à Bord"@fr ,
+                                                "机上无线网络服务评级"@zh ;
+                                     owl:alternativeName "Airplane Wifi Quality Score"@en ;
+                                     skos:altLabel "Airplane Wifi Rating"@en ,
+                                                   "Flight Wifi Rating"@en ,
+                                                   "Onboard Internet Rating"@en ,
+                                                   "Wifi Quality on Flight"@en ,
+                                                   "Wireless Service in Flight Score"@en .
+
+
+###  https://vocab.um.es#hasLegRoomServiceRating
+airline:hasLegRoomServiceRating rdf:type owl:DatatypeProperty ;
+                                rdfs:domain airline:CustomerFeedback ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "The rating given by a customer regarding the legroom space provided during the flight." ;
+                                rdfs:label "Beinfreiheit Bewertung"@de ,
+                                           "Leg Room Rating"@en ,
+                                           "Valoración del Espacio para Piernas"@es ,
+                                           "Évaluation de l'espace pour les jambes"@fr ,
+                                           "腿部空间评级"@zh ;
+                                airline:alternativeName "Flight Leg Space Evaluation" ;
+                                airline:description "The score assigned by a passenger to assess the comfort and space for legs during the flight." .
+
+
+###  https://vocab.um.es#hasOnboardServiceRating
+airline:hasOnboardServiceRating rdf:type owl:DatatypeProperty ;
+                                rdfs:domain airline:CustomerFeedback ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "The rating given by a customer regarding the service provided onboard the flight." ;
+                                rdfs:label "Bewertung des Bordservices"@de ,
+                                           "Onboard Service Rating"@en ,
+                                           "Valoración del Servicio a Bordo"@es ,
+                                           "Évaluation du service à bord"@fr ,
+                                           "机上服务评级"@zh ;
+                                airline:alternativeName "On-flight Service Evaluation" ;
+                                airline:description "The score assigned by a passenger to gauge the quality and experience of the services provided during the flight." .
+
+
+###  https://vocab.um.es#hasOnlineBoardingRating
+airline:hasOnlineBoardingRating rdf:type owl:DatatypeProperty ;
+                                rdfs:domain airline:CustomerFeedback ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "The rating given by a customer regarding the online boarding experience with the airline." ;
+                                rdfs:label "Online Boarding Rating"@en ,
+                                           "Online-Boarding-Bewertung"@de ,
+                                           "Valoración de Embarque en Línea"@es ,
+                                           "Évaluation de l'embarquement en ligne"@fr ,
+                                           "在线登机评级"@zh ;
+                                airline:alternativeName "Digital Boarding Evaluation" ;
+                                airline:description "The score assigned by a passenger based on the convenience and efficiency of the online boarding process offered by the airline." .
+
+
+###  https://vocab.um.es#hasOnlineBookingEaseRating
+airline:hasOnlineBookingEaseRating rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain airline:CustomerFeedback ;
+                                   rdfs:range xsd:integer ;
+                                   dc:creator "Ontology Development Team" ;
+                                   dc:date "2023-10-13" ;
+                                   dc:source "Customer Feedback Surveys 2023" ;
+                                   rdfs:comment "Represents the ease of booking online as rated by the customer." ;
+                                   rdfs:isDefinedBy "An evaluation metric representing the ease with which customers found the online booking process." ;
+                                   skos:altLabel "Digital Booking Ease Grade" ,
+                                                 "Internet Booking Ease Score" ,
+                                                 "Online Booking Simplicity Rating" ,
+                                                 "Online Booking User-friendliness Score" ,
+                                                 "Web Booking Convenience Rating" ;
+                                   skos:definition "Rating given by the customer based on the ease of booking online." ;
+                                   skos:prefLabel "Online Booking Ease Rating" .
+
+
+###  https://vocab.um.es#hasOnlineSupportRating
+airline:hasOnlineSupportRating rdf:type owl:DatatypeProperty ;
+                               rdfs:domain airline:CustomerFeedback ;
+                               rdfs:range xsd:integer ;
+                               dc:creator <https://www.example.org/creator#JohnDoe> ;
+                               dc:date "2023-10-13"^^xsd:date ;
+                               dcterms:description "A quantitative measure, usually between 1 to 5, indicating the quality and responsiveness of an airline's online support service as perceived by the customer."@en ;
+                               rdfs:comment "This property represents the rating a customer gives to the online support service of an airline."@en ;
+                               rdfs:label "Calificación de Soporte en Línea"@es ,
+                                          "Online Support Rating"@en ,
+                                          "Online-Support-Bewertung"@de ,
+                                          "Évaluation du Support en Ligne"@fr ,
+                                          "在线支持评级"@zh ;
+                               owl:versionInfo "Version 1.0 - Initial version based on customer feedback for airline services."@en ;
+                               skos:altLabel "Customer Service Online Score" ,
+                                             "Helpdesk Online Rating" ,
+                                             "Online Assistance Rating" ,
+                                             "Rating for Digital Support" ,
+                                             "Support Rating Online" ,
+                                             "Web Support Score" ;
+                               skos:prefLabel "Online Support Rating" .
+
+
+###  https://vocab.um.es#hasSatisfaction
+airline:hasSatisfaction rdf:type owl:DatatypeProperty ;
+                        rdfs:domain airline:Customer ;
+                        rdfs:range xsd:string ;
+                        dc:creator "Airline Ontology Team" ;
+                        dc:date "2023-10-13"^^xsd:date ;
+                        dcterms:description "Represents the overall satisfaction level of a customer based on their airline experience." ;
+                        rdfs:comment "An attribute to gauge the contentment of the customer after availing airline services." ;
+                        rdfs:isDefinedBy airline:CustomerSatisfactionMeasure ;
+                        rdfs:label "Airline Experience Rating" ,
+                                   "Contentment Level" ,
+                                   "Customer Contentment" ,
+                                   "Customer Satisfaction Score" ,
+                                   "Satisfaction Level" .
+
+
+###  https://vocab.um.es#hasSeatComfortRating
+airline:hasSeatComfortRating rdf:type owl:DatatypeProperty ;
+                             rdfs:domain airline:CustomerFeedback ;
+                             rdfs:range xsd:integer ;
+                             dc:creator "Ontology Engineering Team" ;
+                             dcterms:alternative "Airline Seat Comfort Level" ,
+                                                 "Comfort Rating for Seat" ,
+                                                 "Evaluation of Seat Comfort" ,
+                                                 "Rating for Seat Comfort" ,
+                                                 "Seat's Comfort Score" ;
+                             dcterms:created "2023-10-13" ;
+                             dcterms:description "This property captures the rating given by customers specifically focusing on the comfort of the seat during their flight." ;
+                             rdfs:comment "A rating given by the customer evaluating the comfort of the airline seat." ;
+                             rdfs:label "Calificación de Comodidad del Asiento"@es ,
+                                        "Seat Comfort Rating"@en ,
+                                        "Sitzkomfortbewertung"@de ,
+                                        "Évaluation du Confort du Siège"@fr ,
+                                        "座椅舒适度评分"@zh .
+
+
+###  https://vocab.um.es#hasTimeConvenienceRating
+airline:hasTimeConvenienceRating rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain airline:CustomerFeedback ;
+                                 rdfs:range xsd:integer ;
+                                 dcterms:description "A property that denotes the customer's feedback about the appropriateness of the flight's timing in terms of their convenience and preference."@en ;
+                                 rdfs:comment "This property indicates the customer's satisfaction level regarding the convenience of the flight timing. The rating is based on a scale, where a higher value indicates better satisfaction."@en ;
+                                 rdfs:label "Flight Timing Rating"@en ,
+                                            "Time Appropriateness Rating"@en ,
+                                            "Time Convenience Rating"@en ,
+                                            "Time Suitability Score"@en ,
+                                            "Travel Timing Feedback"@en ;
+                                 skos:altLabel "Convenience of Timing"@en ,
+                                               "Suitability of Time"@en ,
+                                               "Time Suitability Feedback"@en ,
+                                               "Timing Appropriateness"@en ,
+                                               "Timing Convenience"@en .
+
+
+###  https://vocab.um.es#hasTypeOfTravel
+airline:hasTypeOfTravel rdf:type owl:DatatypeProperty ;
+                        rdfs:domain airline:TravelDetails ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "The category of a travel segment, typically differentiated as 'business' or 'personal' among others." ;
+                        rdfs:label "Reiseart"@de ,
+                                   "Tipo de Viaje"@es ,
+                                   "Type de voyage"@fr ,
+                                   "Type of Travel"@en ,
+                                   "旅行类型"@zh ;
+                        airline:alternativeName "Travel Classification" ;
+                        airline:description "The categorization of a journey based on its primary purpose or nature." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://vocab.um.es#Customer
+airline:Customer rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty airline:hasTravelDetails ;
+                                   owl:someValuesFrom airline:TravelDetails
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty airline:hasAge ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty airline:hasCustomerType ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty airline:hasGender ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty airline:hasSatisfaction ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] .
+
+
+###  https://vocab.um.es#CustomerFeedback
+airline:CustomerFeedback rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty airline:hasSeatComfortRating ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:integer
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty airline:hasTimeConvenienceRating ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:integer
+                                         ] .
+
+
+###  https://vocab.um.es#TravelDetails
+airline:TravelDetails rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasTravelDetails ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasArrivalDelayInMinutes ;
+                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:float ;
+                                                             owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                    ]
+                                                                                  )
+                                                           ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasDepartureDelayInMinutes ;
+                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:integer ;
+                                                             owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                    ]
+                                                                                  )
+                                                           ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasFlightDistance ;
+                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:integer ;
+                                                             owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                    ]
+                                                                                  )
+                                                           ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasClass ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty airline:hasTypeOfTravel ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

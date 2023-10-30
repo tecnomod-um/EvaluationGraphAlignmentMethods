@@ -1,0 +1,374 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix fno: <https://w3id.org/function/ontology#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix schema: <https://schema.org/>.
+@prefix mt: <https://purl.org/ontologies/MT/>. 
+@prefix um: <https://vocab.um.es/>.
+@prefix morph-kgc: <https://github.com/morph-kgc/morph-kgc/function/built-in.ttl#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix um_vocab: <https://vocab.um.es#>.
+@prefix : <https://transform.um.es/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+
+<#CustomerFeedbackMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	
+	rr:subjectMap [
+		rr:template "https://data.um.es/CustomerFeedback#{CustomerSatisfationID}";
+		rr:class um_vocab:CustomerFeedback;
+	];
+    	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_customer_satisfaction;
+		rr:objectMap [
+		      rml:reference "satisfaction";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_customer_details;
+		rr:objectMap [
+			rr:parentTriplesMap <#CustomerMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_flight_details;
+		rr:objectMap [
+			rr:parentTriplesMap <#FlightMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#SeatComfortMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#DepartureMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#FoodDrinkMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#GateLocationMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#WifiMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#EntertainmentMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#OnlineSupportMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#OnlineBookingMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#OnBoardServiceMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#LegRoomMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#CheckinMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#CleanlinessMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#BaggageHandlingMapping> 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate um_vocab:has_evaluation_item_score;
+		rr:objectMap [
+			rr:parentTriplesMap <#OnlineBoardingMapping> 
+		]
+	].
+
+<#CustomerMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/Customer#{CustomerSatisfationID}";
+		rr:class um_vocab:Customer;
+	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_customer_age;
+		rr:objectMap [
+		      rml:reference "Age";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_customer_gender;
+		rr:objectMap [
+		      rml:reference "Gender";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_customer_type;
+		rr:objectMap [
+		      rml:reference "Customer Type";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	].
+
+<#FlightMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/Flight#{CustomerSatisfationID}";
+		rr:class um_vocab:Flight;
+	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_flight_class;
+		rr:objectMap [
+		      rml:reference "Class";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_flight_distance;
+		rr:objectMap [
+		      rml:reference "Flight Distance";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_type_of_travel;
+		rr:objectMap [
+		      rml:reference "Type of Travel";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:string
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_arrival_delay_in_minutes;
+		rr:objectMap [
+		      rml:reference "Arrival Delay in Minutes";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+    	];
+	rr:predicateObjectMap [
+                rr:predicate um_vocab:has_departure_delay_in_minutes;
+		rr:objectMap [
+		      rml:reference "Departure Delay in Minutes";
+                      rr:termType rr:Literal;
+		      rr:datatype xsd:integer
+                ]
+    	].
+
+<#SeatComfortMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/SeatComfort#{Seat comfort}";
+		rr:class um_vocab:SeatComfort;
+	].
+
+<#DepartureMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/Departure#{Departure/Arrival time convenient}";
+		rr:class um_vocab:Departure;
+	].
+
+<#FoodDrinkMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/FoodAndDrink#{Food and drink}";
+		rr:class um_vocab:FoodAndDrink;
+	].
+
+<#GateLocationMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/GateLocation#{Gate location}";
+		rr:class um_vocab:GateLocation;
+	].
+
+<#WifiMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/Wifi#{Inflight wifi service}";
+		rr:class um_vocab:Wifi;
+	].
+
+<#EntertainmentMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/Entertainment#{Inflight entertainment}";
+		rr:class um_vocab:Entertainment;
+	].
+
+<#OnlineSupportMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/OnlineSupport#{Online support}";
+		rr:class um_vocab:OnlineSupport;
+	].
+
+<#OnlineBookingMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/OnlineBooking#{Ease of Online booking}";
+		rr:class um_vocab:OnlineBooking;
+	].
+
+<#OnBoardServiceMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/OnBoardService#{On-board service}";
+		rr:class um_vocab:OnBoardService;
+	].
+
+<#LegRoomMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/LegRoomService#{Leg room service}";
+		rr:class um_vocab:LegRoomService;
+	].
+
+
+<#CheckinMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/CheckinService#{Checkin service}";
+		rr:class um_vocab:CheckinService;
+	].
+
+<#CleanlinessMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/Cleanliness#{Cleanliness}";
+		rr:class um_vocab:Cleanliness;
+	].
+
+<#BaggageHandlingMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/BaggageHandling#{Baggage handling}";
+		rr:class um_vocab:BaggageHandling;
+	].
+
+<#OnlineBoardingMapping> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "../AirlinesCustomerSatisfaction_data20k.csv";
+		rml:referenceFormulation ql:CSV;
+	];
+
+	rr:subjectMap [
+		rr:template "https://data.um.es/EvaluationItem/OnlineBoarding#{Online boarding}";
+		rr:class um_vocab:OnlineBoarding;
+	].
