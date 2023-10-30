@@ -7,16 +7,14 @@
 ## Datasets
 
 * [data.csv](./SourceFiles/data.csv)
-  * 541909 rows x 8 columns
+  * 8208 rows x 9 columns
+* [processed_data20K.csv](./SourceFiles/processed_data.csv)
+  * 8208 rows x 16 columns
+  * Processing of identifiers for five classes
+![Counts processed_data.csv](./Figures/counts_data.JPG "Counts processed_data.csv")
 
-* [processed_data20K.csv](./SourceFiles/processed_data20K.csv)
-  * 20000 rows x 13 columns
-  * From above, selection of the first 20000 rows
-  * Processing of identifiers for four classes
-![Counts data20K.csv](./Figures/counts_data.JPG "Counts data20K.csv")
-
-* The "Description" and "CustomerID" fields are the only fields that have null values
-* No field has only unique values
+* No field has null values
+* "Absolute_Url" is the only field that has all unique values
 
 ![Fields cardinality data20K.csv](./Figures/counts_data.JPG "Fields cardinality data20K.csv")
 

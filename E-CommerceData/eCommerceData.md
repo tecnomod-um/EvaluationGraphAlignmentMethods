@@ -40,9 +40,10 @@
 
 |Mapping |Dataset| RDF | attr_triples | rel_triples |
 |:-:|:-:|:-:|:-:|:-:|
-|[Basic](./Mappings/mappingBasic.csv.yml)|processed_data20K.csv|[54553 triples](./Mappings/ecommercedataBasic.nt)|[53615 triples](./Experiments/EntityAlignment/Gold-Basic/Input/attr_triples_2)|[938 triples](./Experiments/EntityAlignment/Gold-Basic/Input/rel_triples_2)|
-|[Gold](./Mappings/mappingGold.csv.yml)|processed_data20K.csv|[95666 triples](./Mappings/ecommercedataGold.nt)|[10081 triples](./Experiments/EntityAlignment/Gold-Basic/Input/attr_triples_1)|[85585 triples](./Experiments/EntityAlignment/Gold-Basic/Input/rel_triples_1)|
-|[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[43164 triples](./Mappings/ecommercedataLLM.nt)|[15798 triples](./Experiments/EntityAlignment/Gold-LLM/Input/attr_triples_2)|[27366 triples](./Experiments/EntityAlignment/Gold-LLM/Input/rel_triples_2)|
+|[Basic](./Mappings/mappingBasic.csv.yml)|processed_data20K.csv|[54553 triples](./Mappings/ecommercedataBasic.nt)|[53615 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[938 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
+|[Gold](./Mappings/mappingGold.csv.yml)|processed_data20K.csv|[95666 triples](./Mappings/ecommercedataGold.nt)|[10081 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[85585 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
+|[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[43164 triples](./Mappings/ecommercedataLLM.nt)|[15798 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[27366 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
+|[Materials](./Mappings/mappingMaterials.csv.yml)|processed_data20K.csv|[46073 triples](./Mappings/ecommercedataMaterials.nt)|[4815 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[41258 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
 
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
