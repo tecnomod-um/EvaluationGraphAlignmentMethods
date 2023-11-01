@@ -1,0 +1,416 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BigBasketProducts/', 'dataset_division': '721_5fold', 'embedding_module': 'AliNet', 'alignment_module': 'mapping', 'search_module': 'greedy', 'layer_dims': [500, 400, 300], 'init': 'xavier', 'ent_l2_norm': True, 'rel_l2_norm': True, 'learning_rate': 0.001, 'optimizer': 'Adam', 'max_epoch': 2000, 'batch_size': 3000, 'neg_margin': 1.5, 'neg_margin_balance': 0.1, 'dropout': 0.0, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.98, 'truncated_freq': 10, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': False, 'eval_norm': False, 'min_rel_win': 50, 'start_augment': 2, 'rel_param': 0.01, 'num_features_nonzero': 0, 'sim_th': 0.0, 'k': 20}
+AliNet
+<openea.modules.args.args_hander.ARGs object at 0x7f68e34c9748>
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/721_5fold/1/test_links
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+../../output/results/Paper/BigBasketProducts/ ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/ ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BigBasketProducts', 'Gold-Gold'] 721_5fold/1/ AliNet
+results output folder: ../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/
+triples num 44825
+head ent num 19867
+total ent num 19872
+ave outs: 2
+additional triples: 35
+triples num 44825
+head ent num 19867
+total ent num 19872
+ave outs: 2
+additional triples: 35
+before enhanced: 44825 44825
+after enhanced: 0 0
+before removing unlinked triples: 89650
+after removing unlinked triples: 49916
+generating one-adj costs time: 0.5711s
+before removing unlinked triples: 44825
+after removing unlinked triples: 24958
+total 2-hop neighbors: 8208
+total 2-hop relation patterns: 1
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+before removing unlinked triples: 44825
+after removing unlinked triples: 24958
+total 2-hop neighbors: 8208
+total 2-hop relation patterns: 1
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+generating one-adj costs time: 0.0462s
+save adj data to ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Gold/721_5fold/1/alinet_saved_data.pkl
+Getting AliNet model...
+epoch 1, loss: 13599.2893, cost time: 61.2617s
+epoch 2, loss: 8065.1082, cost time: 53.1715s
+epoch 3, loss: 5260.0338, cost time: 52.7852s
+epoch 4, loss: 3515.6544, cost time: 52.4413s
+epoch 5, loss: 2452.2004, cost time: 52.0363s
+epoch 6, loss: 1731.1271, cost time: 50.3218s
+epoch 7, loss: 1261.0970, cost time: 48.8929s
+epoch 8, loss: 935.9202, cost time: 50.3065s
+epoch 9, loss: 726.9917, cost time: 51.2568s
+epoch 10, loss: 583.7336, cost time: 48.5855s
+quick results: hits@[1, 5, 10, 50] = [64.167 81.631 83.744 86.764]%, time = 6.205 s 
+neighbors num 397
+finding neighbors for sampling costs time: 52.0285s
+epoch 11, loss: 1710.7836, cost time: 60.4256s
+epoch 12, loss: 964.5439, cost time: 57.2946s
+epoch 13, loss: 807.5042, cost time: 59.9918s
+epoch 14, loss: 705.1263, cost time: 57.3604s
+epoch 15, loss: 621.2730, cost time: 56.8484s
+epoch 16, loss: 572.2730, cost time: 54.9145s
+epoch 17, loss: 517.9802, cost time: 58.5271s
+epoch 18, loss: 487.6241, cost time: 58.7583s
+epoch 19, loss: 450.5241, cost time: 55.7095s
+epoch 20, loss: 426.9684, cost time: 55.2680s
+quick results: hits@[1, 5, 10, 50] = [66.784 82.235 83.543 85.858]%, time = 5.716 s 
+neighbors num 397
+finding neighbors for sampling costs time: 50.8080s
+epoch 21, loss: 446.2243, cost time: 53.6901s
+epoch 22, loss: 409.6929, cost time: 52.1539s
+epoch 23, loss: 392.4765, cost time: 51.0518s
+epoch 24, loss: 381.5660, cost time: 49.0345s
+epoch 25, loss: 366.9110, cost time: 49.2971s
+epoch 26, loss: 350.7125, cost time: 46.1339s
+epoch 27, loss: 335.7991, cost time: 48.6902s
+epoch 28, loss: 342.8018, cost time: 48.5203s
+epoch 29, loss: 316.9555, cost time: 49.1160s
+epoch 30, loss: 316.9210, cost time: 50.4848s
+quick results: hits@[1, 5, 10, 50] = [72.119 83.694 84.902 86.613]%, time = 5.463 s 
+neighbors num 397
+finding neighbors for sampling costs time: 49.4944s
+epoch 31, loss: 338.4132, cost time: 47.4379s
+epoch 32, loss: 313.8230, cost time: 54.8982s
+epoch 33, loss: 316.2181, cost time: 55.4720s
+epoch 34, loss: 307.1378, cost time: 50.5537s
+epoch 35, loss: 303.5825, cost time: 51.5337s
+epoch 36, loss: 306.2305, cost time: 50.3121s
+epoch 37, loss: 302.0301, cost time: 51.0178s
+epoch 38, loss: 303.3962, cost time: 52.1212s
+epoch 39, loss: 293.9590, cost time: 51.1996s
+epoch 40, loss: 290.4541, cost time: 49.2639s
+quick results: hits@[1, 5, 10, 50] = [74.233 84.852 86.059 87.921]%, time = 5.107 s 
+neighbors num 397
+finding neighbors for sampling costs time: 49.4178s
+epoch 41, loss: 286.5949, cost time: 49.9642s
+epoch 42, loss: 284.1973, cost time: 50.8641s
+epoch 43, loss: 291.0837, cost time: 49.7421s
+epoch 44, loss: 282.4945, cost time: 48.6942s
+epoch 45, loss: 278.7870, cost time: 48.6936s
+epoch 46, loss: 271.4679, cost time: 47.9001s
+epoch 47, loss: 270.0435, cost time: 45.1892s
+epoch 48, loss: 266.3046, cost time: 47.0839s
+epoch 49, loss: 263.5575, cost time: 45.8740s
+epoch 50, loss: 273.8190, cost time: 43.8297s
+quick results: hits@[1, 5, 10, 50] = [76.346 85.908 87.318 89.28 ]%, time = 5.034 s 
+neighbors num 397
+finding neighbors for sampling costs time: 41.4319s
+epoch 51, loss: 270.3746, cost time: 40.8174s
+epoch 52, loss: 268.9278, cost time: 38.3494s
+epoch 53, loss: 271.4811, cost time: 37.6871s
+epoch 54, loss: 266.6380, cost time: 36.2247s
+epoch 55, loss: 264.6419, cost time: 38.6797s
+epoch 56, loss: 257.7552, cost time: 37.6248s
+epoch 57, loss: 256.2481, cost time: 36.6271s
+epoch 58, loss: 263.0926, cost time: 39.9352s
+epoch 59, loss: 259.1415, cost time: 39.6744s
+epoch 60, loss: 254.4895, cost time: 37.9870s
+quick results: hits@[1, 5, 10, 50] = [77.453 87.167 88.123 90.74 ]%, time = 3.873 s 
+neighbors num 397
+finding neighbors for sampling costs time: 35.3143s
+epoch 61, loss: 258.1496, cost time: 38.2503s
+epoch 62, loss: 263.9319, cost time: 38.2150s
+epoch 63, loss: 254.0259, cost time: 39.8956s
+epoch 64, loss: 251.8545, cost time: 38.7334s
+epoch 65, loss: 260.5154, cost time: 37.8832s
+epoch 66, loss: 256.7329, cost time: 37.7448s
+epoch 67, loss: 258.7908, cost time: 35.9382s
+epoch 68, loss: 252.4613, cost time: 33.8399s
+epoch 69, loss: 252.4666, cost time: 33.1062s
+epoch 70, loss: 249.3059, cost time: 34.5599s
+quick results: hits@[1, 5, 10, 50] = [78.007 87.62  88.525 91.142]%, time = 3.595 s 
+neighbors num 397
+finding neighbors for sampling costs time: 38.3562s
+epoch 71, loss: 251.8464, cost time: 39.1511s
+epoch 72, loss: 250.7975, cost time: 38.3539s
+epoch 73, loss: 249.2598, cost time: 37.0608s
+epoch 74, loss: 250.9801, cost time: 34.4496s
+epoch 75, loss: 244.4362, cost time: 34.7724s
+epoch 76, loss: 241.6062, cost time: 34.8025s
+epoch 77, loss: 248.3304, cost time: 32.8609s
+epoch 78, loss: 240.4529, cost time: 31.1938s
+epoch 79, loss: 245.9339, cost time: 32.9743s
+epoch 80, loss: 243.2528, cost time: 33.1654s
+quick results: hits@[1, 5, 10, 50] = [78.359 87.972 88.878 91.344]%, time = 3.820 s 
+neighbors num 397
+finding neighbors for sampling costs time: 31.7384s
+epoch 81, loss: 246.0909, cost time: 32.3453s
+epoch 82, loss: 240.4889, cost time: 30.9759s
+epoch 83, loss: 251.5957, cost time: 31.0199s
+epoch 84, loss: 243.9251, cost time: 32.8784s
+epoch 85, loss: 246.8774, cost time: 31.5539s
+epoch 86, loss: 247.5048, cost time: 32.1521s
+epoch 87, loss: 239.6309, cost time: 34.1057s
+epoch 88, loss: 244.4435, cost time: 32.8290s
+epoch 89, loss: 238.6156, cost time: 37.0747s
+epoch 90, loss: 235.6327, cost time: 40.6292s
+quick results: hits@[1, 5, 10, 50] = [78.963 88.123 89.582 92.048]%, time = 5.292 s 
+neighbors num 397
+finding neighbors for sampling costs time: 42.6276s
+epoch 91, loss: 238.0209, cost time: 38.8073s
+epoch 92, loss: 236.0440, cost time: 38.0167s
+epoch 93, loss: 240.3224, cost time: 38.5135s
+epoch 94, loss: 240.6655, cost time: 37.2783s
+epoch 95, loss: 237.3447, cost time: 40.0422s
+epoch 96, loss: 236.6864, cost time: 38.0212s
+epoch 97, loss: 238.6933, cost time: 38.3321s
+epoch 98, loss: 238.1749, cost time: 41.1165s
+epoch 99, loss: 233.6801, cost time: 39.2088s
+epoch 100, loss: 237.9663, cost time: 37.7425s
+quick results: hits@[1, 5, 10, 50] = [78.963 89.029 90.086 92.099]%, time = 4.265 s 
+neighbors num 397
+finding neighbors for sampling costs time: 40.6628s
+epoch 101, loss: 240.4024, cost time: 38.3943s
+epoch 102, loss: 235.6556, cost time: 36.8806s
+epoch 103, loss: 234.4460, cost time: 36.7723s
+epoch 104, loss: 234.2010, cost time: 40.0098s
+epoch 105, loss: 236.1493, cost time: 39.0285s
+epoch 106, loss: 236.9876, cost time: 39.0267s
+epoch 107, loss: 233.7437, cost time: 38.0420s
+epoch 108, loss: 236.3725, cost time: 37.7238s
+epoch 109, loss: 232.6652, cost time: 37.9301s
+epoch 110, loss: 236.8285, cost time: 38.2623s
+quick results: hits@[1, 5, 10, 50] = [79.366 89.079 90.438 92.501]%, time = 4.915 s 
+neighbors num 397
+finding neighbors for sampling costs time: 38.6437s
+epoch 111, loss: 233.9856, cost time: 36.6117s
+epoch 112, loss: 231.6042, cost time: 38.4587s
+epoch 113, loss: 232.4532, cost time: 39.6882s
+epoch 114, loss: 234.8355, cost time: 38.7211s
+epoch 115, loss: 228.9662, cost time: 39.1845s
+epoch 116, loss: 233.6660, cost time: 37.4951s
+epoch 117, loss: 226.3316, cost time: 35.0349s
+epoch 118, loss: 226.4744, cost time: 36.5576s
+epoch 119, loss: 230.5850, cost time: 36.5597s
+epoch 120, loss: 225.5480, cost time: 40.4150s
+quick results: hits@[1, 5, 10, 50] = [79.467 89.28  90.488 92.703]%, time = 6.248 s 
+neighbors num 397
+finding neighbors for sampling costs time: 39.6445s
+epoch 121, loss: 219.2969, cost time: 43.3975s
+epoch 122, loss: 224.3242, cost time: 39.5950s
+epoch 123, loss: 231.0248, cost time: 40.9477s
+epoch 124, loss: 232.8918, cost time: 38.3663s
+epoch 125, loss: 227.5848, cost time: 34.7347s
+epoch 126, loss: 228.2205, cost time: 35.8518s
+epoch 127, loss: 228.0694, cost time: 35.4401s
+epoch 128, loss: 229.0219, cost time: 37.3412s
+epoch 129, loss: 231.1657, cost time: 37.6759s
+epoch 130, loss: 225.7158, cost time: 40.4046s
+quick results: hits@[1, 5, 10, 50] = [79.668 89.431 90.589 93.005]%, time = 5.937 s 
+neighbors num 397
+finding neighbors for sampling costs time: 41.9481s
+epoch 131, loss: 220.9992, cost time: 37.9775s
+epoch 132, loss: 218.2123, cost time: 37.4492s
+epoch 133, loss: 212.7029, cost time: 37.5480s
+epoch 134, loss: 212.8849, cost time: 37.4086s
+epoch 135, loss: 214.8683, cost time: 37.1000s
+epoch 136, loss: 214.2643, cost time: 41.9303s
+epoch 137, loss: 211.0382, cost time: 40.2065s
+epoch 138, loss: 215.4000, cost time: 38.1381s
+epoch 139, loss: 217.9324, cost time: 38.9152s
+epoch 140, loss: 215.7666, cost time: 37.8406s
+quick results: hits@[1, 5, 10, 50] = [80.171 89.935 91.042 93.256]%, time = 4.672 s 
+neighbors num 397
+finding neighbors for sampling costs time: 38.8409s
+epoch 141, loss: 226.6537, cost time: 37.4701s
+epoch 142, loss: 210.8769, cost time: 37.9267s
+epoch 143, loss: 216.0053, cost time: 37.2049s
+epoch 144, loss: 212.2229, cost time: 37.8858s
+epoch 145, loss: 217.4383, cost time: 38.8811s
+epoch 146, loss: 212.6543, cost time: 37.6546s
+epoch 147, loss: 207.8855, cost time: 40.2852s
+epoch 148, loss: 210.9411, cost time: 39.4127s
+epoch 149, loss: 213.5477, cost time: 38.7029s
+epoch 150, loss: 208.7406, cost time: 37.7194s
+quick results: hits@[1, 5, 10, 50] = [81.127 90.337 91.344 93.558]%, time = 5.288 s 
+neighbors num 397
+finding neighbors for sampling costs time: 38.0607s
+epoch 151, loss: 213.4865, cost time: 35.9783s
+epoch 152, loss: 208.6568, cost time: 38.7487s
+epoch 153, loss: 210.0737, cost time: 37.6029s
+epoch 154, loss: 206.3131, cost time: 39.7477s
+epoch 155, loss: 207.6723, cost time: 35.8064s
+epoch 156, loss: 204.5311, cost time: 33.4047s
+epoch 157, loss: 206.9736, cost time: 33.3399s
+epoch 158, loss: 209.4440, cost time: 33.6732s
+epoch 159, loss: 204.9321, cost time: 34.4225s
+epoch 160, loss: 199.8942, cost time: 34.2387s
+quick results: hits@[1, 5, 10, 50] = [81.429 90.79  91.797 93.709]%, time = 4.723 s 
+neighbors num 397
+finding neighbors for sampling costs time: 35.5951s
+epoch 161, loss: 201.3745, cost time: 33.4747s
+epoch 162, loss: 202.8657, cost time: 33.4409s
+epoch 163, loss: 199.4965, cost time: 35.5254s
+epoch 164, loss: 197.8607, cost time: 34.8147s
+epoch 165, loss: 201.5809, cost time: 35.2545s
+epoch 166, loss: 191.7907, cost time: 35.9526s
+epoch 167, loss: 193.3780, cost time: 32.7164s
+epoch 168, loss: 200.0744, cost time: 32.7055s
+epoch 169, loss: 199.0632, cost time: 32.1445s
+epoch 170, loss: 192.1000, cost time: 30.1122s
+quick results: hits@[1, 5, 10, 50] = [81.681 90.74  91.847 93.86 ]%, time = 4.194 s 
+neighbors num 397
+finding neighbors for sampling costs time: 31.0429s
+epoch 171, loss: 192.3220, cost time: 32.1001s
+epoch 172, loss: 194.0067, cost time: 32.3841s
+epoch 173, loss: 193.2315, cost time: 29.8875s
+epoch 174, loss: 191.4479, cost time: 30.0608s
+epoch 175, loss: 193.0762, cost time: 28.3407s
+epoch 176, loss: 187.0705, cost time: 28.5163s
+epoch 177, loss: 186.6688, cost time: 29.4080s
+epoch 178, loss: 187.5498, cost time: 27.5534s
+epoch 179, loss: 179.6822, cost time: 27.6421s
+epoch 180, loss: 181.8784, cost time: 28.9119s
+quick results: hits@[1, 5, 10, 50] = [81.782 90.991 92.048 93.86 ]%, time = 4.467 s 
+neighbors num 397
+finding neighbors for sampling costs time: 32.5438s
+epoch 181, loss: 197.5348, cost time: 31.5232s
+epoch 182, loss: 193.3609, cost time: 30.6005s
+epoch 183, loss: 190.0860, cost time: 30.4259s
+epoch 184, loss: 190.5545, cost time: 31.0395s
+epoch 185, loss: 191.1024, cost time: 26.6180s
+epoch 186, loss: 191.4085, cost time: 28.3569s
+epoch 187, loss: 187.2400, cost time: 29.0718s
+epoch 188, loss: 190.1979, cost time: 28.2692s
+epoch 189, loss: 185.0213, cost time: 28.3071s
+epoch 190, loss: 180.9557, cost time: 29.3226s
+quick results: hits@[1, 5, 10, 50] = [82.184 91.495 92.552 94.212]%, time = 4.124 s 
+neighbors num 397
+finding neighbors for sampling costs time: 28.9677s
+epoch 191, loss: 187.8130, cost time: 28.3575s
+epoch 192, loss: 183.5593, cost time: 27.1617s
+epoch 193, loss: 183.6484, cost time: 26.9403s
+epoch 194, loss: 175.0179, cost time: 29.4441s
+epoch 195, loss: 181.1338, cost time: 30.4420s
+epoch 196, loss: 178.3079, cost time: 30.6602s
+epoch 197, loss: 180.5919, cost time: 28.3569s
+epoch 198, loss: 184.1978, cost time: 31.5302s
+epoch 199, loss: 181.1837, cost time: 30.9091s
+epoch 200, loss: 174.6956, cost time: 29.0540s
+quick results: hits@[1, 5, 10, 50] = [82.637 91.394 92.652 94.363]%, time = 4.146 s 
+neighbors num 397
+finding neighbors for sampling costs time: 31.3555s
+epoch 201, loss: 189.7871, cost time: 30.0112s
+epoch 202, loss: 187.2496, cost time: 29.4301s
+epoch 203, loss: 188.0342, cost time: 30.0649s
+epoch 204, loss: 182.8531, cost time: 30.7341s
+epoch 205, loss: 182.7417, cost time: 29.7458s
+epoch 206, loss: 184.4115, cost time: 30.5276s
+epoch 207, loss: 180.1452, cost time: 30.6162s
+epoch 208, loss: 181.6245, cost time: 27.7452s
+epoch 209, loss: 181.8751, cost time: 29.2633s
+epoch 210, loss: 178.9248, cost time: 28.7602s
+quick results: hits@[1, 5, 10, 50] = [82.889 91.797 92.753 94.665]%, time = 4.530 s 
+neighbors num 397
+finding neighbors for sampling costs time: 31.6490s
+epoch 211, loss: 181.0139, cost time: 30.9265s
+epoch 212, loss: 184.7140, cost time: 30.1203s
+epoch 213, loss: 181.1267, cost time: 30.1846s
+epoch 214, loss: 179.5371, cost time: 30.7188s
+epoch 215, loss: 173.2280, cost time: 28.5903s
+epoch 216, loss: 183.6161, cost time: 28.7083s
+epoch 217, loss: 178.9680, cost time: 29.7499s
+epoch 218, loss: 175.7339, cost time: 28.7394s
+epoch 219, loss: 173.3440, cost time: 27.8682s
+epoch 220, loss: 172.1454, cost time: 30.3774s
+quick results: hits@[1, 5, 10, 50] = [82.386 91.696 92.753 94.665]%, time = 4.173 s 
+neighbors num 397
+finding neighbors for sampling costs time: 31.7725s
+epoch 221, loss: 177.2841, cost time: 29.7782s
+epoch 222, loss: 175.9720, cost time: 29.3225s
+epoch 223, loss: 177.4402, cost time: 28.8822s
+epoch 224, loss: 179.8575, cost time: 27.9752s
+epoch 225, loss: 177.8501, cost time: 28.0476s
+epoch 226, loss: 177.8373, cost time: 29.2326s
+epoch 227, loss: 172.0210, cost time: 28.9402s
+epoch 228, loss: 173.4222, cost time: 28.8576s
+epoch 229, loss: 176.3950, cost time: 30.2232s
+epoch 230, loss: 175.3218, cost time: 30.2603s
+quick results: hits@[1, 5, 10, 50] = [82.335 91.746 92.803 94.867]%, time = 3.651 s 
+
+ == should early stop == 
+
+
+ == training stop == 
+
+accurate results: hits@[1, 5, 10, 50] = [84.246 92.01  93.092 95.067]%, mr = 26.060, mrr = 0.879834, time = 8.049 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [85.567 93.696 94.74  96.779]%, mr = 13.503, mrr = 0.894508, time = 12.438 s 
+Results saved!
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg1_ent_ids saved.
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg2_ent_ids saved.
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg1_rel_ids saved.
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg2_rel_ids saved.
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg1_attr_ids saved.
+../../output/results/Paper/BigBasketProducts/AliNet/Gold-Gold/721_5fold/1/20231030135712/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 10335.360 s.

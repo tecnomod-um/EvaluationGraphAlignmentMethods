@@ -1,0 +1,39 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  mtdt: https://purl.org/ontologies/MT/data/
+  vocab: https://vocab.um.es/
+  um: https://data.um.es/
+
+sources:
+  bigbasket : ['processed_data.csv~csv']
+
+mappings:
+  salesProduct:
+    sources: bigbasket
+    s: mtdt:salesProduct_$(ProductName_idx)_$(Brand_idx)
+    po:
+      - [a, mt:sales_product]
+      - [mt:brandName, $(Brand), xsd:string]
+      - [mt:PRDName, $(ProductName), xsd:string]      
+  salesArticle:
+    sources: bigbasket
+    s: mtdt:salesArticle_$(Absolute_Url_idx)
+    po:
+      - [a, mt:SalesArticle]
+      - [mt:articleName, $(Absolute_Url), xsd:string]            
+      - p: mt:containsProduct
+        o:
+          mapping: salesProduct
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(ProductName_idx)_$(Brand_idx), s]
+              - [str2, $(ProductName_idx)_$(Brand_idx), o]

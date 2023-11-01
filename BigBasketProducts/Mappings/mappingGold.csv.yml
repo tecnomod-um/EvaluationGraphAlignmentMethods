@@ -16,13 +16,13 @@ sources:
 mappings:
   category:
     sources: bigbasket
-    s: bbpdt:category_$(Category_pro)
+    s: bbpdt:category_$(Category_idx)
     po:
       - [a, bbp:Category]
       - [bbp:categoryName, $(Category), xsd:string]
   subcategory:
     sources: bigbasket
-    s: bbpdt:subcategory_$(SubCategory_pro)
+    s: bbpdt:subcategory_$(SubCategory_idx)
     po:
       - [a, bbp:SubCategory]
       - [bbp:subCategoryName, $(SubCategory) , xsd:string]
@@ -36,23 +36,23 @@ mappings:
               - [str2, $(Category), o]
   product:
     sources: bigbasket
-    s: bbpdt:product_$(ProductName_Brand_pro)
+    s: bbpdt:product_$(ProductName_idx)_$(Brand_idx)
     po:
       - [a, bbp:Product]
       - [bbp:productName, $(ProductName), xsd:string]
       - [bbp:brandName, $(Brand), xsd:string]
   salesSpecification:
     sources: bigbasket
-    s: bbpdt:salesSpecification_$(Price_DiscountPrice_pro)
+    s: bbpdt:salesSpecification_$(Price_idx)_$(DiscountPrice_idx)
     po:
       - [a, bbp:SalesSpecification]
       - [bbp:priceArticle, $(Price), xsd:double]
       - [bbp:discount_price, $(DiscountPrice), xsd:double]
-  salesProduct:
-    sources:
-    s: $(Absolute_Url)
+  salesArticle:
+    sources: bigbasket
+    s: bbpdt:salesArticle_$(Absolute_Url_idx)
     po:
-      - [a, bbp:salesArticle]
+      - [a, bbp:SalesArticle]
       - [bbp:image, $(Image_Url), xsd:anyURI]
       - [bbp:productQuantity, $(Quantity), xsd:string]
       - [bbp:url, $(Absolute_Url), xsd:anyURI]    
@@ -70,14 +70,14 @@ mappings:
           condition:
             function: equal
             parameters:
-              - [str1, $(ProductName_Brand_pro), s]
-              - [str2, $(ProductName_Brand_pro), o]
+              - [str1, $(ProductName)_$(Brand), s]
+              - [str2, $(ProductName)_$(Brand), o]
       - p: bbp:hasSalesSpecification
         o:
           mapping: salesSpecification
           condition:
             function: equal
             parameters:
-              - [str1, $(Price_DiscountPrice_pro), s]
-              - [str2, $(Price_DiscountPrice_pro), o]
+              - [str1, $(Price)_$(DiscountPrice), s]
+              - [str2, $(Price)_$(DiscountPrice), o]
     
