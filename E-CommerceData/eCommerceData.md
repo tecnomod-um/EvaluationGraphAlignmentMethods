@@ -390,7 +390,7 @@
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time |Invoice (#/%)|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[375](./Experiments/EntityAlignment/Basic-LLM/Output/AlignE/1/nohup_basic-LLM_aligne.txt)|0.00|0.53 |2.13 |177|0.0.01|617|0 (0.0%)|
+|AlignE|1|[375](./Experiments/EntityAlignment/Basic-LLM/Output/AlignE/1/nohup_basic-LLM_aligne.txt)|0.00|0.53 |2.13 |177|0.01|617|0 (0.0%)|
 |AliNet|1|[375](./Experiments/EntityAlignment/Basic-LLM/Output/AliNet/1/nohup_basic-LLM_alinet.txt)|E|r|r|o|r|||
 |AttrE|1|[375](./Experiments/EntityAlignment/Basic-LLM/Output/AttrE/1/nohup_basic-LLM_attre.txt)|8.00|22.93|35.73|44|0.17|761|6 (1.60)|
 |BootEA|1|[375](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA/1/nohup_basic-LLM_bootea.txt)|0.27|2.13 |3.73|182|0.02|641|0 (0.0%)|
@@ -463,7 +463,11 @@
 
 ## Results
 
-![Graph E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Graph E-Commerce Data")
+![Boxplot Datasets E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets E-Commerce Data")
+
+![Heatmap E-Commerce Data](./Figures/heatmapApproaches.png "Heatmap E-Commerce Data")
+
+![Boxplot Approaches E-Commerce Data](./Figures/boxplotApproaches.png "Boxplot Approaches E-Commerce Data")
 
 ## Metrics
 
