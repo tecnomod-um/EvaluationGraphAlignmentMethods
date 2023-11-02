@@ -386,7 +386,7 @@
 |:-:|:-:|:-:|:-:|
 |[1](./Experiments/EntityAlignment/Basic-LLM/Input/451_1fold/1/)|469|375|94|
 
-### [Output](./Experiments/EntityAlignment/Basic-Basic/Output/)
+### [Output](./Experiments/EntityAlignment/Basic-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time |Invoice (#/%)|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -460,6 +460,10 @@
 |TransD|1|[7770](./Experiments/EntityAlignment/Materials-LLM/Output/TransD/1/nohup_materials-llm_transd.txt)|15.86|47.58|59.83|432|0.30|5643|0 (0.0%)|
 |TransH|1|[7770](./Experiments/EntityAlignment/Materials-LLM/Output/TransH/1/nohup_materials-llm_transh.txt)|16.62|45.48|56.81|455|0.29|4411|0 (0.0%)|
 |TransR|1|[7770](./Experiments/EntityAlignment/Materials-LLM/Output/TransR/1/nohup_materials-llm_transr.txt)|0.10|0.44|0.80|2359|0.01|4226|0 (0.0%)|
+
+## Results
+
+![Graph E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Graph E-Commerce Data")
 
 ## Metrics
 
