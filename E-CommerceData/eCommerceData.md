@@ -471,6 +471,10 @@
 
 ![BarChart Comparisons Approaches E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Approaches E-Commerce Data")
 
+![Heatmap Datasets E-Commerce Data](./Figures/heatmapDataset.png "Heatmap Datasets E-Commerce Data")
+
+![Heatmap Datasets AttrE-BootEA E-Commerce Data](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA E-Commerce Data")
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
