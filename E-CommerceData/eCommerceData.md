@@ -469,6 +469,8 @@
 
 ![Boxplot Approaches E-Commerce Data](./Figures/boxplotApproaches.png "Boxplot Approaches E-Commerce Data")
 
+![BarChart Comparisons Approaches E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Approaches E-Commerce Data")
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
