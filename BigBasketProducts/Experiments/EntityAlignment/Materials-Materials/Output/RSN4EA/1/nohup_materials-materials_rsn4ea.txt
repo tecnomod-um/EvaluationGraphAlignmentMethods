@@ -1,0 +1,113 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BigBasketProducts/', 'dataset_division': '721_5fold', 'embedding_module': 'RSN4EA', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'hidden_size': 100, 'num_layers': 2, 'num_samples': 10240, 'keep_prob': 0.6, 'max_length': 15, 'alpha': 0.7, 'beta': 0.7, 'learning_rate': 0.0005, 'optimizer': 'Adagrad', 'max_epoch': 30, 'batch_size': 512, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 1, 'eval_freq': 3, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False}
+RSN4EA
+<openea.modules.args.args_hander.ARGs object at 0x7fabddf67780>
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials//721_5fold/1/test_links
+before removing unlinked triples: 23258
+after removing unlinked triples: 8208
+before removing unlinked triples: 23258
+after removing unlinked triples: 8208
+Number of rt_dict: 8208
+Number of hr_dict: 6842
+entity relations dict: 8208
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15050
+Number of relations: 1
+Number of attributes: 3
+Number of relation triples: 8208
+Number of attribute triples: 21892
+Number of local relation triples: 8208
+Number of local attribute triples: 21892
+
+Number of rt_dict: 8208
+Number of hr_dict: 6842
+entity relations dict: 8208
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15050
+Number of relations: 1
+Number of attributes: 3
+Number of relation triples: 8208
+Number of attribute triples: 21892
+Number of local relation triples: 8208
+Number of local attribute triples: 21892
+
+Number of rt_dict: 8208
+Number of hr_dict: 6842
+entity relations dict: 8208
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15050
+Number of relations: 1
+Number of attributes: 3
+Number of relation triples: 8208
+Number of attribute triples: 21892
+Number of local relation triples: 8208
+Number of local attribute triples: 21892
+
+Number of rt_dict: 8208
+Number of hr_dict: 6842
+entity relations dict: 8208
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15050
+Number of relations: 1
+Number of attributes: 3
+Number of relation triples: 8208
+Number of attribute triples: 21892
+Number of local relation triples: 8208
+Number of local attribute triples: 21892
+
+../../output/results/Paper/BigBasketProducts/ ../../datasets/Ontologies/Paper/BigBasketProducts/Materials-Materials// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BigBasketProducts', 'Materials-Materials'] 721_5fold/1/ RSN4EA
+results output folder: ../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/
+hrt rt_x 148024 148024
+148024 148024
+148024 148024
+148024 148024
+148024 148024
+148024 148024
+epoch 1, avg. batch_loss: 37808.506387,  cost time: 555.3409 s
+epoch 2, avg. batch_loss: 9244.591472,  cost time: 458.6774 s
+epoch 3, avg. batch_loss: 229.323932,  cost time: 401.0931 s
+quick results: hits@[1, 5, 10, 50] = [0.066 0.997 1.728 5.781]%, time = 4.192 s 
+epoch 4, avg. batch_loss: 29.255954,  cost time: 337.5911 s
+epoch 5, avg. batch_loss: 16.491477,  cost time: 303.4539 s
+epoch 6, avg. batch_loss: 11.178416,  cost time: 282.6402 s
+quick results: hits@[1, 5, 10, 50] = [52.89  56.478 56.545 57.076]%, time = 2.898 s 
+epoch 7, avg. batch_loss: 9.331126,  cost time: 225.7639 s
+epoch 8, avg. batch_loss: 8.533208,  cost time: 225.3877 s
+epoch 9, avg. batch_loss: 8.163924,  cost time: 218.8409 s
+quick results: hits@[1, 5, 10, 50] = [51.894 55.548 56.013 56.744]%, time = 2.979 s 
+epoch 10, avg. batch_loss: 7.925791,  cost time: 178.1346 s
+epoch 11, avg. batch_loss: 7.781309,  cost time: 146.3940 s
+epoch 12, avg. batch_loss: 7.581256,  cost time: 139.0748 s
+quick results: hits@[1, 5, 10, 50] = [50.698 53.754 54.817 56.279]%, time = 2.273 s 
+
+ == should early stop == 
+
+Training ends. Total time = 3492.529 s.
+accurate results: hits@[1, 5, 10, 50] = [50.864 55.116 55.764 57.458]%, mr = 1243.873, mrr = 0.528851, time = 3.635 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [52.492 56.512 56.927 57.907]%, mr = 1304.712, mrr = 0.544422, time = 5.224 s 
+Results saved!
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg1_ent_ids saved.
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg2_ent_ids saved.
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg1_rel_ids saved.
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg2_rel_ids saved.
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg1_attr_ids saved.
+../../output/results/Paper/BigBasketProducts/RSN4EA/Materials-Materials/721_5fold/1/20231031120422/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 4963.810 s.

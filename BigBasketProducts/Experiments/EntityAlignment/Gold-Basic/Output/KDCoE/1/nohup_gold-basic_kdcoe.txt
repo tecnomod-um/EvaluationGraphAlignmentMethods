@@ -1,0 +1,124 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BigBasketProducts/', 'dataset_division': '721_5fold', 'embedding_module': 'KDCoE', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'unit', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'margin': 1.5, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'alpha': 5, 'new_param': 0.1, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True, 'desc_batch_size': 512, 'wv_dim': 300, 'default_desc_length': 4, 'word_embed': '../../datasets/wiki-news-300d-1M.vec', 'desc_sim_th': 0.95, 'sim_th': 0.8, 'max_iter': 5}
+KDCoE
+<openea.modules.args.args_hander.ARGs object at 0x7f0e4dd4e860>
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic//721_5fold/1/test_links
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 8208
+Number of hr_dict: 1
+entity relations dict: 8208
+Number of av_dict: 8208
+entity attributes dict: 8208
+
+KG statistics:
+Number of entities: 8209
+Number of relations: 1
+Number of attributes: 9
+Number of relation triples: 8208
+Number of attribute triples: 73872
+Number of local relation triples: 8208
+Number of local attribute triples: 73872
+
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 8208
+Number of hr_dict: 1
+entity relations dict: 8208
+Number of av_dict: 8208
+entity attributes dict: 8208
+
+KG statistics:
+Number of entities: 8209
+Number of relations: 1
+Number of attributes: 9
+Number of relation triples: 8208
+Number of attribute triples: 73872
+Number of local relation triples: 8208
+Number of local attribute triples: 73872
+
+../../output/results/Paper/BigBasketProducts/ ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Basic// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BigBasketProducts', 'Gold-Basic'] 721_5fold/1/ KDCoE
+results output folder: ../../output/results/Paper/BigBasketProducts/KDCoE/Gold-Basic/721_5fold/1/20231031194136/
+aligned dict 8208
+kg1 descriptions: 0
+kg2 descriptions: 0
+after drop_duplicates, kg1 descriptions: 0
+after drop_duplicates, kg2 descriptions: 0
+kg1 entities having descriptions: 0
+kg2 entities having descriptions: 0
+concat word embeddings
+convert words to ids
+look up desc embeddings
+generating desc input costs time: 1264.2743s
+epoch 1, avg. desc loss: 2837.5941, cost time: 14.8588s
+epoch 2, avg. desc loss: 2837.3307, cost time: 7.6458s
+epoch 3, avg. desc loss: 2837.2490, cost time: 7.7629s
+epoch 4, avg. desc loss: 2836.9883, cost time: 7.1947s
+epoch 5, avg. desc loss: 2837.0457, cost time: 6.7041s
+epoch 6, avg. desc loss: 2836.8786, cost time: 7.2619s
+epoch 7, avg. desc loss: 2836.7585, cost time: 6.8841s
+epoch 8, avg. desc loss: 2836.6169, cost time: 7.3038s
+epoch 9, avg. desc loss: 2836.5471, cost time: 6.9123s
+epoch 10, avg. desc loss: 2836.5390, cost time: 6.0973s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [100. 100. 100. 100.]%, time = 17.017 s 
+epoch 11, avg. desc loss: 2836.3905, cost time: 6.6572s
+epoch 12, avg. desc loss: 2836.4085, cost time: 7.4605s
+epoch 13, avg. desc loss: 2836.3093, cost time: 6.8006s
+epoch 14, avg. desc loss: 2836.3223, cost time: 6.8186s
+epoch 15, avg. desc loss: 2836.2936, cost time: 6.3906s
+epoch 16, avg. desc loss: 2836.2400, cost time: 6.7158s
+epoch 17, avg. desc loss: 2836.1835, cost time: 6.0941s
+epoch 18, avg. desc loss: 2836.1757, cost time: 6.9186s
+epoch 19, avg. desc loss: 2836.2109, cost time: 6.1253s
+epoch 20, avg. desc loss: 2836.1905, cost time: 6.6139s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [100. 100. 100. 100.]%, time = 9.097 s 
+epoch 21, avg. desc loss: 2836.1840, cost time: 6.7364s
+epoch 22, avg. desc loss: 2836.1442, cost time: 6.3884s
+epoch 23, avg. desc loss: 2836.1419, cost time: 6.1356s
+epoch 24, avg. desc loss: 2836.1323, cost time: 6.3133s
+epoch 25, avg. desc loss: 2836.1358, cost time: 6.5802s
+epoch 26, avg. desc loss: 2836.1502, cost time: 6.7217s
+epoch 27, avg. desc loss: 2836.1443, cost time: 6.3956s
+epoch 28, avg. desc loss: 2836.1110, cost time: 6.4058s
+epoch 29, avg. desc loss: 2836.1278, cost time: 6.7359s
+epoch 30, avg. desc loss: 2836.1256, cost time: 5.9984s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [100. 100. 100. 100.]%, time = 8.931 s 
+
+ == should early stop == 
+
+sim th 0.95 0.8
+find new alignment based on description embeddings:
