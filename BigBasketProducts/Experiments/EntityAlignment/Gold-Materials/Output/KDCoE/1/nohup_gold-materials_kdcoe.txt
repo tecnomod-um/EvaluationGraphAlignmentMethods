@@ -1,0 +1,124 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BigBasketProducts/', 'dataset_division': '721_5fold', 'embedding_module': 'KDCoE', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'unit', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'margin': 1.5, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'alpha': 5, 'new_param': 0.1, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True, 'desc_batch_size': 512, 'wv_dim': 300, 'default_desc_length': 4, 'word_embed': '../../datasets/wiki-news-300d-1M.vec', 'desc_sim_th': 0.95, 'sim_th': 0.8, 'max_iter': 5}
+KDCoE
+<openea.modules.args.args_hander.ARGs object at 0x7f9502dd7860>
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials//721_5fold/1/test_links
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 15050
+Number of hr_dict: 6844
+entity relations dict: 15050
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15052
+Number of relations: 2
+Number of attributes: 3
+Number of relation triples: 23258
+Number of attribute triples: 21892
+Number of local relation triples: 23258
+Number of local attribute triples: 21892
+
+Number of rt_dict: 19867
+Number of hr_dict: 11664
+entity relations dict: 19867
+Number of av_dict: 19867
+entity attributes dict: 19867
+
+KG statistics:
+Number of entities: 19872
+Number of relations: 5
+Number of attributes: 9
+Number of relation triples: 44825
+Number of attribute triples: 47597
+Number of local relation triples: 44825
+Number of local attribute triples: 47597
+
+Number of rt_dict: 15050
+Number of hr_dict: 6844
+entity relations dict: 15050
+Number of av_dict: 15050
+entity attributes dict: 15050
+
+KG statistics:
+Number of entities: 15052
+Number of relations: 2
+Number of attributes: 3
+Number of relation triples: 23258
+Number of attribute triples: 21892
+Number of local relation triples: 23258
+Number of local attribute triples: 21892
+
+../../output/results/Paper/BigBasketProducts/ ../../datasets/Ontologies/Paper/BigBasketProducts/Gold-Materials// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BigBasketProducts', 'Gold-Materials'] 721_5fold/1/ KDCoE
+results output folder: ../../output/results/Paper/BigBasketProducts/KDCoE/Gold-Materials/721_5fold/1/20231101203036/
+aligned dict 15050
+kg1 descriptions: 0
+kg2 descriptions: 0
+after drop_duplicates, kg1 descriptions: 0
+after drop_duplicates, kg2 descriptions: 0
+kg1 entities having descriptions: 0
+kg2 entities having descriptions: 0
+concat word embeddings
+convert words to ids
+look up desc embeddings
+generating desc input costs time: 1855.3109s
+epoch 1, avg. desc loss: 4969.2849, cost time: 29.5103s
+epoch 2, avg. desc loss: 4969.2184, cost time: 15.8893s
+epoch 3, avg. desc loss: 4968.9426, cost time: 16.9248s
+epoch 4, avg. desc loss: 4967.6338, cost time: 17.1926s
+epoch 5, avg. desc loss: 4964.8278, cost time: 16.2101s
+epoch 6, avg. desc loss: 4963.7652, cost time: 16.6914s
+epoch 7, avg. desc loss: 4963.4642, cost time: 16.8539s
+epoch 8, avg. desc loss: 4963.3237, cost time: 17.2046s
+epoch 9, avg. desc loss: 4963.2560, cost time: 15.8354s
+epoch 10, avg. desc loss: 4963.2351, cost time: 15.9960s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [74.286 74.419 74.751 77.475]%, time = 18.173 s 
+epoch 11, avg. desc loss: 4963.2071, cost time: 16.8210s
+epoch 12, avg. desc loss: 4963.1996, cost time: 16.2264s
+epoch 13, avg. desc loss: 4963.1960, cost time: 16.6627s
+epoch 14, avg. desc loss: 4963.1846, cost time: 15.9835s
+epoch 15, avg. desc loss: 4963.1908, cost time: 16.2996s
+epoch 16, avg. desc loss: 4963.1815, cost time: 13.5735s
+epoch 17, avg. desc loss: 4963.1825, cost time: 15.7595s
+epoch 18, avg. desc loss: 4963.1780, cost time: 14.5089s
+epoch 19, avg. desc loss: 4963.1842, cost time: 15.0865s
+epoch 20, avg. desc loss: 4963.1813, cost time: 14.6929s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [74.286 74.551 74.884 77.542]%, time = 16.059 s 
+epoch 21, avg. desc loss: 4963.1821, cost time: 14.6659s
+epoch 22, avg. desc loss: 4963.1798, cost time: 13.8087s
+epoch 23, avg. desc loss: 4963.1856, cost time: 14.5372s
+epoch 24, avg. desc loss: 4963.1753, cost time: 14.6900s
+epoch 25, avg. desc loss: 4963.1767, cost time: 14.1227s
+epoch 26, avg. desc loss: 4963.1793, cost time: 14.5180s
+epoch 27, avg. desc loss: 4963.1853, cost time: 14.9494s
+epoch 28, avg. desc loss: 4963.1750, cost time: 15.1865s
+epoch 29, avg. desc loss: 4963.1818, cost time: 14.9382s
+epoch 30, avg. desc loss: 4963.1809, cost time: 14.9760s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [74.286 74.551 74.884 77.542]%, time = 13.977 s 
+
+ == should early stop == 
+
+sim th 0.95 0.8
+find new alignment based on description embeddings:
