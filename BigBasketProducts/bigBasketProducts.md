@@ -231,7 +231,7 @@
 |Conve|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/ConvE/1/error_output_materials-materials_conve.txt)|E|r|r|o|r|||
 |GCN_Align|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/GCN_Align/1/nohup_materials-materials_gcnalign.txt)|53.80|57.39 |57.48|426|0.56|737|0 (0.0%)|
 |GMNN|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/GMNN/1/nohup_materials-materials_gmnn.txt)|100|100|100|1|1.00|31870||
-|HolE|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/HolE/1/nohup_materials-materials_hole.txt)|33.07|43.24 |45.86|9180|0.38|9180|0 (0.0%)|
+|HolE|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/HolE/1/nohup_materials-materials_hole.txt)|33.07|43.24 |45.86|977|0.38|9180|0 (0.0%)|
 |IMUSE|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/IMUSE/1/nohup_materials-materials_imuse.txt)|64.68|88.12 |88.94|152|0.75|888|0 (0.0%)|
 |IPTransE|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/IPTransE/1/error_output_materials-materials_iptranse.txt)|E|r|r|o|r|||
 |JAPE|1|[6020](./Experiments/EntityAlignment/Materials-Materials/Output/JAPE/1/error_output_materials-materials_jape.txt)|E|r|r|o|r|||
@@ -404,31 +404,31 @@
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesProduct (#/%) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AlignE/1/nohup_gold-basic_aligne.txt)|0.06|0.15 |0.27 |1665|0.00|2139|0 (0.0%)|
-|AliNet|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AliNet/1/error_output_gold-basic_alinet.txt)|E|r|r|o|r|||
-|AttrE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AttrE/1/nohup_gold-basic_attre.txt)|86.05|99.30|99.97|1|0.92|5238|0 (1.60)|
-|BootEA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA/1/nohup_gold-basic_bootea.txt)|0.00|0.09 |0.18 |1638|0.00|2160|0 (0.0%)|
-|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_RotatE/1/nohup_gold-basic_bootea_rotate.txt)|0.03|0.18|0.37 |1653|0.00|5720|0 (0.0%)|
-|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_TransH/1/error_output_gold-basic_bootea_transh.txt)|E|r|r|o|r|||
-|Conve|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/ConvE/1/error_output_gold-basic_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/GCN_Align/1/nohup_gold-basic_gcnalign.txt)|0.00|0.09 |0.21|1647|0.00|269|0 (0.0%)|
-|GMNN|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/GMNN/1/nohup_gold-basic_gmnn.txt)|100|100 |100|1|1.00|19927|0 (0.0%)|
-|HolE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/HolE/1/nohup_gold-basic_hole.txt)|0.03|0.06 |0.18|1631|0.00|3975|0 (0.0%)|
-|IMUSE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/IMUSE/1/nohup_gold-basic_imuse.txt)|50.26|57.14 |59.52|466|0.54|609|0 (0.0%)|
-|IPTransE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/IPTransE/1/error_output_gold-basic_iptranse.txt)|E|r|r|o|r|||
-|JAPE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/JAPE/1/nohup_gold-basic_jape.txt)|0.03|0.12 |0.24|1646|0.00|1057|0 (0.0%)|
-|KDCoE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/KDCoE/1/error_output_gold-basic_kdcoe.txt)|E|r|r|o|r|||
-|MTransE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/MTransE/1/nohup_gold-basic_mtranse.txt)|0.03|0.34 |0.43|1642|0.00|471|0 (0.0%)|
-|MultiKE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/MultiKE/1/error_output_gold-basic_multike.txt)|E|r|r|o|r|||
-|ProjE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/ProjE/1/nohup_gold-basic_proje.txt)|0.00|0.09 |0.27|1637|0.00|3045|0 (0.0%)|
-|RDGCN|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RDGCN/1/nohup_gold-basic_rdgcn.txt)|100|100 |100|1|1.00|4100|0 (0.0%)|
-|RotatE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RotatE/1/nohup_gold-basic_rotate.txt)|0.00|0.12 |0.21|1615|0.00|1227|0 (0.0%)|
-|RSN4EA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RSN4EA/1/error_output_gold-basic_rsn4ea.txt)|E|r|r|o|r|||
-|SEA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/SEA/1/nohup_gold-basic_sea.txt)|0.12|0.27 |0.37|1641|0.00|218|0 (0.0%)|
-|SimplE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/SimplE/1/nohup_gold-basic_simple.txt)|0.12|0.21|0.31|1646|0.00|199|0 (0.0%)|
-|TransD|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransD/1/nohup_gold-basic_transd.txt)|0.06|0.27|0.61|1597|0.00|552|0 (0.0%)|
-|TransH|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransH/1/nohup_gold-basic_transh.txt)|0.09|0.18|0.31|1612|0.00|488|0 (0.0%)|
-|TransR|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransR/1/nohup_gold-basic_transr.txt)|0.12|0.21|0.31|1639|0.00|1899|0 (0.0%)|
+|AlignE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/AlignE/1/nohup_basic-llm_aligne.txt)|0.00|0.15 |0.21 |1615|0.00|1440|0 (0.0%)|
+|AliNet|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/AliNet/1/error_output_basic-llm_alinet.txt)|E|r|r|o|r|||
+|AttrE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/AttrE/1/nohup_basic-llm_attre.txt)|65.58|91.44|96.01|3|0.77|7274|0 (1.60)|
+|BootEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA/1/nohup_basic-llm_bootea.txt)|0.06|0.09 |0.27 |1626|0.00|1542|0 (0.0%)|
+|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_RotatE/1/nohup_basic-llm_bootea_rotate.txt)|0.09|0.15|0.21 |1634|0.00|4240|0 (0.0%)|
+|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_TransH/1/error_output_basic-llm_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ConvE/1/error_output_basic-llm_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.03|0.15 |0.21|1645|0.00|227|0 (0.0%)|
+|GMNN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GMNN/1/nohup_basic-llm_gmnn.txt)|4.87|14.41 |23.61|36|0.12|44822|0 (0.0%)|
+|HolE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/HolE/1/nohup_basic-llm_hole.txt)|0.00|0.12 |0.27|1646|0.00|2135|0 (0.0%)|
+|IMUSE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IMUSE/1/nohup_basic-llm_imuse.txt)|28.30|32.38 |32.59|1112|0.30|393|0 (0.0%)|
+|IPTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IPTransE/1/error_output_basic-llm_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/JAPE/1/nohup_basic-llm_jape.txt)|0.06|0.21 |0.40|1651|0.00|1089|0 (0.0%)|
+|KDCoE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/KDCoE/1/error_output_basic-llm_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MTransE/1/nohup_basic-llm_mtranse.txt)|0.06|0.18 |0.27|1642|0.00|295|0 (0.0%)|
+|MultiKE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MultiKE/1/error_output_basic-llm_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ProjE/1/nohup_basic-llm_proje.txt)|0.00|0.12 |0.18|1668|0.00|1765|0 (0.0%)|
+|RDGCN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RDGCN/1/nohup_basic-llm_rdgcn.txt)|2.44|5.51|7.22|1448|0.04|6480|0 (0.0%)|
+|RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RotatE/1/nohup_basic-llm_rotate.txt)|0.06|0.21 |0.31|1650|0.00|2083|0 (0.0%)|
+|RSN4EA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RSN4EA/1/error_output_basic-llm_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SEA/1/nohup_basic-llm_sea.txt)|0.00|0.09 |0.34|1612|0.00|132|0 (0.0%)|
+|SimplE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SimplE/1/nohup_basic-llm_simple.txt)|0.00|0.09|0.31|1643|0.00|154|0 (0.0%)|
+|TransD|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransD/1/nohup_basic-llm_transd.txt)|0.00|0.15|0.24|1658|0.00|332|0 (0.0%)|
+|TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransH/1/nohup_basic-llm_transh.txt)|0.00|0.27|0.43|1638|0.00|330|0 (0.0%)|
+|TransR|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransR/1/nohup_basic-llm_transr.txt)|0.00|0.03|0.24|1642|0.00|1026|0 (0.0%)|
 
 ## [Basic - Materials](./Experiments/EntityAlignment/Basic-Materials/)
 
@@ -445,6 +445,36 @@
 |:-:|:-:|:-:|:-:|
 |[1](./Experiments/EntityAlignment/Basic-Materials/Input/451_1fold/1/)|4104|3283|821|
 
+### [Output](./Experiments/EntityAlignment/Basic-Materials/Output/)
+
+|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesProduct (#/%) |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|AlignE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/AlignE/1/nohup_basic-materials_aligne.txt)|0.00|0.18 |0.46 |1651|0.00|1014|0 (0.0%)|
+|AliNet|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/AliNet/1/error_output_basic-materials_alinet.txt)|E|r|r|o|r|||
+|AttrE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/AttrE/1/nohup_basic-materials_attre.txt)|2.28|7.04|11.36|372|0.05|1259|0 (1.60)|
+|BootEA|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/BootEA/1/nohup_basic-materials_bootea.txt)|0.03|0.18 |0.40 |1645|0.00|1098|0 (0.0%)|
+|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/BootEA_RotatE/1/nohup_basic-materials_bootea_rotate.txt)|0.03|0.21|0.31 |1644|0.00|2625|0 (0.0%)|
+|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/BootEA_TransH/1/error_output_basic-materials_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/ConvE/1/error_output_basic-materials_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/GCN_Align/1/nohup_basic-materials_gcnalign.txt)|0.00|0.12 |0.27|1629|0.00|188|0 (0.0%)|
+|GMNN|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/GMNN/1/nohup_basic-materials_gmnn.txt)|100|100 |100|1|1.00|44609|0 (0.0%)|
+|HolE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/HolE/1/nohup_basic-materials_hole.txt)|0.00|0.12 |0.18|1625|0.00|1614|0 (0.0%)|
+|IMUSE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/IMUSE/1/)|8.22|9.72 |9.96|1443|0.09|341|0 (0.0%)|
+|IPTransE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/IPTransE/1/error_output_basic-materials_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/JAPE/1/nohup_basic-materials_jape.txt)|0.03|0.12 |0.37|1647|0.00|1089|0 (0.0%)|
+|KDCoE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/KDCoE/1/error_output_basic-materials_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/MTransE/1/nohup_basic-materials_mtranse.txt)|0.00|0.06 |0.12|1657|0.00|270|0 (0.0%)|
+|MultiKE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/MultiKE/1/error_output_basic-materials_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/ProjE/1/nohup_basic-materials_proje.txt)|0.18|0.27 |0.34|1659|0.00|1343|0 (0.0%)|
+|RDGCN|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/RDGCN/1/nohup_basic-materials_rdgcn.txt)|99.94|99.94|99.94|1|1.00|2248|0 (0.0%)|
+|RotatE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/RotatE/1/nohup_basic-materials_rotate.txt)|0.09|0.27 |0.43|1638|0.00|1532|0 (0.0%)|
+|RSN4EA|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/RSN4EA/1/error_output_basic-materials_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/SEA/1/nohup_basic-materials_sea.txt)|0.00|0.15 |0.31|1653|0.00|143|0 (0.0%)|
+|SimplE|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/SimplE/1/nohup_basic-materials_simple.txt)|0.00|0.12|0.31|1635|0.00|129|0 (0.0%)|
+|TransD|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/TransD/1/nohup_basic-materials_transd.txt)|0.03|0.12|0.34|1663|0.00|334|0 (0.0%)|
+|TransH|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/TransH/1/nohup_basic-materials_transh.txt)|0.00|0.15|0.27|1642|0.00|291|0 (0.0%)|
+|TransR|1|[3283](./Experiments/EntityAlignment/Basic-Materials/Output/TransR/1/nohup_basic-materials_transr.txt)|0.03|0.12|0.24|1655|0.00|822|0 (0.0%)|
+
 ## [Materials - LLM](./Experiments/EntityAlignment/Materials-LLM/)
 
 ![Graph Materials-LLM](./Figures/bigBasketProducts-Materials-LLM.png "Graph Materials-LLM")
@@ -459,6 +489,51 @@
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
 |[1](./Experiments/EntityAlignment/Materials-LLM/Input/451_1fold/1/)|4104|3283|821|
+
+### [Output](./Experiments/EntityAlignment/Materials-LLM/)
+
+|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|AlignE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AlignE/1/nohup_materials-llm_aligne.txt)|14.38|18.31 |18.31 |1459|0.16|4105|0 (0.0%)|
+|AliNet|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AliNet/1/error_output_materials-llm_alinet.txt)|E|r|r|o|r|||
+|AttrE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AttrE/1/error_output_materials-llm_attre.txt)|E|r|r|o|r|||
+|BootEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA/1/nohup_basic-llm_bootea.txt)|0.06|0.09 |0.27 |1626|0.00|1542|0 (0.0%)|
+|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_RotatE/1/nohup_basic-llm_bootea_rotate.txt)|0.09|0.15|0.21 |1634|0.00|4240|0 (0.0%)|
+|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_TransH/1/error_output_basic-llm_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ConvE/1/error_output_basic-llm_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.03|0.15 |0.21|1645|0.00|227|0 (0.0%)|
+|GMNN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GMNN/1/nohup_basic-llm_gmnn.txt)|4.87|14.41 |23.61|36|0.12|44822|0 (0.0%)|
+|HolE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/HolE/1/nohup_basic-llm_hole.txt)|0.00|0.12 |0.27|1646|0.00|2135|0 (0.0%)|
+|IMUSE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IMUSE/1/nohup_basic-llm_imuse.txt)|28.30|32.38 |32.59|1112|0.30|393|0 (0.0%)|
+|IPTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IPTransE/1/error_output_basic-llm_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/JAPE/1/nohup_basic-llm_jape.txt)|0.06|0.21 |0.40|1651|0.00|1089|0 (0.0%)|
+|KDCoE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/KDCoE/1/error_output_basic-llm_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MTransE/1/nohup_basic-llm_mtranse.txt)|0.06|0.18 |0.27|1642|0.00|295|0 (0.0%)|
+|MultiKE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MultiKE/1/error_output_basic-llm_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ProjE/1/nohup_basic-llm_proje.txt)|0.00|0.12 |0.18|1668|0.00|1765|0 (0.0%)|
+|RDGCN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RDGCN/1/nohup_basic-llm_rdgcn.txt)|2.44|5.51|7.22|1448|0.04|6480|0 (0.0%)|
+|RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RotatE/1/nohup_basic-llm_rotate.txt)|0.06|0.21 |0.31|1650|0.00|2083|0 (0.0%)|
+|RSN4EA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RSN4EA/1/error_output_basic-llm_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SEA/1/nohup_basic-llm_sea.txt)|0.00|0.09 |0.34|1612|0.00|132|0 (0.0%)|
+|SimplE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SimplE/1/nohup_basic-llm_simple.txt)|0.00|0.09|0.31|1643|0.00|154|0 (0.0%)|
+|TransD|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransD/1/nohup_basic-llm_transd.txt)|0.00|0.15|0.24|1658|0.00|332|0 (0.0%)|
+|TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransH/1/nohup_basic-llm_transh.txt)|0.00|0.27|0.43|1638|0.00|330|0 (0.0%)|
+|TransR|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransR/1/nohup_basic-llm_transr.txt)|0.00|0.03|0.24|1642|0.00|1026|0 (0.0%)|
+
+## Results
+
+![Boxplot Datasets BigBasket Products](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets BigBasket Products")
+
+![Heatmap BigBasket Products](./Figures/heatmapApproaches.png "Heatmap BigBasket Products")
+
+![Boxplot Approaches BigBasket Products](./Figures/boxplotApproaches.png "Boxplot Approaches BigBasket Products")
+
+![BarChart Comparisons Approaches BigBasket Products](./Figures/barComparison.png "BarChart Comparisons Approaches BigBasket Products")
+
+![Heatmap Datasets BigBasket Products](./Figures/heatmapDataset.png "Heatmap Datasets BigBasket Products")
+
+![Heatmap Datasets AttrE-BootEA BigBasket Products](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA BigBasket Products")
+
 
 ## Metrics
 
