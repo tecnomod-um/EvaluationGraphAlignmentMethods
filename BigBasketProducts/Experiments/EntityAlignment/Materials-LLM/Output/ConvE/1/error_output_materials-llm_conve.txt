@@ -1,6 +1,6 @@
-2023-11-04 19:43:58.603784: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
-2023-11-04 19:43:58.843916: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
-2023-11-04 19:43:58.844068: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:150] kernel driver does not appear to be running on this host (semantics.inf.um.es): /proc/driver/nvidia/version does not exist
+2023-11-06 18:18:15.239945: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2023-11-06 18:18:15.885215: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2023-11-06 18:18:15.885351: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:150] kernel driver does not appear to be running on this host (semantics.inf.um.es): /proc/driver/nvidia/version does not exist
 /home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
 /home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
@@ -13,7 +13,7 @@
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-2023-11-04 19:44:05.816246: E tensorflow/core/common_runtime/executor.cc:623] Executor failed to create kernel. Invalid argument: Conv2DCustomBackpropInputOp only supports NHWC.
+2023-11-06 18:18:32.082317: E tensorflow/core/common_runtime/executor.cc:623] Executor failed to create kernel. Invalid argument: Conv2DCustomBackpropInputOp only supports NHWC.
 	 [[{{node triple_loss/gradients/cnn/conv2d/Conv2D_grad/Conv2DBackpropInput}} = Conv2DBackpropInput[T=DT_FLOAT, data_format="NCHW", dilations=[1, 1, 1, 1], padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:CPU:0"](triple_loss/gradients/cnn/conv2d/Conv2D_grad/ShapeN, cnn/conv2d/kernel/read, triple_loss/gradients/batch_normalization_1/FusedBatchNorm_grad/transpose_2, ^triple_loss/gradients/cnn/conv2d/BiasAdd_grad/BiasAddGrad)]]
 Traceback (most recent call last):
   File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1334, in _do_call

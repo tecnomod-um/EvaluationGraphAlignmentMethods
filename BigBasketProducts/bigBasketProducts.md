@@ -494,31 +494,31 @@
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AlignE/1/nohup_materials-llm_aligne.txt)|14.38|18.31 |18.31 |1459|0.16|4105|0 (0.0%)|
+|AlignE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AlignE/1/nohup_materials-llm_aligne.txt)|14.10|18.28 |18.37 |1444|0.16|6060|0 (0.0%)|
 |AliNet|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AliNet/1/error_output_materials-llm_alinet.txt)|E|r|r|o|r|||
-|AttrE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AttrE/1/error_output_materials-llm_attre.txt)|E|r|r|o|r|||
-|BootEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA/1/nohup_basic-llm_bootea.txt)|0.06|0.09 |0.27 |1626|0.00|1542|0 (0.0%)|
-|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_RotatE/1/nohup_basic-llm_bootea_rotate.txt)|0.09|0.15|0.21 |1634|0.00|4240|0 (0.0%)|
-|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_TransH/1/error_output_basic-llm_bootea_transh.txt)|E|r|r|o|r|||
-|Conve|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ConvE/1/error_output_basic-llm_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.03|0.15 |0.21|1645|0.00|227|0 (0.0%)|
-|GMNN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/GMNN/1/nohup_basic-llm_gmnn.txt)|4.87|14.41 |23.61|36|0.12|44822|0 (0.0%)|
-|HolE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/HolE/1/nohup_basic-llm_hole.txt)|0.00|0.12 |0.27|1646|0.00|2135|0 (0.0%)|
-|IMUSE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IMUSE/1/nohup_basic-llm_imuse.txt)|28.30|32.38 |32.59|1112|0.30|393|0 (0.0%)|
-|IPTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/IPTransE/1/error_output_basic-llm_iptranse.txt)|E|r|r|o|r|||
-|JAPE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/JAPE/1/nohup_basic-llm_jape.txt)|0.06|0.21 |0.40|1651|0.00|1089|0 (0.0%)|
-|KDCoE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/KDCoE/1/error_output_basic-llm_kdcoe.txt)|E|r|r|o|r|||
-|MTransE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MTransE/1/nohup_basic-llm_mtranse.txt)|0.06|0.18 |0.27|1642|0.00|295|0 (0.0%)|
-|MultiKE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/MultiKE/1/error_output_basic-llm_multike.txt)|E|r|r|o|r|||
-|ProjE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/ProjE/1/nohup_basic-llm_proje.txt)|0.00|0.12 |0.18|1668|0.00|1765|0 (0.0%)|
-|RDGCN|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RDGCN/1/nohup_basic-llm_rdgcn.txt)|2.44|5.51|7.22|1448|0.04|6480|0 (0.0%)|
-|RotatE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RotatE/1/nohup_basic-llm_rotate.txt)|0.06|0.21 |0.31|1650|0.00|2083|0 (0.0%)|
-|RSN4EA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/RSN4EA/1/error_output_basic-llm_rsn4ea.txt)|E|r|r|o|r|||
-|SEA|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SEA/1/nohup_basic-llm_sea.txt)|0.00|0.09 |0.34|1612|0.00|132|0 (0.0%)|
-|SimplE|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/SimplE/1/nohup_basic-llm_simple.txt)|0.00|0.09|0.31|1643|0.00|154|0 (0.0%)|
-|TransD|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransD/1/nohup_basic-llm_transd.txt)|0.00|0.15|0.24|1658|0.00|332|0 (0.0%)|
-|TransH|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransH/1/nohup_basic-llm_transh.txt)|0.00|0.27|0.43|1638|0.00|330|0 (0.0%)|
-|TransR|1|[3283](./Experiments/EntityAlignment/Basic-LLM/Output/TransR/1/nohup_basic-llm_transr.txt)|0.00|0.03|0.24|1642|0.00|1026|0 (0.0%)|
+|AttrE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AttrE/1/nohup_materials-llm_attre.txt)|13.89|18.31|18.86|818|0.16|5578||
+|BootEA|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/BootEA/1/nohup_materials-llm_bootea.txt)|14.23|18.25 |18.31 |1500|0.16|6573|0 (0.0%)|
+|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/BootEA_RotatE/1/nohup_materials-llm_bootea_rotate.txt)|13.98|18.22|18.34 |1583|0.16|16927|0 (0.0%)|
+|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/BootEA_TransH/1/error_output_materials-llm_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/ConvE/1/error_output_materials-llm_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/GCN_Align/1/nohup_materials-llm_gcnalign.txt)|14.38|18.31 |18.37|1575|0.16|845|0 (0.0%)|
+|GMNN|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/GMNN/1/error_output_materials-llm_gmnn.txt)|E|r|r|o|r|||
+|HolE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/HolE/1/nohup_materials-llm_hole.txt)|14.01|17.70 |17.70|1453|0.16|11157|0 (0.0%)|
+|IMUSE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/IMUSE/1/error_output_materials-llm_imuse.txt)|E|r|r|o|r|||
+|IPTransE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/IPTransE/1/error_output_materials-llm_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/JAPE/1/nohup_materials-llm_jape.txt)|14.16|17.70 |17.70|1597|0.16|1723|0 (0.0%)|
+|KDCoE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/KDCoE/1/error_output_materials-llm_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/MTransE/1/)|14.38|18.25 |18.28|1552|0.16|832|0 (0.0%)|
+|MultiKE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/MultiKE/1/error_output_materials-llm_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/ProjE/1/nohup_materials-llm_proje.txt)|13.92|17.76 |17.85|1384|0.16|5475|0 (0.0%)|
+|RDGCN|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/RDGCN/1/error_output_materials-llm_rdgcn.txt)|E|r|r|o|r|||
+|RotatE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/RotatE/1/nohup_materials-llm_rotate.txt)|14.38|17.70 |17.70|1586|0.16|7099|0 (0.0%)|
+|RSN4EA|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/RSN4EA/1/error_output_materials-llm_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/SEA/1/nohup_materials-llm_sea.txt)|14.01|18.34 |18.49|1364|0.16|651|0 (0.0%)|
+|SimplE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/SimplE/1/nohup_materials-llm_simple.txt)|13.83|17.70|17.73|1587|0.16|1127|0 (0.0%)|
+|TransD|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/TransD/1/nohup_materials-llm_transd.txt)|13.83|17.64|17.73|1457|0.16|2426|0 (0.0%)|
+|TransH|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/TransH/1/nohup_materials-llm_transh.txt)|13.86|17.61|17.73|1551|0.16|1518|0 (0.0%)|
+|TransR|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/TransR/1/nohup_materials-llm_transr.txt)|0.15|0.58|0.85|1509|0.1|4549|0 (0.0%)|
 
 ## Results
 
