@@ -1,0 +1,78 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  um: https://vocab.um.es/
+  bredt: https://vocab.um.es/data/bre/
+  bre: https://vocab.um.es/ontology/bre/
+
+sources:
+  brazilianE : ['processed_olist_customers_dataset_20K.csv~csv']
+
+mappings:
+  state:
+    sources: brazilianE
+    s: bredt:state_$(customer_state_idx)
+    po:
+      - [a, bre:State]
+      - [bre:stateName, $(customer_state), xsd:string]
+  city:
+    sources: brazilianE
+    s: bredt:city_$(customer_city_idx)
+    po:
+      - [a, bre:City]
+      - [bre:cityName, $(customer_city), xsd:string]
+      - p: bre:hasState
+        o:
+          mapping: state
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(customer_state), s]
+              - [str2, $(customer_state), o]
+  zipCodePrefix:
+    sources: brazilianE
+    s: bredt:zipCodePrefix_$(customer_zip_code_prefix_idx)
+    po:
+      - [a, bre:ZipCodePrefix]
+      - [bre:hasCode, $(customer_zip_code_prefix), xsd:string]
+      - p: bre:hasCity
+        o:
+          mapping: city
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(customer_city), s]
+              - [str2, $(customer_city), o]
+  customerAccount:
+    sources: brazilianE
+    s: bredt:customerAccount_$(customer_unique_id_idx)
+    po:
+      - [a, bre:CustomerAccount]
+      - [bre:hasID, $(customer_unique_id), xsd:string]
+  customerIdOrder:
+    sources: brazilianE
+    s: bredt:customerIdOrder_$(customer_id_idx)
+    po:
+      - [a, bre:CustomerIdOrder]
+      - [bre:hasID, $(customer_id), xsd:string]
+      - p: bre:hasZipCodePrefix
+        o:
+          mapping: zipCodePrefix
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(customer_zip_code_prefix), s]
+              - [str2, $(customer_zip_code_prefix), o]
+      - p: bre:hasCustomerAccount
+        o:
+          mapping: customerAccount
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(customer_unique_id), s]
+              - [str2, $(customer_unique_id), o]      

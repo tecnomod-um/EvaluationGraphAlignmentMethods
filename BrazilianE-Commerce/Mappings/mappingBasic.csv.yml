@@ -1,0 +1,27 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  um: https://vocab.um.es/
+  bredt: https://vocab.um.es/data/bre/
+  bre: https://vocab.um.es/ontology/bre/
+
+sources:
+  brazilianE : ['processed_olist_customers_dataset_20K.csv~csv']
+
+mappings:
+  customerOrder:
+    sources: brazilianE
+    s: bredt:customerOrder_$(customer_id_idx)
+    po:
+      - [a, bre:CustomerOrder]
+      - [bre:hasID, $(customer_id), xsd:string]
+      - [bre:hasCustomerAccount, $(customer_unique_id), xsd:string]
+      - [bre:hasState, $(customer_state), xsd:string]
+      - [bre:hasCity, $(customer_city), xsd:string]
+      - [bre:hasZipCodePrefix, $(customer_zip_code_prefix), xsd:string]
+      

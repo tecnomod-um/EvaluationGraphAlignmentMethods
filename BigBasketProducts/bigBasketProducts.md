@@ -41,27 +41,6 @@
 |[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[69428 triples](./Mappings/bigbasketproductsLLM.nt)|[61288 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[8140 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
 |[Materials](./Mappings/mappingMaterials.csv.yml)|processed_data20K.csv|[45150 triples](./Mappings/bigbasketproductsMaterials.nt)|[21892 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[23258 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
 
-[Gold](./Mappings/mappingGold.csv.yml) - processed_data.csv
-|Property |Number|
-|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/image>|8208|
-|<https://vocab.um.es/ontology/bbp/url>|8208|
-|<https://vocab.um.es/ontology/bbp/productQuantity>|8208|
-|<https://vocab.um.es/ontology/bbp/productName>|6842|
-|<https://vocab.um.es/ontology/bbp/brandName>|6842|
-|<https://vocab.um.es/ontology/bbp/priceArticle>|4472|
-|<https://vocab.um.es/ontology/bbp/discount_price>|4472|
-|<https://vocab.um.es/ontology/bbp/subCategoryName>|334|
-|<https://vocab.um.es/ontology/bbp/categoryName>|11|
-|**Total Attr_Triples**|47597|
-|<https://vocab.um.es/ontology/bbp/belongsToSubCategory>|8208|
-|<https://vocab.um.es/ontology/bbp/hasProduct>|8208|
-|<https://vocab.um.es/ontology/bbp/hasSalesSpecification>|8208|
-|<http://www.w3.org/2000/01/rdf-schema#subClassOf>|334|
-|<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>|19867|
-|**Total Rel_Triples**|44825|
-|**Total Graph Gold**|92422|
-
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
 ![Graph Gold](./Figures/bigBasketProducts-Gold.png "Graph Gold")

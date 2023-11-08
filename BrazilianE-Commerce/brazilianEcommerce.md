@@ -1,22 +1,23 @@
-# BigBasket Products
+# Brazilian E-Commerce
 
-* URL: <https://www.kaggle.com/datasets/chinmayshanbhag/big-basket-products>
+* URL: <https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce>
 * Format: CSV
-* Description: Dataset containing the products listed on the website of online grocery store Big Basket.
+* Description: This is a Brazilian ecommerce public dataset of orders made at Olist Store. The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. We also released a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates.
 
 ## Datasets
 
-* [data.csv](./SourceFiles/data.csv)
-  * 8208 rows x 9 columns
-* [processed_data20K.csv](./SourceFiles/processed_data.csv)
-  * 8208 rows x 19 columns
+* [olist_customers_dataset.csv](./SourceFiles/olist_customers_dataset.csv)
+  * 99441 rows x 5 columns
+* [processed_olist_customers_dataset_20K.csv](./SourceFiles/processed_olist_customers_dataset_20K.csv)
+  * 20000 rows x 10 columns
+  * Selected the first 20000 rows of the above file
   * Processing of identifiers for five classes
-![Counts processed_data.csv](./Figures/counts_data.JPG "Counts processed_data.csv")
+![Counts processed_olist_customers_dataset_20K.csv](./Figures/count_data.JPG "Counts processed_olist_customers_dataset_20K.csv")
 
 * No field has null values
-* "Absolute_Url" is the only field that has all unique values
+* "customer_id" is the only field that has all unique values
 
-![Fields cardinality data20K.csv](./Figures/counts_data.JPG "Fields cardinality data20K.csv")
+![Fields cardinality processed_olist_customers_dataset_20K.csv](./Figures/card_data.JPG "Fields cardinality processed_olist_customers_dataset_20K.csv")
 
 * (0,0) No relationship between values in the row and column fields
 * (0,1) One value in the row field is related to at most one value in the column field
@@ -24,62 +25,42 @@
 * (1,1) One value in the row filed is only related to one value in the column field
 * (1,2) One value in the row field can be related to one or several values in the column field
 * Inconsistencies:
+  * A value of a "customer_city" should only be associated with a value of a "customer_state"
 
 ## Ontologies
 
-* [Basic](./Ontologies/eCommerceOntology.owl)
-* [LLM](./Ontologies/eCommerceOntologyLLM.owl)
-* [Gold standard](./Ontologies/eCommerceOntologyII.owl)
-* [Materials](./Ontology/materials_anony_v2.owl)
+* [Basic](./Ontologies/)
+* [LLM](./Ontologies/)
+* [Gold standard](./Ontologies//)
+* [Transactions](./Ontologies/)
 
 ## Mapping
 
 |Mapping |Dataset| RDF | attr_triples | rel_triples |
 |:-:|:-:|:-:|:-:|:-:|
-|[Basic](./Mappings/mappingBasic.csv.yml)|processed_data.csv|[82080 triples](./Mappings/bigbasketproductsBasic.nt)|[73872 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[8208 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
-|[Gold](./Mappings/mappingGold.csv.yml)|processed_data.csv|[92422 triples](./Mappings/bigbasketproductsGold.nt)|[47597 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[44825 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
+|[Basic](./Mappings/mappingBasic.csv.yml)|processed_olist_customers_dataset_20K.csv|[120000 triples](./Mappings/brazilianecommerceBasic.nt)|[10000 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[20000 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
+|[Gold](./Mappings/mappingGold.csv.yml)|processed_olist_customers_dataset_20K.csv|[152758 triples](./Mappings/brazilianecommerceGold.nt)|[50857 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[101901 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
 |[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[69428 triples](./Mappings/bigbasketproductsLLM.nt)|[61288 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[8140 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
 |[Materials](./Mappings/mappingMaterials.csv.yml)|processed_data20K.csv|[45150 triples](./Mappings/bigbasketproductsMaterials.nt)|[21892 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[23258 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
 
-[Gold](./Mappings/mappingGold.csv.yml) - processed_data.csv
-|Property |Number|
-|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/image>|8208|
-|<https://vocab.um.es/ontology/bbp/url>|8208|
-|<https://vocab.um.es/ontology/bbp/productQuantity>|8208|
-|<https://vocab.um.es/ontology/bbp/productName>|6842|
-|<https://vocab.um.es/ontology/bbp/brandName>|6842|
-|<https://vocab.um.es/ontology/bbp/priceArticle>|4472|
-|<https://vocab.um.es/ontology/bbp/discount_price>|4472|
-|<https://vocab.um.es/ontology/bbp/subCategoryName>|334|
-|<https://vocab.um.es/ontology/bbp/categoryName>|11|
-|**Total Attr_Triples**|47597|
-|<https://vocab.um.es/ontology/bbp/belongsToSubCategory>|8208|
-|<https://vocab.um.es/ontology/bbp/hasProduct>|8208|
-|<https://vocab.um.es/ontology/bbp/hasSalesSpecification>|8208|
-|<http://www.w3.org/2000/01/rdf-schema#subClassOf>|334|
-|<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>|19867|
-|**Total Rel_Triples**|44825|
-|**Total Graph Gold**|92422|
-
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
-![Graph Gold](./Figures/bigBasketProducts-Gold.png "Graph Gold")
+![Graph Gold](./Figures/BrazilianEcommerce-Gold.png "Graph Gold")
 
 ### [Input](./Experiments/EntityAlignment/Gold-Gold/Input/)
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/Gold-Gold/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/SalesArticle> <https://vocab.um.es/ontology/bbp/SalesArticle>| 8208 (41.31%)|3311 (41.66%)
-|<https://vocab.um.es/ontology/bbp/Product> <https://vocab.um.es/ontology/bbp/Product>|6842 (34.44%)| 2703 (34.01%)|
-|<https://vocab.um.es/ontology/bbp/Category> <https://vocab.um.es/ontology/bbp/Category>| 11 (0.06%)| 3 (0.04%)|
-|<https://vocab.um.es/ontology/bbp/SubCategory> <https://vocab.um.es/ontology/bbp/SubCategory>| 334 (1.68%)| 124 (1.56%)|
-|<https://vocab.um.es/ontology/bbp/SalesSpecification> <https://vocab.um.es/ontology/bbp/SalesSpecification>| 4472 (22.51%)| 1806 (22.73%)|
-| Total related entities |19867|7947
+|<https://vocab.um.es/ontology/bre/CustomerIdOrder> <https://vocab.um.es/ontology/bre/CustomerIdOrder>| 20000 (39.33%)|8015 (39.40%)
+|<https://vocab.um.es/ontology/bre/CustomerAccount> <https://vocab.um.es/ontology/bre/CustomerAccount>|19843 (39.02%)| 7903 (38.85%)|
+|<https://vocab.um.es/ontology/bre/State> <https://vocab.um.es/ontology/bre/State>| 27 (0.05%)| 12 (0.06%)|
+|<https://vocab.um.es/ontology/bre/City> <https://vocab.um.es/ontology/bre/City>| 2247 (4.42%)| 900 (4.42%)|
+|<https://vocab.um.es/ontology/bre/ZipCodePrefix> <https://vocab.um.es/ontology/bre/ZipCodePrefix>| 8740 (17.18%)| 3513 (17.27%)|
+| Total related entities |50857|20343
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Gold-Gold/Input/451_1fold/1/)|9933|7947|1987|
+|[1](./Experiments/EntityAlignment/Gold-Gold/Input/451_1fold/1/)|25428|20343|5086|
 
 ### [Output](./Experiments/EntityAlignment/Gold-Gold/Output/)
 
@@ -113,18 +94,18 @@
 
 ## [Basic - Basic](./Experiments/EntityAlignment/Basic-Basic/)
 
-![Graph Basic](./Figures/bigBasketProducts-Basic.png "Graph Basic")
+![Graph Basic](./Figures/BrazilianEcommerce-Basic.png "Graph Basic")
 
 ### [Input](./Experiments/EntityAlignment/Basic-Basic/Input/)
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/Basic-Basic/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/SalesProduct> <https://vocab.um.es/ontology/bbp/SalesProduct>| 8208 (100%)|3283 (100%)
-| Total related entities |8208|3283
+|<https://vocab.um.es/ontology/bre/CustomerIdOrder> <https://vocab.um.es/ontology/bre/CustomerIdOrder>| 20000 (100%)|8000 (100%)
+| Total related entities |20000|8000
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Basic-Basic/Input/451_1fold/1/)|4104|3283|821|
+|[1](./Experiments/EntityAlignment/Basic-Basic/Input/451_1fold/1/)|10000|8000|2000|
 
 ### [Output](./Experiments/EntityAlignment/Basic-Basic/Output/)
 
