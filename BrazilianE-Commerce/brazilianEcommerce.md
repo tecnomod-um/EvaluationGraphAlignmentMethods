@@ -40,8 +40,8 @@
 |:-:|:-:|:-:|:-:|:-:|
 |[Basic](./Mappings/mappingBasic.csv.yml)|processed_olist_customers_dataset_20K.csv|[120000 triples](./Mappings/brazilianecommerceBasic.nt)|[10000 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[20000 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
 |[Gold](./Mappings/mappingGold.csv.yml)|processed_olist_customers_dataset_20K.csv|[152758 triples](./Mappings/brazilianecommerceGold.nt)|[50857 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[101901 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
-|[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[69428 triples](./Mappings/bigbasketproductsLLM.nt)|[61288 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[8140 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
-|[Materials](./Mappings/mappingMaterials.csv.yml)|processed_data20K.csv|[45150 triples](./Mappings/bigbasketproductsMaterials.nt)|[21892 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[23258 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
+|[LLM](./Mappings/mappingLLM.csv.ttl)|processed_olist_customers_dataset_20K.csv|[84357 triples](./Mappings/brazilianecommerceLLM.nt)|[20000 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[64357 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
+|[Transactions](./Mappings/mappingTransactions.csv.yml)|processed_olist_customers_dataset_20K.csv|[39686 triples](./Mappings/brazilianecommerceTransactions.nt)|[19843 triples](./Experiments/EntityAlignment/Transactions-Transactions/Input/attr_triples_1)|[19843 triples](./Experiments/EntityAlignment/Transactions-Transactions/Input/rel_triples_1)|
 
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
@@ -139,19 +139,21 @@
 
 ## [LLM - LLM](./Experiments/EntityAlignment/LLM-LLM/)
 
-![Graph LLM](./Figures/bigBasketProducts-LLM.png "Graph LLM")
+![Graph LLM](./Figures/BrazilianEcommerce-LLM.png "Graph LLM")
 
 ### [Input](./Experiments/EntityAlignment/LLM-LLM/Input/)
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/LLM-LLM/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/sales_product/> <https://vocab.um.es/sales_product/>| 6769 (45.40%)|2724 (45.67%)
-|<http://schema.org/Offer/> <http://schema.org/Offer/>| 8140 (54.60%)| 3240 (54.33%)
-| Total related entities |14909|5964
+|<https://vocab.um.es#Customer> <https://vocab.um.es#Customer>| 20000 (64.49%)|8021 (64.66%)
+|<https://vocab.um.es#State> <https://vocab.um.es#State>| 27 (0.09%)| 11 (0.09%)
+|<https://vocab.um.es#City> <https://vocab.um.es#City>| 2247 (7.24%)| 871 (7.02%)
+|<https://vocab.um.es#ZipCodePrefix> <https://vocab.um.es#ZipCodePrefix>| 8740 (28.18%)| 3502 (28.23%)
+| Total related entities |31014|12405
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/LLM-LLM/Input/451_1fold/1/)|7454|5964|1491|
+|[1](./Experiments/EntityAlignment/LLM-LLM/Input/451_1fold/1/)|15507|12405|3102|
 
 ### [Output](./Experiments/EntityAlignment/LLM-LLM/Output/)
 
@@ -183,21 +185,20 @@
 |TransH|1|[5964](./Experiments/EntityAlignment/LLM-LLM/Output/TransH/1/nohup_llm-llm_transh.txt)|50.07|52.77|52.93|1272|0.51|436|0 (0.0%)|
 |TransR|1|[5964](./Experiments/EntityAlignment/LLM-LLM/Output/TransR/1/nohup_llm-llm_transr.txt)|0.03|0.34|0.59|2362|0.01|890|0 (0.0%)|
 
-## [Materials - Materials](./Experiments/EntityAlignment/Materials-Materials/)
+## [Transactions - Transactions](./Experiments/EntityAlignment/Transactions-Transactions/)
 
-![Graph Materials](./Figures/bigBasketProducts-Materials.png "Graph Materials")
+![Graph Transactions](./Figures/BrazilianEcommerce-Transactions.png "Graph Transactions")
 
-### [Input](./Experiments/EntityAlignment/Materials-Materials/Input/)
+### [Input](./Experiments/EntityAlignment/Transactions-Transactions/Input/)
 
-|ent_links| [Related Entities](./Experiments/EntityAlignment/Materials-Materials/Input/ent_links)|Split 1 Test|
+|ent_links| [Related Entities](./Experiments/EntityAlignment/Transactions-Transactions/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://purl.org/ontologies/MT/SalesArticle> <https://purl.org/ontologies/MT/SalesArticle>| 8208 (54.54%)|3355 (55.73%)
-|<https://purl.org/ontologies/MT/sales_product> <https://purl.org/ontologies/MT/sales_product>| 6842 (45.46%)| 2665 (44.27%)
-| Total related entities |15050|6020
+|<https://purl.org/ontologies/BPA/CustomerAccount> <https://purl.org/ontologies/BPA/CustomerAccount>| 19843 (100%)|7937 (100%)
+| Total related entities |19843|7937
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Materials-Materials/Input/451_1fold/1/)|7525|6020|1505|
+|[1](./Experiments/EntityAlignment/Transactions-Transactions/Input/451_1fold/1/)|9921|7937|1985|
 
 ### [Output](./Experiments/EntityAlignment/Materials-Materials/Output/)
 

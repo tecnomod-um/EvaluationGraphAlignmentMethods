@@ -1,0 +1,24 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  bpa: https://purl.org/ontologies/BPA/
+  purl: https://purl.org/
+  bpadt: https://purl.org/ontologies/BPA/data/
+  vocab: https://vocab.um.es/
+  um: https://data.um.es/
+
+sources:
+  brazilianE : ['processed_olist_customers_dataset_20K.csv~csv']
+
+mappings:
+  salesProduct:
+    sources: brazilianE
+    s: bpadt:customerAccount_$(customer_unique_id_idx)
+    po:
+      - [a, bpa:CustomerAccount]
+      - [bpa:hasID, $(customer_unique_id), xsd:string]
