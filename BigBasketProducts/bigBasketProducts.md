@@ -27,10 +27,10 @@
 
 ## Ontologies
 
-* [Basic](./Ontologies/eCommerceOntology.owl)
-* [LLM](./Ontologies/eCommerceOntologyLLM.owl)
-* [Gold standard](./Ontologies/eCommerceOntologyII.owl)
-* [Materials](./Ontology/materials_anony_v2.owl)
+* [Basic](./Ontologies/)
+* [LLM](./Ontologies)
+* [Gold standard](./Ontologies/BigBasketProductsOntologyGold.owl)
+* [Materials](../)
 
 ## Mapping
 
