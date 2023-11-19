@@ -33,7 +33,7 @@
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./EntityAlignment/Basic-Basic/Input/541_1fold/1/)|10.000|8.000|2.000|
+|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1)|10.000|8.000|2.000|
 
 ### [Output](./EntityAlignment/Basic-Basic/Output/)
 
