@@ -1,0 +1,124 @@
+load arguments: {'training_data': '../../OntologySummit/AmazonRatings/EntityAlignment/', 'output': '../../OntologySummit/AmazonRatings/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'SimplE', 'alignment_module': 'sharing', 'search_module': 'greedy', 'dim': 100, 'init': 'xavier', 'ent_l2_norm': True, 'rel_l2_norm': True, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'batch_threads_num': 2, 'test_threads_num': 3, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True}
+SimplE
+<openea.modules.args.args_hander.ARGs object at 0x7fe8e59128d0>
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/attr_triples_2
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/541_5fold/1/test_links
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+../../OntologySummit/AmazonRatings/EntityAlignment/results/ ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-LLM/ ['..', '..', 'OntologySummit', 'AmazonRatings', 'EntityAlignment', 'Basic-LLM'] 541_5fold/1/ SimplE
+results output folder: ../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/
+epoch 1, avg. triple loss: 1.3424, cost time: 32.9096s
+epoch 2, avg. triple loss: 1.1216, cost time: 26.1511s
+epoch 3, avg. triple loss: 1.0356, cost time: 25.9265s
+epoch 4, avg. triple loss: 0.9938, cost time: 33.2336s
+epoch 5, avg. triple loss: 0.9709, cost time: 21.7135s
+epoch 6, avg. triple loss: 0.9552, cost time: 27.3678s
+epoch 7, avg. triple loss: 0.9459, cost time: 26.5929s
+epoch 8, avg. triple loss: 0.9381, cost time: 25.5666s
+epoch 9, avg. triple loss: 0.9327, cost time: 23.8228s
+epoch 10, avg. triple loss: 0.9277, cost time: 30.6069s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.   0.05 0.05 0.4 ]%, time = 30.657 s 
+epoch 11, avg. triple loss: 0.9233, cost time: 22.7493s
+epoch 12, avg. triple loss: 0.9187, cost time: 29.1998s
+epoch 13, avg. triple loss: 0.9145, cost time: 30.3239s
+epoch 14, avg. triple loss: 0.9096, cost time: 40.0829s
+epoch 15, avg. triple loss: 0.9055, cost time: 25.0853s
+epoch 16, avg. triple loss: 0.9024, cost time: 22.3033s
+epoch 17, avg. triple loss: 0.8989, cost time: 26.6544s
+epoch 18, avg. triple loss: 0.8962, cost time: 26.1777s
+epoch 19, avg. triple loss: 0.8937, cost time: 24.7222s
+epoch 20, avg. triple loss: 0.8913, cost time: 27.0335s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.   0.   0.05 0.2 ]%, time = 15.430 s 
+epoch 21, avg. triple loss: 0.8890, cost time: 24.9361s
+epoch 22, avg. triple loss: 0.8867, cost time: 27.6437s
+epoch 23, avg. triple loss: 0.8856, cost time: 24.6397s
+epoch 24, avg. triple loss: 0.8845, cost time: 26.5120s
+epoch 25, avg. triple loss: 0.8824, cost time: 36.5931s
+epoch 26, avg. triple loss: 0.8817, cost time: 26.5446s
+epoch 27, avg. triple loss: 0.8809, cost time: 28.8499s
+epoch 28, avg. triple loss: 0.8791, cost time: 27.7508s
+epoch 29, avg. triple loss: 0.8787, cost time: 24.9393s
+epoch 30, avg. triple loss: 0.8788, cost time: 24.9097s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.  0.  0.1 0.5]%, time = 17.235 s 
+
+ == should early stop == 
+
+Training ends. Total time = 932.150 s.
+test
+accurate results: hits@[1, 5, 10, 50] = [0.025 0.05  0.15  0.725]%, mr = 3998.107, mrr = 0.001338, time = 60.091 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [0.012 0.025 0.088 0.65 ]%, mr = 4000.407, mrr = 0.001129, time = 82.479 s 
+Results saved!
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg1_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg2_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg1_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg2_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg1_attr_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231105131444/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 1294.004 s.
