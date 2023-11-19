@@ -213,7 +213,7 @@
 |RDGCN|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/RDGCN/nohup_rdgcn.txt)|0.00|0.02|0.04|12016|0.00|38398|0 (0%)|1 (0.01%)|0 (0%)|
 |RotatE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|24,031|E|r|r|o|r||
 |RSN4EA|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|24,031|E|r|r|o|r||
-|SEA|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/SEA/nohup_sea)|97.37|99.85|99.98|1|0.98|136451|7773 (97.53%)|7921 (97.29%)|7674 (97.29%)|
+|SEA|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/SEA/nohup_sea.txt)|97.37|99.85|99.98|1|0.98|136451|7773 (97.53%)|7921 (97.29%)|7674 (97.29%)|
 |SimplE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/SimplE/nohup_simple.txt)|0.47|1.20|1.73|3419|0.01|21271|110 (1.38%)|0 (0%)|0 (0%)|
 |TransD|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/TransD/nohup_transd.txt)|78.66|82.66|83.93|119|0.81|228186|6931 (86.96%)|6084 (74.72%)|5857 (74.25%)|
 |TransH|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/TransH/nohup_transh.txt)|79.91|83.73|85.58|39|0.82|182091|6895 (86.51%)|6263 (76.92%)|6015 (76.26%)|
@@ -240,7 +240,7 @@
 ### [Output](./EntityAlignment/Gold-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|CustomerFeedback (%)|Flight (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/AlignE/nohup_aligne.txt)|0.01|0.06|0.10|3991|0.00|19918|0 (0%)|1 (0.01%)|1 (0.01%)|
 |AliNet|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/AttrE/nohup_attre.txt)|9.73|20.11|26.45|182|0.16|41273|152 (1.91%)|2069 (25.71%)|115 (1.44%)|
