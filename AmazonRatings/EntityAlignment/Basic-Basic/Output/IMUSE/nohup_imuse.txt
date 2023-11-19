@@ -1,0 +1,154 @@
+load arguments: {'training_data': '../../OntologySummit/AmazonRatings/EntityAlignment/', 'output': '../../OntologySummit/AmazonRatings/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'IMUSE', 'alignment_module': 'sharing', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'margin': 1.5, 'loss': 'margin-based', 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'SGD', 'max_epoch': 2000, 'batch_size': 5000, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True, 'sim_thresholds_ent': 0.6, 'sim_thresholds_attr': 0.6, 'interactive_model_iter_num': 1}
+IMUSE
+<openea.modules.args.args_hander.ARGs object at 0x7f90fab52978>
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/rel_triples_1
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/rel_triples_2
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/attr_triples_1
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/attr_triples_2
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/541_5fold/1/train_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/541_5fold/1/valid_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/541_5fold/1/test_links
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 4
+Number of relation triples: 20000
+Number of attribute triples: 80000
+Number of local relation triples: 20000
+Number of local attribute triples: 80000
+
+../../OntologySummit/AmazonRatings/EntityAlignment/results/ ../../OntologySummit/AmazonRatings/EntityAlignment/Basic-Basic/ ['..', '..', 'OntologySummit', 'AmazonRatings', 'EntityAlignment', 'Basic-Basic'] 541_5fold/1/ IMUSE
+results output folder: ../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/
+aligned_attr_pair_set: 4
+align_entity_by_attributes...
+1 len(aligned_ent_pair_set_all): 18227 len(aligned_ent_pair_set_iter): 18227
+5037.114581108093
+epoch 1, avg. triple loss: 1.5176, cost time: 7.3883s
+epoch 1, align learning loss: 1.3965, time: 2.2989s
+epoch 2, avg. triple loss: 1.0738, cost time: 5.7433s
+epoch 2, align learning loss: 1.0991, time: 1.6662s
+epoch 3, avg. triple loss: 0.6356, cost time: 7.6381s
+epoch 3, align learning loss: 0.8420, time: 1.2610s
+epoch 4, avg. triple loss: 0.3452, cost time: 9.0761s
+epoch 4, align learning loss: 0.6363, time: 1.9523s
+epoch 5, avg. triple loss: 0.1910, cost time: 11.2256s
+epoch 5, align learning loss: 0.4793, time: 1.8513s
+epoch 6, avg. triple loss: 0.1169, cost time: 5.9422s
+epoch 6, align learning loss: 0.3628, time: 1.8134s
+epoch 7, avg. triple loss: 0.0771, cost time: 8.9836s
+epoch 7, align learning loss: 0.2773, time: 2.9190s
+epoch 8, avg. triple loss: 0.0561, cost time: 14.6225s
+epoch 8, align learning loss: 0.2147, time: 2.1128s
+epoch 9, avg. triple loss: 0.0427, cost time: 5.9539s
+epoch 9, align learning loss: 0.1684, time: 2.8056s
+epoch 10, avg. triple loss: 0.0344, cost time: 5.8900s
+epoch 10, align learning loss: 0.1339, time: 1.7295s
+quick results: hits@[1, 5, 10, 50] = [43.65 43.7  43.7  44.  ]%, time = 19.230 s 
+epoch 11, avg. triple loss: 0.0284, cost time: 6.0011s
+epoch 11, align learning loss: 0.1078, time: 0.9843s
+epoch 12, avg. triple loss: 0.0234, cost time: 9.3290s
+epoch 12, align learning loss: 0.0878, time: 3.1478s
+epoch 13, avg. triple loss: 0.0199, cost time: 8.6540s
+epoch 13, align learning loss: 0.0723, time: 1.4623s
+epoch 14, avg. triple loss: 0.0177, cost time: 14.8567s
+epoch 14, align learning loss: 0.0600, time: 2.0977s
+epoch 15, avg. triple loss: 0.0155, cost time: 7.3550s
+epoch 15, align learning loss: 0.0503, time: 1.9875s
+epoch 16, avg. triple loss: 0.0138, cost time: 6.7986s
+epoch 16, align learning loss: 0.0424, time: 2.4397s
+epoch 17, avg. triple loss: 0.0128, cost time: 8.0143s
+epoch 17, align learning loss: 0.0360, time: 1.9690s
+epoch 18, avg. triple loss: 0.0112, cost time: 8.6086s
+epoch 18, align learning loss: 0.0307, time: 2.3248s
+epoch 19, avg. triple loss: 0.0110, cost time: 12.0451s
+epoch 19, align learning loss: 0.0264, time: 1.7427s
+epoch 20, avg. triple loss: 0.0100, cost time: 8.6047s
+epoch 20, align learning loss: 0.0228, time: 1.9610s
+quick results: hits@[1, 5, 10, 50] = [43.65 43.7  43.75 43.95]%, time = 8.008 s 
+epoch 21, avg. triple loss: 0.0090, cost time: 5.4577s
+epoch 21, align learning loss: 0.0198, time: 1.3887s
+epoch 22, avg. triple loss: 0.0084, cost time: 4.8151s
+epoch 22, align learning loss: 0.0173, time: 1.2546s
+epoch 23, avg. triple loss: 0.0080, cost time: 6.3489s
+epoch 23, align learning loss: 0.0152, time: 2.6566s
+epoch 24, avg. triple loss: 0.0075, cost time: 5.9257s
+epoch 24, align learning loss: 0.0134, time: 1.0930s
+epoch 25, avg. triple loss: 0.0071, cost time: 8.2026s
+epoch 25, align learning loss: 0.0118, time: 1.3432s
+epoch 26, avg. triple loss: 0.0073, cost time: 8.5340s
+epoch 26, align learning loss: 0.0105, time: 2.6688s
+epoch 27, avg. triple loss: 0.0067, cost time: 11.5761s
+epoch 27, align learning loss: 0.0093, time: 3.2551s
+epoch 28, avg. triple loss: 0.0062, cost time: 6.0639s
+epoch 28, align learning loss: 0.0084, time: 1.7066s
+epoch 29, avg. triple loss: 0.0064, cost time: 11.9412s
+epoch 29, align learning loss: 0.0075, time: 1.6349s
+epoch 30, avg. triple loss: 0.0061, cost time: 6.5477s
+epoch 30, align learning loss: 0.0068, time: 0.9370s
+quick results: hits@[1, 5, 10, 50] = [43.65 43.75 43.75 43.9 ]%, time = 7.387 s 
+
+ == should early stop == 
+
+Training ends. Total time = 357.276 s.
+accurate results: hits@[1, 5, 10, 50] = [43.65  43.675 43.75  43.888]%, mr = 2250.416, mrr = 0.437152, time = 38.436 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [43.662 43.7   43.762 44.112]%, mr = 2071.463, mrr = 0.437364, time = 58.531 s 
+Results saved!
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg1_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg2_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg1_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg2_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg1_attr_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/IMUSE/Basic-Basic/541_5fold/1/20231105131543/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 5615.201 s.
