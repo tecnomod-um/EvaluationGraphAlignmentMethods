@@ -270,7 +270,7 @@
 
 ## [LLM - LLM](./EntityAlignment/LLM-LLM/)
 
-![Graph LLM-LLM](./Figures/LLM-LLM_AirlinesCustomerSatisfaction.png "Graph LLM-LLM")
+![Graph LLM-LLM](./Figures/LLM_AirlinesCustomerSatisfaction.drawio.png)
 
 ### [Input](./EntityAlignment/LLM-LLM/Input/)
 
@@ -279,7 +279,7 @@
 |<https://vocab.um.es#CustomerFeedback> - <https://vocab.um.es#CustomerFeedback>| 20,000 (33.33%)|8,023 (33.43%)|
 |<https://vocab.um.es#TravelDetails> - <https://vocab.um.es#TravelDetails>| 20,000 (33.33%)|7,882 (32.84%)|
 |<https://vocab.um.es#Customer> - <https://vocab.um.es#Customer>| 20,000 (33.33%)|8,095 (33.73%)|
-| Total related entities |30,000|24,000|
+| Total related entities |60,000|24,000|
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
@@ -288,7 +288,7 @@
 ### [Output](./EntityAlignment/LLM-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|CustomerFeedback (%)|TravelDetails (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/LLM-LLM/Output/AlignE/nohup_aligne.txt)|0.02|0.05|0.08|3975|0.00|16203|1 (0.01%)|2 (0.03%)|1 (0.01%)|
 |AliNet|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/LLM-LLM/Output/AttrE/nohup_attre.txt)|20.35|36.63|45.18|57|0.29|29317|1363 (16.99%)|3288 (41.72%)|234 (2.89%)|
