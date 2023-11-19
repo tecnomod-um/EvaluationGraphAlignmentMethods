@@ -160,7 +160,7 @@
 
 ## [Gold - Gold](./EntityAlignment/Gold-Gold/)
 
-![Graph Gold-Gold](./Figures/Gold_AirlinesCustomerSatisfaction.png "Graph Gold")
+![Graph Gold-Gold](./Figures/Gold_AirlinesCustomerSatisfaction.drawio.png)
 
 ### [Input](./EntityAlignment/Gold-Gold/Input/)
 
@@ -192,7 +192,7 @@
 ### [Output](./EntityAlignment/Gold-Gold/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|CustomerFeedback (%)|Flight (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/AlignE/nohup_aligne.txt)|90.65|95.86|97.34|3|0.93|279625|7857 (98.58%)|7060 (86.71%)|6837 (86.68%)|
 |AliNet|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/AliNet/nohup_alinet.txt)|68.34|75.56|75.57|2184|0.72|117293|5996 (75.23%)|5320 (65.34%)|5076 (64.35%)|
 |AttrE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1)|[24,031](./EntityAlignment/Gold-Gold/Output/AttrE/nohup_attre.txt)|99.61|99.98|100|1|1|167718|7960 (99.87%)|8109 (99.59%)|7836 (99.34%)|
