@@ -1,0 +1,477 @@
+load arguments: {'training_data': '../../OntologySummit/AmazonRatings/EntityAlignment/', 'output': '../../OntologySummit/AmazonRatings/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'MTransE', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'unit', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'alpha': 5, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True}
+MTransE
+<openea.modules.args.args_hander.ARGs object at 0x7f03c41f0908>
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/attr_triples_2
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/test_links
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+../../OntologySummit/AmazonRatings/EntityAlignment/results/ ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/ ['..', '..', 'OntologySummit', 'AmazonRatings', 'EntityAlignment', 'Gold-LLM'] 541_5fold/1/ MTransE
+results output folder: ../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/
+epoch 1, avg. triple loss: 2.2121, cost time: 8.0514s
+epoch 1, avg. mapping loss: 7.2433, cost time: 5.7707s
+epoch 2, avg. triple loss: 1.6581, cost time: 7.0252s
+epoch 2, avg. mapping loss: 5.8274, cost time: 5.2843s
+epoch 3, avg. triple loss: 1.4812, cost time: 7.0959s
+epoch 3, avg. mapping loss: 5.3457, cost time: 4.7999s
+epoch 4, avg. triple loss: 1.3736, cost time: 7.0719s
+epoch 4, avg. mapping loss: 5.0219, cost time: 4.8271s
+epoch 5, avg. triple loss: 1.2937, cost time: 6.6375s
+epoch 5, avg. mapping loss: 4.7195, cost time: 5.0571s
+epoch 6, avg. triple loss: 1.2286, cost time: 6.7884s
+epoch 6, avg. mapping loss: 4.4169, cost time: 4.8738s
+epoch 7, avg. triple loss: 1.1730, cost time: 6.4600s
+epoch 7, avg. mapping loss: 4.1280, cost time: 4.8315s
+epoch 8, avg. triple loss: 1.1241, cost time: 7.1193s
+epoch 8, avg. mapping loss: 3.8130, cost time: 4.8996s
+epoch 9, avg. triple loss: 1.0803, cost time: 6.8579s
+epoch 9, avg. mapping loss: 3.5301, cost time: 5.1695s
+epoch 10, avg. triple loss: 1.0407, cost time: 6.7928s
+epoch 10, avg. mapping loss: 3.2361, cost time: 4.9478s
+epoch 11, avg. triple loss: 1.0046, cost time: 6.8687s
+epoch 11, avg. mapping loss: 2.9600, cost time: 4.8573s
+epoch 12, avg. triple loss: 0.9714, cost time: 6.6474s
+epoch 12, avg. mapping loss: 2.7036, cost time: 5.0817s
+epoch 13, avg. triple loss: 0.9406, cost time: 6.6558s
+epoch 13, avg. mapping loss: 2.4641, cost time: 4.9769s
+epoch 14, avg. triple loss: 0.9121, cost time: 6.7359s
+epoch 14, avg. mapping loss: 2.2295, cost time: 5.2449s
+epoch 15, avg. triple loss: 0.8855, cost time: 6.2215s
+epoch 15, avg. mapping loss: 2.0202, cost time: 5.4058s
+epoch 16, avg. triple loss: 0.8607, cost time: 6.4726s
+epoch 16, avg. mapping loss: 1.8388, cost time: 5.2633s
+epoch 17, avg. triple loss: 0.8373, cost time: 6.5520s
+epoch 17, avg. mapping loss: 1.6751, cost time: 5.0598s
+epoch 18, avg. triple loss: 0.8154, cost time: 6.7647s
+epoch 18, avg. mapping loss: 1.5207, cost time: 5.0397s
+epoch 19, avg. triple loss: 0.7947, cost time: 6.8428s
+epoch 19, avg. mapping loss: 1.3747, cost time: 5.0484s
+epoch 20, avg. triple loss: 0.7751, cost time: 6.6254s
+epoch 20, avg. mapping loss: 1.2543, cost time: 5.2186s
+epoch 21, avg. triple loss: 0.7565, cost time: 6.8106s
+epoch 21, avg. mapping loss: 1.1378, cost time: 5.1433s
+epoch 22, avg. triple loss: 0.7389, cost time: 7.1037s
+epoch 22, avg. mapping loss: 1.0379, cost time: 5.1681s
+epoch 23, avg. triple loss: 0.7221, cost time: 6.9982s
+epoch 23, avg. mapping loss: 0.9504, cost time: 5.4331s
+epoch 24, avg. triple loss: 0.7061, cost time: 7.2199s
+epoch 24, avg. mapping loss: 0.8644, cost time: 5.5123s
+epoch 25, avg. triple loss: 0.6909, cost time: 7.0292s
+epoch 25, avg. mapping loss: 0.7866, cost time: 5.3567s
+epoch 26, avg. triple loss: 0.6763, cost time: 6.9265s
+epoch 26, avg. mapping loss: 0.7178, cost time: 5.3576s
+epoch 27, avg. triple loss: 0.6624, cost time: 6.3398s
+epoch 27, avg. mapping loss: 0.6582, cost time: 5.3336s
+epoch 28, avg. triple loss: 0.6491, cost time: 7.1283s
+epoch 28, avg. mapping loss: 0.6077, cost time: 4.7679s
+epoch 29, avg. triple loss: 0.6363, cost time: 6.8911s
+epoch 29, avg. mapping loss: 0.5572, cost time: 4.9874s
+epoch 30, avg. triple loss: 0.6240, cost time: 7.4124s
+epoch 30, avg. mapping loss: 0.5081, cost time: 4.8557s
+epoch 31, avg. triple loss: 0.6122, cost time: 7.2454s
+epoch 31, avg. mapping loss: 0.4747, cost time: 5.3627s
+epoch 32, avg. triple loss: 0.6009, cost time: 7.0392s
+epoch 32, avg. mapping loss: 0.4374, cost time: 5.3010s
+epoch 33, avg. triple loss: 0.5900, cost time: 7.0111s
+epoch 33, avg. mapping loss: 0.4026, cost time: 4.9145s
+epoch 34, avg. triple loss: 0.5795, cost time: 6.6659s
+epoch 34, avg. mapping loss: 0.3754, cost time: 5.4782s
+epoch 35, avg. triple loss: 0.5693, cost time: 7.1199s
+epoch 35, avg. mapping loss: 0.3483, cost time: 5.4890s
+epoch 36, avg. triple loss: 0.5595, cost time: 7.1848s
+epoch 36, avg. mapping loss: 0.3214, cost time: 5.7275s
+epoch 37, avg. triple loss: 0.5501, cost time: 7.2040s
+epoch 37, avg. mapping loss: 0.2989, cost time: 5.6980s
+epoch 38, avg. triple loss: 0.5410, cost time: 7.2935s
+epoch 38, avg. mapping loss: 0.2808, cost time: 5.8909s
+epoch 39, avg. triple loss: 0.5322, cost time: 7.1888s
+epoch 39, avg. mapping loss: 0.2628, cost time: 6.0671s
+epoch 40, avg. triple loss: 0.5237, cost time: 8.5399s
+epoch 40, avg. mapping loss: 0.2438, cost time: 5.1595s
+epoch 41, avg. triple loss: 0.5154, cost time: 7.9997s
+epoch 41, avg. mapping loss: 0.2286, cost time: 5.9508s
+epoch 42, avg. triple loss: 0.5074, cost time: 7.4803s
+epoch 42, avg. mapping loss: 0.2139, cost time: 5.4665s
+epoch 43, avg. triple loss: 0.4997, cost time: 7.6627s
+epoch 43, avg. mapping loss: 0.2024, cost time: 5.8444s
+epoch 44, avg. triple loss: 0.4922, cost time: 8.4671s
+epoch 44, avg. mapping loss: 0.1892, cost time: 6.3194s
+epoch 45, avg. triple loss: 0.4849, cost time: 7.9105s
+epoch 45, avg. mapping loss: 0.1783, cost time: 5.3154s
+epoch 46, avg. triple loss: 0.4778, cost time: 7.2087s
+epoch 46, avg. mapping loss: 0.1663, cost time: 5.4768s
+epoch 47, avg. triple loss: 0.4709, cost time: 8.3439s
+epoch 47, avg. mapping loss: 0.1571, cost time: 5.9335s
+epoch 48, avg. triple loss: 0.4642, cost time: 7.5397s
+epoch 48, avg. mapping loss: 0.1498, cost time: 6.3733s
+epoch 49, avg. triple loss: 0.4577, cost time: 8.2931s
+epoch 49, avg. mapping loss: 0.1402, cost time: 5.3410s
+epoch 50, avg. triple loss: 0.4513, cost time: 8.1262s
+epoch 50, avg. mapping loss: 0.1328, cost time: 5.3068s
+epoch 51, avg. triple loss: 0.4451, cost time: 7.9770s
+epoch 51, avg. mapping loss: 0.1250, cost time: 6.1205s
+epoch 52, avg. triple loss: 0.4391, cost time: 8.0796s
+epoch 52, avg. mapping loss: 0.1194, cost time: 4.9211s
+epoch 53, avg. triple loss: 0.4332, cost time: 6.8006s
+epoch 53, avg. mapping loss: 0.1139, cost time: 6.1821s
+epoch 54, avg. triple loss: 0.4275, cost time: 6.8862s
+epoch 54, avg. mapping loss: 0.1067, cost time: 6.0704s
+epoch 55, avg. triple loss: 0.4218, cost time: 7.2497s
+epoch 55, avg. mapping loss: 0.1010, cost time: 5.8877s
+epoch 56, avg. triple loss: 0.4163, cost time: 7.5843s
+epoch 56, avg. mapping loss: 0.0975, cost time: 6.3177s
+epoch 57, avg. triple loss: 0.4110, cost time: 8.0491s
+epoch 57, avg. mapping loss: 0.0921, cost time: 5.9350s
+epoch 58, avg. triple loss: 0.4057, cost time: 8.6709s
+epoch 58, avg. mapping loss: 0.0873, cost time: 4.8054s
+epoch 59, avg. triple loss: 0.4006, cost time: 7.6754s
+epoch 59, avg. mapping loss: 0.0832, cost time: 5.8561s
+epoch 60, avg. triple loss: 0.3955, cost time: 7.5930s
+epoch 60, avg. mapping loss: 0.0788, cost time: 5.4293s
+epoch 61, avg. triple loss: 0.3906, cost time: 7.8922s
+epoch 61, avg. mapping loss: 0.0751, cost time: 6.2930s
+epoch 62, avg. triple loss: 0.3857, cost time: 7.2397s
+epoch 62, avg. mapping loss: 0.0719, cost time: 5.6229s
+epoch 63, avg. triple loss: 0.3810, cost time: 7.6978s
+epoch 63, avg. mapping loss: 0.0684, cost time: 5.6357s
+epoch 64, avg. triple loss: 0.3763, cost time: 7.5708s
+epoch 64, avg. mapping loss: 0.0653, cost time: 6.0319s
+epoch 65, avg. triple loss: 0.3717, cost time: 7.1753s
+epoch 65, avg. mapping loss: 0.0624, cost time: 6.0772s
+epoch 66, avg. triple loss: 0.3672, cost time: 8.5710s
+epoch 66, avg. mapping loss: 0.0598, cost time: 5.8515s
+epoch 67, avg. triple loss: 0.3627, cost time: 7.4429s
+epoch 67, avg. mapping loss: 0.0565, cost time: 5.5281s
+epoch 68, avg. triple loss: 0.3583, cost time: 8.3747s
+epoch 68, avg. mapping loss: 0.0547, cost time: 5.3546s
+epoch 69, avg. triple loss: 0.3540, cost time: 7.0557s
+epoch 69, avg. mapping loss: 0.0518, cost time: 6.3252s
+epoch 70, avg. triple loss: 0.3498, cost time: 7.6900s
+epoch 70, avg. mapping loss: 0.0497, cost time: 6.0785s
+epoch 71, avg. triple loss: 0.3456, cost time: 7.4310s
+epoch 71, avg. mapping loss: 0.0481, cost time: 5.6829s
+epoch 72, avg. triple loss: 0.3415, cost time: 6.8164s
+epoch 72, avg. mapping loss: 0.0452, cost time: 5.5577s
+epoch 73, avg. triple loss: 0.3375, cost time: 8.2968s
+epoch 73, avg. mapping loss: 0.0434, cost time: 6.1465s
+epoch 74, avg. triple loss: 0.3335, cost time: 7.1508s
+epoch 74, avg. mapping loss: 0.0419, cost time: 5.0164s
+epoch 75, avg. triple loss: 0.3295, cost time: 8.2829s
+epoch 75, avg. mapping loss: 0.0403, cost time: 5.7337s
+epoch 76, avg. triple loss: 0.3256, cost time: 7.7589s
+epoch 76, avg. mapping loss: 0.0390, cost time: 6.0405s
+epoch 77, avg. triple loss: 0.3218, cost time: 7.6069s
+epoch 77, avg. mapping loss: 0.0376, cost time: 5.3807s
+epoch 78, avg. triple loss: 0.3180, cost time: 7.4753s
+epoch 78, avg. mapping loss: 0.0357, cost time: 6.2171s
+epoch 79, avg. triple loss: 0.3143, cost time: 8.1949s
+epoch 79, avg. mapping loss: 0.0337, cost time: 6.1467s
+epoch 80, avg. triple loss: 0.3106, cost time: 7.9203s
+epoch 80, avg. mapping loss: 0.0332, cost time: 6.4394s
+epoch 81, avg. triple loss: 0.3069, cost time: 7.5450s
+epoch 81, avg. mapping loss: 0.0313, cost time: 5.1857s
+epoch 82, avg. triple loss: 0.3033, cost time: 7.9680s
+epoch 82, avg. mapping loss: 0.0302, cost time: 5.6825s
+epoch 83, avg. triple loss: 0.2997, cost time: 7.5528s
+epoch 83, avg. mapping loss: 0.0293, cost time: 5.8107s
+epoch 84, avg. triple loss: 0.2962, cost time: 8.3114s
+epoch 84, avg. mapping loss: 0.0279, cost time: 5.6502s
+epoch 85, avg. triple loss: 0.2927, cost time: 8.1159s
+epoch 85, avg. mapping loss: 0.0272, cost time: 5.5543s
+epoch 86, avg. triple loss: 0.2892, cost time: 7.2097s
+epoch 86, avg. mapping loss: 0.0261, cost time: 6.0011s
+epoch 87, avg. triple loss: 0.2858, cost time: 8.0966s
+epoch 87, avg. mapping loss: 0.0254, cost time: 6.1034s
+epoch 88, avg. triple loss: 0.2824, cost time: 7.6094s
+epoch 88, avg. mapping loss: 0.0243, cost time: 4.8578s
+epoch 89, avg. triple loss: 0.2791, cost time: 6.2786s
+epoch 89, avg. mapping loss: 0.0233, cost time: 5.0941s
+epoch 90, avg. triple loss: 0.2758, cost time: 6.5890s
+epoch 90, avg. mapping loss: 0.0225, cost time: 4.8103s
+epoch 91, avg. triple loss: 0.2725, cost time: 6.8128s
+epoch 91, avg. mapping loss: 0.0217, cost time: 5.1796s
+epoch 92, avg. triple loss: 0.2692, cost time: 6.8335s
+epoch 92, avg. mapping loss: 0.0211, cost time: 4.6289s
+epoch 93, avg. triple loss: 0.2660, cost time: 7.1841s
+epoch 93, avg. mapping loss: 0.0204, cost time: 4.9370s
+epoch 94, avg. triple loss: 0.2628, cost time: 6.6005s
+epoch 94, avg. mapping loss: 0.0200, cost time: 5.7851s
+epoch 95, avg. triple loss: 0.2596, cost time: 7.0852s
+epoch 95, avg. mapping loss: 0.0193, cost time: 4.5562s
+epoch 96, avg. triple loss: 0.2565, cost time: 5.8562s
+epoch 96, avg. mapping loss: 0.0185, cost time: 4.5586s
+epoch 97, avg. triple loss: 0.2534, cost time: 6.4876s
+epoch 97, avg. mapping loss: 0.0180, cost time: 5.2561s
+epoch 98, avg. triple loss: 0.2503, cost time: 6.7204s
+epoch 98, avg. mapping loss: 0.0174, cost time: 5.0082s
+epoch 99, avg. triple loss: 0.2472, cost time: 6.9256s
+epoch 99, avg. mapping loss: 0.0169, cost time: 4.7662s
+epoch 100, avg. triple loss: 0.2442, cost time: 6.4958s
+epoch 100, avg. mapping loss: 0.0163, cost time: 4.9910s
+quick results: hits@[1, 5, 10, 50] = [49.753 51.333 51.802 53.358]%, time = 8.512 s 
+epoch 101, avg. triple loss: 0.2412, cost time: 6.6699s
+epoch 101, avg. mapping loss: 0.0160, cost time: 5.1720s
+epoch 102, avg. triple loss: 0.2382, cost time: 6.4930s
+epoch 102, avg. mapping loss: 0.0154, cost time: 4.5443s
+epoch 103, avg. triple loss: 0.2353, cost time: 6.1672s
+epoch 103, avg. mapping loss: 0.0150, cost time: 4.6246s
+epoch 104, avg. triple loss: 0.2323, cost time: 6.6515s
+epoch 104, avg. mapping loss: 0.0145, cost time: 4.6742s
+epoch 105, avg. triple loss: 0.2294, cost time: 6.5432s
+epoch 105, avg. mapping loss: 0.0142, cost time: 4.4492s
+epoch 106, avg. triple loss: 0.2265, cost time: 7.3515s
+epoch 106, avg. mapping loss: 0.0136, cost time: 5.0368s
+epoch 107, avg. triple loss: 0.2237, cost time: 6.8350s
+epoch 107, avg. mapping loss: 0.0135, cost time: 5.3528s
+epoch 108, avg. triple loss: 0.2208, cost time: 6.7407s
+epoch 108, avg. mapping loss: 0.0130, cost time: 4.5682s
+epoch 109, avg. triple loss: 0.2180, cost time: 6.2757s
+epoch 109, avg. mapping loss: 0.0128, cost time: 5.2153s
+epoch 110, avg. triple loss: 0.2152, cost time: 5.5644s
+epoch 110, avg. mapping loss: 0.0125, cost time: 4.7714s
+quick results: hits@[1, 5, 10, 50] = [50.494 51.704 52.296 53.728]%, time = 7.233 s 
+epoch 111, avg. triple loss: 0.2124, cost time: 6.5027s
+epoch 111, avg. mapping loss: 0.0121, cost time: 4.7136s
+epoch 112, avg. triple loss: 0.2097, cost time: 6.1570s
+epoch 112, avg. mapping loss: 0.0117, cost time: 4.3216s
+epoch 113, avg. triple loss: 0.2069, cost time: 6.6692s
+epoch 113, avg. mapping loss: 0.0116, cost time: 4.4780s
+epoch 114, avg. triple loss: 0.2042, cost time: 6.6189s
+epoch 114, avg. mapping loss: 0.0114, cost time: 5.0867s
+epoch 115, avg. triple loss: 0.2015, cost time: 6.5628s
+epoch 115, avg. mapping loss: 0.0112, cost time: 4.4846s
+epoch 116, avg. triple loss: 0.1988, cost time: 6.9053s
+epoch 116, avg. mapping loss: 0.0107, cost time: 4.1581s
+epoch 117, avg. triple loss: 0.1962, cost time: 6.2897s
+epoch 117, avg. mapping loss: 0.0106, cost time: 5.4074s
+epoch 118, avg. triple loss: 0.1935, cost time: 6.6011s
+epoch 118, avg. mapping loss: 0.0103, cost time: 4.7638s
+epoch 119, avg. triple loss: 0.1909, cost time: 6.7764s
+epoch 119, avg. mapping loss: 0.0100, cost time: 4.3838s
+epoch 120, avg. triple loss: 0.1883, cost time: 6.4760s
+epoch 120, avg. mapping loss: 0.0098, cost time: 4.9331s
+quick results: hits@[1, 5, 10, 50] = [50.963 52.296 52.741 53.926]%, time = 7.587 s 
+epoch 121, avg. triple loss: 0.1857, cost time: 6.6183s
+epoch 121, avg. mapping loss: 0.0096, cost time: 4.7747s
+epoch 122, avg. triple loss: 0.1831, cost time: 6.5323s
+epoch 122, avg. mapping loss: 0.0093, cost time: 5.0110s
+epoch 123, avg. triple loss: 0.1806, cost time: 6.8395s
+epoch 123, avg. mapping loss: 0.0092, cost time: 4.3198s
+epoch 124, avg. triple loss: 0.1780, cost time: 6.7073s
+epoch 124, avg. mapping loss: 0.0090, cost time: 5.2809s
+epoch 125, avg. triple loss: 0.1755, cost time: 6.3882s
+epoch 125, avg. mapping loss: 0.0088, cost time: 4.4906s
+epoch 126, avg. triple loss: 0.1730, cost time: 6.8717s
+epoch 126, avg. mapping loss: 0.0087, cost time: 4.8460s
+epoch 127, avg. triple loss: 0.1705, cost time: 7.0344s
+epoch 127, avg. mapping loss: 0.0085, cost time: 5.1714s
+epoch 128, avg. triple loss: 0.1681, cost time: 6.0020s
+epoch 128, avg. mapping loss: 0.0082, cost time: 3.7526s
+epoch 129, avg. triple loss: 0.1656, cost time: 6.8564s
+epoch 129, avg. mapping loss: 0.0081, cost time: 4.9080s
+epoch 130, avg. triple loss: 0.1632, cost time: 6.5094s
+epoch 130, avg. mapping loss: 0.0080, cost time: 4.3034s
+quick results: hits@[1, 5, 10, 50] = [51.185 52.593 53.086 54.173]%, time = 6.578 s 
+epoch 131, avg. triple loss: 0.1608, cost time: 6.4998s
+epoch 131, avg. mapping loss: 0.0078, cost time: 5.2432s
+epoch 132, avg. triple loss: 0.1584, cost time: 6.9970s
+epoch 132, avg. mapping loss: 0.0077, cost time: 5.0184s
+epoch 133, avg. triple loss: 0.1560, cost time: 7.0455s
+epoch 133, avg. mapping loss: 0.0073, cost time: 5.0191s
+epoch 134, avg. triple loss: 0.1537, cost time: 6.8484s
+epoch 134, avg. mapping loss: 0.0074, cost time: 5.2103s
+epoch 135, avg. triple loss: 0.1514, cost time: 6.8612s
+epoch 135, avg. mapping loss: 0.0072, cost time: 4.9399s
+epoch 136, avg. triple loss: 0.1491, cost time: 7.3530s
+epoch 136, avg. mapping loss: 0.0071, cost time: 4.7734s
+epoch 137, avg. triple loss: 0.1468, cost time: 5.8728s
+epoch 137, avg. mapping loss: 0.0069, cost time: 4.4043s
+epoch 138, avg. triple loss: 0.1445, cost time: 6.9321s
+epoch 138, avg. mapping loss: 0.0069, cost time: 4.8087s
+epoch 139, avg. triple loss: 0.1423, cost time: 7.2000s
+epoch 139, avg. mapping loss: 0.0068, cost time: 5.2941s
+epoch 140, avg. triple loss: 0.1400, cost time: 7.3211s
+epoch 140, avg. mapping loss: 0.0066, cost time: 5.2393s
+quick results: hits@[1, 5, 10, 50] = [51.383 52.914 53.185 54.321]%, time = 7.248 s 
+epoch 141, avg. triple loss: 0.1378, cost time: 6.9145s
+epoch 141, avg. mapping loss: 0.0064, cost time: 4.9279s
+epoch 142, avg. triple loss: 0.1356, cost time: 6.3202s
+epoch 142, avg. mapping loss: 0.0063, cost time: 4.9216s
+epoch 143, avg. triple loss: 0.1335, cost time: 7.2761s
+epoch 143, avg. mapping loss: 0.0062, cost time: 4.9487s
+epoch 144, avg. triple loss: 0.1313, cost time: 6.0079s
+epoch 144, avg. mapping loss: 0.0062, cost time: 5.4281s
+epoch 145, avg. triple loss: 0.1292, cost time: 6.6153s
+epoch 145, avg. mapping loss: 0.0060, cost time: 4.7443s
+epoch 146, avg. triple loss: 0.1271, cost time: 6.4488s
+epoch 146, avg. mapping loss: 0.0059, cost time: 4.2733s
+epoch 147, avg. triple loss: 0.1250, cost time: 6.2226s
+epoch 147, avg. mapping loss: 0.0058, cost time: 4.9463s
+epoch 148, avg. triple loss: 0.1230, cost time: 6.1915s
+epoch 148, avg. mapping loss: 0.0057, cost time: 4.6208s
+epoch 149, avg. triple loss: 0.1209, cost time: 6.5907s
+epoch 149, avg. mapping loss: 0.0055, cost time: 4.0076s
+epoch 150, avg. triple loss: 0.1189, cost time: 6.0778s
+epoch 150, avg. mapping loss: 0.0055, cost time: 4.5592s
+quick results: hits@[1, 5, 10, 50] = [51.654 52.963 53.407 54.444]%, time = 6.825 s 
+epoch 151, avg. triple loss: 0.1169, cost time: 6.0579s
+epoch 151, avg. mapping loss: 0.0054, cost time: 4.8449s
+epoch 152, avg. triple loss: 0.1150, cost time: 5.8708s
+epoch 152, avg. mapping loss: 0.0053, cost time: 4.4063s
+epoch 153, avg. triple loss: 0.1130, cost time: 6.1074s
+epoch 153, avg. mapping loss: 0.0052, cost time: 4.2781s
+epoch 154, avg. triple loss: 0.1111, cost time: 5.6945s
+epoch 154, avg. mapping loss: 0.0051, cost time: 3.5801s
+epoch 155, avg. triple loss: 0.1092, cost time: 4.7942s
+epoch 155, avg. mapping loss: 0.0050, cost time: 4.3633s
+epoch 156, avg. triple loss: 0.1074, cost time: 6.2524s
+epoch 156, avg. mapping loss: 0.0049, cost time: 4.1290s
+epoch 157, avg. triple loss: 0.1055, cost time: 5.4342s
+epoch 157, avg. mapping loss: 0.0048, cost time: 4.1803s
+epoch 158, avg. triple loss: 0.1037, cost time: 4.8431s
+epoch 158, avg. mapping loss: 0.0048, cost time: 3.7904s
+epoch 159, avg. triple loss: 0.1019, cost time: 5.7473s
+epoch 159, avg. mapping loss: 0.0046, cost time: 4.0848s
+epoch 160, avg. triple loss: 0.1001, cost time: 6.2421s
+epoch 160, avg. mapping loss: 0.0046, cost time: 4.6248s
+quick results: hits@[1, 5, 10, 50] = [51.778 53.086 53.407 54.617]%, time = 6.390 s 
+epoch 161, avg. triple loss: 0.0984, cost time: 6.1948s
+epoch 161, avg. mapping loss: 0.0045, cost time: 4.2245s
+epoch 162, avg. triple loss: 0.0966, cost time: 5.8199s
+epoch 162, avg. mapping loss: 0.0045, cost time: 4.2196s
+epoch 163, avg. triple loss: 0.0949, cost time: 6.2675s
+epoch 163, avg. mapping loss: 0.0044, cost time: 4.0895s
+epoch 164, avg. triple loss: 0.0932, cost time: 6.2216s
+epoch 164, avg. mapping loss: 0.0043, cost time: 3.9383s
+epoch 165, avg. triple loss: 0.0916, cost time: 5.3395s
+epoch 165, avg. mapping loss: 0.0042, cost time: 4.2034s
+epoch 166, avg. triple loss: 0.0900, cost time: 5.5541s
+epoch 166, avg. mapping loss: 0.0042, cost time: 3.9497s
+epoch 167, avg. triple loss: 0.0883, cost time: 5.4610s
+epoch 167, avg. mapping loss: 0.0041, cost time: 4.1659s
+epoch 168, avg. triple loss: 0.0868, cost time: 5.6984s
+epoch 168, avg. mapping loss: 0.0040, cost time: 4.1976s
+epoch 169, avg. triple loss: 0.0852, cost time: 5.9912s
+epoch 169, avg. mapping loss: 0.0040, cost time: 4.0460s
+epoch 170, avg. triple loss: 0.0836, cost time: 5.6593s
+epoch 170, avg. mapping loss: 0.0039, cost time: 4.4538s
+quick results: hits@[1, 5, 10, 50] = [51.802 53.111 53.432 54.617]%, time = 5.849 s 
+epoch 171, avg. triple loss: 0.0821, cost time: 6.0523s
+epoch 171, avg. mapping loss: 0.0038, cost time: 3.8195s
+epoch 172, avg. triple loss: 0.0806, cost time: 5.2479s
+epoch 172, avg. mapping loss: 0.0037, cost time: 4.3858s
+epoch 173, avg. triple loss: 0.0792, cost time: 5.9285s
+epoch 173, avg. mapping loss: 0.0037, cost time: 4.1452s
+epoch 174, avg. triple loss: 0.0777, cost time: 6.0223s
+epoch 174, avg. mapping loss: 0.0036, cost time: 4.4995s
+epoch 175, avg. triple loss: 0.0763, cost time: 5.5563s
+epoch 175, avg. mapping loss: 0.0035, cost time: 4.0249s
+epoch 176, avg. triple loss: 0.0749, cost time: 6.0327s
+epoch 176, avg. mapping loss: 0.0035, cost time: 3.9786s
+epoch 177, avg. triple loss: 0.0735, cost time: 6.0453s
+epoch 177, avg. mapping loss: 0.0034, cost time: 3.9341s
+epoch 178, avg. triple loss: 0.0721, cost time: 5.3200s
+epoch 178, avg. mapping loss: 0.0034, cost time: 3.9143s
+epoch 179, avg. triple loss: 0.0708, cost time: 5.4693s
+epoch 179, avg. mapping loss: 0.0033, cost time: 3.8882s
+epoch 180, avg. triple loss: 0.0695, cost time: 5.3318s
+epoch 180, avg. mapping loss: 0.0033, cost time: 4.4178s
+quick results: hits@[1, 5, 10, 50] = [51.728 53.012 53.457 54.593]%, time = 7.719 s 
+epoch 181, avg. triple loss: 0.0682, cost time: 6.0456s
+epoch 181, avg. mapping loss: 0.0032, cost time: 4.4311s
+epoch 182, avg. triple loss: 0.0669, cost time: 7.0597s
+epoch 182, avg. mapping loss: 0.0032, cost time: 4.2343s
+epoch 183, avg. triple loss: 0.0656, cost time: 5.2993s
+epoch 183, avg. mapping loss: 0.0031, cost time: 5.3482s
+epoch 184, avg. triple loss: 0.0644, cost time: 6.1463s
+epoch 184, avg. mapping loss: 0.0030, cost time: 3.8317s
+epoch 185, avg. triple loss: 0.0632, cost time: 6.8964s
+epoch 185, avg. mapping loss: 0.0030, cost time: 4.9021s
+epoch 186, avg. triple loss: 0.0620, cost time: 5.3225s
+epoch 186, avg. mapping loss: 0.0029, cost time: 4.1778s
+epoch 187, avg. triple loss: 0.0608, cost time: 6.8688s
+epoch 187, avg. mapping loss: 0.0029, cost time: 4.8038s
+epoch 188, avg. triple loss: 0.0597, cost time: 6.2073s
+epoch 188, avg. mapping loss: 0.0028, cost time: 4.5489s
+epoch 189, avg. triple loss: 0.0585, cost time: 7.1529s
+epoch 189, avg. mapping loss: 0.0028, cost time: 4.6258s
+epoch 190, avg. triple loss: 0.0574, cost time: 6.4763s
+epoch 190, avg. mapping loss: 0.0027, cost time: 5.0499s
+quick results: hits@[1, 5, 10, 50] = [51.654 53.012 53.407 54.617]%, time = 7.170 s 
+
+ == should early stop == 
+
+Training ends. Total time = 2348.352 s.
+accurate results: hits@[1, 5, 10, 50] = [50.568 51.981 52.37  53.642]%, mr = 1543.012, mrr = 0.512931, time = 23.697 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [52.846 54.827 55.562 57.481]%, mr = 1232.770, mrr = 0.538306, time = 44.082 s 
+Results saved!
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg1_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg2_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg1_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg2_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg1_attr_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/MTransE/Gold-LLM/541_5fold/1/20231114184324/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 2466.426 s.

@@ -1,0 +1,351 @@
+load arguments: {'training_data': '../../OntologySummit/AmazonRatings/EntityAlignment/', 'output': '../../OntologySummit/AmazonRatings/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'AlignE', 'alignment_module': 'swapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss': 'limited', 'loss_norm': 'L2', 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'pos_margin': 0.01, 'neg_margin': 2.0, 'neg_margin_balance': 0.2, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.9, 'truncated_freq': 10, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False}
+AlignE
+<openea.modules.args.args_hander.ARGs object at 0x7ff2c8752908>
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/attr_triples_2
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/541_5fold/1/test_links
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+Number of rt_dict: 40499
+Number of hr_dict: 20502
+entity relations dict: 40499
+Number of av_dict: 40499
+entity attributes dict: 40499
+
+KG statistics:
+Number of entities: 40502
+Number of relations: 3
+Number of attributes: 4
+Number of relation triples: 80499
+Number of attribute triples: 60499
+Number of local relation triples: 80499
+Number of local attribute triples: 60499
+
+supervised relation triples: 61169, 61169
+supervised attribute triples: 30225, 30225
+../../OntologySummit/AmazonRatings/EntityAlignment/results/ ../../OntologySummit/AmazonRatings/EntityAlignment/Gold-LLM/ ['..', '..', 'OntologySummit', 'AmazonRatings', 'EntityAlignment', 'Gold-LLM'] 541_5fold/1/ AlignE
+results output folder: ../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/
+epoch 1, avg. triple loss: 2.2654, cost time: 29.6843s
+epoch 2, avg. triple loss: 1.8426, cost time: 34.7039s
+epoch 3, avg. triple loss: 1.6126, cost time: 35.9408s
+epoch 4, avg. triple loss: 1.4640, cost time: 40.3670s
+epoch 5, avg. triple loss: 1.3676, cost time: 44.3278s
+epoch 6, avg. triple loss: 1.2990, cost time: 37.8391s
+epoch 7, avg. triple loss: 1.2454, cost time: 35.3646s
+epoch 8, avg. triple loss: 1.2015, cost time: 38.4016s
+epoch 9, avg. triple loss: 1.1638, cost time: 37.2179s
+epoch 10, avg. triple loss: 1.1314, cost time: 38.3508s
+
+generating neighbors of 81004 entities costs 198.015 s.
+epoch 11, avg. triple loss: 1.2924, cost time: 38.1457s
+epoch 12, avg. triple loss: 1.2424, cost time: 36.6788s
+epoch 13, avg. triple loss: 1.2117, cost time: 36.2581s
+epoch 14, avg. triple loss: 1.1840, cost time: 34.6637s
+epoch 15, avg. triple loss: 1.1592, cost time: 40.8820s
+epoch 16, avg. triple loss: 1.1365, cost time: 37.4013s
+epoch 17, avg. triple loss: 1.1164, cost time: 36.6687s
+epoch 18, avg. triple loss: 1.0983, cost time: 36.6634s
+epoch 19, avg. triple loss: 1.0802, cost time: 36.8278s
+epoch 20, avg. triple loss: 1.0637, cost time: 37.8801s
+
+generating neighbors of 81004 entities costs 246.931 s.
+epoch 21, avg. triple loss: 1.0594, cost time: 33.6912s
+epoch 22, avg. triple loss: 1.0459, cost time: 32.6518s
+epoch 23, avg. triple loss: 1.0328, cost time: 33.7079s
+epoch 24, avg. triple loss: 1.0210, cost time: 36.7073s
+epoch 25, avg. triple loss: 1.0091, cost time: 37.4591s
+epoch 26, avg. triple loss: 0.9977, cost time: 40.1452s
+epoch 27, avg. triple loss: 0.9878, cost time: 36.1219s
+epoch 28, avg. triple loss: 0.9778, cost time: 37.4584s
+epoch 29, avg. triple loss: 0.9676, cost time: 42.5795s
+epoch 30, avg. triple loss: 0.9592, cost time: 39.4235s
+
+generating neighbors of 81004 entities costs 259.183 s.
+epoch 31, avg. triple loss: 0.9583, cost time: 39.5587s
+epoch 32, avg. triple loss: 0.9501, cost time: 40.1873s
+epoch 33, avg. triple loss: 0.9427, cost time: 37.7938s
+epoch 34, avg. triple loss: 0.9351, cost time: 38.8667s
+epoch 35, avg. triple loss: 0.9279, cost time: 50.6249s
+epoch 36, avg. triple loss: 0.9215, cost time: 40.4018s
+epoch 37, avg. triple loss: 0.9143, cost time: 38.3448s
+epoch 38, avg. triple loss: 0.9080, cost time: 38.1548s
+epoch 39, avg. triple loss: 0.9027, cost time: 38.3890s
+epoch 40, avg. triple loss: 0.8973, cost time: 40.2008s
+
+generating neighbors of 81004 entities costs 232.389 s.
+epoch 41, avg. triple loss: 0.8964, cost time: 33.7293s
+epoch 42, avg. triple loss: 0.8913, cost time: 31.6499s
+epoch 43, avg. triple loss: 0.8863, cost time: 32.4271s
+epoch 44, avg. triple loss: 0.8813, cost time: 35.9461s
+epoch 45, avg. triple loss: 0.8762, cost time: 41.2970s
+epoch 46, avg. triple loss: 0.8724, cost time: 37.8503s
+epoch 47, avg. triple loss: 0.8674, cost time: 36.6122s
+epoch 48, avg. triple loss: 0.8630, cost time: 38.7936s
+epoch 49, avg. triple loss: 0.8596, cost time: 35.4450s
+epoch 50, avg. triple loss: 0.8555, cost time: 42.4560s
+
+generating neighbors of 81004 entities costs 244.323 s.
+epoch 51, avg. triple loss: 0.8551, cost time: 38.5283s
+epoch 52, avg. triple loss: 0.8514, cost time: 39.5734s
+epoch 53, avg. triple loss: 0.8478, cost time: 39.5422s
+epoch 54, avg. triple loss: 0.8446, cost time: 38.3550s
+epoch 55, avg. triple loss: 0.8408, cost time: 39.0625s
+epoch 56, avg. triple loss: 0.8380, cost time: 48.8325s
+epoch 57, avg. triple loss: 0.8340, cost time: 39.3488s
+epoch 58, avg. triple loss: 0.8313, cost time: 38.0068s
+epoch 59, avg. triple loss: 0.8282, cost time: 40.5600s
+epoch 60, avg. triple loss: 0.8254, cost time: 36.5950s
+
+generating neighbors of 81004 entities costs 253.526 s.
+epoch 61, avg. triple loss: 0.8251, cost time: 32.1676s
+epoch 62, avg. triple loss: 0.8223, cost time: 32.2881s
+epoch 63, avg. triple loss: 0.8192, cost time: 33.0920s
+epoch 64, avg. triple loss: 0.8171, cost time: 31.8515s
+epoch 65, avg. triple loss: 0.8145, cost time: 37.4602s
+epoch 66, avg. triple loss: 0.8118, cost time: 37.9646s
+epoch 67, avg. triple loss: 0.8098, cost time: 37.7742s
+epoch 68, avg. triple loss: 0.8076, cost time: 40.1534s
+epoch 69, avg. triple loss: 0.8049, cost time: 38.3633s
+epoch 70, avg. triple loss: 0.8027, cost time: 36.6663s
+
+generating neighbors of 81004 entities costs 239.769 s.
+epoch 71, avg. triple loss: 0.8030, cost time: 37.1413s
+epoch 72, avg. triple loss: 0.8009, cost time: 37.1302s
+epoch 73, avg. triple loss: 0.7985, cost time: 44.1804s
+epoch 74, avg. triple loss: 0.7966, cost time: 36.5794s
+epoch 75, avg. triple loss: 0.7951, cost time: 38.6601s
+epoch 76, avg. triple loss: 0.7931, cost time: 38.1591s
+epoch 77, avg. triple loss: 0.7906, cost time: 37.5667s
+epoch 78, avg. triple loss: 0.7889, cost time: 37.0364s
+epoch 79, avg. triple loss: 0.7872, cost time: 40.1799s
+epoch 80, avg. triple loss: 0.7853, cost time: 38.0560s
+
+generating neighbors of 81004 entities costs 248.944 s.
+epoch 81, avg. triple loss: 0.7857, cost time: 34.3881s
+epoch 82, avg. triple loss: 0.7835, cost time: 32.7342s
+epoch 83, avg. triple loss: 0.7820, cost time: 31.5204s
+epoch 84, avg. triple loss: 0.7806, cost time: 33.0241s
+epoch 85, avg. triple loss: 0.7786, cost time: 36.3375s
+epoch 86, avg. triple loss: 0.7778, cost time: 34.5513s
+epoch 87, avg. triple loss: 0.7759, cost time: 37.4559s
+epoch 88, avg. triple loss: 0.7748, cost time: 37.8221s
+epoch 89, avg. triple loss: 0.7732, cost time: 36.6899s
+epoch 90, avg. triple loss: 0.7721, cost time: 37.5671s
+
+generating neighbors of 81004 entities costs 235.485 s.
+epoch 91, avg. triple loss: 0.7720, cost time: 40.3048s
+epoch 92, avg. triple loss: 0.7707, cost time: 37.1591s
+epoch 93, avg. triple loss: 0.7694, cost time: 38.4726s
+epoch 94, avg. triple loss: 0.7680, cost time: 40.7378s
+epoch 95, avg. triple loss: 0.7670, cost time: 39.2484s
+epoch 96, avg. triple loss: 0.7652, cost time: 38.1258s
+epoch 97, avg. triple loss: 0.7642, cost time: 38.3013s
+epoch 98, avg. triple loss: 0.7625, cost time: 37.9581s
+epoch 99, avg. triple loss: 0.7614, cost time: 40.2444s
+epoch 100, avg. triple loss: 0.7603, cost time: 39.9906s
+quick results: hits@[1, 5, 10, 50] = [56.148 61.975 66.198 79.259]%, time = 13.587 s 
+
+generating neighbors of 81004 entities costs 247.142 s.
+epoch 101, avg. triple loss: 0.7615, cost time: 35.8464s
+epoch 102, avg. triple loss: 0.7601, cost time: 35.1821s
+epoch 103, avg. triple loss: 0.7588, cost time: 36.6378s
+epoch 104, avg. triple loss: 0.7572, cost time: 38.9476s
+epoch 105, avg. triple loss: 0.7568, cost time: 38.2282s
+epoch 106, avg. triple loss: 0.7550, cost time: 44.8374s
+epoch 107, avg. triple loss: 0.7546, cost time: 38.5812s
+epoch 108, avg. triple loss: 0.7532, cost time: 39.7145s
+epoch 109, avg. triple loss: 0.7519, cost time: 45.7561s
+epoch 110, avg. triple loss: 0.7512, cost time: 38.4215s
+quick results: hits@[1, 5, 10, 50] = [56.321 62.395 66.617 79.827]%, time = 12.573 s 
+
+generating neighbors of 81004 entities costs 245.148 s.
+epoch 111, avg. triple loss: 0.7522, cost time: 36.8852s
+epoch 112, avg. triple loss: 0.7505, cost time: 38.5595s
+epoch 113, avg. triple loss: 0.7499, cost time: 36.9698s
+epoch 114, avg. triple loss: 0.7490, cost time: 38.1950s
+epoch 115, avg. triple loss: 0.7478, cost time: 36.9374s
+epoch 116, avg. triple loss: 0.7472, cost time: 37.3702s
+epoch 117, avg. triple loss: 0.7464, cost time: 35.6168s
+epoch 118, avg. triple loss: 0.7456, cost time: 37.1832s
+epoch 119, avg. triple loss: 0.7444, cost time: 36.2559s
+epoch 120, avg. triple loss: 0.7434, cost time: 36.4208s
+quick results: hits@[1, 5, 10, 50] = [56.395 62.741 67.037 80.543]%, time = 12.805 s 
+
+generating neighbors of 81004 entities costs 217.884 s.
+epoch 121, avg. triple loss: 0.7445, cost time: 34.3896s
+epoch 122, avg. triple loss: 0.7431, cost time: 38.4369s
+epoch 123, avg. triple loss: 0.7424, cost time: 34.5490s
+epoch 124, avg. triple loss: 0.7415, cost time: 44.0230s
+epoch 125, avg. triple loss: 0.7410, cost time: 36.7256s
+epoch 126, avg. triple loss: 0.7401, cost time: 37.8590s
+epoch 127, avg. triple loss: 0.7395, cost time: 40.5402s
+epoch 128, avg. triple loss: 0.7386, cost time: 39.8198s
+epoch 129, avg. triple loss: 0.7377, cost time: 38.1182s
+epoch 130, avg. triple loss: 0.7372, cost time: 37.8227s
+quick results: hits@[1, 5, 10, 50] = [56.568 63.086 67.235 81.333]%, time = 13.453 s 
+
+generating neighbors of 81004 entities costs 246.056 s.
+epoch 131, avg. triple loss: 0.7375, cost time: 40.7239s
+epoch 132, avg. triple loss: 0.7369, cost time: 41.8038s
+epoch 133, avg. triple loss: 0.7357, cost time: 43.1791s
+epoch 134, avg. triple loss: 0.7349, cost time: 43.0006s
+epoch 135, avg. triple loss: 0.7345, cost time: 40.4422s
+epoch 136, avg. triple loss: 0.7338, cost time: 40.1631s
+epoch 137, avg. triple loss: 0.7327, cost time: 41.7182s
+epoch 138, avg. triple loss: 0.7328, cost time: 41.1574s
+epoch 139, avg. triple loss: 0.7318, cost time: 40.1895s
+epoch 140, avg. triple loss: 0.7314, cost time: 36.8826s
+quick results: hits@[1, 5, 10, 50] = [56.79  63.21  67.58  82.198]%, time = 11.714 s 
+
+generating neighbors of 81004 entities costs 244.608 s.
+epoch 141, avg. triple loss: 0.7318, cost time: 39.9452s
+epoch 142, avg. triple loss: 0.7309, cost time: 39.4368s
+epoch 143, avg. triple loss: 0.7303, cost time: 40.9651s
+epoch 144, avg. triple loss: 0.7301, cost time: 40.2055s
+epoch 145, avg. triple loss: 0.7292, cost time: 39.8769s
+epoch 146, avg. triple loss: 0.7284, cost time: 38.7613s
+epoch 147, avg. triple loss: 0.7279, cost time: 41.6962s
+epoch 148, avg. triple loss: 0.7272, cost time: 38.9487s
+epoch 149, avg. triple loss: 0.7268, cost time: 41.4445s
+epoch 150, avg. triple loss: 0.7260, cost time: 37.5002s
+quick results: hits@[1, 5, 10, 50] = [56.84  63.481 67.901 83.012]%, time = 13.885 s 
+
+generating neighbors of 81004 entities costs 247.868 s.
+epoch 151, avg. triple loss: 0.7266, cost time: 41.0188s
+epoch 152, avg. triple loss: 0.7263, cost time: 41.4092s
+epoch 153, avg. triple loss: 0.7256, cost time: 39.2455s
+epoch 154, avg. triple loss: 0.7248, cost time: 36.1348s
+epoch 155, avg. triple loss: 0.7242, cost time: 36.4575s
+epoch 156, avg. triple loss: 0.7237, cost time: 37.8313s
+epoch 157, avg. triple loss: 0.7234, cost time: 33.3985s
+epoch 158, avg. triple loss: 0.7229, cost time: 32.0616s
+epoch 159, avg. triple loss: 0.7219, cost time: 32.6282s
+epoch 160, avg. triple loss: 0.7217, cost time: 32.1022s
+quick results: hits@[1, 5, 10, 50] = [56.765 63.679 68.099 83.704]%, time = 10.847 s 
+
+generating neighbors of 81004 entities costs 235.486 s.
+epoch 161, avg. triple loss: 0.7225, cost time: 33.9137s
+epoch 162, avg. triple loss: 0.7218, cost time: 36.1389s
+epoch 163, avg. triple loss: 0.7208, cost time: 34.3227s
+epoch 164, avg. triple loss: 0.7202, cost time: 34.9085s
+epoch 165, avg. triple loss: 0.7202, cost time: 34.5442s
+epoch 166, avg. triple loss: 0.7192, cost time: 35.0122s
+epoch 167, avg. triple loss: 0.7187, cost time: 35.8405s
+epoch 168, avg. triple loss: 0.7185, cost time: 34.7353s
+epoch 169, avg. triple loss: 0.7182, cost time: 35.9779s
+epoch 170, avg. triple loss: 0.7173, cost time: 34.0284s
+quick results: hits@[1, 5, 10, 50] = [56.79  63.778 68.346 84.074]%, time = 11.605 s 
+
+generating neighbors of 81004 entities costs 220.390 s.
+epoch 171, avg. triple loss: 0.7179, cost time: 41.1064s
+epoch 172, avg. triple loss: 0.7178, cost time: 41.6540s
+epoch 173, avg. triple loss: 0.7169, cost time: 36.4490s
+epoch 174, avg. triple loss: 0.7166, cost time: 36.1446s
+epoch 175, avg. triple loss: 0.7159, cost time: 33.6154s
+epoch 176, avg. triple loss: 0.7158, cost time: 34.6918s
+epoch 177, avg. triple loss: 0.7150, cost time: 35.7339s
+epoch 178, avg. triple loss: 0.7146, cost time: 39.1318s
+epoch 179, avg. triple loss: 0.7140, cost time: 39.6525s
+epoch 180, avg. triple loss: 0.7138, cost time: 39.3416s
+quick results: hits@[1, 5, 10, 50] = [56.741 64.025 68.494 84.815]%, time = 12.622 s 
+
+generating neighbors of 81004 entities costs 246.613 s.
+epoch 181, avg. triple loss: 0.7147, cost time: 40.8046s
+epoch 182, avg. triple loss: 0.7143, cost time: 38.4288s
+epoch 183, avg. triple loss: 0.7127, cost time: 38.1699s
+epoch 184, avg. triple loss: 0.7134, cost time: 42.8437s
+epoch 185, avg. triple loss: 0.7124, cost time: 38.9910s
+epoch 186, avg. triple loss: 0.7121, cost time: 40.9765s
+epoch 187, avg. triple loss: 0.7116, cost time: 38.6765s
+epoch 188, avg. triple loss: 0.7117, cost time: 37.4145s
+epoch 189, avg. triple loss: 0.7110, cost time: 37.7332s
+epoch 190, avg. triple loss: 0.7104, cost time: 38.4119s
+quick results: hits@[1, 5, 10, 50] = [56.988 64.099 68.815 85.235]%, time = 13.168 s 
+
+generating neighbors of 81004 entities costs 242.522 s.
+epoch 191, avg. triple loss: 0.7110, cost time: 34.7952s
+epoch 192, avg. triple loss: 0.7102, cost time: 36.6635s
+epoch 193, avg. triple loss: 0.7107, cost time: 34.6908s
+epoch 194, avg. triple loss: 0.7099, cost time: 35.2145s
+epoch 195, avg. triple loss: 0.7092, cost time: 38.1316s
+epoch 196, avg. triple loss: 0.7090, cost time: 39.5782s
+epoch 197, avg. triple loss: 0.7088, cost time: 41.5141s
+epoch 198, avg. triple loss: 0.7083, cost time: 39.3016s
+epoch 199, avg. triple loss: 0.7079, cost time: 40.1530s
+epoch 200, avg. triple loss: 0.7073, cost time: 38.9760s
+quick results: hits@[1, 5, 10, 50] = [56.988 64.37  68.938 85.704]%, time = 12.309 s 
+
+generating neighbors of 81004 entities costs 221.640 s.
+epoch 201, avg. triple loss: 0.7081, cost time: 33.1777s
+epoch 202, avg. triple loss: 0.7077, cost time: 36.0663s
+epoch 203, avg. triple loss: 0.7070, cost time: 35.1841s
+epoch 204, avg. triple loss: 0.7068, cost time: 35.7914s
+epoch 205, avg. triple loss: 0.7064, cost time: 33.8945s
+epoch 206, avg. triple loss: 0.7061, cost time: 35.3011s
+epoch 207, avg. triple loss: 0.7058, cost time: 34.9652s
+epoch 208, avg. triple loss: 0.7055, cost time: 35.5343s
+epoch 209, avg. triple loss: 0.7054, cost time: 35.3363s
+epoch 210, avg. triple loss: 0.7048, cost time: 35.4530s
+quick results: hits@[1, 5, 10, 50] = [56.963 64.519 69.185 86.123]%, time = 10.459 s 
+
+ == should early stop == 
+
+Training ends. Total time = 14433.024 s.
+accurate results: hits@[1, 5, 10, 50] = [55.87  64.327 70.815 87.802]%, mr = 53.058, mrr = 0.606031, time = 34.460 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [56.685 66.883 73.401 89.13 ]%, mr = 26.314, mrr = 0.619130, time = 49.262 s 
+Results saved!
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg1_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg2_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg1_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg2_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg1_attr_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/AlignE/Gold-LLM/541_5fold/1/20231113184410/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 14595.777 s.
