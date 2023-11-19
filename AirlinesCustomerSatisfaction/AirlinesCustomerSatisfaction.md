@@ -254,9 +254,9 @@
 |IMUSE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/IMUSE/nohup_imuse.txt)|14.28|14.32|14.36|5356|0.14|12898|3 (0.04%)|3425 (42.56%)|0 (0%)|
 |IPTransE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |JAPE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/JAPE/nohup_jape.txt)|0.02|0.05|0.11|3999|0.00|13611|1 (0.01%)|1 (0.01%)|2 (0.03%)|
-|KDCoE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/KDCoE/nohup_kdcoe.txt)|24,000|E|r|r|o|r||
+|KDCoE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |MTransE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/MTransE/nohup_mtranse.txt)|0.02|0.05|0.11|4001|0.00|18252|0 (0%)|3 (0.04%)|2 (0.03%)|
-|MultiKE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/MultiKE/nohup_multike.txt)|24,000|E|r|r|o|r||
+|MultiKE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |ProjE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/ProjE/nohup_proje.txt)|0.00|0.06|0.11|6002|0.00|44402|0 (0%)|0 (0%)|1 (0.01%)|
 |RDGCN|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/RDGCN/nohup_rdgcn.txt)|0.00|0.02|0.04|12001|0.00|29529|0 (0%)|0 (0%)|1 (0.01%)|
 |RotatE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
