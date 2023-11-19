@@ -160,7 +160,7 @@
 
 ## [Gold - Gold](./EntityAlignment/Gold-Gold/)
 
-![Graph Gold-Gold](./Figures/Gold-Gold_AirlinesCustomerSatisfaction.png "Graph Gold-Gold")
+![Graph Gold-Gold](./Figures/Gold_AirlinesCustomerSatisfaction.png "Graph Gold")
 
 ### [Input](./EntityAlignment/Gold-Gold/Input/)
 
