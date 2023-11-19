@@ -1,6 +1,3 @@
-2023-11-12 00:27:42.065034: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
-2023-11-12 00:27:42.479171: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
-2023-11-12 00:27:42.479643: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:150] kernel driver does not appear to be running on this host (semantics.inf.um.es): /proc/driver/nvidia/version does not exist
 /home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
 /home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
@@ -29,3 +26,23 @@ To accept the future behavior, pass 'sort=False'.
 To retain the current behavior and silence the warning, pass 'sort=True'.
 
   rel_mapping = pd.concat([rel_mapping, rev_r_m], ignore_index=True)
+Traceback (most recent call last):
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/lib/arraysetops.py", line 283, in unique
+    consolidated = ar.view(dtype)
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/core/_internal.py", line 459, in _view_is_safe
+    raise TypeError("Cannot change data-type for object array.")
+TypeError: Cannot change data-type for object array.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main_from_args.py", line 94, in <module>
+    model.init()
+  File "/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py", line 229, in init
+    self.sample_paths()
+  File "/home/galmagro/OpenEA/src/openea/approaches/rsn4ea.py", line 139, in sample_paths
+    rtlist = np.unique(kb[['r_id', 't_id']].values, axis=0)
+  File "<__array_function__ internals>", line 6, in unique
+  File "/home/galmagro/anaconda3/envs/openea/lib/python3.6/site-packages/numpy/lib/arraysetops.py", line 294, in unique
+    raise TypeError(msg.format(dt=ar.dtype))
+TypeError: The axis argument to unique is not supported for dtype object
