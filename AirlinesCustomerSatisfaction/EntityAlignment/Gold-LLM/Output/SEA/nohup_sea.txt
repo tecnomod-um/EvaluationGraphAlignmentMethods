@@ -1,0 +1,192 @@
+load arguments: {'training_data': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/', 'output': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'SEA', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'margin': 1.5, 'loss': 'margin-based', 'alpha_1': 2.5, 'alpha_2': 0.25, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adam', 'max_epoch': 2000, 'batch_size': 5000, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True}
+SEA
+<openea.modules.args.args_hander.ARGs object at 0x7ff09e727a20>
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/attr_triples_2
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/541_5fold/1/test_links
+Number of rt_dict: 60077
+Number of hr_dict: 40094
+entity relations dict: 60077
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60094
+Number of relations: 4
+Number of attributes: 9
+Number of relation triples: 380077
+Number of attribute triples: 179923
+Number of local relation triples: 380077
+Number of local attribute triples: 179923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 60077
+Number of hr_dict: 40094
+entity relations dict: 60077
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60094
+Number of relations: 4
+Number of attributes: 9
+Number of relation triples: 380077
+Number of attribute triples: 179923
+Number of local relation triples: 380077
+Number of local attribute triples: 179923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/ ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Gold-LLM/ ['..', '..', 'OntologySummit', 'AirlinesCustomerSatisfaction', 'EntityAlignment', 'Gold-LLM'] 541_5fold/1/ SEA
+results output folder: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/
+epoch 1, avg. triple loss: 0.7304, cost time: 87.8476s
+epoch 1, avg. mapping loss: 5.3196, cost time: 70.5173s
+epoch 2, avg. triple loss: 0.3158, cost time: 85.7333s
+epoch 2, avg. mapping loss: 5.1125, cost time: 78.7524s
+epoch 3, avg. triple loss: 0.2664, cost time: 120.5701s
+epoch 3, avg. mapping loss: 5.0332, cost time: 112.7312s
+epoch 4, avg. triple loss: 0.2362, cost time: 131.9971s
+epoch 4, avg. mapping loss: 4.9938, cost time: 104.2304s
+epoch 5, avg. triple loss: 0.2167, cost time: 128.4356s
+epoch 5, avg. mapping loss: 4.9718, cost time: 111.4138s
+epoch 6, avg. triple loss: 0.2015, cost time: 142.3619s
+epoch 6, avg. mapping loss: 4.9585, cost time: 116.8359s
+epoch 7, avg. triple loss: 0.1908, cost time: 142.4769s
+epoch 7, avg. mapping loss: 4.9506, cost time: 100.2898s
+epoch 8, avg. triple loss: 0.1842, cost time: 128.2275s
+epoch 8, avg. mapping loss: 4.9454, cost time: 103.9449s
+epoch 9, avg. triple loss: 0.1794, cost time: 125.2079s
+epoch 9, avg. mapping loss: 4.9420, cost time: 104.4364s
+epoch 10, avg. triple loss: 0.1754, cost time: 127.2578s
+epoch 10, avg. mapping loss: 4.9395, cost time: 106.7777s
+quick results: hits@[1, 5, 10, 50] = [0.033 0.1   0.117 0.7  ]%, time = 67.783 s 
+epoch 11, avg. triple loss: 0.1711, cost time: 127.0768s
+epoch 11, avg. mapping loss: 4.9376, cost time: 99.2608s
+epoch 12, avg. triple loss: 0.1693, cost time: 126.4114s
+epoch 12, avg. mapping loss: 4.9361, cost time: 95.9888s
+epoch 13, avg. triple loss: 0.1666, cost time: 124.7477s
+epoch 13, avg. mapping loss: 4.9348, cost time: 104.8828s
+epoch 14, avg. triple loss: 0.1645, cost time: 131.1811s
+epoch 14, avg. mapping loss: 4.9340, cost time: 104.5479s
+epoch 15, avg. triple loss: 0.1626, cost time: 115.1713s
+epoch 15, avg. mapping loss: 4.9332, cost time: 100.1346s
+epoch 16, avg. triple loss: 0.1606, cost time: 127.1075s
+epoch 16, avg. mapping loss: 4.9327, cost time: 96.5925s
+epoch 17, avg. triple loss: 0.1599, cost time: 131.3113s
+epoch 17, avg. mapping loss: 4.9317, cost time: 108.8191s
+epoch 18, avg. triple loss: 0.1584, cost time: 137.0207s
+epoch 18, avg. mapping loss: 4.9313, cost time: 98.9450s
+epoch 19, avg. triple loss: 0.1566, cost time: 114.6990s
+epoch 19, avg. mapping loss: 4.9308, cost time: 99.6861s
+epoch 20, avg. triple loss: 0.1555, cost time: 117.7989s
+epoch 20, avg. mapping loss: 4.9303, cost time: 97.1757s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.1   0.417]%, time = 166.868 s 
+epoch 21, avg. triple loss: 0.1535, cost time: 111.7239s
+epoch 21, avg. mapping loss: 4.9302, cost time: 104.0495s
+epoch 22, avg. triple loss: 0.1524, cost time: 124.5093s
+epoch 22, avg. mapping loss: 4.9297, cost time: 101.0611s
+epoch 23, avg. triple loss: 0.1519, cost time: 120.3051s
+epoch 23, avg. mapping loss: 4.9293, cost time: 92.4954s
+epoch 24, avg. triple loss: 0.1500, cost time: 111.8604s
+epoch 24, avg. mapping loss: 4.9290, cost time: 94.5386s
+epoch 25, avg. triple loss: 0.1501, cost time: 113.3154s
+epoch 25, avg. mapping loss: 4.9289, cost time: 91.3029s
+epoch 26, avg. triple loss: 0.1488, cost time: 105.7412s
+epoch 26, avg. mapping loss: 4.9285, cost time: 92.4414s
+epoch 27, avg. triple loss: 0.1485, cost time: 112.5097s
+epoch 27, avg. mapping loss: 4.9283, cost time: 98.4531s
+epoch 28, avg. triple loss: 0.1470, cost time: 109.4172s
+epoch 28, avg. mapping loss: 4.9279, cost time: 87.4424s
+epoch 29, avg. triple loss: 0.1460, cost time: 111.4302s
+epoch 29, avg. mapping loss: 4.9278, cost time: 100.8778s
+epoch 30, avg. triple loss: 0.1453, cost time: 146.2064s
+epoch 30, avg. mapping loss: 4.9277, cost time: 91.9316s
+quick results: hits@[1, 5, 10, 50] = [0.017 0.067 0.083 0.583]%, time = 129.001 s 
+epoch 31, avg. triple loss: 0.1451, cost time: 133.3688s
+epoch 31, avg. mapping loss: 4.9274, cost time: 97.6926s
+epoch 32, avg. triple loss: 0.1448, cost time: 119.4952s
+epoch 32, avg. mapping loss: 4.9273, cost time: 95.9126s
+epoch 33, avg. triple loss: 0.1430, cost time: 116.6100s
+epoch 33, avg. mapping loss: 4.9269, cost time: 94.1480s
+epoch 34, avg. triple loss: 0.1437, cost time: 118.9231s
+epoch 34, avg. mapping loss: 4.9269, cost time: 96.3754s
+epoch 35, avg. triple loss: 0.1429, cost time: 125.4651s
+epoch 35, avg. mapping loss: 4.9267, cost time: 95.3790s
+epoch 36, avg. triple loss: 0.1419, cost time: 118.7706s
+epoch 36, avg. mapping loss: 4.9265, cost time: 103.0740s
+epoch 37, avg. triple loss: 0.1409, cost time: 124.8027s
+epoch 37, avg. mapping loss: 4.9261, cost time: 105.7861s
+epoch 38, avg. triple loss: 0.1404, cost time: 137.0308s
+epoch 38, avg. mapping loss: 4.9263, cost time: 104.4189s
+epoch 39, avg. triple loss: 0.1408, cost time: 127.5151s
+epoch 39, avg. mapping loss: 4.9259, cost time: 100.1784s
+epoch 40, avg. triple loss: 0.1392, cost time: 124.2294s
+epoch 40, avg. mapping loss: 4.9258, cost time: 92.0271s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.083 0.45 ]%, time = 44.913 s 
+epoch 41, avg. triple loss: 0.1394, cost time: 117.3457s
+epoch 41, avg. mapping loss: 4.9257, cost time: 91.9049s
+epoch 42, avg. triple loss: 0.1386, cost time: 109.7154s
+epoch 42, avg. mapping loss: 4.9255, cost time: 98.3435s
+epoch 43, avg. triple loss: 0.1383, cost time: 122.0188s
+epoch 43, avg. mapping loss: 4.9254, cost time: 94.5266s
+epoch 44, avg. triple loss: 0.1377, cost time: 115.9766s
+epoch 44, avg. mapping loss: 4.9253, cost time: 98.1378s
+epoch 45, avg. triple loss: 0.1380, cost time: 126.2709s
+epoch 45, avg. mapping loss: 4.9253, cost time: 94.2247s
+epoch 46, avg. triple loss: 0.1365, cost time: 127.9265s
+epoch 46, avg. mapping loss: 4.9251, cost time: 100.3852s
+epoch 47, avg. triple loss: 0.1371, cost time: 115.6153s
+epoch 47, avg. mapping loss: 4.9250, cost time: 95.0103s
+epoch 48, avg. triple loss: 0.1371, cost time: 118.2629s
+epoch 48, avg. mapping loss: 4.9248, cost time: 96.0003s
+epoch 49, avg. triple loss: 0.1369, cost time: 115.2922s
+epoch 49, avg. mapping loss: 4.9249, cost time: 89.0836s
+epoch 50, avg. triple loss: 0.1356, cost time: 108.5172s
+epoch 50, avg. mapping loss: 4.9247, cost time: 96.9915s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.117 0.483]%, time = 41.983 s 
+
+ == should early stop == 
+
+Training ends. Total time = 11516.220 s.
+accurate results: hits@[1, 5, 10, 50] = [0.017 0.054 0.108 0.638]%, mr = 4017.390, mrr = 0.001192, time = 550.454 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [0.008 0.071 0.133 0.662]%, mr = 4021.040, mrr = 0.001195, time = 872.151 s 
+Results saved!
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg1_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg2_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg1_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg2_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg1_attr_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SEA/Gold-LLM/541_5fold/1/20231104120611/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 13163.209 s.
