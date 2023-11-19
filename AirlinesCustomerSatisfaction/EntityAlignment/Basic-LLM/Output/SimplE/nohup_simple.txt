@@ -1,0 +1,148 @@
+load arguments: {'training_data': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/', 'output': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'SimplE', 'alignment_module': 'sharing', 'search_module': 'greedy', 'dim': 100, 'init': 'xavier', 'ent_l2_norm': True, 'rel_l2_norm': True, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'batch_threads_num': 2, 'test_threads_num': 3, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True}
+SimplE
+<openea.modules.args.args_hander.ARGs object at 0x7f73c30628d0>
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/attr_triples_2
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/test_links
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 20000
+Number of attribute triples: 459923
+Number of local relation triples: 20000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 20000
+Number of attribute triples: 459923
+Number of local relation triples: 20000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/ ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/ ['..', '..', 'OntologySummit', 'AirlinesCustomerSatisfaction', 'EntityAlignment', 'Basic-LLM'] 541_5fold/1/ SimplE
+results output folder: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/
+epoch 1, avg. triple loss: 1.3342, cost time: 17.0102s
+epoch 2, avg. triple loss: 1.0717, cost time: 18.9404s
+epoch 3, avg. triple loss: 0.9724, cost time: 19.1017s
+epoch 4, avg. triple loss: 0.9266, cost time: 19.3027s
+epoch 5, avg. triple loss: 0.9030, cost time: 17.4185s
+epoch 6, avg. triple loss: 0.8891, cost time: 19.7593s
+epoch 7, avg. triple loss: 0.8808, cost time: 19.1673s
+epoch 8, avg. triple loss: 0.8748, cost time: 16.6470s
+epoch 9, avg. triple loss: 0.8709, cost time: 15.9368s
+epoch 10, avg. triple loss: 0.8676, cost time: 19.5711s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.   0.1  0.15 0.75]%, time = 16.937 s 
+epoch 11, avg. triple loss: 0.8645, cost time: 17.6716s
+epoch 12, avg. triple loss: 0.8619, cost time: 18.9619s
+epoch 13, avg. triple loss: 0.8596, cost time: 16.5227s
+epoch 14, avg. triple loss: 0.8575, cost time: 20.3575s
+epoch 15, avg. triple loss: 0.8547, cost time: 17.2922s
+epoch 16, avg. triple loss: 0.8522, cost time: 19.3780s
+epoch 17, avg. triple loss: 0.8492, cost time: 17.5151s
+epoch 18, avg. triple loss: 0.8458, cost time: 16.6773s
+epoch 19, avg. triple loss: 0.8426, cost time: 19.0040s
+epoch 20, avg. triple loss: 0.8383, cost time: 17.5305s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.   0.   0.2  0.75]%, time = 10.104 s 
+epoch 21, avg. triple loss: 0.8351, cost time: 18.0386s
+epoch 22, avg. triple loss: 0.8314, cost time: 17.2108s
+epoch 23, avg. triple loss: 0.8285, cost time: 17.6145s
+epoch 24, avg. triple loss: 0.8253, cost time: 17.9437s
+epoch 25, avg. triple loss: 0.8225, cost time: 17.1525s
+epoch 26, avg. triple loss: 0.8200, cost time: 16.0277s
+epoch 27, avg. triple loss: 0.8181, cost time: 18.5468s
+epoch 28, avg. triple loss: 0.8159, cost time: 14.9789s
+epoch 29, avg. triple loss: 0.8142, cost time: 15.1639s
+epoch 30, avg. triple loss: 0.8127, cost time: 14.9002s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.05 0.15 0.25 0.6 ]%, time = 7.917 s 
+epoch 31, avg. triple loss: 0.8114, cost time: 14.5166s
+epoch 32, avg. triple loss: 0.8100, cost time: 17.4929s
+epoch 33, avg. triple loss: 0.8087, cost time: 17.6292s
+epoch 34, avg. triple loss: 0.8077, cost time: 18.6609s
+epoch 35, avg. triple loss: 0.8067, cost time: 17.9632s
+epoch 36, avg. triple loss: 0.8057, cost time: 18.8836s
+epoch 37, avg. triple loss: 0.8053, cost time: 14.9199s
+epoch 38, avg. triple loss: 0.8046, cost time: 15.6525s
+epoch 39, avg. triple loss: 0.8039, cost time: 16.1032s
+epoch 40, avg. triple loss: 0.8035, cost time: 17.0663s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.05 0.2  0.25 0.65]%, time = 12.297 s 
+epoch 41, avg. triple loss: 0.8030, cost time: 14.7950s
+epoch 42, avg. triple loss: 0.8024, cost time: 15.5633s
+epoch 43, avg. triple loss: 0.8019, cost time: 16.3809s
+epoch 44, avg. triple loss: 0.8018, cost time: 11.9744s
+epoch 45, avg. triple loss: 0.8013, cost time: 16.1961s
+epoch 46, avg. triple loss: 0.8010, cost time: 21.8438s
+epoch 47, avg. triple loss: 0.8007, cost time: 19.4345s
+epoch 48, avg. triple loss: 0.8003, cost time: 15.9242s
+epoch 49, avg. triple loss: 0.8001, cost time: 16.5120s
+epoch 50, avg. triple loss: 0.7999, cost time: 16.6780s
+valid
+quick results: hits@[1, 5, 10, 50] = [0.05 0.2  0.25 0.7 ]%, time = 16.728 s 
+
+ == should early stop == 
+
+Training ends. Total time = 1024.990 s.
+test
+accurate results: hits@[1, 5, 10, 50] = [0.012 0.075 0.137 0.675]%, mr = 3995.162, mrr = 0.001302, time = 45.763 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [0.    0.05  0.125 0.712]%, mr = 3989.225, mrr = 0.001097, time = 97.937 s 
+Results saved!
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg1_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg2_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg1_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg2_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg1_attr_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/SimplE/Basic-LLM/541_5fold/1/20231103192822/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 1466.558 s.

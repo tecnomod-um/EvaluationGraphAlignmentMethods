@@ -1,0 +1,234 @@
+load arguments: {'training_data': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/', 'output': '../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'AlignE', 'alignment_module': 'swapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss': 'limited', 'loss_norm': 'L2', 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'pos_margin': 0.01, 'neg_margin': 2.0, 'neg_margin_balance': 0.2, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.9, 'truncated_freq': 10, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False}
+AlignE
+<openea.modules.args.args_hander.ARGs object at 0x7f14e1bf0908>
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/rel_triples_1
+read relation triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/rel_triples_2
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/attr_triples_1
+read attribute triples: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/attr_triples_2
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/train_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/valid_links
+read links: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/541_5fold/1/test_links
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 20000
+Number of attribute triples: 459923
+Number of local relation triples: 20000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 20000
+Number of attribute triples: 459923
+Number of local relation triples: 20000
+Number of local attribute triples: 459923
+
+Number of rt_dict: 60000
+Number of hr_dict: 3
+entity relations dict: 60000
+Number of av_dict: 60000
+entity attributes dict: 60000
+
+KG statistics:
+Number of entities: 60003
+Number of relations: 1
+Number of attributes: 23
+Number of relation triples: 60000
+Number of attribute triples: 459923
+Number of local relation triples: 60000
+Number of local attribute triples: 459923
+
+supervised relation triples: 10000, 10000
+supervised attribute triples: 229964, 140000
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/ ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/Basic-LLM/ ['..', '..', 'OntologySummit', 'AirlinesCustomerSatisfaction', 'EntityAlignment', 'Basic-LLM'] 541_5fold/1/ AlignE
+results output folder: ../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/
+epoch 1, avg. triple loss: 2.0309, cost time: 53.7463s
+epoch 2, avg. triple loss: 1.5760, cost time: 55.1576s
+epoch 3, avg. triple loss: 1.4793, cost time: 62.8136s
+epoch 4, avg. triple loss: 1.4081, cost time: 58.5086s
+epoch 5, avg. triple loss: 1.3406, cost time: 60.7583s
+epoch 6, avg. triple loss: 1.2753, cost time: 57.0298s
+epoch 7, avg. triple loss: 1.2146, cost time: 51.0455s
+epoch 8, avg. triple loss: 1.1590, cost time: 52.4001s
+epoch 9, avg. triple loss: 1.1074, cost time: 49.9033s
+epoch 10, avg. triple loss: 1.0594, cost time: 48.2948s
+
+generating neighbors of 80004 entities costs 1191.700 s.
+epoch 11, avg. triple loss: 0.9440, cost time: 77.7089s
+epoch 12, avg. triple loss: 0.8898, cost time: 82.1325s
+epoch 13, avg. triple loss: 0.8647, cost time: 72.2281s
+epoch 14, avg. triple loss: 0.8439, cost time: 78.1541s
+epoch 15, avg. triple loss: 0.8247, cost time: 73.1169s
+epoch 16, avg. triple loss: 0.8059, cost time: 68.9991s
+epoch 17, avg. triple loss: 0.7872, cost time: 87.7917s
+epoch 18, avg. triple loss: 0.7693, cost time: 80.2731s
+epoch 19, avg. triple loss: 0.7515, cost time: 67.0614s
+epoch 20, avg. triple loss: 0.7344, cost time: 92.6857s
+
+generating neighbors of 80004 entities costs 1618.377 s.
+epoch 21, avg. triple loss: 0.7192, cost time: 77.2288s
+epoch 22, avg. triple loss: 0.7002, cost time: 60.6134s
+epoch 23, avg. triple loss: 0.6853, cost time: 60.6273s
+epoch 24, avg. triple loss: 0.6704, cost time: 69.5561s
+epoch 25, avg. triple loss: 0.6567, cost time: 69.1879s
+epoch 26, avg. triple loss: 0.6432, cost time: 78.8736s
+epoch 27, avg. triple loss: 0.6302, cost time: 85.1214s
+epoch 28, avg. triple loss: 0.6175, cost time: 65.7324s
+epoch 29, avg. triple loss: 0.6057, cost time: 81.5270s
+epoch 30, avg. triple loss: 0.5937, cost time: 65.9962s
+
+generating neighbors of 80004 entities costs 1340.747 s.
+epoch 31, avg. triple loss: 0.6448, cost time: 63.0652s
+epoch 32, avg. triple loss: 0.6017, cost time: 66.0028s
+epoch 33, avg. triple loss: 0.5879, cost time: 62.9101s
+epoch 34, avg. triple loss: 0.5768, cost time: 57.3356s
+epoch 35, avg. triple loss: 0.5661, cost time: 77.9264s
+epoch 36, avg. triple loss: 0.5563, cost time: 61.1082s
+epoch 37, avg. triple loss: 0.5470, cost time: 58.9325s
+epoch 38, avg. triple loss: 0.5378, cost time: 66.0989s
+epoch 39, avg. triple loss: 0.5290, cost time: 63.2702s
+epoch 40, avg. triple loss: 0.5206, cost time: 76.7684s
+
+generating neighbors of 80004 entities costs 1251.767 s.
+epoch 41, avg. triple loss: 0.6456, cost time: 54.0354s
+epoch 42, avg. triple loss: 0.5580, cost time: 56.3751s
+epoch 43, avg. triple loss: 0.5414, cost time: 57.9078s
+epoch 44, avg. triple loss: 0.5306, cost time: 52.0681s
+epoch 45, avg. triple loss: 0.5210, cost time: 57.4389s
+epoch 46, avg. triple loss: 0.5122, cost time: 55.4081s
+epoch 47, avg. triple loss: 0.5035, cost time: 62.2965s
+epoch 48, avg. triple loss: 0.4958, cost time: 48.0966s
+epoch 49, avg. triple loss: 0.4884, cost time: 58.2555s
+epoch 50, avg. triple loss: 0.4808, cost time: 57.8538s
+
+generating neighbors of 80004 entities costs 1002.007 s.
+epoch 51, avg. triple loss: 0.6810, cost time: 47.8508s
+epoch 52, avg. triple loss: 0.5392, cost time: 40.5646s
+epoch 53, avg. triple loss: 0.5169, cost time: 50.6196s
+epoch 54, avg. triple loss: 0.5042, cost time: 49.1696s
+epoch 55, avg. triple loss: 0.4947, cost time: 48.9801s
+epoch 56, avg. triple loss: 0.4862, cost time: 44.5223s
+epoch 57, avg. triple loss: 0.4784, cost time: 46.7858s
+epoch 58, avg. triple loss: 0.4711, cost time: 47.6457s
+epoch 59, avg. triple loss: 0.4639, cost time: 43.8996s
+epoch 60, avg. triple loss: 0.4572, cost time: 44.7578s
+
+generating neighbors of 80004 entities costs 909.016 s.
+epoch 61, avg. triple loss: 0.7512, cost time: 50.1986s
+epoch 62, avg. triple loss: 0.5573, cost time: 49.3925s
+epoch 63, avg. triple loss: 0.5230, cost time: 48.7156s
+epoch 64, avg. triple loss: 0.5065, cost time: 49.5095s
+epoch 65, avg. triple loss: 0.4955, cost time: 53.7777s
+epoch 66, avg. triple loss: 0.4865, cost time: 51.2153s
+epoch 67, avg. triple loss: 0.4792, cost time: 47.5124s
+epoch 68, avg. triple loss: 0.4723, cost time: 58.3161s
+epoch 69, avg. triple loss: 0.4659, cost time: 54.1367s
+epoch 70, avg. triple loss: 0.4599, cost time: 46.5911s
+
+generating neighbors of 80004 entities costs 879.229 s.
+epoch 71, avg. triple loss: 0.7648, cost time: 48.8529s
+epoch 72, avg. triple loss: 0.5632, cost time: 52.9299s
+epoch 73, avg. triple loss: 0.5248, cost time: 51.8098s
+epoch 74, avg. triple loss: 0.5063, cost time: 56.3055s
+epoch 75, avg. triple loss: 0.4945, cost time: 51.2601s
+epoch 76, avg. triple loss: 0.4852, cost time: 62.4615s
+epoch 77, avg. triple loss: 0.4774, cost time: 56.5970s
+epoch 78, avg. triple loss: 0.4706, cost time: 51.6378s
+epoch 79, avg. triple loss: 0.4644, cost time: 49.2081s
+epoch 80, avg. triple loss: 0.4586, cost time: 52.7865s
+
+generating neighbors of 80004 entities costs 820.800 s.
+epoch 81, avg. triple loss: 0.7426, cost time: 51.9975s
+epoch 82, avg. triple loss: 0.5496, cost time: 52.4166s
+epoch 83, avg. triple loss: 0.5140, cost time: 49.1334s
+epoch 84, avg. triple loss: 0.4984, cost time: 45.6939s
+epoch 85, avg. triple loss: 0.4880, cost time: 53.2514s
+epoch 86, avg. triple loss: 0.4796, cost time: 52.1440s
+epoch 87, avg. triple loss: 0.4728, cost time: 49.2751s
+epoch 88, avg. triple loss: 0.4663, cost time: 48.1753s
+epoch 89, avg. triple loss: 0.4602, cost time: 54.5642s
+epoch 90, avg. triple loss: 0.4545, cost time: 52.4096s
+
+generating neighbors of 80004 entities costs 779.296 s.
+epoch 91, avg. triple loss: 0.7585, cost time: 53.4952s
+epoch 92, avg. triple loss: 0.5554, cost time: 59.0443s
+epoch 93, avg. triple loss: 0.5160, cost time: 52.7776s
+epoch 94, avg. triple loss: 0.4999, cost time: 49.7578s
+epoch 95, avg. triple loss: 0.4898, cost time: 47.7313s
+epoch 96, avg. triple loss: 0.4819, cost time: 60.1227s
+epoch 97, avg. triple loss: 0.4754, cost time: 57.9411s
+epoch 98, avg. triple loss: 0.4693, cost time: 43.8217s
+epoch 99, avg. triple loss: 0.4638, cost time: 53.5357s
+epoch 100, avg. triple loss: 0.4581, cost time: 51.7205s
+quick results: hits@[1, 5, 10, 50] = [0.   0.   0.05 0.45]%, time = 23.247 s 
+
+generating neighbors of 80004 entities costs 630.032 s.
+epoch 101, avg. triple loss: 0.7723, cost time: 45.7216s
+epoch 102, avg. triple loss: 0.5657, cost time: 47.8479s
+epoch 103, avg. triple loss: 0.5236, cost time: 48.0366s
+epoch 104, avg. triple loss: 0.5068, cost time: 46.1215s
+epoch 105, avg. triple loss: 0.4960, cost time: 48.2845s
+epoch 106, avg. triple loss: 0.4877, cost time: 48.7587s
+epoch 107, avg. triple loss: 0.4809, cost time: 44.5762s
+epoch 108, avg. triple loss: 0.4748, cost time: 46.2653s
+epoch 109, avg. triple loss: 0.4694, cost time: 47.5286s
+epoch 110, avg. triple loss: 0.4641, cost time: 47.8279s
+quick results: hits@[1, 5, 10, 50] = [0.  0.  0.  0.5]%, time = 24.302 s 
+
+generating neighbors of 80004 entities costs 702.513 s.
+epoch 111, avg. triple loss: 0.7704, cost time: 41.1423s
+epoch 112, avg. triple loss: 0.5705, cost time: 46.9385s
+epoch 113, avg. triple loss: 0.5257, cost time: 46.9969s
+epoch 114, avg. triple loss: 0.5092, cost time: 45.1496s
+epoch 115, avg. triple loss: 0.4982, cost time: 47.6742s
+epoch 116, avg. triple loss: 0.4897, cost time: 48.2643s
+epoch 117, avg. triple loss: 0.4826, cost time: 48.2498s
+epoch 118, avg. triple loss: 0.4764, cost time: 48.1968s
+epoch 119, avg. triple loss: 0.4710, cost time: 46.2937s
+epoch 120, avg. triple loss: 0.4660, cost time: 44.6636s
+quick results: hits@[1, 5, 10, 50] = [0.   0.   0.   0.15]%, time = 22.482 s 
+
+ == should early stop == 
+
+Training ends. Total time = 20368.837 s.
+accurate results: hits@[1, 5, 10, 50] = [0.012 0.1   0.137 0.725]%, mr = 4025.591, mrr = 0.001315, time = 37.331 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [0.    0.075 0.175 0.8  ]%, mr = 4027.694, mrr = 0.001343, time = 53.243 s 
+Results saved!
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg1_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg2_ent_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg1_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg2_rel_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg1_attr_ids saved.
+../../OntologySummit/AirlinesCustomerSatisfaction/EntityAlignment/results/AlignE/Basic-LLM/541_5fold/1/20231103192838/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 20773.210 s.
