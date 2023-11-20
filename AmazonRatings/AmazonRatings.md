@@ -9,7 +9,7 @@
 * [Basic](./Ontologies/Basic_AmazonRatings.owl)
 * [LLM](./Ontologies/LLM_AmazonRatings.owl)
 * [Gold](./Ontologies/Gold_AmazonRatings.owl)
-* [AP](./Ontologies/AP_AmazonRatings.owl)
+* AP
 
 ## Mapping
 
@@ -18,7 +18,7 @@
 |[Basic](./Mappings/basic_mapping.csv.ttl)|[AmazonRating_data20k.csv](./SourceFiles/AmazonRating_data20k.csv)|[100,000 triples](./Mappings/Basic_AmazonRating_data20k.nt)|[80,000 triples](./EntityAlignment/Basic-Basic/Input/attr_triples_1)|[20,000 triples](./EntityAlignment/Basic-Basic/Input/rel_triples_1)|
 |[Gold](./Mappings/gold_mapping.csv.ttl)|[AmazonRating_data20k.csv](./SourceFiles/AmazonRating_data20k.csv)|[140,998 triples](./Mappings/Gold_AmazonRating_data20k.nt)|[60,499 triples](./EntityAlignment/Gold-Gold/Input/attr_triples_1)|[80,499 triples](./EntityAlignment/Gold-Gold/Input/rel_triples_1)|
 |[LLM](./Mappings/LLM_mapping.csv.ttl)|[AmazonRating_data20k.csv](./SourceFiles/AmazonRating_data20k.csv)|[140,998 triples](./Mappings/LLM_AmazonRating_data20k.nt)|[60,499 triples](./EntityAlignment/LLM-LLM/Input/attr_triples_1)|[60,000 triples](./EntityAlignment/LLM-LLM/Input/rel_triples_1)|
-|[AP](./Mappings/mappingLLM.csv.ttl)|[AmazonRating_data20k.csv](./SourceFiles/AmazonRating_data20k.csv)|[121,897 triples](./Mappings/LLM_AmazonRating_data20k.nt)|[1,398 triples](./EntityAlignment/LLM-LLM/Input/attr_triples_1)|[120,499 triples](./EntityAlignment/LLM-LLM/Input/rel_triples_1)|
+|[AP](./Mappings/AP_mapping.csv.ttl)|[AmazonRating_data20k.csv](./SourceFiles/AmazonRating_data20k.csv)|[121,897 triples](./Mappings/AP_AmazonRating_data20k.nt)|[1,398 triples](./EntityAlignment/AP-AP/Input/attr_triples_1)|[120,499 triples](./EntityAlignment/AP-AP/Input/rel_triples_1)|
 
 
 ## [Basic - Basic](./EntityAlignment/Basic-Basic/)
