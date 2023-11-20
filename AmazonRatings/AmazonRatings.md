@@ -91,7 +91,7 @@
 |AttrE|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/AttrE/nohup_attre.txt)|53.40|81.28|88.33|7|0.66|31853|4272 (53.40%)|
 |BootEA|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/BootEA/nohup_bootea.txt)|0.00|0.05|0.13|3985|0.00|19819|0 (0%)|
 |BootEA_RotatE|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.03|0.09|0.13|4034|0.00|63409|2 (0.03%)|
-|BootEA_TransH|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
+|BootEA_TransH|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/GCN_Align/nohup_gcnalign.txt)|0.01|0.08|0.11|4019|0.00|2978|1 (0.01%)|
 |GMNN|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
@@ -191,9 +191,9 @@
 |IMUSE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |IPTransE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |JAPE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
-|KDCoE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/KDCoE/nohup_kdcoe.txt)|||||||
+|KDCoE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |MTransE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/MTransE/nohup_mtranse.txt)|0.04|0.04|0.06|3986|0.00|4408|3 (0.04%)|
-|MultiKE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/MultiKE/nohup_multike.txt)|||||||
+|MultiKE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |ProjE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/ProjE/nohup_proje.txt)|0.04|0.04|0.14|3966|0.00|23792|3 (0.04%)|
 |RDGCN|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/RDGCN/nohup_rdgcn.txt)|0.01|0.06|0.13|0.63|4001|6437|1 (0.01%)|
 |RotatE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/RotatE/nohup_rotate.txt)|0.00|0.04|0.08|3993|0.00|34825|0 (0%)|
