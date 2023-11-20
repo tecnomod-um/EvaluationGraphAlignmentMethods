@@ -44,7 +44,7 @@
 |AliNet|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Basic/Output/AttrE/nohup_attre.txt)|99.16|100|100|1|1|19520|7933 (99.16%)|
 |BootEA|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Basic/Output/BootEA/nohup_bootea.txt)|0.00|0.04|0.06|3973|0.00|16328|0 (0%)|
-|BootEA_RotatE|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Basic/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|0.03|0.08|0.10|3993|0.00|23171|2	(0.03%)|
+|BootEA_RotatE|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Basic/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.03|0.08|0.10|3993|0.00|23171|2	(0.03%)|
 |BootEA_TransH|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Basic-Basic/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Basic/Output/GCN_Align/nohup_gcnalign.txt)|0.00|0.08|0.13|3985|0.00|2923|0 (0%)|
@@ -90,7 +90,7 @@
 |AliNet|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/AttrE/nohup_attre.txt)|53.40|81.28|88.33|7|0.66|31853|4272 (53.40%)|
 |BootEA|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/BootEA/nohup_bootea.txt)|0.00|0.05|0.13|3985|0.00|19819|0 (0%)|
-|BootEA_RotatE|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|0.03|0.09|0.13|4034|0.00|63409|2 (0.03%)|
+|BootEA_RotatE|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.03|0.09|0.13|4034|0.00|63409|2 (0.03%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Basic-Gold/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-Gold/Output/GCN_Align/nohup_gcnalign.txt)|0.01|0.08|0.11|4019|0.00|2978|1 (0.01%)|
@@ -136,7 +136,7 @@
 |AliNet|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-LLM/Output/AttrE/nohup_attre.txt)|50.09|77.6|85.59|10|0.62|24322|4007 (50.09%)|
 |BootEA|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-LLM/Output/BootEA/nohup_bootea.txt)|0.01|0.06|0.18|3996|0.00|19492|1 (0.01%)|
-|BootEA_RotatE|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-LLM/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|0.01|0.05|0.15|4000|0.00|53927|1 (0.01%)|
+|BootEA_RotatE|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-LLM/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.01|0.05|0.15|4000|0.00|53927|1 (0.01%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Basic-LLM/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-LLM/Output/GCN_Align/nohup_gcnalign.txt)|0.00|0.08|0.12|3997|0.00|3509|0 (0%)|
@@ -182,7 +182,7 @@
 |AliNet|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |AttrE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/AttrE/nohup_attre.txt)|0.08|0.18|0.28|3805|0.00|10967|6 (0.08%)|
 |BootEA|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/BootEA/nohup_bootea.txt)|0.01|0.03|0.10|3986|0.00|29515|1 (0.01%)|
-|BootEA_RotatE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|0.00|0.05|0.14|4020|0.00|78086|0 (0%)|
+|BootEA_RotatE|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.00|0.05|0.14|4020|0.00|78086|0 (0%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|8,000|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Basic-AP/Input/541_5fold/1/)|[8,000](./EntityAlignment/Basic-AP/Output/GCN_Align/nohup_gcnalign.txt)|0.01|0.06|0.15|4003|0.00|4168|1 (0.01%)|
@@ -230,7 +230,7 @@
 |AliNet|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/AliNet/nohup_alinet.txt)|60.23|69.59|74.14|203|0.65|96679|4843 (60.40%)|510 (91.07%)|4404 (57.78%)|
 |AttrE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/AttrE/nohup_attre.txt)|99.38|99.90|99.94|1|1|43673|7961 (99.29%)|533 (95.18%)|7606 (99.79%)|
 |BootEA|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/BootEA/nohup_bootea.txt)|60.54|70.23|75.97|39|0.66|98911|4837 (60.33%)|508 (90.71%)|4463 (58.55%)|
-|BootEA_RotatE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|59.66|71.14|77.15|30|0.65|101404|4767 (59.45%)|506 (90.36%)|4392 (57.62%)|
+|BootEA_RotatE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|59.66|71.14|77.15|30|0.65|101404|4767 (59.45%)|506 (90.36%)|4392 (57.62%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/GCN_Align/nohup_gcnalign.txt)|75.64|75.85|76.07|175|0.76|6345|4836 (60.31%)|508 (90.71%)|4351 (57.08%)|
@@ -278,7 +278,7 @@
 |AliNet|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/AliNet/nohup_alinet.txt)|57.92|66.91|71.54|287|0.62|33556|4779 (59.82%)|520 (89.66%)|4084 (53.52%)|
 |AttrE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/AttrE/nohup_attre.txt)|99.37|99.91|99.95|1|0.99|14704|7929 (99.25%)|551 (95.00%)|7618 (99.83%)|
 |BootEA|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/BootEA/nohup_bootea.txt)|60.54|70.02|76.00|39|0.65|20441|4841 (60.60%)|523 (90.17%)|4444 (58.24%)|
-|BootEA_RotatE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|58.83|70.61|76.88|32|0.65|27940|4686 (58.66%)|524 (90.34%)|4320 (56.61%)|
+|BootEA_RotatE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|58.83|70.61|76.88|32|0.65|27940|4686 (58.66%)|524 (90.34%)|4320 (56.61%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/GCN_Align/nohup_gcnalign.txt)|59.73|71.10|77.70|29|0.66|2479|4828 (60.43%)|526 (90.69%)|4322 (56.64%)|
@@ -326,7 +326,7 @@
 |AliNet|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/AliNet/nohup_alinet.txt)|49.09|49.82|49.92|1834|0.49|52965|4009 (50.64%)|0 (0%)|3944 (51.06%)|
 |AttrE|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/AttrE/nohup_attre.txt)|51.85|53.14|53.94|982|0.53|30233|4028 (50.88%)|429 (76.74%)|3942 (51.04%)|
 |BootEA|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/BootEA/nohup_bootea.txt)|58.78|64.59|67.59|61|0.62|210376|4625 (58.42%)|499 (89.27%)|4398 (56.94%)|
-|BootEA_RotatE|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|56.10|65.31|71.32|54|0.61|139188|4397 (55.54%)|500 (89.45%)|4191 (54.26%)|
+|BootEA_RotatE|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|56.10|65.31|71.32|54|0.61|139188|4397 (55.54%)|500 (89.45%)|4191 (54.26%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/GCN_Align/nohup_gcnalign.txt)|52.82|54.00|54.24|2417|0.53|8970|4121 (52.05%)|444 (79.43%)|3992 (51.68%)|
@@ -374,7 +374,7 @@
 |AliNet|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/AliNet/nohup_alinet.txt)|59.02|66.33|68.70|384|0.62|69205|4751 (59.85%)|504 (88.73%)|4306 (55.97%)|
 |AttrE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/AttrE/nohup_attre.txt)|98.82|99.82|99.92|1|0.99|46804|7826 (98.59%)|531 (93.49%)|7651 (99.44%)|
 |BootEA|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/BootEA/nohup_bootea.txt)|61.06|70.36|75.83|39|0.66|105545|4825 (60.78%)|515 (90.67%)|4552 (59.16%)|
-|BootEA_RotatE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|59.11|70.41|76.51|31|0.65|120509|4669 (58.82%)|517 (91.02%)|4390 (57.06%)|
+|BootEA_RotatE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|59.11|70.41|76.51|31|0.65|120509|4669 (58.82%)|517 (91.02%)|4390 (57.06%)|
 |BootEA_TransH|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/GCN_Align/nohup_gcnalign.txt)|60.09|71.03|77.36|35|0.66|9137|4811 (60.61%)|517 (91.02%)|4407 (57.28%)|
@@ -422,7 +422,7 @@
 |AliNet|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/AliNet/nohup_alinet.txt)|49.21|49.90|49.94|2419|0.50|6602|4120 (51.38%)|0 (0%)|3852 (50.47%)|
 |AttrE|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/AttrE/nohup_attre.txt)|52.29|53.77|54.91|801|0.53|10713|4172 (52.03%)|445 (81.20%)|3854 (50.49%)|
 |BootEA|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/BootEA/nohup_bootea.txt)|57.04|62.02|66.21|67|0.60|48646|4571 (57.00%)|495 (90.33%)|4175 (54.70%)|
-|BootEA_RotatE|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|57.25|66.91|72.85|45|0.62|40344|4576 (57.06%)|496 (90.51%)|4203 (55.06%)|
+|BootEA_RotatE|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|57.25|66.91|72.85|45|0.62|40344|4576 (57.06%)|496 (90.51%)|4203 (55.06%)|
 |BootEA_TransH|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|16,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/GCN_Align/nohup_gcnalign.txt)|52.83|54.07|54.25|2381|0.53|2965|4222 (52.65%)|439 (80.11%)|3897 (51.05%)|
@@ -471,7 +471,7 @@
 |AliNet|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/AliNet/nohup_alinet.txt)|78.88|82.71|84.13|221|0.81|56331|6186 (78.67%)|6458 (80.82%)|537 (95.04%)|5909 (75.94%)|
 |AttrE|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/AttrE/nohup_attre.txt)|75.73|77.84|79.35|220|0.77|68160|5903 (75.07%)|6091 (76.22%)|512 (90.62%)|5821 (74.81%)|
 |BootEA|[1](./EntityAlignment/v-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/BootEA/nohup_bootea.txt)|80.86|84.92|87.84|26|0.83|57728|6301 (80.13%)|6511 (81.48%)|541 (95.75%)|6214 (79.86%)|
-|BootEA_RotatE|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/BootEA_RotatE/nohup_bootea_rotate.txt)|79.47|85.59|88.75|15|0.82|215420|6183 (78.63%)|6386 (79.91%)|539 (95.40%)|6123 (78.69%)|
+|BootEA_RotatE|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|79.47|85.59|88.75|15|0.82|215420|6183 (78.63%)|6386 (79.91%)|539 (95.40%)|6123 (78.69%)|
 |BootEA_TransH|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|24,200|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|24,200|E|r|r|o|r||
 |GCN_Align|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/GCN_Align/nohup_gcnalign.txt)|77.26|80.10|81.64|217|0.79|16045|5952 (75.70%)|6367 (79.68%)|536 (94.87%)|5841 (75.07%)|
