@@ -1,0 +1,134 @@
+load arguments: {'training_data': '../../OntologySummit/AmazonRatings/EntityAlignment/', 'output': '../../OntologySummit/AmazonRatings/EntityAlignment/results/', 'dataset_division': '541_5fold', 'embedding_module': 'RSN4EA', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'hidden_size': 100, 'num_layers': 2, 'num_samples': 10240, 'keep_prob': 0.6, 'max_length': 15, 'alpha': 0.7, 'beta': 0.7, 'learning_rate': 0.0005, 'optimizer': 'Adagrad', 'max_epoch': 30, 'batch_size': 512, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 1, 'eval_freq': 3, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False}
+RSN4EA
+<openea.modules.args.args_hander.ARGs object at 0x7f1d3408b940>
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/rel_triples_1
+read relation triples: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/rel_triples_2
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/attr_triples_1
+read attribute triples: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/attr_triples_2
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/541_5fold/1/train_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/541_5fold/1/valid_links
+read links: ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/541_5fold/1/test_links
+before removing unlinked triples: 120499
+after removing unlinked triples: 60000
+before removing unlinked triples: 120499
+after removing unlinked triples: 60000
+Number of rt_dict: 40000
+Number of hr_dict: 40499
+entity relations dict: 40000
+Number of av_dict: 1398
+entity attributes dict: 1398
+
+KG statistics:
+Number of entities: 60499
+Number of relations: 3
+Number of attributes: 1
+Number of relation triples: 60000
+Number of attribute triples: 1398
+Number of local relation triples: 60000
+Number of local attribute triples: 1398
+
+Number of rt_dict: 40000
+Number of hr_dict: 40499
+entity relations dict: 40000
+Number of av_dict: 1398
+entity attributes dict: 1398
+
+KG statistics:
+Number of entities: 60499
+Number of relations: 3
+Number of attributes: 1
+Number of relation triples: 60000
+Number of attribute triples: 1398
+Number of local relation triples: 60000
+Number of local attribute triples: 1398
+
+Number of rt_dict: 40000
+Number of hr_dict: 40499
+entity relations dict: 40000
+Number of av_dict: 1398
+entity attributes dict: 1398
+
+KG statistics:
+Number of entities: 60499
+Number of relations: 3
+Number of attributes: 1
+Number of relation triples: 60000
+Number of attribute triples: 1398
+Number of local relation triples: 60000
+Number of local attribute triples: 1398
+
+Number of rt_dict: 40000
+Number of hr_dict: 40499
+entity relations dict: 40000
+Number of av_dict: 1398
+entity attributes dict: 1398
+
+KG statistics:
+Number of entities: 60499
+Number of relations: 3
+Number of attributes: 1
+Number of relation triples: 60000
+Number of attribute triples: 1398
+Number of local relation triples: 60000
+Number of local attribute triples: 1398
+
+../../OntologySummit/AmazonRatings/EntityAlignment/results/ ../../OntologySummit/AmazonRatings/EntityAlignment/AP-AP/ ['..', '..', 'OntologySummit', 'AmazonRatings', 'EntityAlignment', 'AP-AP'] 541_5fold/1/ RSN4EA
+results output folder: ../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/
+hrt rt_x 1064712 1064712
+1064712 1064712
+1064712 1064712
+1064712 1064712
+1064712 1064712
+1064712 1064712
+epoch 1, avg. batch_loss: 13556.396532,  cost time: 13130.9354 s
+epoch 2, avg. batch_loss: 11.826355,  cost time: 10476.5635 s
+epoch 3, avg. batch_loss: 9.467998,  cost time: 9555.3983 s
+quick results: hits@[1, 5, 10, 50] = [66.496 74.595 76.05  79.455]%, time = 74.956 s 
+epoch 4, avg. batch_loss: 8.999241,  cost time: 7089.5801 s
+epoch 5, avg. batch_loss: 8.758786,  cost time: 5719.8031 s
+epoch 6, avg. batch_loss: 8.611602,  cost time: 5317.7869 s
+quick results: hits@[1, 5, 10, 50] = [68.198 76.215 77.388 80.413]%, time = 45.930 s 
+epoch 7, avg. batch_loss: 8.504625,  cost time: 5518.4268 s
+epoch 8, avg. batch_loss: 8.436336,  cost time: 5537.7326 s
+epoch 9, avg. batch_loss: 8.368949,  cost time: 7554.6719 s
+quick results: hits@[1, 5, 10, 50] = [68.992 76.678 77.835 80.86 ]%, time = 56.186 s 
+epoch 10, avg. batch_loss: 8.330585,  cost time: 8010.7214 s
+epoch 11, avg. batch_loss: 8.287836,  cost time: 9182.2019 s
+epoch 12, avg. batch_loss: 8.257071,  cost time: 6841.4353 s
+quick results: hits@[1, 5, 10, 50] = [69.041 77.107 78.248 81.24 ]%, time = 49.087 s 
+epoch 13, avg. batch_loss: 8.230752,  cost time: 6471.9978 s
+epoch 14, avg. batch_loss: 8.195568,  cost time: 9015.3166 s
+epoch 15, avg. batch_loss: 8.174430,  cost time: 6525.1204 s
+quick results: hits@[1, 5, 10, 50] = [69.107 77.174 78.364 81.636]%, time = 46.883 s 
+epoch 16, avg. batch_loss: 8.145898,  cost time: 7079.3872 s
+epoch 17, avg. batch_loss: 8.134469,  cost time: 6899.6864 s
+epoch 18, avg. batch_loss: 8.114384,  cost time: 5995.6851 s
+quick results: hits@[1, 5, 10, 50] = [69.967 77.355 78.463 81.917]%, time = 44.907 s 
+epoch 19, avg. batch_loss: 8.095987,  cost time: 6051.0119 s
+epoch 20, avg. batch_loss: 8.082840,  cost time: 7213.2606 s
+epoch 21, avg. batch_loss: 8.070253,  cost time: 7202.7736 s
+quick results: hits@[1, 5, 10, 50] = [70.38  77.438 78.678 82.066]%, time = 55.782 s 
+epoch 22, avg. batch_loss: 8.048574,  cost time: 6800.7496 s
+epoch 23, avg. batch_loss: 8.038809,  cost time: 6582.0352 s
+epoch 24, avg. batch_loss: 8.029109,  cost time: 6281.4752 s
+quick results: hits@[1, 5, 10, 50] = [69.934 77.438 78.612 81.884]%, time = 64.858 s 
+epoch 25, avg. batch_loss: 8.012008,  cost time: 7483.7373 s
+epoch 26, avg. batch_loss: 7.994514,  cost time: 8484.8560 s
+epoch 27, avg. batch_loss: 7.982766,  cost time: 6994.5989 s
+quick results: hits@[1, 5, 10, 50] = [70.132 77.587 78.727 82.066]%, time = 61.602 s 
+epoch 28, avg. batch_loss: 7.980770,  cost time: 6123.5820 s
+epoch 29, avg. batch_loss: 7.957012,  cost time: 6014.4979 s
+epoch 30, avg. batch_loss: 7.947452,  cost time: 5780.8982 s
+quick results: hits@[1, 5, 10, 50] = [70.347 77.802 78.843 82.05 ]%, time = 41.991 s 
+Training ends. Total time = 217586.640 s.
+accurate results: hits@[1, 5, 10, 50] = [71.087 77.946 79.252 82.388]%, mr = 676.996, mrr = 0.744964, time = 153.140 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [72.736 78.773 80.14  83.281]%, mr = 527.459, mrr = 0.757733, time = 340.410 s 
+Results saved!
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg1_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg2_ent_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg1_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg2_rel_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg1_attr_ids saved.
+../../OntologySummit/AmazonRatings/EntityAlignment/results/RSN4EA/AP-AP/541_5fold/1/20231105131132/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 243441.850 s.
