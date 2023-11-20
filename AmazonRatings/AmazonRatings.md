@@ -207,7 +207,7 @@
 
 ## [Gold - Gold](./EntityAlignment/Gold-Gold/)
 
-![Graph Gold-Gold](./Figures/Gold-Gold_AmazonRatings.png "Graph Gold-Gold")
+![Graph Gold-Gold](./Figures/Gold_AmazonRatings.drawio.png)
 
 ### [Input](./EntityAlignment/Gold-Gold/Input/)
 
@@ -225,7 +225,7 @@
 ### [Output](./EntityAlignment/Gold-Gold/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticle (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/AlignE/1/nohup_aligne.txt)|56.56|65.26|71.07|60|0.61|52505|4605 (57.43%)|494 (88.21%)|4064 (53.32%)|
 |AliNet|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/AliNet/1/nohup_alinet.txt)|60.23|69.59|74.14|203|0.65|96679|4843 (60.40%)|510 (91.07%)|4404 (57.78%)|
 |AttrE|[1](./EntityAlignment/Gold-Gold/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-Gold/Output/AttrE/1/nohup_attre.txt)|99.38|99.90|99.94|1|1|43673|7961 (99.29%)|533 (95.18%)|7606 (99.79%)|
@@ -273,7 +273,7 @@
 ### [Output](./EntityAlignment/Gold-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticle (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/AlignE/1/nohup_aligne.txt)|55.87|64.33|70.82|53|0.61|14596|4549 (56.94%)|510 (87.93%)|3992 (52.31%)|
 |AliNet|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/AliNet/1/nohup_alinet.txt)|57.92|66.91|71.54|287|0.62|33556|4779 (59.82%)|520 (89.66%)|4084 (53.52%)|
 |AttrE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-LLM/Output/AttrE/1/nohup_attre.txt)|99.37|99.91|99.95|1|0.99|14704|7929 (99.25%)|551 (95.00%)|7618 (99.83%)|
@@ -321,7 +321,7 @@
 ### [Output](./EntityAlignment/Gold-AP/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticle (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/AlignE/1/nohup_aligne.txt)|53.83|58.11|61.51|264|0.56|97163|4220 (53.30%)|446 (79.79%)|4054 (52.49%)|
 |AliNet|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/AliNet/1/nohup_alinet.txt)|49.09|49.82|49.92|1834|0.49|52965|4009 (50.64%)|0 (0%)|3944 (51.06%)|
 |AttrE|[1](./EntityAlignment/Gold-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/Gold-AP/Output/AttrE/1/nohup_attre.txt)|51.85|53.14|53.94|982|0.53|30233|4028 (50.88%)|429 (76.74%)|3942 (51.04%)|
@@ -351,7 +351,7 @@
 
 ## [LLM - LLM](./EntityAlignment/LLM-LLM/)
 
-![Graph LLM-LLM](./Figures/LLM-LLM_AmazonRatings.png "Graph LLM-LLM")
+![Graph LLM-LLM](./Figures/LLM_AmazonRatings.drawio.png)
 
 ### [Input](./EntityAlignment/LLM-LLM/Input/)
 
@@ -369,7 +369,7 @@
 ### [Output](./EntityAlignment/LLM-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticle (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/AlignE/1/nohup_aligne.txt)|56.59|65.19|71.11|54|0.61|54905|4545 (57.26%)|506 (89.08%)|4116 (53.50%)|
 |AliNet|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/AliNet/1/nohup_alinet.txt)|59.02|66.33|68.70|384|0.62|69205|4751 (59.85%)|504 (88.73%)|4306 (55.97%)|
 |AttrE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-LLM/Output/AttrE/1/nohup_attre.txt)|98.82|99.82|99.92|1|0.99|46804|7826 (98.59%)|531 (93.49%)|7651 (99.44%)|
@@ -417,7 +417,7 @@
 ### [Output](./EntityAlignment/LLM-AP/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticle (%)|Customer (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/AlignE/1/nohup_aligne.txt)|53.98|58.32|61.57|253|0.57|27773|4323 (53.91%)|451 (82.30%)|3970 (52.01%)|
 |AliNet|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/AliNet/1/nohup_alinet.txt)|49.21|49.90|49.94|2419|0.50|6602|4120 (51.38%)|0 (0%)|3852 (50.47%)|
 |AttrE|[1](./EntityAlignment/LLM-AP/Input/541_5fold/1/)|[16,200](./EntityAlignment/LLM-AP/Output/AttrE/1/nohup_attre.txt)|52.29|53.77|54.91|801|0.53|10713|4172 (52.03%)|445 (81.20%)|3854 (50.49%)|
@@ -466,7 +466,7 @@
 ### [Output](./EntityAlignment/AP-AP/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|SalesOrder (%)|SalesArticleBatch (%)|SalesArticle (%)|CustomerAccount(%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/AlignE/1/nohup_aligne.txt)|77.12|80.86|83.29|81|0.79|157117|5940 (75.54%)|6303 (78.88%)|529 (93.63%)|5891 (75.71%)|
 |AliNet|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/AliNet/1/nohup_alinet.txt)|78.88|82.71|84.13|221|0.81|56331|6186 (78.67%)|6458 (80.82%)|537 (95.04%)|5909 (75.94%)|
 |AttrE|[1](./EntityAlignment/AP-AP/Input/541_5fold/1/)|[24,200](./EntityAlignment/AP-AP/Output/AttrE/1/nohup_attre.txt)|75.73|77.84|79.35|220|0.77|68160|5903 (75.07%)|6091 (76.22%)|512 (90.62%)|5821 (74.81%)|
