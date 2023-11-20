@@ -248,7 +248,7 @@
 |BootEA_RotatE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/BootEA-RotatE/nohup_bootea_rotate.txt)|0.01|0.05|0.09|4015|0.00|96049|2 (0.03%)|1 (0.01%)|0 (0%)|
 |BootEA_TransH|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |Conve|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
-|GCN_Align|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/GCN_Align/nohup_gcnalign.txt)|0.00|0.09|0.15|0.58|3992|13413|0 (0%)|1 (0.01%)|0 (0%)|
+|GCN_Align|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/GCN_Align/nohup_gcnalign.txt)|0.00|0.09|0.15|3992|0.58|13413|0 (0%)|1 (0.01%)|0 (0%)|
 |GMNN|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|24,000|E|r|r|o|r||
 |HolE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/HolE/nohup_hole.txt)|0.02|0.08|0.12|4613|0.00|34728|0 (0%)|2 (0.02%)|3 (0.04%)|
 |IMUSE|[1](./EntityAlignment/Gold-LLM/Input/541_5fold/1)|[24,000](./EntityAlignment/Gold-LLM/Output/IMUSE/nohup_imuse.txt)|14.28|14.32|14.36|5356|0.14|12898|3 (0.04%)|3425 (42.56%)|0 (0%)|
