@@ -1,0 +1,696 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BrazilianEcommerce/', 'dataset_division': '721_5fold', 'embedding_module': 'BootEA_RotatE', 'alignment_module': 'swapping', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': False, 'gamma': 12.0, 'learning_rate': 0.01, 'optimizer': 'Adam', 'max_epoch': 2000, 'batch_size': 5000, 'min_iter': 40, 'neg_sampling': 'uniform', 'neg_triple_num': 10, 'truncated_epsilon': 0.9, 'truncated_freq': 10, 'batch_threads_num': 4, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'start_bp': 5000, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True, 'sim_th': 0.75, 'k': 10, 'sub_epoch': 10, 'align_times': 1}
+BootEA_RotatE
+<openea.modules.args.args_hander.ARGs object at 0x7fc59edd3748>
+read relation triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions//721_5fold/1/test_links
+Number of rt_dict: 19843
+Number of hr_dict: 1
+entity relations dict: 19843
+Number of av_dict: 19843
+entity attributes dict: 19843
+
+KG statistics:
+Number of entities: 19844
+Number of relations: 1
+Number of attributes: 1
+Number of relation triples: 19843
+Number of attribute triples: 19843
+Number of local relation triples: 19843
+Number of local attribute triples: 19843
+
+Number of rt_dict: 19843
+Number of hr_dict: 1
+entity relations dict: 19843
+Number of av_dict: 19843
+entity attributes dict: 19843
+
+KG statistics:
+Number of entities: 19844
+Number of relations: 1
+Number of attributes: 1
+Number of relation triples: 19843
+Number of attribute triples: 19843
+Number of local relation triples: 19843
+Number of local attribute triples: 19843
+
+Number of rt_dict: 19843
+Number of hr_dict: 1
+entity relations dict: 19843
+Number of av_dict: 19843
+entity attributes dict: 19843
+
+KG statistics:
+Number of entities: 19844
+Number of relations: 1
+Number of attributes: 1
+Number of relation triples: 19843
+Number of attribute triples: 19843
+Number of local relation triples: 19843
+Number of local attribute triples: 19843
+
+Number of rt_dict: 19843
+Number of hr_dict: 1
+entity relations dict: 19843
+Number of av_dict: 19843
+entity attributes dict: 19843
+
+KG statistics:
+Number of entities: 19844
+Number of relations: 1
+Number of attributes: 1
+Number of relation triples: 19843
+Number of attribute triples: 19843
+Number of local relation triples: 19843
+Number of local attribute triples: 19843
+
+supervised relation triples: 9921, 9921
+supervised attribute triples: 9921, 9921
+../../output/results/Paper/BrazilianEcommerce/ ../../datasets/Ontologies/Paper/BrazilianEcommerce/Transactions-Transactions// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BrazilianEcommerce', 'Transactions-Transactions'] 721_5fold/1/ BootEA_RotatE
+results output folder: ../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/
+
+iteration 1
+epoch 1, avg. triple loss: 5.2657, cost time: 16.0036s
+epoch 2, avg. triple loss: 2.7313, cost time: 15.8311s
+epoch 3, avg. triple loss: 0.9760, cost time: 15.8445s
+epoch 4, avg. triple loss: 0.3032, cost time: 15.0042s
+epoch 5, avg. triple loss: 0.1218, cost time: 13.4069s
+epoch 6, avg. triple loss: 0.0777, cost time: 12.9104s
+epoch 7, avg. triple loss: 0.0642, cost time: 12.1420s
+epoch 8, avg. triple loss: 0.0601, cost time: 13.6380s
+epoch 9, avg. triple loss: 0.0584, cost time: 15.7599s
+epoch 10, avg. triple loss: 0.0575, cost time: 14.6335s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.101 0.252]%, time = 3.531 s 
+
+iteration 2
+epoch 11, avg. triple loss: 0.0562, cost time: 15.2307s
+epoch 12, avg. triple loss: 0.0566, cost time: 14.7978s
+epoch 13, avg. triple loss: 0.0565, cost time: 14.0191s
+epoch 14, avg. triple loss: 0.0565, cost time: 13.0934s
+epoch 15, avg. triple loss: 0.0567, cost time: 13.2854s
+epoch 16, avg. triple loss: 0.0563, cost time: 13.3665s
+epoch 17, avg. triple loss: 0.0567, cost time: 13.2332s
+epoch 18, avg. triple loss: 0.0565, cost time: 14.9773s
+epoch 19, avg. triple loss: 0.0570, cost time: 14.8955s
+epoch 20, avg. triple loss: 0.0568, cost time: 14.5341s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.403]%, time = 3.627 s 
+
+iteration 3
+epoch 21, avg. triple loss: 0.0572, cost time: 14.6818s
+epoch 22, avg. triple loss: 0.0572, cost time: 13.4528s
+epoch 23, avg. triple loss: 0.0584, cost time: 13.1199s
+epoch 24, avg. triple loss: 0.0579, cost time: 13.6862s
+epoch 25, avg. triple loss: 0.0588, cost time: 13.5443s
+epoch 26, avg. triple loss: 0.0565, cost time: 13.5407s
+epoch 27, avg. triple loss: 0.0578, cost time: 13.8237s
+epoch 28, avg. triple loss: 0.0573, cost time: 15.2190s
+epoch 29, avg. triple loss: 0.0592, cost time: 15.3147s
+epoch 30, avg. triple loss: 0.0591, cost time: 15.7411s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.101 0.403]%, time = 3.599 s 
+
+ == should early stop == 
+
+
+iteration 4
+epoch 31, avg. triple loss: 0.0590, cost time: 14.8285s
+epoch 32, avg. triple loss: 0.0594, cost time: 13.7861s
+epoch 33, avg. triple loss: 0.0596, cost time: 12.8406s
+epoch 34, avg. triple loss: 0.0583, cost time: 12.5179s
+epoch 35, avg. triple loss: 0.0581, cost time: 13.2080s
+epoch 36, avg. triple loss: 0.0588, cost time: 13.3874s
+epoch 37, avg. triple loss: 0.0602, cost time: 14.1422s
+epoch 38, avg. triple loss: 0.0607, cost time: 14.3512s
+epoch 39, avg. triple loss: 0.0607, cost time: 14.9932s
+epoch 40, avg. triple loss: 0.0599, cost time: 14.2266s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.101 0.403]%, time = 3.518 s 
+
+ == should early stop == 
+
+
+iteration 5
+epoch 41, avg. triple loss: 0.0586, cost time: 13.1922s
+epoch 42, avg. triple loss: 0.0593, cost time: 13.1130s
+epoch 43, avg. triple loss: 0.0606, cost time: 12.5862s
+epoch 44, avg. triple loss: 0.0609, cost time: 12.8353s
+epoch 45, avg. triple loss: 0.0607, cost time: 12.8493s
+epoch 46, avg. triple loss: 0.0601, cost time: 14.8900s
+epoch 47, avg. triple loss: 0.0609, cost time: 13.7220s
+epoch 48, avg. triple loss: 0.0619, cost time: 14.5784s
+epoch 49, avg. triple loss: 0.0604, cost time: 14.9351s
+epoch 50, avg. triple loss: 0.0607, cost time: 14.1532s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.05  0.453]%, time = 3.517 s 
+
+ == should early stop == 
+
+
+iteration 6
+epoch 51, avg. triple loss: 0.0602, cost time: 13.4075s
+epoch 52, avg. triple loss: 0.0609, cost time: 13.7441s
+epoch 53, avg. triple loss: 0.0610, cost time: 12.7424s
+epoch 54, avg. triple loss: 0.0617, cost time: 14.0332s
+epoch 55, avg. triple loss: 0.0597, cost time: 14.1373s
+epoch 56, avg. triple loss: 0.0598, cost time: 14.1546s
+epoch 57, avg. triple loss: 0.0600, cost time: 13.5867s
+epoch 58, avg. triple loss: 0.0597, cost time: 13.4193s
+epoch 59, avg. triple loss: 0.0606, cost time: 13.2636s
+epoch 60, avg. triple loss: 0.0623, cost time: 13.9898s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.554]%, time = 2.762 s 
+
+ == should early stop == 
+
+
+iteration 7
+epoch 61, avg. triple loss: 0.0640, cost time: 13.7171s
+epoch 62, avg. triple loss: 0.0619, cost time: 14.3243s
+epoch 63, avg. triple loss: 0.0617, cost time: 12.6487s
+epoch 64, avg. triple loss: 0.0619, cost time: 14.8661s
+epoch 65, avg. triple loss: 0.0620, cost time: 14.5297s
+epoch 66, avg. triple loss: 0.0610, cost time: 13.9901s
+epoch 67, avg. triple loss: 0.0623, cost time: 14.2109s
+epoch 68, avg. triple loss: 0.0600, cost time: 13.5343s
+epoch 69, avg. triple loss: 0.0597, cost time: 12.6281s
+epoch 70, avg. triple loss: 0.0610, cost time: 12.4462s
+quick results: hits@[1, 5, 10, 50] = [0.05  0.05  0.101 0.453]%, time = 3.692 s 
+
+iteration 8
+epoch 71, avg. triple loss: 0.0606, cost time: 12.3261s
+epoch 72, avg. triple loss: 0.0616, cost time: 12.4967s
+epoch 73, avg. triple loss: 0.0629, cost time: 13.2194s
+epoch 74, avg. triple loss: 0.0614, cost time: 14.2040s
+epoch 75, avg. triple loss: 0.0591, cost time: 13.4247s
+epoch 76, avg. triple loss: 0.0593, cost time: 13.3957s
+epoch 77, avg. triple loss: 0.0596, cost time: 14.3858s
+epoch 78, avg. triple loss: 0.0593, cost time: 12.7154s
+epoch 79, avg. triple loss: 0.0599, cost time: 13.0437s
+epoch 80, avg. triple loss: 0.0617, cost time: 12.5341s
+quick results: hits@[1, 5, 10, 50] = [0.05  0.101 0.151 0.302]%, time = 2.773 s 
+
+iteration 9
+epoch 81, avg. triple loss: 0.0620, cost time: 12.9547s
+epoch 82, avg. triple loss: 0.0602, cost time: 13.8320s
+epoch 83, avg. triple loss: 0.0594, cost time: 14.1307s
+epoch 84, avg. triple loss: 0.0590, cost time: 13.8390s
+epoch 85, avg. triple loss: 0.0591, cost time: 14.1722s
+epoch 86, avg. triple loss: 0.0608, cost time: 14.7274s
+epoch 87, avg. triple loss: 0.0602, cost time: 14.2509s
+epoch 88, avg. triple loss: 0.0586, cost time: 13.8933s
+epoch 89, avg. triple loss: 0.0591, cost time: 13.5715s
+epoch 90, avg. triple loss: 0.0604, cost time: 13.1497s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.353]%, time = 3.079 s 
+
+ == should early stop == 
+
+
+iteration 10
+epoch 91, avg. triple loss: 0.0610, cost time: 12.5065s
+epoch 92, avg. triple loss: 0.0610, cost time: 12.7300s
+epoch 93, avg. triple loss: 0.0616, cost time: 13.9229s
+epoch 94, avg. triple loss: 0.0602, cost time: 14.0362s
+epoch 95, avg. triple loss: 0.0585, cost time: 13.8256s
+epoch 96, avg. triple loss: 0.0594, cost time: 14.5676s
+epoch 97, avg. triple loss: 0.0591, cost time: 14.5889s
+epoch 98, avg. triple loss: 0.0595, cost time: 12.6566s
+epoch 99, avg. triple loss: 0.0605, cost time: 13.0310s
+epoch 100, avg. triple loss: 0.0615, cost time: 13.0348s
+quick results: hits@[1, 5, 10, 50] = [0.    0.101 0.101 0.605]%, time = 3.715 s 
+
+ == should early stop == 
+
+
+iteration 11
+epoch 101, avg. triple loss: 0.0607, cost time: 12.5390s
+epoch 102, avg. triple loss: 0.0623, cost time: 12.4083s
+epoch 103, avg. triple loss: 0.0606, cost time: 12.4353s
+epoch 104, avg. triple loss: 0.0606, cost time: 14.4808s
+epoch 105, avg. triple loss: 0.0600, cost time: 13.9605s
+epoch 106, avg. triple loss: 0.0596, cost time: 13.8822s
+epoch 107, avg. triple loss: 0.0591, cost time: 14.2852s
+epoch 108, avg. triple loss: 0.0589, cost time: 14.3215s
+epoch 109, avg. triple loss: 0.0598, cost time: 13.8285s
+epoch 110, avg. triple loss: 0.0595, cost time: 13.0855s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.554]%, time = 2.840 s 
+
+ == should early stop == 
+
+
+iteration 12
+epoch 111, avg. triple loss: 0.0594, cost time: 12.7848s
+epoch 112, avg. triple loss: 0.0588, cost time: 13.3058s
+epoch 113, avg. triple loss: 0.0575, cost time: 13.2619s
+epoch 114, avg. triple loss: 0.0573, cost time: 13.2774s
+epoch 115, avg. triple loss: 0.0575, cost time: 14.9851s
+epoch 116, avg. triple loss: 0.0594, cost time: 15.0480s
+epoch 117, avg. triple loss: 0.0596, cost time: 15.2015s
+epoch 118, avg. triple loss: 0.0562, cost time: 14.8843s
+epoch 119, avg. triple loss: 0.0581, cost time: 14.6859s
+epoch 120, avg. triple loss: 0.0581, cost time: 12.9105s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.453]%, time = 3.291 s 
+
+ == should early stop == 
+
+
+iteration 13
+epoch 121, avg. triple loss: 0.0584, cost time: 12.9745s
+epoch 122, avg. triple loss: 0.0592, cost time: 12.5533s
+epoch 123, avg. triple loss: 0.0566, cost time: 12.8594s
+epoch 124, avg. triple loss: 0.0565, cost time: 12.7880s
+epoch 125, avg. triple loss: 0.0591, cost time: 14.1793s
+epoch 126, avg. triple loss: 0.0583, cost time: 13.6351s
+epoch 127, avg. triple loss: 0.0568, cost time: 13.8640s
+epoch 128, avg. triple loss: 0.0564, cost time: 13.2614s
+epoch 129, avg. triple loss: 0.0565, cost time: 12.8819s
+epoch 130, avg. triple loss: 0.0567, cost time: 12.6708s
+quick results: hits@[1, 5, 10, 50] = [0.05  0.05  0.05  0.353]%, time = 2.853 s 
+
+iteration 14
+epoch 131, avg. triple loss: 0.0571, cost time: 13.2130s
+epoch 132, avg. triple loss: 0.0572, cost time: 12.1358s
+epoch 133, avg. triple loss: 0.0578, cost time: 12.3248s
+epoch 134, avg. triple loss: 0.0564, cost time: 12.9558s
+epoch 135, avg. triple loss: 0.0575, cost time: 12.6985s
+epoch 136, avg. triple loss: 0.0578, cost time: 12.4777s
+epoch 137, avg. triple loss: 0.0557, cost time: 12.4580s
+epoch 138, avg. triple loss: 0.0561, cost time: 12.4468s
+epoch 139, avg. triple loss: 0.0559, cost time: 12.3750s
+epoch 140, avg. triple loss: 0.0559, cost time: 12.7783s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.252]%, time = 3.612 s 
+
+iteration 15
+epoch 141, avg. triple loss: 0.0567, cost time: 12.9114s
+epoch 142, avg. triple loss: 0.0578, cost time: 13.0496s
+epoch 143, avg. triple loss: 0.0549, cost time: 12.6049s
+epoch 144, avg. triple loss: 0.0544, cost time: 13.4298s
+epoch 145, avg. triple loss: 0.0555, cost time: 12.5018s
+epoch 146, avg. triple loss: 0.0554, cost time: 13.1020s
+epoch 147, avg. triple loss: 0.0557, cost time: 12.8027s
+epoch 148, avg. triple loss: 0.0546, cost time: 11.7969s
+epoch 149, avg. triple loss: 0.0541, cost time: 12.2369s
+epoch 150, avg. triple loss: 0.0545, cost time: 13.7587s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.252]%, time = 2.727 s 
+
+ == should early stop == 
+
+
+iteration 16
+epoch 151, avg. triple loss: 0.0539, cost time: 11.5155s
+epoch 152, avg. triple loss: 0.0553, cost time: 12.2326s
+epoch 153, avg. triple loss: 0.0531, cost time: 11.9789s
+epoch 154, avg. triple loss: 0.0544, cost time: 12.4009s
+epoch 155, avg. triple loss: 0.0542, cost time: 12.0783s
+epoch 156, avg. triple loss: 0.0537, cost time: 12.6865s
+epoch 157, avg. triple loss: 0.0549, cost time: 13.0195s
+epoch 158, avg. triple loss: 0.0546, cost time: 12.4813s
+epoch 159, avg. triple loss: 0.0551, cost time: 12.4993s
+epoch 160, avg. triple loss: 0.0548, cost time: 12.0294s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.202]%, time = 2.869 s 
+
+ == should early stop == 
+
+
+iteration 17
+epoch 161, avg. triple loss: 0.0558, cost time: 12.6868s
+epoch 162, avg. triple loss: 0.0542, cost time: 13.4743s
+epoch 163, avg. triple loss: 0.0537, cost time: 12.4117s
+epoch 164, avg. triple loss: 0.0529, cost time: 13.0592s
+epoch 165, avg. triple loss: 0.0530, cost time: 13.7183s
+epoch 166, avg. triple loss: 0.0529, cost time: 13.6388s
+epoch 167, avg. triple loss: 0.0556, cost time: 13.7375s
+epoch 168, avg. triple loss: 0.0544, cost time: 13.3737s
+epoch 169, avg. triple loss: 0.0546, cost time: 12.9245s
+epoch 170, avg. triple loss: 0.0530, cost time: 14.0126s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.504]%, time = 3.342 s 
+
+ == should early stop == 
+
+
+iteration 18
+epoch 171, avg. triple loss: 0.0538, cost time: 12.5527s
+epoch 172, avg. triple loss: 0.0517, cost time: 12.1506s
+epoch 173, avg. triple loss: 0.0544, cost time: 12.6822s
+epoch 174, avg. triple loss: 0.0550, cost time: 11.7974s
+epoch 175, avg. triple loss: 0.0527, cost time: 12.9191s
+epoch 176, avg. triple loss: 0.0534, cost time: 12.4320s
+epoch 177, avg. triple loss: 0.0529, cost time: 12.2417s
+epoch 178, avg. triple loss: 0.0545, cost time: 12.8406s
+epoch 179, avg. triple loss: 0.0538, cost time: 13.1046s
+epoch 180, avg. triple loss: 0.0534, cost time: 12.7730s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.453]%, time = 3.004 s 
+
+ == should early stop == 
+
+
+iteration 19
+epoch 181, avg. triple loss: 0.0525, cost time: 12.7272s
+epoch 182, avg. triple loss: 0.0537, cost time: 13.4816s
+epoch 183, avg. triple loss: 0.0530, cost time: 14.2256s
+epoch 184, avg. triple loss: 0.0518, cost time: 12.4724s
+epoch 185, avg. triple loss: 0.0526, cost time: 13.7774s
+epoch 186, avg. triple loss: 0.0528, cost time: 13.4194s
+epoch 187, avg. triple loss: 0.0532, cost time: 13.9229s
+epoch 188, avg. triple loss: 0.0538, cost time: 13.3462s
+epoch 189, avg. triple loss: 0.0527, cost time: 13.2385s
+epoch 190, avg. triple loss: 0.0536, cost time: 13.2638s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.202]%, time = 3.472 s 
+
+ == should early stop == 
+
+
+iteration 20
+epoch 191, avg. triple loss: 0.0535, cost time: 13.2005s
+epoch 192, avg. triple loss: 0.0525, cost time: 13.2237s
+epoch 193, avg. triple loss: 0.0535, cost time: 13.2281s
+epoch 194, avg. triple loss: 0.0527, cost time: 14.9945s
+epoch 195, avg. triple loss: 0.0508, cost time: 14.3571s
+epoch 196, avg. triple loss: 0.0543, cost time: 13.7294s
+epoch 197, avg. triple loss: 0.0522, cost time: 13.6301s
+epoch 198, avg. triple loss: 0.0523, cost time: 14.6932s
+epoch 199, avg. triple loss: 0.0532, cost time: 14.8062s
+epoch 200, avg. triple loss: 0.0526, cost time: 14.6165s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.302]%, time = 3.297 s 
+
+ == should early stop == 
+
+
+iteration 21
+epoch 201, avg. triple loss: 0.0528, cost time: 14.2678s
+epoch 202, avg. triple loss: 0.0524, cost time: 14.7774s
+epoch 203, avg. triple loss: 0.0520, cost time: 15.1260s
+epoch 204, avg. triple loss: 0.0521, cost time: 14.9475s
+epoch 205, avg. triple loss: 0.0522, cost time: 14.5213s
+epoch 206, avg. triple loss: 0.0533, cost time: 16.0133s
+epoch 207, avg. triple loss: 0.0531, cost time: 15.6204s
+epoch 208, avg. triple loss: 0.0533, cost time: 15.3587s
+epoch 209, avg. triple loss: 0.0518, cost time: 16.0470s
+epoch 210, avg. triple loss: 0.0523, cost time: 13.5864s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.151 0.554]%, time = 3.432 s 
+
+ == should early stop == 
+
+
+iteration 22
+epoch 211, avg. triple loss: 0.0518, cost time: 16.0363s
+epoch 212, avg. triple loss: 0.0525, cost time: 15.7261s
+epoch 213, avg. triple loss: 0.0519, cost time: 14.8816s
+epoch 214, avg. triple loss: 0.0531, cost time: 14.6144s
+epoch 215, avg. triple loss: 0.0519, cost time: 15.8613s
+epoch 216, avg. triple loss: 0.0508, cost time: 15.2651s
+epoch 217, avg. triple loss: 0.0511, cost time: 16.3887s
+epoch 218, avg. triple loss: 0.0519, cost time: 16.7339s
+epoch 219, avg. triple loss: 0.0529, cost time: 13.6900s
+epoch 220, avg. triple loss: 0.0509, cost time: 16.3343s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.151 0.353]%, time = 4.339 s 
+
+ == should early stop == 
+
+
+iteration 23
+epoch 221, avg. triple loss: 0.0527, cost time: 16.1381s
+epoch 222, avg. triple loss: 0.0524, cost time: 16.8986s
+epoch 223, avg. triple loss: 0.0518, cost time: 16.3549s
+epoch 224, avg. triple loss: 0.0512, cost time: 16.5258s
+epoch 225, avg. triple loss: 0.0521, cost time: 17.3359s
+epoch 226, avg. triple loss: 0.0511, cost time: 17.8247s
+epoch 227, avg. triple loss: 0.0509, cost time: 17.0383s
+epoch 228, avg. triple loss: 0.0515, cost time: 16.9387s
+epoch 229, avg. triple loss: 0.0524, cost time: 18.2988s
+epoch 230, avg. triple loss: 0.0533, cost time: 16.8443s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.101 0.403]%, time = 4.791 s 
+
+ == should early stop == 
+
+
+iteration 24
+epoch 231, avg. triple loss: 0.0525, cost time: 18.3078s
+epoch 232, avg. triple loss: 0.0524, cost time: 15.6671s
+epoch 233, avg. triple loss: 0.0526, cost time: 16.9786s
+epoch 234, avg. triple loss: 0.0516, cost time: 18.2569s
+epoch 235, avg. triple loss: 0.0511, cost time: 17.4736s
+epoch 236, avg. triple loss: 0.0513, cost time: 17.9912s
+epoch 237, avg. triple loss: 0.0522, cost time: 18.4133s
+epoch 238, avg. triple loss: 0.0523, cost time: 17.0761s
+epoch 239, avg. triple loss: 0.0509, cost time: 17.2448s
+epoch 240, avg. triple loss: 0.0523, cost time: 17.1218s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.101 0.302]%, time = 5.744 s 
+
+ == should early stop == 
+
+
+iteration 25
+epoch 241, avg. triple loss: 0.0512, cost time: 21.8183s
+epoch 242, avg. triple loss: 0.0502, cost time: 23.3587s
+epoch 243, avg. triple loss: 0.0516, cost time: 22.1714s
+epoch 244, avg. triple loss: 0.0502, cost time: 23.4689s
+epoch 245, avg. triple loss: 0.0504, cost time: 23.2914s
+epoch 246, avg. triple loss: 0.0504, cost time: 23.2447s
+epoch 247, avg. triple loss: 0.0504, cost time: 23.4060s
+epoch 248, avg. triple loss: 0.0511, cost time: 23.8853s
+epoch 249, avg. triple loss: 0.0504, cost time: 22.0077s
+epoch 250, avg. triple loss: 0.0519, cost time: 25.1579s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.151 0.605]%, time = 7.092 s 
+
+ == should early stop == 
+
+
+iteration 26
+epoch 251, avg. triple loss: 0.0512, cost time: 23.7364s
+epoch 252, avg. triple loss: 0.0513, cost time: 23.6644s
+epoch 253, avg. triple loss: 0.0509, cost time: 24.2242s
+epoch 254, avg. triple loss: 0.0512, cost time: 20.2791s
+epoch 255, avg. triple loss: 0.0503, cost time: 22.3859s
+epoch 256, avg. triple loss: 0.0506, cost time: 23.5804s
+epoch 257, avg. triple loss: 0.0495, cost time: 23.0631s
+epoch 258, avg. triple loss: 0.0506, cost time: 23.4181s
+epoch 259, avg. triple loss: 0.0504, cost time: 18.5320s
+epoch 260, avg. triple loss: 0.0490, cost time: 20.4015s
+quick results: hits@[1, 5, 10, 50] = [0.    0.101 0.101 0.353]%, time = 7.215 s 
+
+ == should early stop == 
+
+
+iteration 27
+epoch 261, avg. triple loss: 0.0517, cost time: 18.1494s
+epoch 262, avg. triple loss: 0.0522, cost time: 17.1448s
+epoch 263, avg. triple loss: 0.0517, cost time: 18.8283s
+epoch 264, avg. triple loss: 0.0505, cost time: 23.8565s
+epoch 265, avg. triple loss: 0.0507, cost time: 23.6753s
+epoch 266, avg. triple loss: 0.0499, cost time: 23.8887s
+epoch 267, avg. triple loss: 0.0509, cost time: 24.2097s
+epoch 268, avg. triple loss: 0.0503, cost time: 22.6527s
+epoch 269, avg. triple loss: 0.0499, cost time: 24.1169s
+epoch 270, avg. triple loss: 0.0492, cost time: 23.1723s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.302]%, time = 13.268 s 
+
+ == should early stop == 
+
+
+iteration 28
+epoch 271, avg. triple loss: 0.0507, cost time: 24.5137s
+epoch 272, avg. triple loss: 0.0507, cost time: 22.3368s
+epoch 273, avg. triple loss: 0.0490, cost time: 22.1767s
+epoch 274, avg. triple loss: 0.0510, cost time: 23.7184s
+epoch 275, avg. triple loss: 0.0521, cost time: 23.0139s
+epoch 276, avg. triple loss: 0.0513, cost time: 22.4644s
+epoch 277, avg. triple loss: 0.0507, cost time: 21.4547s
+epoch 278, avg. triple loss: 0.0510, cost time: 22.8859s
+epoch 279, avg. triple loss: 0.0508, cost time: 23.2273s
+epoch 280, avg. triple loss: 0.0512, cost time: 24.0854s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.302]%, time = 5.942 s 
+
+ == should early stop == 
+
+
+iteration 29
+epoch 281, avg. triple loss: 0.0509, cost time: 18.0516s
+epoch 282, avg. triple loss: 0.0501, cost time: 24.3372s
+epoch 283, avg. triple loss: 0.0509, cost time: 22.2746s
+epoch 284, avg. triple loss: 0.0503, cost time: 23.1544s
+epoch 285, avg. triple loss: 0.0505, cost time: 23.6398s
+epoch 286, avg. triple loss: 0.0495, cost time: 23.9904s
+epoch 287, avg. triple loss: 0.0501, cost time: 21.2878s
+epoch 288, avg. triple loss: 0.0506, cost time: 22.3210s
+epoch 289, avg. triple loss: 0.0505, cost time: 21.9915s
+epoch 290, avg. triple loss: 0.0508, cost time: 19.8841s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.655]%, time = 8.973 s 
+
+ == should early stop == 
+
+
+iteration 30
+epoch 291, avg. triple loss: 0.0517, cost time: 21.5393s
+epoch 292, avg. triple loss: 0.0490, cost time: 23.8959s
+epoch 293, avg. triple loss: 0.0494, cost time: 23.5363s
+epoch 294, avg. triple loss: 0.0499, cost time: 23.5016s
+epoch 295, avg. triple loss: 0.0493, cost time: 23.1548s
+epoch 296, avg. triple loss: 0.0494, cost time: 23.7013s
+epoch 297, avg. triple loss: 0.0500, cost time: 24.5425s
+epoch 298, avg. triple loss: 0.0498, cost time: 24.5067s
+epoch 299, avg. triple loss: 0.0490, cost time: 21.5868s
+epoch 300, avg. triple loss: 0.0496, cost time: 21.6767s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.202]%, time = 7.625 s 
+
+ == should early stop == 
+
+
+iteration 31
+epoch 301, avg. triple loss: 0.0488, cost time: 18.5551s
+epoch 302, avg. triple loss: 0.0502, cost time: 18.4321s
+epoch 303, avg. triple loss: 0.0501, cost time: 18.5342s
+epoch 304, avg. triple loss: 0.0505, cost time: 18.1614s
+epoch 305, avg. triple loss: 0.0502, cost time: 18.4932s
+epoch 306, avg. triple loss: 0.0499, cost time: 17.8657s
+epoch 307, avg. triple loss: 0.0499, cost time: 19.0750s
+epoch 308, avg. triple loss: 0.0487, cost time: 18.2667s
+epoch 309, avg. triple loss: 0.0496, cost time: 19.7047s
+epoch 310, avg. triple loss: 0.0506, cost time: 20.5289s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.453]%, time = 6.960 s 
+
+ == should early stop == 
+
+
+iteration 32
+epoch 311, avg. triple loss: 0.0499, cost time: 19.0735s
+epoch 312, avg. triple loss: 0.0505, cost time: 18.4058s
+epoch 313, avg. triple loss: 0.0495, cost time: 19.3117s
+epoch 314, avg. triple loss: 0.0492, cost time: 18.3644s
+epoch 315, avg. triple loss: 0.0495, cost time: 18.8873s
+epoch 316, avg. triple loss: 0.0489, cost time: 18.0793s
+epoch 317, avg. triple loss: 0.0493, cost time: 16.0394s
+epoch 318, avg. triple loss: 0.0492, cost time: 16.5417s
+epoch 319, avg. triple loss: 0.0491, cost time: 17.2461s
+epoch 320, avg. triple loss: 0.0490, cost time: 16.5933s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.05  0.302]%, time = 4.984 s 
+
+ == should early stop == 
+
+
+iteration 33
+epoch 321, avg. triple loss: 0.0494, cost time: 16.5733s
+epoch 322, avg. triple loss: 0.0513, cost time: 16.2671s
+epoch 323, avg. triple loss: 0.0513, cost time: 17.5240s
+epoch 324, avg. triple loss: 0.0504, cost time: 17.2036s
+epoch 325, avg. triple loss: 0.0511, cost time: 16.8426s
+epoch 326, avg. triple loss: 0.0507, cost time: 16.5114s
+epoch 327, avg. triple loss: 0.0506, cost time: 17.1029s
+epoch 328, avg. triple loss: 0.0500, cost time: 16.4236s
+epoch 329, avg. triple loss: 0.0488, cost time: 19.0736s
+epoch 330, avg. triple loss: 0.0497, cost time: 18.0678s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.403]%, time = 9.466 s 
+
+ == should early stop == 
+
+
+iteration 34
+epoch 331, avg. triple loss: 0.0489, cost time: 16.5407s
+epoch 332, avg. triple loss: 0.0497, cost time: 16.2034s
+epoch 333, avg. triple loss: 0.0493, cost time: 17.3110s
+epoch 334, avg. triple loss: 0.0501, cost time: 17.3218s
+epoch 335, avg. triple loss: 0.0495, cost time: 17.1110s
+epoch 336, avg. triple loss: 0.0493, cost time: 16.3710s
+epoch 337, avg. triple loss: 0.0496, cost time: 18.3785s
+epoch 338, avg. triple loss: 0.0491, cost time: 18.1714s
+epoch 339, avg. triple loss: 0.0478, cost time: 17.7280s
+epoch 340, avg. triple loss: 0.0493, cost time: 17.5782s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.101 0.353]%, time = 7.689 s 
+
+ == should early stop == 
+
+
+iteration 35
+epoch 341, avg. triple loss: 0.0491, cost time: 17.0938s
+epoch 342, avg. triple loss: 0.0478, cost time: 17.9909s
+epoch 343, avg. triple loss: 0.0493, cost time: 18.4106s
+epoch 344, avg. triple loss: 0.0486, cost time: 18.1602s
+epoch 345, avg. triple loss: 0.0479, cost time: 19.2065s
+epoch 346, avg. triple loss: 0.0488, cost time: 18.3006s
+epoch 347, avg. triple loss: 0.0488, cost time: 17.3525s
+epoch 348, avg. triple loss: 0.0487, cost time: 16.4930s
+epoch 349, avg. triple loss: 0.0494, cost time: 17.3122s
+epoch 350, avg. triple loss: 0.0494, cost time: 17.9542s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.353]%, time = 7.493 s 
+
+ == should early stop == 
+
+
+iteration 36
+epoch 351, avg. triple loss: 0.0491, cost time: 17.3429s
+epoch 352, avg. triple loss: 0.0493, cost time: 17.6195s
+epoch 353, avg. triple loss: 0.0491, cost time: 17.8301s
+epoch 354, avg. triple loss: 0.0475, cost time: 18.0686s
+epoch 355, avg. triple loss: 0.0494, cost time: 18.9799s
+epoch 356, avg. triple loss: 0.0501, cost time: 18.1810s
+epoch 357, avg. triple loss: 0.0498, cost time: 18.2050s
+epoch 358, avg. triple loss: 0.0498, cost time: 17.0857s
+epoch 359, avg. triple loss: 0.0502, cost time: 18.0433s
+epoch 360, avg. triple loss: 0.0497, cost time: 17.0582s
+quick results: hits@[1, 5, 10, 50] = [0.05  0.05  0.101 0.302]%, time = 11.452 s 
+
+iteration 37
+epoch 361, avg. triple loss: 0.0500, cost time: 17.5066s
+epoch 362, avg. triple loss: 0.0510, cost time: 17.6203s
+epoch 363, avg. triple loss: 0.0489, cost time: 18.2167s
+epoch 364, avg. triple loss: 0.0493, cost time: 16.7696s
+epoch 365, avg. triple loss: 0.0497, cost time: 17.2712s
+epoch 366, avg. triple loss: 0.0494, cost time: 17.4370s
+epoch 367, avg. triple loss: 0.0494, cost time: 17.1910s
+epoch 368, avg. triple loss: 0.0507, cost time: 18.6859s
+epoch 369, avg. triple loss: 0.0513, cost time: 18.7783s
+epoch 370, avg. triple loss: 0.0497, cost time: 17.4693s
+quick results: hits@[1, 5, 10, 50] = [0.    0.05  0.05  0.302]%, time = 8.409 s 
+
+iteration 38
+epoch 371, avg. triple loss: 0.0492, cost time: 17.4797s
+epoch 372, avg. triple loss: 0.0493, cost time: 17.0982s
+epoch 373, avg. triple loss: 0.0513, cost time: 17.9907s
+epoch 374, avg. triple loss: 0.0495, cost time: 17.1550s
+epoch 375, avg. triple loss: 0.0505, cost time: 17.3988s
+epoch 376, avg. triple loss: 0.0505, cost time: 18.2347s
+epoch 377, avg. triple loss: 0.0497, cost time: 17.9981s
+epoch 378, avg. triple loss: 0.0502, cost time: 16.7206s
+epoch 379, avg. triple loss: 0.0503, cost time: 16.9781s
+epoch 380, avg. triple loss: 0.0499, cost time: 18.9395s
+quick results: hits@[1, 5, 10, 50] = [0.05  0.05  0.101 0.252]%, time = 7.682 s 
+
+iteration 39
+epoch 381, avg. triple loss: 0.0489, cost time: 18.8305s
+epoch 382, avg. triple loss: 0.0484, cost time: 18.7972s
+epoch 383, avg. triple loss: 0.0503, cost time: 18.2659s
+epoch 384, avg. triple loss: 0.0498, cost time: 18.4388s
+epoch 385, avg. triple loss: 0.0478, cost time: 18.3675s
+epoch 386, avg. triple loss: 0.0492, cost time: 17.2458s
+epoch 387, avg. triple loss: 0.0509, cost time: 18.6965s
+epoch 388, avg. triple loss: 0.0502, cost time: 16.8974s
+epoch 389, avg. triple loss: 0.0499, cost time: 19.5682s
+epoch 390, avg. triple loss: 0.0501, cost time: 16.8712s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.    0.453]%, time = 6.955 s 
+
+iteration 40
+epoch 391, avg. triple loss: 0.0516, cost time: 18.3539s
+epoch 392, avg. triple loss: 0.0505, cost time: 19.4374s
+epoch 393, avg. triple loss: 0.0500, cost time: 16.8239s
+epoch 394, avg. triple loss: 0.0488, cost time: 17.8515s
+epoch 395, avg. triple loss: 0.0485, cost time: 18.8479s
+epoch 396, avg. triple loss: 0.0488, cost time: 17.7399s
+epoch 397, avg. triple loss: 0.0480, cost time: 17.2317s
+epoch 398, avg. triple loss: 0.0484, cost time: 18.1880s
+epoch 399, avg. triple loss: 0.0484, cost time: 17.5850s
+epoch 400, avg. triple loss: 0.0479, cost time: 18.8715s
+quick results: hits@[1, 5, 10, 50] = [0.    0.    0.101 0.605]%, time = 8.000 s 
+
+ == should early stop == 
+
+Training ends. Total time = 6797.904 s.
+accurate results: hits@[1, 5, 10, 50] = [0.013 0.063 0.139 0.58 ]%, mr = 3972.916, mrr = 0.001158, time = 21.519 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [0.025 0.088 0.113 0.542]%, mr = 3976.128, mrr = 0.001290, time = 127.151 s 
+Results saved!
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg1_ent_ids saved.
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg2_ent_ids saved.
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg1_rel_ids saved.
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg2_rel_ids saved.
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg1_attr_ids saved.
+../../output/results/Paper/BrazilianEcommerce/BootEA_RotatE/Transactions-Transactions/721_5fold/1/20231116235301/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 6975.103 s.

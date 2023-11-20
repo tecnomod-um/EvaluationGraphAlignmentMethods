@@ -1,0 +1,124 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/BrazilianEcommerce/', 'dataset_division': '721_5fold', 'embedding_module': 'KDCoE', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'init': 'unit', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'margin': 1.5, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'alpha': 5, 'new_param': 0.1, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': True, 'desc_batch_size': 512, 'wv_dim': 300, 'default_desc_length': 4, 'word_embed': '../../datasets/wiki-news-300d-1M.vec', 'desc_sim_th': 0.95, 'sim_th': 0.8, 'max_iter': 5}
+KDCoE
+<openea.modules.args.args_hander.ARGs object at 0x7f9efcf35860>
+read relation triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic//721_5fold/1/test_links
+Number of rt_dict: 50857
+Number of hr_dict: 30862
+entity relations dict: 50857
+Number of av_dict: 50857
+entity attributes dict: 50857
+
+KG statistics:
+Number of entities: 50862
+Number of relations: 5
+Number of attributes: 4
+Number of relation triples: 101901
+Number of attribute triples: 50857
+Number of local relation triples: 101901
+Number of local attribute triples: 50857
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 5
+Number of relation triples: 20000
+Number of attribute triples: 100000
+Number of local relation triples: 20000
+Number of local attribute triples: 100000
+
+Number of rt_dict: 50857
+Number of hr_dict: 30862
+entity relations dict: 50857
+Number of av_dict: 50857
+entity attributes dict: 50857
+
+KG statistics:
+Number of entities: 50862
+Number of relations: 5
+Number of attributes: 4
+Number of relation triples: 101901
+Number of attribute triples: 50857
+Number of local relation triples: 101901
+Number of local attribute triples: 50857
+
+Number of rt_dict: 20000
+Number of hr_dict: 1
+entity relations dict: 20000
+Number of av_dict: 20000
+entity attributes dict: 20000
+
+KG statistics:
+Number of entities: 20001
+Number of relations: 1
+Number of attributes: 5
+Number of relation triples: 20000
+Number of attribute triples: 100000
+Number of local relation triples: 20000
+Number of local attribute triples: 100000
+
+../../output/results/Paper/BrazilianEcommerce/ ../../datasets/Ontologies/Paper/BrazilianEcommerce/Gold-Basic// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'BrazilianEcommerce', 'Gold-Basic'] 721_5fold/1/ KDCoE
+results output folder: ../../output/results/Paper/BrazilianEcommerce/KDCoE/Gold-Basic/721_5fold/1/20231119133340/
+aligned dict 20000
+kg1 descriptions: 0
+kg2 descriptions: 0
+after drop_duplicates, kg1 descriptions: 0
+after drop_duplicates, kg2 descriptions: 0
+kg1 entities having descriptions: 0
+kg2 entities having descriptions: 0
+concat word embeddings
+convert words to ids
+look up desc embeddings
+generating desc input costs time: 1720.2603s
+epoch 1, avg. desc loss: 6744.0528, cost time: 34.3447s
+epoch 2, avg. desc loss: 6743.0793, cost time: 20.3846s
+epoch 3, avg. desc loss: 6737.2273, cost time: 18.8715s
+epoch 4, avg. desc loss: 6736.0960, cost time: 19.3803s
+epoch 5, avg. desc loss: 6735.9859, cost time: 18.8579s
+epoch 6, avg. desc loss: 6735.9389, cost time: 21.0953s
+epoch 7, avg. desc loss: 6735.9127, cost time: 20.2776s
+epoch 8, avg. desc loss: 6735.9018, cost time: 19.6596s
+epoch 9, avg. desc loss: 6735.8820, cost time: 20.0399s
+epoch 10, avg. desc loss: 6735.8957, cost time: 20.9122s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [56.6 56.8 57.  59. ]%, time = 24.959 s 
+epoch 11, avg. desc loss: 6735.8732, cost time: 19.5163s
+epoch 12, avg. desc loss: 6735.8644, cost time: 19.2916s
+epoch 13, avg. desc loss: 6735.8597, cost time: 20.1572s
+epoch 14, avg. desc loss: 6735.8651, cost time: 21.2512s
+epoch 15, avg. desc loss: 6735.8522, cost time: 20.3930s
+epoch 16, avg. desc loss: 6735.8497, cost time: 21.2676s
+epoch 17, avg. desc loss: 6735.8589, cost time: 21.3510s
+epoch 18, avg. desc loss: 6735.8521, cost time: 22.0142s
+epoch 19, avg. desc loss: 6735.8560, cost time: 22.3666s
+epoch 20, avg. desc loss: 6735.8521, cost time: 20.1159s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [56.6  56.8  57.05 59.05]%, time = 13.172 s 
+epoch 21, avg. desc loss: 6735.8542, cost time: 21.9854s
+epoch 22, avg. desc loss: 6735.8496, cost time: 23.1730s
+epoch 23, avg. desc loss: 6735.8469, cost time: 22.3120s
+epoch 24, avg. desc loss: 6735.8497, cost time: 21.2023s
+epoch 25, avg. desc loss: 6735.8488, cost time: 21.7023s
+epoch 26, avg. desc loss: 6735.8521, cost time: 22.3040s
+epoch 27, avg. desc loss: 6735.8557, cost time: 22.9170s
+epoch 28, avg. desc loss: 6735.8491, cost time: 22.2598s
+epoch 29, avg. desc loss: 6735.8452, cost time: 21.3823s
+epoch 30, avg. desc loss: 6735.8541, cost time: 19.1694s
+valid desc
+quick results: hits@[1, 5, 10, 50] = [56.6  56.8  57.05 59.05]%, time = 12.420 s 
+
+ == should early stop == 
+
+sim th 0.95 0.8
+find new alignment based on description embeddings:
