@@ -277,141 +277,143 @@
 
 ## [Gold - LLM](./Experiments/EntityAlignment/Gold-LLM/)
 
-![Graph Gold-LLM](./Figures/bigBasketProducts-Gold-LLM.png "Graph Gold-LLM")
+![Graph Gold-LLM](./Figures/BrazilianEcommerce-Gold-LLM.png "Graph Gold-LLM")
 
 ### [Input](./Experiments/EntityAlignment/Gold-LLM/Input/)
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/Gold-LLM/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/SalesArticle> - <https://vocab.um.es/sales_product/>| 8208 (50.18%)|3282 (50.17%)
-|<https://vocab.um.es/ontology/bbp/SalesSpecification> - <http://schema.org/Offer/>| 8148 (49.82%)|3260 (49.83%)
-| Total related entities |16356|6542
+|<https://vocab.um.es/ontology/bre/CustomerIdOrder> - <https://vocab.um.es#Customer>| 20000 (64.49%)|7991 (64.42%)
+|<https://vocab.um.es/ontology/bre/ZipCodePrefix> - <https://vocab.um.es#ZipCodePrefix>| 8740 (28.18%)|3528 (28.44%)
+|<https://vocab.um.es/ontology/bre/City> - <https://vocab.um.es#City>| 2247 (7.24%)|875 (7.05%)
+|<https://vocab.um.es/ontology/bre/State> - <https://vocab.um.es#State>| 27 (0.09%)|11 (0.09%)
+| Total related entities |31014|12405
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Gold-LLM/Input/451_1fold/1/)|8178|6542|1636|
+|[1](./Experiments/EntityAlignment/Gold-LLM/Input/451_1fold/1/)|15507|12405|3102|
 
 ### [Output](./Experiments/EntityAlignment/Gold-LLM/Output/)
 
-|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |SalesSpecification (#/%) |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/AlignE/1/nohup_gold-llm_aligne.txt)|38.96|57.63 |60.07 |1045|0.47|5252|0 (0.0%)|
-|AliNet|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/AliNet/1/nohup_gold-llm_alinet.txt)|31.31|45.55|46.73|1412|0.37|2247||
-|AttrE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/AttrE/1/nohup_gold-llm_attre.txt)|48.88|70.18|76.93|28|0.59|4867|6 (1.60)|
-|BootEA|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA/1/nohup_gold-llm_bootea.txt)|39.94|57.93 |60.33 |1026|0.48|4895|0 (0.0%)|
-|BootEA_RotatE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_RotatE/1/nohup_gold-llm_bootea_rotate.txt)|36.46|57.87|60.59 |1496|0.46|8585|0 (0.0%)|
-|BootEA_TransH|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_TransH/1/error_output_gold-llm_bootea_transh.txt)|E|r|r|o|r|||
-|Conve|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/ConvE/1/error_output_gold-llm_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/GCN_Align/1/nohup_gold-llm_gcnalign.txt)|24.21|40.31 |44.25|2170|0.31|771|0 (0.0%)|
-|GMNN|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/GMNN/1/error_output_gold-llm_gmnn.txt)|E|r|r|o|r|||
-|HolE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/HolE/1/nohup_gold-llm_hole.txt)|22.64|39.03 |44.42|1337|0.30|13156|0 (0.0%)|
-|IMUSE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/IMUSE/1/nohup_gold-llm_imuse.txt)|33.78|55.06 |59.46|818|0.43|1184|0 (0.0%)|
-|IPTransE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/IPTransE/1/error_output_gold-llm_iptranse.txt)|E|r|r|o|r|||
-|JAPE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/JAPE/1/nohup_gold-llm_jape.txt)|24.20|37.62 |41.49|1082|0.30|1182|0 (0.0%)|
-|KDCoE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/KDCoE/1/error_output_gold-llm_kdcoe.txt)|E|r|r|o|r|||
-|MTransE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/MTransE/1/nohup_gold-llm_mtranse.txt)|23.53|33.57 |36.76|609|0.28|802|0 (0.0%)|
-|MultiKE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/MultiKE/1/error_output_gold-llm_multike.txt)|E|r|r|o|r|||
-|ProjE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/ProjE/1/nohup_gold-llm_proje.txt)|21.92|30.14 |30.85|2747|0.26|4979|0 (0.0%)|
-|RDGCN|1|[6542](./Experiments/EntityAlignment//Gold-LLM/Output/RDGCN/1/nohup_gold-llm_rdgcn.txt)|14.34|20.99 |23.39|1898|0.18|14291|0 (0.0%)|
-|RotatE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/RotatE/1/nohup_gold-llm_rotate.txt)|30.66|53.30 |58.19|1969|0.40|5016|0 (0.0%)|
-|RSN4EA|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/RSN4EA/1/error_output_gold-llm_rsn4ea.txt)|E|r|r|o|r|||
-|SEA|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/SEA/1/nohup_gold-llm_sea.txt)|35.60|54.66 |58.67|1166|0.44|921|0 (0.0%)|
-|SimplE|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/SimplE/1/nohup_gold-llm_simple.txt)|19.66|36.52|41.35|1299|0.27|982|0 (0.0%)|
-|TransD|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/TransD/1/nohup_gold-llm_transd.txt)|33.23|48.88|51.73|1360|0.40|2184|0 (0.0%)|
-|TransH|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/TransH/1/nohup_gold-llm_transh.txt)|33.02|50.44|53.63|1078|0.41|2262|0 (0.0%)|
-|TransR|1|[6542](./Experiments/EntityAlignment/Gold-LLM/Output/TransR/1/nohup_gold-llm_transr.txt)|0.18|0.70|1.10|2454|0.01|2231|0 (0.0%)|
+|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | CustomerIdOrder (#/%) |ZipCodePrefix (#/%) |City (#/%) |State (#/%) |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|AlignE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/AlignE/1/nohup_gold-llm_aligne.txt)|61.00|83.86|87.06|152|0.71|20913|4091 (51.20%)|2708 (76.76%)|757 (86.51%)|11 (100%)
+|AliNet|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/AliNet/1/nohup_gold-llm_alinet.txt)|62.61|85.26|87.36|279|0.72|24381|-|-|-|-|
+|AttrE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/AttrE/1/nohup_gold-llm_attre.txt)|72.54|82.47|83.77|82|0.77|25731|5633 (70.49%)|2631 (74.57%)|723 (82.63%)|11 (100%)
+|BootEA|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA/1/nohup_gold-llm_bootea.txt)|62.93|86.56|89.94|102|0.73|31157|4249 (53.17%)|2779 (78.77%)|768 (87.77%)|11 (100%)
+|BootEA_RotatE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_RotatE/1/nohup_gold-llm_bootea_rotate.txt)|62.48|87.05|90.62|24|0.73|37592|-|-|-|-|
+|BootEA_TransH|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_TransH/1/error_output_gold-llm_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/ConvE/1/error_output_gold-llm_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/GCN_Align/1/nohup_gold-llm_gcnalign.txt)|60.25|81.81|83.99|326|0.70|2570|-|-|-|-|
+|GMNN|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/GMNN/1/error_output_gold-llm_gmnn.txt)|E|r|r|o|r|||
+|HolE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/HolE/1/nohup_gold-llm_hole.txt)|40.70|59.28|63.52|572|0.49|41036|-|-|-|-|
+|IMUSE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/IMUSE/1/error_output_gold-llm_imuse.txt)|E|r|r|o|r|||
+|IPTransE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/IPTransE/1/error_output_gold-llm_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/JAPE/1/error_output_gold-llm_jape.txt)|E|r|r|o|r|||
+|KDCoE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/KDCoE/1/error_output_gold-llm_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/MTransE/1/nohup_gold-llm_mtranse.txt)|47.57|62.92|64.94|821|0.54|4847|-|-|-|-|
+|MultiKE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/MultiKE/1/error_output_gold-llm_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/ProjE/1/nohup_gold-llm_proje.txt)|0.24|1.02|1.87|4215|0.01|22175|-|-|-|-|
+|RDGCN|1|[12405](./Experiments/EntityAlignment//Gold-LLM/Output/RDGCN/1/nohup_gold-llm_rdgcn.txt)|48.14|55.24|56.80|1223|0.51|42698|-|-|-|-|
+|RotatE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/RotatE/1/nohup_gold-llm_rotate.txt)|61.15|85.75|89.63|34|0.72|20979|-|-|-|-|
+|RSN4EA|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/RSN4EA/1/nohup_gold-llm_rsn4ea.txt)|59.65|82.35|85.18|240|0.70|41051|-|-|-|-|
+|SEA|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/SEA/1/nohup_gold-llm_sea.txt)|61.17|84.41|88.29|88|0.71|6376|4164 (52.11%)|2669 (75.65%)|744 (85.03%)|11 (100%)
+|SimplE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/SimplE/1/nohup_gold-llm_simple.txt)|48.65|69.18|72.08|494|0.58|5598|-|-|-|-|
+|TransD|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/TransD/1/nohup_gold-llm_transd.txt)|48.95|64.53|67.54|531|0.56|10902|-|-|-|-|
+|TransH|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/TransH/1/nohup_gold-llm_transh.txt)|43.60|56.07|57.86|843|0.49|4975|-|-|-|-|
+|TransR|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/TransR/1/nohup_gold-llm_transr.txt)|0.07|0.32|0.62|4071|0.00|8490|-|-|-|-|
 
-## [Gold - Materials](./Experiments/EntityAlignment/Gold-Materials/)
+## [Gold - Transactions](./Experiments/EntityAlignment/Gold-Transactions/)
 
-![Graph Gold-Materials](./Figures/bigBasketProducts-Gold-Materials.png "Graph Gold-Materials")
+![Graph Gold-Transactions](./Figures/BrazilianEcommerce-Gold-Transactions.png "Graph Gold-Transactions")
 
-### [Input](./Experiments/EntityAlignment/Gold-Materials/Input/)
+### [Input](./Experiments/EntityAlignment/Gold-Transactions/Input/)
 
-|ent_links| [Related Entities](./Experiments/EntityAlignment/Gold-Materials/Input/ent_links)|Split 1 Test|
+|ent_links| [Related Entities](./Experiments/EntityAlignment/Gold-Transactions/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/SalesArticle> - <https://purl.org/ontologies/MT/SalesArticle>| 8208 (54.54%)|3276 (54.42%)
-|<https://vocab.um.es/ontology/bbp/Product> - <https://purl.org/ontologies/MT/sales_product>| 6842 (45.46%)|2744 (45.58%)
-| Total related entities |15050|6020
+|<https://vocab.um.es/ontology/bre/CustomerAccount> - <https://purl.org/ontologies/BPA/CustomerAccount>| 19843 (100%)|7937 (100%)
+| Total related entities |19843|7937
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Gold-Materials/Input/451_1fold/1/)|7525|6020|1505|
+|[1](./Experiments/EntityAlignment/Gold-Transactions/Input/451_1fold/1/)|9921|7937|1985|
 
-### [Output](./Experiments/EntityAlignment/Gold-Materials/Output/)
 
-|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |Product (#/%) |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/AlignE/1/nohup_gold-materials_aligne.txt)|53.31|56.66 |57.03 |573|0.55|5237|0 (0.0%)|
-|AliNet|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/AliNet/1/nohup_gold-materials_alinet.txt)|53.92|57.06|57.28|445|0.56|5172||
-|AttrE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/AttrE/1/nohup_gold-materials_attre.txt)|52.82|59.02|62.03|287|0.56|2788|6 (1.60)|
-|BootEA|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/BootEA/1/nohup_gold-materials_bootea.txt)|53.79|56.89 |57.03 |638|0.55|5297|0 (0.0%)|
-|BootEA_RotatE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/BootEA_RotatE/1/nohup_gold-materials_bootea_rotate.txt)|53.69|56.94|57.03 |651|0.55|10599|0 (0.0%)|
-|BootEA_TransH|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/BootEA_TransH/1/error_output_gold-materials_bootea_transh.txt)|E|r|r|o|r|||
-|Conve|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/ConvE/1/error_output_gold-materials_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/GCN_Align/1/nohup_gold-materials_gcnalign.txt)|53.87|57.04|57.16|655|0.55|677|0 (0.0%)|
-|GMNN|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/GMNN/1/nohup_gold-materials_gmnn.txt)|100|100|100|1|1.00|42545||
-|HolE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/HolE/1/nohup_gold-materials_hole.txt)|51.55|55.43|55.83|984|0.53|18212|0 (0.0%)|
-|IMUSE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/IMUSE/1/nohup_gold-materials_imuse.txt)|52.43|60.52 |60.98|659|0.56|1412|0 (0.0%)|
-|IPTransE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/IPTransE/1/error_output_gold-materials_iptranse.txt)|E|r|r|o|r|||
-|JAPE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/JAPE/1/nohup_gold-materials_jape.txt)|50.57|53.70 |54.14|901|0.52|1315|0 (0.0%)|
-|KDCoE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/KDCoE/1/error_output_gold-materials_kdcoe.txt)|E|r|r|o|r|||
-|MTransE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/MTransE/1/nohup_gold-materials_mtranse.txt)|46.11|50.52 |51.41|846|0.48|1025|0 (0.0%)|
-|MultiKE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/MultiKE/1/error_output_gold-materials_multike.txt)|E|r|r|o|r|||
-|ProjE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/ProjE/1/nohup_gold-materials_proje.txt)|28.21|31.43 |31.65|1401|0.30|5533|0 (0.0%)|
-|RDGCN|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/RDGCN/1/nohup_gold-materials_rdgcn.txt)|73.42|75.60 |77.11|101|0.75|8926|0 (0.0%)|
-|RotatE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/RotatE/1/nohup_gold-materials_rotate.txt)|52.64|56.89 |56.99|745|0.55|7471|0 (0.0%)|
-|RSN4EA|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/RSN4EA/1/nohup_gold-materials_rsn4ea.txt)|51.96|55.32|55.93|1306|0.54|7380||
-|SEA|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/SEA/1/nohup_gold-materials_sea.txt)|53.49|56.78 |57.01|649|0.55|1036|0 (0.0%)|
-|SimplE|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/SimplE/1/nohup_gold-materials_simple.txt)|49.49|56.10|56.53|817|0.53|2971|0 (0.0%)|
-|TransD|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/TransD/1/nohup_gold-materials_transd.txt)|50.53|52.97|53.37|606|0.52|2536|0 (0.0%)|
-|TransH|1|[6020](./Experiments/EntityAlignment//Gold-Materials/Output/TransH/1/nohup_gold-materials_transh.txt)|50.68|53.14|53.44|695|0.52|1677|0 (0.0%)|
-|TransR|1|[6020](./Experiments/EntityAlignment/Gold-Materials/Output/TransR/1/nohup_gold-materials_transr.txt)|0.10|0.30|0.52|2311|0.00|2934|0 (0.0%)|
+### [Output](./Experiments/EntityAlignment/Gold-Transactions/Output/)
+
+|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time |CustomerAccount (#/%)|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|AlignE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/AlignE/1/nohup_gold-transactions_aligne.txt)|0.00|0.08|0.09|3955|0.00|4833|0 (0.0%)|
+|AliNet|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/AliNet/1/error_output_gold-transactions_alinet.txt)|E|r|r|o|r|||
+|AttrE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/AttrE/1/nohup_gold-transactions_attre.txt)|3.89|13.03|21.09|125|0.10|4965|309 (3.89)|
+|BootEA|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/BootEA/1/nohup_gold-transactions_bootea.txt)|0.01|0.04|0.11|3981|0.00|5258|1 (0.01%)|
+|BootEA_RotatE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/BootEA_RotatE/1/nohup_gold-transactions_bootea_rotate.txt)|0.00|0.04|0.10|3995|0.00|12665|-|
+|BootEA_TransH|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/BootEA_TransH/1/)|E|r|r|o|r|||
+|Conve|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/ConvE/1/error_output_gold-transactions_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/GCN_Align/1/nohup_gold-transactions_gcnalign.txt)|0.03|0.09|0.14|3983|0.00|374|-|
+|GMNN|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/GMNN/1/nohup_gold-transactions_gmnn.txt)|100|100|100|1|1.00|36384|-|
+|HolE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/HolE/1/nohup_gold-transactions_hole.txt)|0.01|0.03|0.08|3935|0.00|4755|-|
+|IMUSE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/IMUSE/1/nohup_gold-transactions_imuse.txt)|100|100|100|1|1.00|684|-|
+|IPTransE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/IPTransE/1/error_output_gold-transactions_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/JAPE/1/error_output_gold-transactions_jape.txt)|E|r|r|o|r|||
+|KDCoE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/KDCoE/1/error_output_gold-transactions_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/MTransE/1/nohup_gold-transactions_mtranse.txt)|0.03|0.06|0.18|4002|0.00|882|-|
+|MultiKE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/MultiKE/1/error_output_gold-transactions_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/ProjE/1/nohup_gold-transactions_proje.txt)|0.05|0.10|0.16|3971|0.00|5720|-|
+|RDGCN|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/RDGCN/1/nohup_gold-transactions_rdgcn.txt)|0.69|0.76|0.84|3961|0.01|13089|-|
+|RotatE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/RotatE/1/nohup_gold-transactions_rotate.txt)|0.01|0.10|0.19|3973|0.00|5468|-|
+|RSN4EA|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/RSN4EA/1/error_output_gold-transactions_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/SEA/1/nohup_gold-transactions_sea.txt)|0.00|0.03|0.10|3936|0.00|498|0 (0.00%)|
+|SimplE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/SimplE/1/nohup_gold-transactions_simple.txt)|0.01|0.04|0.06|3976|0.00|370|-|
+|TransD|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/TransD/1/nohup_gold-transactions_transd.txt)|0.01|0.06|0.11|3990|0.00|1058|-|
+|TransH|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/TransD/1/nohup_gold-transactions_transd.txt)|0.01|0.10|0.18|3953|0.00|925|-|
+|TransR|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/TransR/1/nohup_gold-transactions_transr.txt)|0.03|0.08|0.11|3987|0.00|3285|-|
 
 
 ## [Basic - LLM](./Experiments/EntityAlignment/Basic-LLM/)
 
-![Graph Basic-LLM](./Figures/bigBasketProducts-Basic-LLM.png "Graph Basic-LLM")
+![Graph Basic-LLM](./Figures/BrazilianEcommerce-Basic-LLM.png "Graph Basic-LLM")
 
 ### [Input](./Experiments/EntityAlignment/Basic-LLM/Input/)
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/Basic-LLM/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://vocab.um.es/ontology/bbp/SalesProduct> <https://vocab.um.es/sales_product/>| 8208 (100%)|3283 (100%)
-| Total related entities |8208|3283
+|<https://vocab.um.es/ontology/bre/CustomerOrder> <https://vocab.um.es#Customer>| 20000 (100%)|8000 (100%)
+| Total related entities |20000|8000
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
 |:-:|:-:|:-:|:-:|
-|[1](./Experiments/EntityAlignment/Basic-LLM/Input/451_1fold/1/)|4104|3283|821|
+|[1](./Experiments/EntityAlignment/Basic-LLM/Input/451_1fold/1/)|10000|8000|2000|
 
 ### [Output](./Experiments/EntityAlignment/Basic-LLM/Output/)
 
-|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesProduct (#/%) |
+|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | CustomerOrder (#/%) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|AlignE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AlignE/1/nohup_gold-basic_aligne.txt)|0.06|0.15 |0.27 |1665|0.00|2139|0 (0.0%)|
-|AliNet|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AliNet/1/error_output_gold-basic_alinet.txt)|E|r|r|o|r|||
-|AttrE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/AttrE/1/nohup_gold-basic_attre.txt)|86.05|99.30|99.97|1|0.92|5238|0 (1.60)|
-|BootEA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA/1/nohup_gold-basic_bootea.txt)|0.00|0.09 |0.18 |1638|0.00|2160|0 (0.0%)|
-|BootEA_RotatE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_RotatE/1/nohup_gold-basic_bootea_rotate.txt)|0.03|0.18|0.37 |1653|0.00|5720|0 (0.0%)|
-|BootEA_TransH|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_TransH/1/error_output_gold-basic_bootea_transh.txt)|E|r|r|o|r|||
-|Conve|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/ConvE/1/error_output_gold-basic_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/GCN_Align/1/nohup_gold-basic_gcnalign.txt)|0.00|0.09 |0.21|1647|0.00|269|0 (0.0%)|
-|GMNN|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/GMNN/1/nohup_gold-basic_gmnn.txt)|100|100 |100|1|1.00|19927|0 (0.0%)|
-|HolE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/HolE/1/nohup_gold-basic_hole.txt)|0.03|0.06 |0.18|1631|0.00|3975|0 (0.0%)|
-|IMUSE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/IMUSE/1/nohup_gold-basic_imuse.txt)|50.26|57.14 |59.52|466|0.54|609|0 (0.0%)|
-|IPTransE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/IPTransE/1/error_output_gold-basic_iptranse.txt)|E|r|r|o|r|||
-|JAPE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/JAPE/1/nohup_gold-basic_jape.txt)|0.03|0.12 |0.24|1646|0.00|1057|0 (0.0%)|
-|KDCoE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/KDCoE/1/error_output_gold-basic_kdcoe.txt)|E|r|r|o|r|||
-|MTransE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/MTransE/1/nohup_gold-basic_mtranse.txt)|0.03|0.34 |0.43|1642|0.00|471|0 (0.0%)|
-|MultiKE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/MultiKE/1/error_output_gold-basic_multike.txt)|E|r|r|o|r|||
-|ProjE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/ProjE/1/nohup_gold-basic_proje.txt)|0.00|0.09 |0.27|1637|0.00|3045|0 (0.0%)|
-|RDGCN|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RDGCN/1/nohup_gold-basic_rdgcn.txt)|100|100 |100|1|1.00|4100|0 (0.0%)|
-|RotatE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RotatE/1/nohup_gold-basic_rotate.txt)|0.00|0.12 |0.21|1615|0.00|1227|0 (0.0%)|
-|RSN4EA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/RSN4EA/1/error_output_gold-basic_rsn4ea.txt)|E|r|r|o|r|||
-|SEA|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/SEA/1/nohup_gold-basic_sea.txt)|0.12|0.27 |0.37|1641|0.00|218|0 (0.0%)|
-|SimplE|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/SimplE/1/nohup_gold-basic_simple.txt)|0.12|0.21|0.31|1646|0.00|199|0 (0.0%)|
-|TransD|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransD/1/nohup_gold-basic_transd.txt)|0.06|0.27|0.61|1597|0.00|552|0 (0.0%)|
-|TransH|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransH/1/nohup_gold-basic_transh.txt)|0.09|0.18|0.31|1612|0.00|488|0 (0.0%)|
-|TransR|1|[3283](./Experiments/EntityAlignment/Gold-Basic/Output/TransR/1/nohup_gold-basic_transr.txt)|0.12|0.21|0.31|1639|0.00|1899|0 (0.0%)|
+|AlignE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/AlignE/1/nohup_basic-llm_aligne.txt)|0.00|0.06|0.11|3950|0.00|3438|0 (0.00%)|
+|AliNet|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/AliNet/1/error_output_basic-llm_alinet.txt)|E|r|r|o|r|||
+|AttrE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/AttrE/1/nohup_basic-llm_attre.txt)|14.91|32.96|43.11|96|0.24|6869|1193 (14.91%)|
+|BootEA|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA/1/nohup_basic-llm_bootea.txt)|0.01|0.05|0.09|4048|0.00|3521|1 (0.01%)|
+|BootEA_RotatE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_RotatE/1/nohup_basic-llm_bootea_rotate.txt)|0.00|0.09|0.15|3989|0.00|8743|-|
+|BootEA_TransH|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_TransH/1/error_output_basic-llm_bootea_transh.txt)|E|r|r|o|r|||
+|Conve|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/ConvE/1/error_output_basic-llm_conve.txt)|E|r|r|o|r|||
+|GCN_Align|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.00|0.11|0.19|4012|0.00|126|-|
+|GMNN|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/GMNN/1/nohup_basic-llm_gmnn.txt)|100|100 |100|1|1.00|45951|-|
+|HolE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/HolE/1/nohup_basic-llm_hole.txt)|0.01|0.08|0.18|3986|0.00|2762|-|
+|IMUSE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/IMUSE/1/error_output_basic-llm_imuse.txt)|E|r|r|o|r|||
+|IPTransE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/IPTransE/1/error_output_basic-llm_iptranse.txt)|E|r|r|o|r|||
+|JAPE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/JAPE/1/error_output_basic-llm_jape.txt)|E|r|r|o|r|||
+|KDCoE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/KDCoE/1/error_output_basic-llm_kdcoe.txt)|E|r|r|o|r|||
+|MTransE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/MTransE/1/nohup_basic-llm_mtranse.txt)|0.00|0.06|0.09|3969|0.00|366|-|
+|MultiKE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/MultiKE/1/error_output_basic-llm_multike.txt)|E|r|r|o|r|||
+|ProjE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/ProjE/1/nohup_basic-llm_proje.txt)|0.03|0.09|0.15|4028|0.00|2001|-|
+|RDGCN|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/RDGCN/1/nohup_basic-llm_rdgcn.txt)|56.04|56.06|56.16|774|0.56|6698|-|
+|RotatE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/RotatE/1/nohup_basic-llm_rotate.txt)|0.01|0.06|0.14|3990|0.00|2647|-|
+|RSN4EA|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/RSN4EA/1/error_output_basic-llm_rsn4ea.txt)|E|r|r|o|r|||
+|SEA|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/SEA/1/nohup_basic-llm_sea.txt)|0.04|0.15|0.19|3975|0.00|541|3 (0.04%)|
+|SimplE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/SimplE/1/nohup_basic-llm_simple.txt)|0.00|0.05|0.14|4005|0.00|346|-|
+|TransD|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/TransD/1/nohup_basic-llm_transd.txt)|0.01|0.06|0.15|4001|0.00|845|-|
+|TransH|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/TransH/1/nohup_basic-llm_transh.txt)|0.04|0.06|0.13|3946|0.00|704|-|
+|TransR|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/TransR/1/nohup_basic-llm_transr.txt)|0.01|0.06|0.08|4036|0.00|2282|-|
 
 ## Metrics
 
