@@ -501,17 +501,17 @@
 
 ## Results
 
-![Boxplot Datasets BigBasket Products](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets BigBasket Products")
+![Modules Boxplot BigBasket Products](./Figures/boxplotApproaches.png "Modules Boxplot BigBasket Products")
 
-![Heatmap BigBasket Products](./Figures/heatmapApproaches.png "Heatmap BigBasket Products")
+![Modules Clusters BigBasket Products](./Figures/clusterApproaches.png "Modules Clusters BigBasket Products")
 
-![Boxplot Approaches BigBasket Products](./Figures/boxplotApproaches.png "Boxplot Approaches BigBasket Products")
+![Datasets Boxplot BigBasket Products](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot BigBasket Products")
 
-![BarChart Comparisons Approaches BigBasket Products](./Figures/barComparison.png "BarChart Comparisons Approaches BigBasket Products")
+![Datasets Clusters BigBasket Products](./Figures/clusterDataset.png "Datasets Clusters BigBasket Products")
 
-![Heatmap Datasets BigBasket Products](./Figures/heatmapDataset.png "Heatmap Datasets BigBasket Products")
+![Datasets Cluster AttrE-BootEA BigBasket Products](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA BigBasket Products")
 
-![Heatmap Datasets AttrE-BootEA BigBasket Products](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA BigBasket Products")
+![BarChart Comparisons Modules BigBasket Products](./Figures/barComparison.png "BarChart Comparisons Modules BigBasket Products")
 
 
 ## Metrics

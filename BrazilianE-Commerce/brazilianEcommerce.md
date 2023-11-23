@@ -415,6 +415,20 @@
 |TransH|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/TransH/1/nohup_basic-llm_transh.txt)|0.04|0.06|0.13|3946|0.00|704|-|
 |TransR|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/TransR/1/nohup_basic-llm_transr.txt)|0.01|0.06|0.08|4036|0.00|2282|-|
 
+## Results
+
+![Modules Boxplot Brazilian E-Commerce](./Figures/boxplotApproaches.png "Modules Boxplot Brazilian E-Commerce")
+
+![Modules Clusters Brazilian E-Commerce](./Figures/clusterApproaches.png "Modules Clusters Brazilian E-Commerce")
+
+![Datasets Boxplot Brazilian E-Commerce](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot Brazilian E-Commerce")
+
+![Datasets Clusters Brazilian E-Commerce](./Figures/clusterDataset.png "Datasets Clusters Brazilian E-Commerce")
+
+![Datasets Cluster AttrE-BootEA Brazilian E-Commerce](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA Brazilian E-Commerce")
+
+![BarChart Comparisons Modules Brazilian E-Commerce](./Figures/barComparison.png "BarChart Comparisons Modules Brazilian E-Commerce")
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|

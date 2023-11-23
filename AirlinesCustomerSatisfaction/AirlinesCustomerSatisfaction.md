@@ -317,17 +317,17 @@
 
 ## Results
 
-![Boxplot Datasets AirlinesCustomerSatisfaction Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets AirlinesCustomerSatisfaction Data")
+![Modules Boxplot Airlines Customer Satisfaction](./Figures/boxplotApproaches.png "Modules Boxplot Airlines Customer Satisfaction")
 
-![Heatmap AirlinesCustomerSatisfaction Data](./Figures/heatmapApproaches.png "Heatmap AirlinesCustomerSatisfaction Data")
+![Modules Clusters Airlines Customer Satisfaction](./Figures/clusterApproaches.png "Modules Clusters Brazilian Airlines Customer Satisfaction")
 
-![Boxplot Approaches AirlinesCustomerSatisfaction Data](./Figures/boxplotApproaches.png "Boxplot Approaches AirlinesCustomerSatisfaction Data")
+![Datasets Boxplot Airlines Customer Satisfaction](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot Airlines Customer Satisfaction")
 
-![BarChart Comparisons Approaches AirlinesCustomerSatisfaction Data](./Figures/barComparison.png "BarChart Comparisons Approaches AirlinesCustomerSatisfaction Data")
+![Datasets Clusters Airlines Customer Satisfaction](./Figures/clusterDataset.png "Datasets Clusters Airlines Customer Satisfaction")
 
-![Heatmap Datasets AirlinesCustomerSatisfaction Data](./Figures/heatmapDataset.png "Heatmap Datasets AirlinesCustomerSatisfaction Data")
+![Datasets Cluster AttrE-BootEA Airlines Customer Satisfaction](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA Airlines Customer Satisfaction")
 
-![Heatmap Datasets AttrE-BootEA AirlinesCustomerSatisfaction Data](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA AirlinesCustomerSatisfaction Data")
+![BarChart Comparisons Modules Airlines Customer Satisfaction](./Figures/barComparison.png "BarChart Comparisons Modules Airlines Customer Satisfaction")
 
 ## Metrics
 

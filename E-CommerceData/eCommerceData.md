@@ -475,17 +475,17 @@
 
 ## Results
 
-![Boxplot Datasets E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets E-Commerce Data")
+![Modules Boxplot E-Commerce Data](./Figures/boxplotApproaches.png "Modules Boxplot E-Commerce Data")
 
-![Heatmap E-Commerce Data](./Figures/heatmapApproaches.png "Heatmap E-Commerce Data")
+![Modules Clusters E-Commerce Data](./Figures/clusterApproaches.png "Modules Clusters Brazilian E-Commerce Data")
 
-![Boxplot Approaches E-Commerce Data](./Figures/boxplotApproaches.png "Boxplot Approaches E-Commerce Data")
+![Datasets Boxplot E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot E-Commerce Data")
 
-![BarChart Comparisons Approaches E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Approaches E-Commerce Data")
+![Datasets Clusters E-Commerce Data](./Figures/clusterDataset.png "Datasets Clusters E-Commerce Data")
 
-![Heatmap Datasets E-Commerce Data](./Figures/heatmapDataset.png "Heatmap Datasets E-Commerce Data")
+![Datasets Cluster AttrE-BootEA E-Commerce Data](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA E-Commerce Data")
 
-![Heatmap Datasets AttrE-BootEA E-Commerce Data](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA E-Commerce Data")
+![BarChart Comparisons Modules E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Modules E-Commerce Data")
 
 ## Metrics
 

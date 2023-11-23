@@ -496,17 +496,17 @@
 
 ## Results
 
-![Boxplot Datasets AmazonRatings Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets AmazonRatings Data")
+![Modules Boxplot Amazon Ratings](./Figures/boxplotApproaches.png "Modules Boxplot Amazon Ratings")
 
-![Heatmap AmazonRatings Data](./Figures/heatmapApproaches.png "Heatmap AmazonRatings Data")
+![Modules Clusters Amazon Ratings](./Figures/clusterApproaches.png "Modules Clusters Amazon Ratings")
 
-![Boxplot Approaches AmazonRatings Data](./Figures/boxplotApproaches.png "Boxplot Approaches AmazonRatings Data")
+![Datasets Boxplot Amazon Ratings](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot Amazon Ratings")
 
-![BarChart Comparisons Approaches AmazonRatings Data](./Figures/barComparison.png "BarChart Comparisons Approaches AmazonRatings Data")
+![Datasets Clusters Amazon Ratings](./Figures/clusterDataset.png "Datasets Clusters Amazon Ratings")
 
-![Heatmap Datasets AmazonRatings Data](./Figures/heatmapDataset.png "Heatmap Datasets AmazonRatings Data")
+![Datasets Cluster AttrE-BootEA Amazon Ratings](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA Amazon Ratings")
 
-![Heatmap Datasets AttrE-BootEA AmazonRatings Data](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA AmazonRatings Data")
+![BarChart Comparisons Modules Amazon Ratings](./Figures/barComparison.png "BarChart Comparisons Modules Amazon Ratings")
 
 
 ## Metrics
