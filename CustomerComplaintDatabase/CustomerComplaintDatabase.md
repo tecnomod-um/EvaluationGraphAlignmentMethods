@@ -289,7 +289,7 @@
 ### [Output](./EntityAlignment/LLM-LLM/Output/)
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time (s)|CustomerComplaint (%)|Product (%)|SubProduct (%)|CompanyResponse (%)|Company (%)|ProblemOfComplaint (%)|ProblemSubCategory (%)|State (%)|Resolution (%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/AlignE/nohup_aligne.txt)|46.09|55.26|60.70|539|0.51|21743|2593 (32.44%)|20 (100%)|16 (100%)|4161 (51.90%)|212 (93.39%)|60 (96.77%)|46 (88.46%)|29 (100%)|4119 (51.47%)|
 |AliNet|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/AliNet/nohup_alinet.txt)|38.69|44.80|46.93|3445|0.42|59194|833 (10.42%)|19 (95.00%)|15 (93.75%)|4108 (51.23%)|207 (91.19%)|58 (93.55%)|48 (92.31%)|28 (96.55%)|4132 (51.64%)|
 |AttrE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/AttrE/nohup_attre.txt)|47.15|56.44|61.61|416|0.52|16551|2870 (35.90%)|20 (100%)|14 (87.50%)|4132 (51.53%)|211 (92.95%)|62 (100%)|43 (82.69%)|28 (96.55%)|4135 (51.67%)|
