@@ -432,7 +432,7 @@
 ## Merged methods
 
 |Pair|Approach| CustomerIdOrder (#/%)| CustomerAccount (#/%) |ZipCodePrefix (#/%) |City (#/%) |State (#/%) |
-|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Basic-Basic|AttrE|7964 (99.55%)| - | - | - | - |
 |Basic-Basic|BootEA|3 (0.04%)| - | - | - | - |
 |Basic-Basic|AlignE|3 (0.04%)| - | - | - | - |
