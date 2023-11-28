@@ -429,6 +429,67 @@
 
 ![BarChart Comparisons Modules Brazilian E-Commerce](./Figures/barComparison.png "BarChart Comparisons Modules Brazilian E-Commerce")
 
+## Merged methods
+
+|Pair|Approach| CustomerIdOrder (#/%)| CustomerAccount (#/%) |ZipCodePrefix (#/%) |City (#/%) |State (#/%) |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Basic-Basic|AttrE|7964 (99.55%)| - | - | - | - |
+|Basic-Basic|BootEA|3 (0.04%)| - | - | - | - |
+|Basic-Basic|AlignE|3 (0.04%)| - | - | - | - |
+|Basic-Basic|SEA|2 (0.03%)| - | - | - | - | - |
+|Basic-Basic|AttrE-BootEA|7964 (99.55%)| - | - | - | - |
+|Basic-Basic|AttrE-AlignE|7964 (99.55%)| - | - | - | - |
+|Basic-Basic|AttrE-SEA|7964 (99.55%)| - | - | - | - |
+|Basic-Gold|AttrE| - | - | - | - | - |
+|Basic-Gold|BootEA| - | - | - | - | - |
+|Basic-Gold|AlignE| - | - | - | - | - |
+|Basic-Gold|SEA| - | - | - | - | - | - |
+|Basic-Gold|AttrE-BootEA|2825 (86.05%)| - | - | - | - |
+|Basic-Gold|AttrE-AlignE|2825 (86.05%)| - | - | - | - |
+|Basic-Gold|AttrE-SEA|2825 (86.05%)| - | - | - | - |
+|Basic-LLM|AttrE|1193 (14.91%)| - | - | - | - |
+|Basic-LLM|BootEA|1 (0.01%)| - | - | - | - |
+|Basic-LLM|AlignE|0 (0.00%)| - | - | - | - |
+|Basic-LLM|SEA|3 (0.04%)| - | - | - | - |
+|Basic-LLM|AttrE-BootEA|1194 (14.93%)| - | - | - | - |
+|Basic-LLM|AttrE-AlignE|1193 (14.91%)| - | - | - | - |
+|Basic-LLM|AttrE-SEA|1195 (14.94%)| - | - | - | - |
+|Gold-Gold|AttrE|7731 (96.46%)|7580 (95.91%)|3382 (96.27%)|871 (96.78%)|12 (100%)|
+|Gold-Gold|BootEA|6709 (83.71%)|6586 (83.34%)|3233 (92.03%)|845 (93.89%)|12 (100%)|
+|Gold-Gold|AlignE|5619 (70.11%)|5069 (64.14%)|3083 (87.76%)|800 (88.89%)|12 (100%)|
+|Gold-Gold|SEA|5650 (70.49%)|5571 (70.49%)|3112 (88.59%)|808 (89.78%)|12 (100%)|
+|Gold-Gold|AttrE-BootEA|7812 (97.47%)|7707 (97.52%)|3413 (97.15%)|875 (97.22%)|12 (100%)|
+|Gold-Gold|AttrE-AlignE|7735 (96.51%)|7583 (95.95%)|3391 (96.53%)|871 (96.78%)|12 (100%)|
+|Gold-Gold|AttrE-SEA|7737 (96.53%)|7626 (96.50%)|3384 (96.33%)|872 (96.89%)|12 (100%)|
+|Gold-LLM|AttrE|5633 (70.49%)| - |2631 (74.57%)|723 (82.63%)|11 (100%)|
+|Gold-LLM|BootEA|4249 (53.17%)| - |2779 (78.77%)|768 (87.77%)|11 (100%)|
+|Gold-LLM|AlignE|4091 (51.20%)| - |2708 (76.76%)|757 (86.51%)|11 (100%)|
+|Gold-LLM|SEA|4164 (52.11%)| - |2669 (75.65%)|744 (85.03%)|11 (100%)|
+|Gold-LLM|AttrE-BootEA|6199 (77.57%)| - |2807 (79.56%)|768 (87.77%)|11 (100%)|
+|Gold-LLM|AttrE-AlignE|6034 (75.51%)| - |2737 (77.58%)|757 (86.51%)|11 (100%)|
+|Gold-LLM|AttrE-SEA|6102 (76.36%)| - |2714 (76.93%)|747 (85.37%)|11 (100%)|
+|Gold-Transactions|AttrE| - |309 (3.89%)| - | - | - |
+|Gold-Transactions|BootEA| - |1 (0.01%)| - | - | - |
+|Gold-Transactions|AlignE| - |0 (0.0%)| - | - | - |
+|Gold-Transactions|SEA| - |0 (0.00%)| - | - | - |
+|Gold-Transactions|AttrE-BootEA| - |310 (3.91%)| - | - | - |
+|Gold-Transactions|AttrE-AlignE| - |309 (3.89%)| - | - | - |
+|Gold-Transactions|AttrE-SEA| - |309 (3.89%)| - | - | - |
+|LLM-LLM|AttrE|7257 (90.48%)| - |2832 (80.87%)|760 (87.26%)|11 (100%)|
+|LLM-LLM|BootEA|4249 (52.97%)| - |2703 (77.18%)|769 (88.29%)|11 (100%)|
+|LLM-LLM|AlignE|4125 (51.43%)| - |2614 (74.64%)|761 (87.37%)|11 (100%)|
+|LLM-LLM|SEA|4192 (52.26%)| - |2592 (74.01%)|755 (86.68%)|11 (100%)|
+|LLM-LLM|AttrE-BootEA|7299 (91.00%)| - |2915 (83.24%)|776 (89.09%)|11 (100%)|
+|LLM-LLM|AttrE-AlignE|7267 (90.60%)| - |2862 (81.72%)|770 (88.40%)|11 (100%)|
+|LLM-LLM|AttrE-SEA|7275 (90.70%)| - |2854 (81.50%)|765 (87.83%)|11 (100%)|
+|Transactions-Transactions|AttrE| - |1156 (14.57%)| - | - | - |
+|Transactions-Transactions|BootEA| - |1 (0.01%)| - | - | - |
+|Transactions-Transactions|AlignE| - |1 (0.01%)| - | - | - |
+|Transactions-Transactions|SEA| - | - |0 (0.0%)| - | - |
+|Transactions-Transactions|AttrE-BootEA| - |1157 (14.58%)| - | - | - |
+|Transactions-Transactions|AttrE-AlignE| - |1157 (14.58%)| - | - | - |
+|Transactions-Transactions|AttrE-SEA| - |1156 (14.56%)| - | - | - |
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
