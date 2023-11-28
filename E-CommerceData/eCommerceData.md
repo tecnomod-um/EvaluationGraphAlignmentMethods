@@ -487,6 +487,74 @@
 
 ![BarChart Comparisons Modules E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Modules E-Commerce Data")
 
+## Merged methods
+
+|Pair|Approach|Invoice (#/%)|salesArticle (#/%)|SalesSpecification (#/%)|Product (#/%)|Customer (#/%)|Country (#/%)|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Basic-Basic|AttrE|342 (91.20%)| - | - | - | - | - |
+|Basic-Basic|BootEA|3 (0.80%)| - | - | - | - | - |
+|Basic-Basic|AlignE|1 (0.27%)| - | - | - | - | - |
+|Basic-Basic|SEA|0 (0.0%)| - | - | - | - | - |
+|Basic-Basic|AttrE-BootEA|342 (91.20%)| - | - | - | - | - |
+|Basic-Basic|AttrE-AlignE|342 (91.20%)| - | - | - | - | - |
+|Basic-Basic|AttrE-SEA|342 (91.20%)| - | - | - | - | - |
+|Basic-Gold|AttrE|5 (1.33%)| - | - | - | - | - |
+|Basic-Gold|BootEA|0 (0.00%)| - | - | - | - | - |
+|Basic-Gold|AlignE|3 (0.80%)| - | - | - | - | - |
+|Basic-Gold|SEA|1 (0.27%)| - | - | - | - | - |
+|Basic-Gold|AttrE-BootEA|5 (1.33%)| - | - | - | - | - |
+|Basic-Gold|AttrE-AlignE|8 (2.13%)| - | - | - | - | - |
+|Basic-Gold|AttrE-SEA|6 (1.60%)| - | - | - | - | - |
+|Basic-LLM|AttrE|30 (8.00%)| - | - | - | - | - |
+|Basic-LLM|BootEA|1 (0.27%)| - | - | - | - | - |
+|Basic-LLM|AlignE|0 (0.00%)| - | - | - | - | - |
+|Basic-LLM|SEA|0 (0.0%)| - | - | - | - | - |
+|Basic-LLM|AttrE-BootEA|31 (8.27%)| - | - | - | - | - |
+|Basic-LLM|AttrE-AlignE|30 (8.00%)| - | - | - | - | - |
+|Basic-LLM|AttrE-SEA|30 (8.00%)| - | - | - | - | - |
+|Gold-Gold|AttrE|372 (98.67%)|7783 (99.57%)|555 (98.93%)|945 (99.79%)|191 (99.48%)|7 (100%)|
+|Gold-Gold|BootEA|375 (99.47%)|7804 (98.83%)|558 (99.47%)|928 (97.99%)|192 (100%)|7 (100%)|
+|Gold-Gold|AlignE|365 (96.82%)|7750 (99.14%)|547 (97.50%)|890 (93.98%)|190 (98.96%)|7 (100%)|
+|Gold-Gold|SEA|367 (97.35%)|7623 (97.52%)|554 (98.75%)|930 (98.20%)|180 (93.75%)|7 (100%)|
+|Gold-Gold|AttrE-BootEA|375 (99.47%)|7810 (99.91%)|558 (99.47%)|945 (99.79%)|192 (100%)|7 (100%)|
+|Gold-Gold|AttrE-AlignE|374 (99.20%)|7796 (99.73%)|557 (99.29%)|945 (99.79%)|191 (99.48%)|7 (100%)|
+|Gold-Gold|AttrE-SEA|373 (98.94%)|7801 (99.80%)|557 (99.29%)|945 (99.79%)|192 (100%)|7 (100%)|
+|Gold-LLM|AttrE|308 (84.62%)|3673 (47.08%)|172 (31.73%)| - | - | - |
+|Gold-LLM|BootEA|291 (79.95%)|4214 (54.01%)|160 (29.52%)| - | - | - |
+|Gold-LLM|AlignE|296 (81.32%)|4449 (57.02%)|161 (29.70%)| - | - | - |
+|Gold-LLM|SEA|327 (89.84%)|4920 (63.06%)|225 (41.51%)| - | - | - |
+|Gold-LLM|AttrE-BootEA|308 (84.62%)|3673 (47.08%)|172 (31.73%)| - | - | - |
+|Gold-LLM|AttrE-AlignE|308 (84.62%)|3673 (47.08%)|172 (31.73%)| - | - | - |
+|Gold-LLM|AttrE-SEA|343 (94.23%)|5721 (73.33%)|253 (46.68%)| - | - | - |
+|Gold-Materials|AttrE| - |1269 (16.30%)| - |794 (83.76%)| - | - |
+|Gold-Materials|BootEA| - |1628 (20.91%)| - |798 (84.18%)| - | - |
+|Gold-Materials|AlignE| - |1598 (20.53%)| - |797 (84.07%)| - | - |
+|Gold-Materials|SEA| - |1584 (20.35%)| - |794 (83.76%)| - | - |
+|Gold-Materials|AttrE-BootEA| - |2276 (29.24%)| - |802 (84.60%)| - | - |
+|Gold-Materials|AttrE-AlignE| - |2276 (29.24%)| - |802 (84.60%)| - | - |
+|Gold-Materials|AttrE-SEA| - |2293 (29.45%)| - |799 (84.28%)| - | - |
+|LLM-LLM|AttrE|360 (93.99%)|937 (98.42%)|72 (83.72%)| - | - | - |
+|LLM-LLM|BootEA|358 (93.47%)|921 (96.74%)|74 (86.05%)| - | - | - |
+|LLM-LLM|AlignE|351 (91.64%)|921 (96.74%)|77 (89.53%)| - | - | - |
+|LLM-LLM|SEA|355 (92.69%)|924 (97.06%)|77 (89.53%)| - | - | - |
+|LLM-LLM|AttrE-BootEA|365 (95.30%)|943 (99.05%)|78 (90.70%)| - | - | - |
+|LLM-LLM|AttrE-AlignE|365 (95.30%)|943 (99.05%)|78 (90.70%)| - | - | - |
+|LLM-LLM|AttrE-SEA|366 (95.56%)|945 (99.26%)|77 (89.53%)| - | - | - |
+|Materials-LLM|AttrE| - |6344 (81.65%)| - | - | - | - |
+|Materials-LLM|BootEA| - | - |7226 (93.00%)| - | - | - |
+|Materials-LLM|AlignE| - |7295 (93.89%)| - | - | - | - |
+|Materials-LLM|SEA| - |7299 (93.94%)| - | - | - | - |
+|Materials-LLM|AttrE-BootEA| - |7310 (94.08%)| - | - | - | - |
+|Materials-LLM|AttrE-AlignE| - |7310 (94.08%)| - | - | - | - |
+|Materials-LLM|AttrE-SEA| - |7311 (94.09%)| - | - | - | - |
+|Materials-Materials|AttrE| - |1599 (20.55%)| - |838 (87.93%)| - | - |
+|Materials-Materials|BootEA| - |1728 (22.21%)| - |814 (85.41%)| - | - |
+|Materials-Materials|AlignE| - |1722 (22.13%)| - |813 (85.31%)| - | - |
+|Materials-Materials|SEA| - |1796 (23.08%)| - |813 (85.31%)| - | - |
+|Materials-Materials|AttrE-BootEA| - |2572 (33.06%)| - |839 (88.04%)| - | - |
+|Materials-Materials|AttrE-AlignE| - |2572 (33.06%)| - |839 (88.04%)| - | - |
+|Materials-Materials|AttrE-SEA| - |2633 (33.84%)| - |839 (88.04%)| - | - |
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
