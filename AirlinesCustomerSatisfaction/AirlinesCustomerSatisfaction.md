@@ -329,8 +329,50 @@
 
 ![BarChart Comparisons Modules Airlines Customer Satisfaction](./Figures/barComparison.png "BarChart Comparisons Modules Airlines Customer Satisfaction")
 
-## Metrics
+## Merged methods
 
-|Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
-|:------:|:------:|:---:|:-:|:-:|:--:|:-:|:-:|:-:|
+|Pair|Approach|CustomerFeedback (%)|TravelDetails (%)|Customer (%)|
+|:-:|:-:|:-:|:-:|:-:|
+|Basic-Basic|AttrE|7902 (98.78%)| - | - |
+|Basic-Basic|BootEA|1 (0.01%)| - | - |
+|Basic-Basic|AlignE|1 (0.01%)| - | - |
+|Basic-Basic|SEA|2 (0.03%)| - | - |
+|Basic-Basic|AttrE-BootEA|7902 (98.78%)| - | - |
+|Basic-Basic|AttrE-AlignE|7902 (98.78%)| - | - |
+|Basic-Basic|AttrE-SEA|7902 (98.78%)| - | - |
+|Basic-Gold|AttrE|1506 (18.83%)| - | - |
+|Basic-Gold|BootEA|2 (0.03%)| - | - |
+|Basic-Gold|AlignE|0 (0%)| - | - |
+|Basic-Gold|SEA|3 (0.04%)| - | - |
+|Basic-Gold|AttrE-BootEA|1507 (18.84%)| - | - |
+|Basic-Gold|AttrE-AlignE|1506 (18.83%)| - | - |
+|Basic-Gold|AttrE-SEA|1509 (18.86%)| - | - |
+|Basic-LLM|AttrE|135 (1.69%)| - | - |
+|Basic-LLM|BootEA|2 (0.03%)| - | - |
+|Basic-LLM|AlignE|1 (0.01%)| - | - |
+|Basic-LLM|SEA|1 (0.01%)| - | - |
+|Basic-LLM|AttrE-BootEA|137 (1.71%)| - | - |
+|Basic-LLM|AttrE-AlignE|136 (1.70%)| - | - |
+|Basic-LLM|AttrE-SEA|136 (1.70%)| - | - |
+|Gold-Gold|AttrE|7960 (99.87%)|8109 (99.59%)|7836 (99.34%)|
+|Gold-Gold|BootEA|7836 (98.32%)|7920 (97.27%)|7672 (97.26%)|
+|Gold-Gold|AlignE|7857 (98.58%)|7060 (86.71%)|6837 (86.68%)|
+|Gold-Gold|SEA|7773 (97.53%)|7921 (97.29%)|7674 (97.29%)|
+|Gold-Gold|AttrE-BootEA|7967 (99.96%)|8129 (99.84%)|7868 (99.75%)|
+|Gold-Gold|AttrE-AlignE|7967 (99.96%)|8118 (99.71%)|7849 (99.51%)|
+|Gold-Gold|AttrE-SEA|7965 (99.94%)|8132 (99.88%)|7871 (99.78%)|
+|Gold-LLM|AttrE|152 (1.91%)|2069 (25.71%)|115 (1.44%)|
+|Gold-LLM|BootEA|3 (0.04%)|0 (0%)|2 (0.03%)|
+|Gold-LLM|AlignE|0 (0%)|1 (0.01%)|1 (0.01%)|
+|Gold-LLM|SEA|0 (0%)|3 (0.04%)|1 (0.01%)|
+|Gold-LLM|AttrE-BootEA|155 (1.94%)|2069 (25.71%)|117 (1.47%)|
+|Gold-LLM|AttrE-AlignE|152 (1.91%)|2070 (25.72%)|116 (1.45%)|
+|Gold-LLM|AttrE-SEA|152 (1.91%)|2071 (25.74%)|116 (1.45%)|
+|LLM-LLM|AttrE|1363 (16.99%)|3288 (41.72%)|234 (2.89%)|
+|LLM-LLM|BootEA|1 (0.01%)|0 (0%)|0 (0%)|
+|LLM-LLM|AlignE|1 (0.01%)|2 (0.03%)|1 (0.01%)|
+|LLM-LLM|SEA|3 (0.04%)|0 (0%)|1 (0.01%)|
+|LLM-LLM|AttrE-BootEA|1364 (17.00%)|3288 (41.72%)|234 (2.89%)|
+|LLM-LLM|AttrE-AlignE|1364 (17.00%)|3288 (41.72%)|235 (2.90%)|
+|LLM-LLM|AttrE-SEA|1366 (17.03%)|3288 (41.72%)|235 (2.90%)|
 
