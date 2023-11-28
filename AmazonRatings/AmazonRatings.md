@@ -509,10 +509,80 @@
 ![BarChart Comparisons Modules Amazon Ratings](./Figures/barComparison.png "BarChart Comparisons Modules Amazon Ratings")
 
 
-## Metrics
+## Merged methods
 
-|Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
-|:------:|:------:|:---:|:-:|:-:|:--:|:-:|:-:|:-:|
+|Pair|Approach|SalesOrder (%)|SalesArticle (%)|Customer (%)|SalesArticleBatch (%)|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Basic-Basic|AttrE|7933 (99.16%)| - | - | - |
+|Basic-Basic|BootEA|0 (0%)| - | - | - |
+|Basic-Basic|AlignE|0 (0%)| - | - | - |
+|Basic-Basic|SEA|1 (0.01%)| - | - | - |
+|Basic-Basic|AttrE-BootEA|7933 (99.16%)| - | - | - |
+|Basic-Basic|AttrE-AlignE|7933 (99.16%)| - | - | - |
+|Basic-Basic|AttrE-SEA|7933 (99.16%)| - | - | - |
+|Basic-Gold|AttrE|4272 (53.40%)| - | - | - |
+|Basic-Gold|BootEA|0 (0%)| - | - | - |
+|Basic-Gold|AlignE|0 (0%)| - | - | - |
+|Basic-Gold|SEA|3 (0.04%)| - | - | - |
+|Basic-Gold|AttrE-BootEA|4272 (53.40%)| - | - | - |
+|Basic-Gold|AttrE-AlignE|4272 (53.40%)| - | - | - |
+|Basic-Gold|AttrE-SEA|4275 (53.44%)| - | - | - |
+|Basic-LLM|AttrE|4007 (50.09%)| - | - | - |
+|Basic-LLM|BootEA|1 (0.01%)| - | - | - |
+|Basic-LLM|AlignE|1 (0.01%)| - | - | - |
+|Basic-LLM|SEA|2 (0.03%)| - | - | - |
+|Basic-LLM|AttrE-BootEA|4007 (50.09%)| - | - | - |
+|Basic-LLM|AttrE-AlignE|4007 (50.09%)| - | - | - |
+|Basic-LLM|AttrE-SEA|4009 (50.11%)| - | - | - |
+|Basic-AP|AttrE|6 (0.08%)| - | - | - |
+|Basic-AP|BootEA|1 (0.01%)| - | - | - |
+|Basic-AP|AlignE|1 (0.01%)| - | - | - |
+|Basic-AP|SEA|0 (0%)| - | - | - |
+|Basic-AP|AttrE-BootEA|7 (0.09%)| - | - | - |
+|Basic-AP|AttrE-AlignE|7 (0.09%)| - | - | - |
+|Basic-AP|AttrE-SEA|6 (0.08%)| - | - | - |
+|Gold-Gold|AttrE|7961 (99.29%)|533 (95.18%)|7606 (99.79%)| - |
+|Gold-Gold|BootEA|4837 (60.33%)|508 (90.71%)|4463 (58.55%)| - |
+|Gold-Gold|AlignE|4605 (57.43%)|494 (88.21%)|4064 (53.32%)| - |
+|Gold-Gold|SEA|4542 (56.65%)|505 (90.18%)|4186 (54.92%)| - |
+|Gold-Gold|AttrE-BootEA|7967 (99.36%)|533 (95.18%)|7607 (99.80%)| - |
+|Gold-Gold|AttrE-AlignE|7963 (99.31%)|533 (95.18%)|7606 (99.79%)| - |
+|Gold-Gold|AttrE-SEA|7961 (99.29%)|534 (95.36%)|7606 (99.79%)| - |
+|Gold-LLM|AttrE|7929 (99.25%)|551 (95.00%)|7618 (99.83%)| - |
+|Gold-LLM|BootEA|4841 (60.60%)|523 (90.17%)|4444 (58.24%)| - |
+|Gold-LLM|AlignE|4549 (56.94%)|510 (87.93%)|3992 (52.31%)| - |
+|Gold-LLM|SEA|4483 (56.11%)|516 (88.97%)|4131 (54.13%)| - |
+|Gold-LLM|AttrE-BootEA|7937 (99.35%)|554 (95.52%)|7619 (99.84%)| - |
+|Gold-LLM|AttrE-AlignE|7931 (99.27%)|553 (95.34%)|7618 (99.83%)| - |
+|Gold-LLM|AttrE-SEA|7932 (99.29%)|551 (95.00%)|7619 (99.84%)| - |
+|Gold-AP|AttrE|4028 (50.88%)|429 (76.74%)|3942 (51.04%)| - |
+|Gold-AP|BootEA|4625 (58.42%)|499 (89.27%)|4398 (56.94%)| - |
+|Gold-AP|AlignE|4220 (53.30%)|446 (79.79%)|4054 (52.49%)| - |
+|Gold-AP|SEA|4329 (54.68%)|500 (89.45%)|4145 (53.66%)| - |
+|Gold-AP|AttrE-BootEA|4644 (58.66%)|500 (89.45%)|4427 (57.31%)| - |
+|Gold-AP|AttrE-AlignE|4245 (53.62%)|475 (84.97%)|4054 (52.49%)| - |
+|Gold-AP|AttrE-SEA|4357 (55.03%)|500 (89.45%)|4145 (53.66%)| - |
+|LLM-LLM|AttrE|7826 (98.59%)|531 (93.49%)|7651 (99.44%)| - |
+|LLM-LLM|BootEA|4825 (60.78%)|515 (90.67%)|4552 (59.16%)| - |
+|LLM-LLM|AlignE|4545 (57.26%)|506 (89.08%)|4116 (53.50%)| - |
+|LLM-LLM|SEA|4461 (56.20%)|509 (89.61%)|4251 (55.25%)| - |
+|LLM-LLM|AttrE-BootEA|7836 (98.72%)|534 (94.01%)|7656 (99.51%)| - |
+|LLM-LLM|AttrE-AlignE|7830 (98.64%)|533 (93.84%)|7653 (99.47%)| - |
+|LLM-LLM|AttrE-SEA|7830 (98.64%)|534 (94.01%)|7651 (99.44%)| - |
+|LLM-AP|AttrE|4172 (52.03%)|445 (81.20%)|3854 (50.49%)| - |
+|LLM-AP|BootEA|4571 (57.00%)|495 (90.33%)|4175 (54.70%)| - |
+|LLM-AP|AlignE|4323 (53.91%)|451 (82.30%)|3970 (52.01%)| - |
+|LLM-AP|SEA|4382 (54.65%)|488 (89.05%)|3999 (52.39%)| - |
+|LLM-AP|AttrE-BootEA|4576 (57.06%)|497 (90.69%)|4175 (54.70%)| - |
+|LLM-AP|AttrE-AlignE|4348 (54.22%)|482 (87.96%)|3972 (52.04%)| - |
+|LLM-AP|AttrE-SEA|4407 (54.96%)|493 (89.96%)|4001 (52.42%)| - |
+|AP-AP|AttrE|5903 (75.07%)|512 (90.62%)|5821 (74.81%)|6091 (76.22%)|
+|AP-AP|BootEA|6301 (80.13%)|541 (95.75%)|6214 (79.86%)|6511 (81.48%)|
+|AP-AP|AlignE|5940 (75.54%)|529 (93.63%)|5891 (75.71%)|6303 (78.88%)|
+|AP-AP|SEA|5982 (76.08%)|527 (93.27%)|5903 (75.86%)|6118 (76.56%)|
+|AP-AP|AttrE-BootEA|6319 (80.36%)|541 (95.75%)|6220 (79.94%)|6532 (81.74%)|
+|AP-AP|AttrE-AlignE|5971 (75.94%)|530 (93.81%)|5909 (75.94%)|6337 (79.30%)|
+|AP-AP|AttrE-SEA|6015 (76.50%)|532 (94.16%)|5920 (76.08%)|6196 (77.54%)|
 
 
 
