@@ -307,7 +307,7 @@
 |MTransE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/MTransE/nohup_mtranse.txt)|34.69|36.94|37.80|2232|0.36|5941|420 (5.25%)|9 (45.00%)|2 (12.50%)|4001 (49.90%)|149 (65.64%)|19 (30.65%)|4 (7.69%)|1 (3.45%)|3865 (48.30%)|
 |MultiKE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|24,420|E|r|r|o|r||
 |ProjE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/ProjE/nohup_proje.txt)|27.65|34.96|39.08|2370|0.31|35662|2569 (32.14%)|11 (55.00%)|2 (12.50%)|3990 (49.76%)|144 (63.44%)|33 (53.23%)|1 (1.92%)|2 (6.90%)|1 (0.01%)|
-|RDGCN|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/RDGCN/nohup_rdgcn.txt)|0.05|0.22|0.41|9895|0.00|86838|10 (0.13%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|1 (0.012%)
+|RDGCN|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/RDGCN/nohup_rdgcn.txt)|0.05|0.22|0.41|9895|0.00|86838|10 (0.13%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|0 (0%)|1 (0.01%)|
 |RotatE|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|24,420|E|r|r|o|r||
 |RSN4EA|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|24,420|E|r|r|o|r||
 |SEA|[1](./EntityAlignment/LLM-LLM/Input/541_5fold/1)|[24,420](./EntityAlignment/LLM-LLM/Output/SEA/nohup_sea.txt)|45.13|55.25|61.04|367|0.50|7459|2398 (30.00%)|20 (100%)|12 (75.00%)|4108 (51.23%)|209 (92.07%)|62 (100%)|26 (50.00%)|29 (100%)|4157 (51.95%)|
