@@ -436,17 +436,17 @@
 |Basic-Basic|AttrE|7964 (99.55%)| - | - | - | - |
 |Basic-Basic|BootEA|3 (0.04%)| - | - | - | - |
 |Basic-Basic|AlignE|3 (0.04%)| - | - | - | - |
-|Basic-Basic|SEA|2 (0.03%)| - | - | - | - | - |
+|Basic-Basic|SEA|2 (0.03%)| - | - | - | - |
 |Basic-Basic|AttrE-BootEA|7964 (99.55%)| - | - | - | - |
 |Basic-Basic|AttrE-AlignE|7964 (99.55%)| - | - | - | - |
 |Basic-Basic|AttrE-SEA|7964 (99.55%)| - | - | - | - |
-|Basic-Gold|AttrE| - | - | - | - | - |
-|Basic-Gold|BootEA| - | - | - | - | - |
-|Basic-Gold|AlignE| - | - | - | - | - |
-|Basic-Gold|SEA| - | - | - | - | - | - |
-|Basic-Gold|AttrE-BootEA|2825 (86.05%)| - | - | - | - |
-|Basic-Gold|AttrE-AlignE|2825 (86.05%)| - | - | - | - |
-|Basic-Gold|AttrE-SEA|2825 (86.05%)| - | - | - | - |
+|Basic-Gold|AttrE|6627 (82.84%)| - | - | - | - |
+|Basic-Gold|BootEA|2 (0.03%)| - | - | - | - |
+|Basic-Gold|AlignE|1 (0.01%)| - | - | - | - |
+|Basic-Gold|SEA|1 (0.01%)| - | - | - | - | - |
+|Basic-Gold|AttrE-BootEA|6627 (82.84%)| - | - | - | - |
+|Basic-Gold|AttrE-AlignE|6628 (82.85%)| - | - | - | - |
+|Basic-Gold|AttrE-SEA|6627 (82.84%)| - | - | - | - |
 |Basic-LLM|AttrE|1193 (14.91%)| - | - | - | - |
 |Basic-LLM|BootEA|1 (0.01%)| - | - | - | - |
 |Basic-LLM|AlignE|0 (0.00%)| - | - | - | - |
