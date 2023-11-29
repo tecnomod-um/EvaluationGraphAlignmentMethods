@@ -13,7 +13,7 @@
 
 ### Table of alignments
 
-Alignments were carried out whenever the schemas had compatible entities to align.
+A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align.
 
 | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
 |:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
