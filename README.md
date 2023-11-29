@@ -11,6 +11,25 @@
 
 ## Tables
 
+### Table of alignments
+
+Alignments were carried out whenever the schemas had compatible entities to align.
+
+| Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
+|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
+| Basic-Basic | X | X | X | X | X | X |
+| Basic-Gold | X | X | X | X | X | X |
+| Basic-LLM | X | X | X | X | X | X |
+| Basic-AP |  | X | X |  |  |  |
+| Gold-Gold | X | X | X | X | X | X |
+| Gold-LLM | X | X | X | X | X | X |
+| Gold-AP |  | X | X | X | X |  |
+| LLM-LLM | X | X | X | X | X | X |
+| LLM-AP |  | X | X | X | X |  |
+| AP-AP |  | X | X | X | X |  |
+
+
+
 ### Table mean Hits@1 for each module
 |    | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   meanH@1 |
 |---:|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------:|
