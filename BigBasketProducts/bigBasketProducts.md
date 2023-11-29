@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BigBasket Products
 
 * URL: <https://www.kaggle.com/datasets/chinmayshanbhag/big-basket-products>
@@ -1240,4 +1239,4 @@ Bootea, Bootea Rotate and RSN4EA are based on the structure of the relationships
 7. The Materials semantic schema has been reduced to the two classes whose entities can be aligned according to the CSV file. The results are not very good when comparing this schema with LLM or Basic, but do well with Gold, as these classes lack a clear structure both in terms of attributes and relationships between classes.
     * It is only when we enrich classes with attributes, not with relationships between classes, that we see an improvement in the percentage of aligned entities for AttrE
     * Looking at the LLM-Materials pair, it can be concluded that in the face of poor or too simple schemes, both AttrE and BootEA are not able to align entities.
->>>>>>> 09f07d1e81893de835718dc6350f750704e485a7
+
