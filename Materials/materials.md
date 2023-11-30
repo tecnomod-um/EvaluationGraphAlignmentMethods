@@ -50,10 +50,10 @@
 
 |ent_links| [Related Entities](./Experiments/EntityAlignment/Materials-Materials/Input/ent_links)|Split 1 Test|
 |:-:|:-:|:-:|
-|<https://purl.org/ontologies/MT/SalesArticle> - <https://purl.org/ontologies/MT/SalesArticle>| 19719 (51.95%)|7980 (89.09%)
-|<https://purl.org/ontologies/MT/sales_product> - <https://purl.org/ontologies/MT/sales_product>| 13366 (35.22%)|5308 (10.91%)
-|<https://purl.org/ontologies/MT/material> - <https://purl.org/ontologies/MT/material>| 4861 (12.81%)|1888 (10.91%)
-|<https://purl.org/ontologies/MT/Indication> - <https://purl.org/ontologies/MT/Indication>| 8 (0.02%)| 5 (10.91%)
+|<https://purl.org/ontologies/MT/SalesArticle> - <https://purl.org/ontologies/MT/SalesArticle>| 19719 (51.95%)|7980 (52.57%)
+|<https://purl.org/ontologies/MT/sales_product> - <https://purl.org/ontologies/MT/sales_product>| 13366 (35.22%)|5308 (34.96%)
+|<https://purl.org/ontologies/MT/material> - <https://purl.org/ontologies/MT/material>| 4861 (12.81%)|1888 (12.44%)
+|<https://purl.org/ontologies/MT/Indication> - <https://purl.org/ontologies/MT/Indication>| 8 (0.02%)| 5 (0.03%)
 | Total related entities |37954|15181
 
 |Split|Training (50%) | Test (40%) | Validation (10%) |
