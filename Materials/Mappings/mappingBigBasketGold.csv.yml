@@ -1,0 +1,40 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  um: https://vocab.um.es/
+  bbpdt: https://vocab.um.es/data/bbp/
+  bbp: https://vocab.um.es/ontology/bbp/
+
+  
+sources:
+  materialsCsv : ['processed_Materials_hive_20K.csv~csv']
+
+mappings:
+  product:
+    sources: materialsCsv
+    s: bbpdt:product_$(PRD_NO_BRANDNAME_BAS_NO_pro)
+    po:
+      - [a, bbp:Product]
+      - [bbp:productName, $(PRD_NAME), xsd:string]
+      - [bbp:brandName, $(BRANDNAME), xsd:string]
+  salesProduct:
+    sources: materialsCsv
+    s: bbpdt:salesArticle_$(ART_NO)
+    po:
+      - [a, bbp:SalesArticle]
+      - p: bbp:hasProduct
+        o:
+          mapping: product
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(PRD_NO_BRANDNAME_BAS_NO_pro), s]
+              - [str2, $(PRD_NO_BRANDNAME_BAS_NO_pro), o]
+ 

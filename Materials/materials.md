@@ -16,30 +16,26 @@
 
 ## Ontologies
 
-* [Basic](./Ontologies/eCommerceOntology.owl)
-  * One class
-  * Zero object properties
-  * Eight data properties
-* [LLM](./Ontologies/eCommerceOntologyLLM.owl)
-  * Three classes
-  * Two object properties
-  * Six data properties
-* [Gold standard](./Ontologies/eCommerceOntologyII.owl)
-  * Six classes
-  * Six object properties
-  * Eight data properties
-* [Materials](./Ontology/materials_anony_v2.owl)
+* [Materials](./Ontology)
+  * Four classes
+  * Three object properties
+  * Twelve data properties
+* [E-CommerceGold](./Ontologies)
+  * Two classes
+  * One object property
+  * Two data properties
+* [BigBasketGold](./Ontologies)
   * Two classes
   * One object property
   * Two data properties
 
 ## Mapping
 
-|Mapping |Dataset| RDF | attr_triples | rel_triples |
-|:-:|:-:|:-:|:-:|:-:|
-|[Materials](./Mappings/mappingMaterials.csv.yml)|processed_data20K.csv|[200300 triples](./Mappings/)|[122767 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[77533 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
-|[Basic](./Mappings/mappingBasic.csv.yml)|processed_data20K.csv|[54553 triples](./Mappings/ecommercedataBasic.nt)|[53615 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[938 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
-|[Gold](./Mappings/mappingGold.csv.yml)|processed_data20K.csv|[95666 triples](./Mappings/ecommercedataGold.nt)|[10081 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[85585 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
+|Mapping |RDF | attr_triples | rel_triples |
+|:-:|:-:|:-:|:-:|
+|[Materials](./Mappings/mappingMaterials.csv.yml)|[200300 triples](./Mappings/materialsMaterials.nt)|[122767 triples](./Experiments/EntityAlignment/Materials-Materials/Input/attr_triples_1)|[77533 triples](./Experiments/EntityAlignment/Materials-Materials/Input/rel_triples_1)|
+|[E-CommerceGold](./Mappings/mappingeCommerceGold.csv.yml)|[78836 triples](./Mappings/materialsEcommerceGold.nt)|[53615 triples](./Experiments/EntityAlignment/Basic-Basic/Input/attr_triples_1)|[938 triples](./Experiments/EntityAlignment/Basic-Basic/Input/rel_triples_1)|
+|[BigBasketGold](./Mappings/mappingBigBasketGold.csv.yml)|[95666 triples](./Mappings/materialsBigBasketGold.nt)|[10081 triples](./Experiments/EntityAlignment/Gold-Gold/Input/attr_triples_1)|[85585 triples](./Experiments/EntityAlignment/Gold-Gold/Input/rel_triples_1)|
 |[LLM](./Mappings/mappingLLM.csv.ttl)|processed_data20K.csv|[43164 triples](./Mappings/ecommercedataLLM.nt)|[15798 triples](./Experiments/EntityAlignment/LLM-LLM/Input/attr_triples_1)|[27366 triples](./Experiments/EntityAlignment/LLM-LLM/Input/rel_triples_1)|
 
 ## [Materials - Materials](./Experiments/EntityAlignment/Materials-Materials/)

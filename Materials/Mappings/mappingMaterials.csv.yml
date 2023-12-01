@@ -1,0 +1,74 @@
+prefixes:
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  void: http://rdfs.org/ns/void#
+  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  mt: https://purl.org/ontologies/MT/
+  purl: https://purl.org/
+  mtdt: https://purl.org/ontologies/MT/data/
+  vocab: https://vocab.um.es/
+  um: https://data.um.es/
+
+sources:
+  materialsCsv : ['processed_Materials_hive_20K.csv~csv']
+  
+mappings:
+  indication:
+    sources: materialsCsv
+    s: mtdt:indication_$(INDICATION)
+    po:
+      - [a, mt:Indication]
+      - [mt:code, $(INDICATION), xsd:string]
+  salesProduct:
+    sources: materialsCsv
+    s: mtdt:salesProduct_$(PRD_NO_BRANDNAME_BAS_NO_pro)
+    po:
+      - [a, mt:sales_product]
+      - [mt:brandName, $(BRANDNAME), xsd:string]
+      - [mt:PRDName, $(PRD_NAME), xsd:string]
+      - [mt:PRDNumber, $(PRD_NO), xsd:string]
+      - [mt:BASNumber, $(BAS_NO), xsd:string]            
+      - p: mt:hasIndication
+        o:
+          mapping: indication
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(INDICATION), s]
+              - [str2, $(INDICATION), o]
+  material:
+    sources: materialsCsv
+    s: mtdt:materials_$(PBG_NO)
+    po:
+      - [a, mt:material]
+      - [mt:BIName, $(BI_NAME), xsd:string]
+      - [mt:BINumber, $(BI_NO), xsd:string]
+      - [mt:PBGName, $(PBG_NAME), xsd:string]      
+      - [mt:PBGNumber, $(PBG_NO), xsd:string]      
+      - p: mt:soldAsProduct
+        o:
+          mapping: salesProduct
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(PRD_NO_BRANDNAME_BAS_NO_pro), s]
+              - [str2, $(PRD_NO_BRANDNAME_BAS_NO_pro), o]
+  salesArticle:
+    sources: materialsCsv
+    s: mtdt:salesArticle_$(ART_NO)
+    po:
+      - [a, mt:SalesArticle]
+      - [mt:articleName, $(ART_NAME), xsd:string]
+      - [mt:articleNumber, $(ART_NO), xsd:string]
+      - [mt:GTIN_EAN, $(GTIN_EAN), xsd:string]            
+      - p: mt:containsProduct
+        o:
+          mapping: salesProduct
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(PRD_NO_BRANDNAME_BAS_NO_pro), s]
+              - [str2, $(PRD_NO_BRANDNAME_BAS_NO_pro), o]
