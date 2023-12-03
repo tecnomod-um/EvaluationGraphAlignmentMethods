@@ -1,0 +1,549 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/Materials/', 'dataset_division': '721_5fold', 'embedding_module': 'JAPE', 'alignment_module': 'sharing', 'search_module': 'greedy', 'dim': 100, 'init': 'normal', 'ent_l2_norm': True, 'rel_l2_norm': True, 'loss_norm': 'L2', 'learning_rate': 0.01, 'optimizer': 'Adagrad', 'max_epoch': 2000, 'batch_size': 5000, 'attr_max_epoch': 200, 'top_attr_threshold': 0.9, 'attr_sim_mat_threshold': 0.95, 'attr_sim_mat_beta': 0.001, 'neg_alpha': 0.1, 'neg_sampling': 'uniform', 'neg_triple_num': 1, 'sub_mat_size': 1000, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False}
+JAPE
+<openea.modules.args.args_hander.ARGs object at 0x7ff69c036780>
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/test_links
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+../../output/results/Paper/Materials/ ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'Materials', 'Materials-BigBasketProductsGold'] 721_5fold/1/ JAPE
+results output folder: ../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/
+Training attribute embeddings:
+../../output/results/Paper/Materials/ ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'Materials', 'Materials-BigBasketProductsGold'] 721_5fold/1/ Attr2Vec
+results output folder: ../../output/results/Paper/Materials/Attr2Vec/Materials-BigBasketProductsGold/721_5fold/1/20231201114032/
+total attributes: 12
+selected attributes 10
+total attributes: 2
+selected attributes 1
+total selected attributes 11
+total attributes: 12
+selected attributes 10
+total attributes: 2
+selected attributes 1
+total selected attributes 11
+entity attribute dict 44704
+training data of attribute correlations 98635
+epoch 1, attribute loss: 72.4813, cost time: 0.2792s
+epoch 2, attribute loss: 74.2029, cost time: 0.2821s
+epoch 3, attribute loss: 71.5104, cost time: 0.2911s
+epoch 4, attribute loss: 72.7218, cost time: 0.2717s
+epoch 5, attribute loss: 66.0756, cost time: 0.2492s
+epoch 6, attribute loss: 70.6002, cost time: 0.2830s
+epoch 7, attribute loss: 68.8484, cost time: 0.2902s
+epoch 8, attribute loss: 67.3871, cost time: 0.3002s
+epoch 9, attribute loss: 66.5210, cost time: 0.2945s
+epoch 10, attribute loss: 64.5539, cost time: 0.2883s
+epoch 11, attribute loss: 67.0288, cost time: 0.3011s
+epoch 12, attribute loss: 73.8513, cost time: 0.2994s
+epoch 13, attribute loss: 70.7050, cost time: 0.2955s
+epoch 14, attribute loss: 64.0482, cost time: 0.2966s
+epoch 15, attribute loss: 71.8936, cost time: 0.2535s
+epoch 16, attribute loss: 71.9082, cost time: 0.2814s
+epoch 17, attribute loss: 61.9306, cost time: 0.2992s
+epoch 18, attribute loss: 59.0415, cost time: 0.2986s
+epoch 19, attribute loss: 51.8133, cost time: 0.3016s
+epoch 20, attribute loss: 60.6926, cost time: 0.3309s
+epoch 21, attribute loss: 67.9796, cost time: 0.2994s
+epoch 22, attribute loss: 68.3349, cost time: 0.2951s
+epoch 23, attribute loss: 58.5251, cost time: 0.2710s
+epoch 24, attribute loss: 60.1940, cost time: 0.3106s
+epoch 25, attribute loss: 57.8290, cost time: 0.2967s
+epoch 26, attribute loss: 53.9847, cost time: 0.3258s
+epoch 27, attribute loss: 56.4993, cost time: 0.3229s
+epoch 28, attribute loss: 59.8621, cost time: 0.3493s
+epoch 29, attribute loss: 54.1087, cost time: 0.3508s
+epoch 30, attribute loss: 65.5087, cost time: 0.2650s
+epoch 31, attribute loss: 58.4391, cost time: 0.2795s
+epoch 32, attribute loss: 60.4548, cost time: 0.2968s
+epoch 33, attribute loss: 64.7953, cost time: 0.3213s
+epoch 34, attribute loss: 52.5456, cost time: 0.3192s
+epoch 35, attribute loss: 55.6800, cost time: 0.3182s
+epoch 36, attribute loss: 55.3314, cost time: 0.3316s
+epoch 37, attribute loss: 59.9914, cost time: 0.2749s
+epoch 38, attribute loss: 50.8923, cost time: 0.2831s
+epoch 39, attribute loss: 50.6206, cost time: 0.3486s
+epoch 40, attribute loss: 63.7135, cost time: 0.3287s
+epoch 41, attribute loss: 52.8503, cost time: 0.3210s
+epoch 42, attribute loss: 52.7947, cost time: 0.2815s
+epoch 43, attribute loss: 55.1412, cost time: 0.3156s
+epoch 44, attribute loss: 55.8664, cost time: 0.2882s
+epoch 45, attribute loss: 51.5005, cost time: 0.3066s
+epoch 46, attribute loss: 58.6981, cost time: 0.3056s
+epoch 47, attribute loss: 49.3039, cost time: 0.3216s
+epoch 48, attribute loss: 50.0381, cost time: 0.3009s
+epoch 49, attribute loss: 50.0181, cost time: 0.3210s
+epoch 50, attribute loss: 56.6878, cost time: 0.3331s
+epoch 51, attribute loss: 56.4224, cost time: 0.3210s
+epoch 52, attribute loss: 59.2510, cost time: 0.2937s
+epoch 53, attribute loss: 51.8505, cost time: 0.2869s
+epoch 54, attribute loss: 57.0751, cost time: 0.2760s
+epoch 55, attribute loss: 55.4067, cost time: 0.2785s
+epoch 56, attribute loss: 46.9844, cost time: 0.2737s
+epoch 57, attribute loss: 49.1613, cost time: 0.2897s
+epoch 58, attribute loss: 51.1382, cost time: 0.3117s
+epoch 59, attribute loss: 53.8540, cost time: 0.2954s
+epoch 60, attribute loss: 46.3507, cost time: 0.2846s
+epoch 61, attribute loss: 57.1272, cost time: 0.2918s
+epoch 62, attribute loss: 52.4119, cost time: 0.2769s
+epoch 63, attribute loss: 43.7804, cost time: 0.2835s
+epoch 64, attribute loss: 45.4155, cost time: 0.2895s
+epoch 65, attribute loss: 48.0479, cost time: 0.3154s
+epoch 66, attribute loss: 51.7942, cost time: 0.3137s
+epoch 67, attribute loss: 48.5927, cost time: 0.3037s
+epoch 68, attribute loss: 41.8288, cost time: 0.3314s
+epoch 69, attribute loss: 48.7393, cost time: 0.3670s
+epoch 70, attribute loss: 46.3172, cost time: 0.3483s
+epoch 71, attribute loss: 55.0782, cost time: 0.3556s
+epoch 72, attribute loss: 47.2849, cost time: 0.3128s
+epoch 73, attribute loss: 52.6068, cost time: 0.2919s
+epoch 74, attribute loss: 54.1216, cost time: 0.2806s
+epoch 75, attribute loss: 50.0272, cost time: 0.3083s
+epoch 76, attribute loss: 49.3694, cost time: 0.3076s
+epoch 77, attribute loss: 44.1732, cost time: 0.2939s
+epoch 78, attribute loss: 52.6128, cost time: 0.3078s
+epoch 79, attribute loss: 43.8093, cost time: 0.3126s
+epoch 80, attribute loss: 50.6446, cost time: 0.3553s
+epoch 81, attribute loss: 54.5290, cost time: 0.3216s
+epoch 82, attribute loss: 44.9151, cost time: 0.3158s
+epoch 83, attribute loss: 52.9234, cost time: 0.2843s
+epoch 84, attribute loss: 43.6839, cost time: 0.3324s
+epoch 85, attribute loss: 50.8834, cost time: 0.2755s
+epoch 86, attribute loss: 48.6523, cost time: 0.3104s
+epoch 87, attribute loss: 49.9926, cost time: 0.3423s
+epoch 88, attribute loss: 39.7659, cost time: 0.3039s
+epoch 89, attribute loss: 46.4282, cost time: 0.2750s
+epoch 90, attribute loss: 47.4141, cost time: 0.2870s
+epoch 91, attribute loss: 44.5282, cost time: 0.2734s
+epoch 92, attribute loss: 45.5246, cost time: 0.2885s
+epoch 93, attribute loss: 48.2496, cost time: 0.3397s
+epoch 94, attribute loss: 43.6063, cost time: 0.3025s
+epoch 95, attribute loss: 49.9230, cost time: 0.2826s
+epoch 96, attribute loss: 47.9254, cost time: 0.2921s
+epoch 97, attribute loss: 50.6795, cost time: 0.3164s
+epoch 98, attribute loss: 42.9879, cost time: 0.3217s
+epoch 99, attribute loss: 46.0435, cost time: 0.3057s
+epoch 100, attribute loss: 43.0171, cost time: 0.3183s
+epoch 101, attribute loss: 51.2374, cost time: 0.3109s
+epoch 102, attribute loss: 47.8123, cost time: 0.3287s
+epoch 103, attribute loss: 45.3300, cost time: 0.3182s
+epoch 104, attribute loss: 51.1404, cost time: 0.3451s
+epoch 105, attribute loss: 47.8025, cost time: 0.3527s
+epoch 106, attribute loss: 45.4213, cost time: 0.3054s
+epoch 107, attribute loss: 45.5040, cost time: 0.2853s
+epoch 108, attribute loss: 51.1475, cost time: 0.3283s
+epoch 109, attribute loss: 47.2843, cost time: 0.3337s
+epoch 110, attribute loss: 44.8625, cost time: 0.3342s
+epoch 111, attribute loss: 40.4258, cost time: 0.2821s
+epoch 112, attribute loss: 46.4319, cost time: 0.2888s
+epoch 113, attribute loss: 47.9279, cost time: 0.2860s
+epoch 114, attribute loss: 46.3772, cost time: 0.2863s
+epoch 115, attribute loss: 44.0361, cost time: 0.3127s
+epoch 116, attribute loss: 43.3021, cost time: 0.2862s
+epoch 117, attribute loss: 49.0616, cost time: 0.2731s
+epoch 118, attribute loss: 42.1157, cost time: 0.2768s
+epoch 119, attribute loss: 42.5014, cost time: 0.3104s
+epoch 120, attribute loss: 48.1133, cost time: 0.2814s
+epoch 121, attribute loss: 43.2892, cost time: 0.3140s
+epoch 122, attribute loss: 42.1616, cost time: 0.3115s
+epoch 123, attribute loss: 41.7849, cost time: 0.3219s
+epoch 124, attribute loss: 43.8624, cost time: 0.3506s
+epoch 125, attribute loss: 43.5621, cost time: 0.3008s
+epoch 126, attribute loss: 46.2411, cost time: 0.3035s
+epoch 127, attribute loss: 41.0666, cost time: 0.2699s
+epoch 128, attribute loss: 46.4178, cost time: 0.3000s
+epoch 129, attribute loss: 40.0077, cost time: 0.3060s
+epoch 130, attribute loss: 44.7895, cost time: 0.2931s
+epoch 131, attribute loss: 46.2887, cost time: 0.3172s
+epoch 132, attribute loss: 46.2884, cost time: 0.2574s
+epoch 133, attribute loss: 46.1987, cost time: 0.2704s
+epoch 134, attribute loss: 50.6387, cost time: 0.3302s
+epoch 135, attribute loss: 44.7566, cost time: 0.3035s
+epoch 136, attribute loss: 45.5335, cost time: 0.2888s
+epoch 137, attribute loss: 43.9987, cost time: 0.3022s
+epoch 138, attribute loss: 47.0188, cost time: 0.2826s
+epoch 139, attribute loss: 48.7285, cost time: 0.3079s
+epoch 140, attribute loss: 42.8962, cost time: 0.3160s
+epoch 141, attribute loss: 35.4072, cost time: 0.3317s
+epoch 142, attribute loss: 46.5153, cost time: 0.2970s
+epoch 143, attribute loss: 44.5142, cost time: 0.3201s
+epoch 144, attribute loss: 38.8861, cost time: 0.2990s
+epoch 145, attribute loss: 45.0863, cost time: 0.3421s
+epoch 146, attribute loss: 46.4319, cost time: 0.3358s
+epoch 147, attribute loss: 46.4436, cost time: 0.3170s
+epoch 148, attribute loss: 42.2306, cost time: 0.3055s
+epoch 149, attribute loss: 39.8995, cost time: 0.2964s
+epoch 150, attribute loss: 44.1267, cost time: 0.2955s
+epoch 151, attribute loss: 39.4036, cost time: 0.2905s
+epoch 152, attribute loss: 44.2805, cost time: 0.3177s
+epoch 153, attribute loss: 38.5439, cost time: 0.3203s
+epoch 154, attribute loss: 42.5765, cost time: 0.3328s
+epoch 155, attribute loss: 40.4858, cost time: 0.3127s
+epoch 156, attribute loss: 42.4431, cost time: 0.3011s
+epoch 157, attribute loss: 45.2407, cost time: 0.2852s
+epoch 158, attribute loss: 43.7202, cost time: 0.3179s
+epoch 159, attribute loss: 48.2508, cost time: 0.3200s
+epoch 160, attribute loss: 45.4722, cost time: 0.3093s
+epoch 161, attribute loss: 45.3549, cost time: 0.2956s
+epoch 162, attribute loss: 44.1911, cost time: 0.3256s
+epoch 163, attribute loss: 42.3131, cost time: 0.3224s
+epoch 164, attribute loss: 44.5268, cost time: 0.3221s
+epoch 165, attribute loss: 41.6682, cost time: 0.3075s
+epoch 166, attribute loss: 45.0975, cost time: 0.3026s
+epoch 167, attribute loss: 45.0605, cost time: 0.2834s
+epoch 168, attribute loss: 46.5786, cost time: 0.3555s
+epoch 169, attribute loss: 38.7405, cost time: 0.3360s
+epoch 170, attribute loss: 46.2155, cost time: 0.3319s
+epoch 171, attribute loss: 45.8008, cost time: 0.3262s
+epoch 172, attribute loss: 37.8300, cost time: 0.3163s
+epoch 173, attribute loss: 44.9483, cost time: 0.3035s
+epoch 174, attribute loss: 43.8098, cost time: 0.2737s
+epoch 175, attribute loss: 44.2178, cost time: 0.2957s
+epoch 176, attribute loss: 47.7676, cost time: 0.3359s
+epoch 177, attribute loss: 43.9630, cost time: 0.3026s
+epoch 178, attribute loss: 42.8917, cost time: 0.3105s
+epoch 179, attribute loss: 41.7648, cost time: 0.3354s
+epoch 180, attribute loss: 46.1372, cost time: 0.3141s
+epoch 181, attribute loss: 42.8873, cost time: 0.2935s
+epoch 182, attribute loss: 43.7570, cost time: 0.3021s
+epoch 183, attribute loss: 46.8224, cost time: 0.3064s
+epoch 184, attribute loss: 41.9191, cost time: 0.3078s
+epoch 185, attribute loss: 43.1062, cost time: 0.3535s
+epoch 186, attribute loss: 43.4659, cost time: 0.2921s
+epoch 187, attribute loss: 42.2563, cost time: 0.3040s
+epoch 188, attribute loss: 41.6474, cost time: 0.3040s
+epoch 189, attribute loss: 41.8284, cost time: 0.2961s
+epoch 190, attribute loss: 43.8536, cost time: 0.2875s
+epoch 191, attribute loss: 45.0184, cost time: 0.3089s
+epoch 192, attribute loss: 44.5104, cost time: 0.2967s
+epoch 193, attribute loss: 44.0593, cost time: 0.3170s
+epoch 194, attribute loss: 41.5584, cost time: 0.3178s
+epoch 195, attribute loss: 36.4036, cost time: 0.3239s
+epoch 196, attribute loss: 38.9673, cost time: 0.2890s
+epoch 197, attribute loss: 45.6974, cost time: 0.3204s
+epoch 198, attribute loss: 42.5403, cost time: 0.2575s
+epoch 199, attribute loss: 40.0857, cost time: 0.3028s
+epoch 200, attribute loss: 50.2237, cost time: 0.3764s
+get entity embeddings from attributes
+cost time: 154.2200s
+Training attributes ends. Total time = 221.198 s.
+Joint training:
+epoch 1, avg. triple loss: 1.8804, cost time: 2.4392s
+epoch 1, sim loss: 16.0000, cost time: 2.2160s
+epoch 2, avg. triple loss: 1.3503, cost time: 2.3829s
+epoch 2, sim loss: 16.0000, cost time: 2.2744s
+epoch 3, avg. triple loss: 1.1736, cost time: 2.2516s
+epoch 3, sim loss: 16.0000, cost time: 2.2040s
+epoch 4, avg. triple loss: 1.0598, cost time: 2.2751s
+epoch 4, sim loss: 16.0000, cost time: 2.0398s
+epoch 5, avg. triple loss: 0.9742, cost time: 2.1799s
+epoch 5, sim loss: 16.0000, cost time: 2.2596s
+epoch 6, avg. triple loss: 0.9042, cost time: 2.2988s
+epoch 6, sim loss: 16.0000, cost time: 2.2043s
+epoch 7, avg. triple loss: 0.8446, cost time: 2.2995s
+epoch 7, sim loss: 16.0000, cost time: 2.2851s
+epoch 8, avg. triple loss: 0.7934, cost time: 2.2885s
+epoch 8, sim loss: 16.0000, cost time: 2.3531s
+epoch 9, avg. triple loss: 0.7478, cost time: 2.3970s
+epoch 9, sim loss: 16.0000, cost time: 2.3209s
+epoch 10, avg. triple loss: 0.7076, cost time: 2.3155s
+epoch 10, sim loss: 16.0000, cost time: 2.2034s
+epoch 11, avg. triple loss: 0.6712, cost time: 2.1069s
+epoch 11, sim loss: 16.0000, cost time: 2.3350s
+epoch 12, avg. triple loss: 0.6390, cost time: 2.3684s
+epoch 12, sim loss: 16.0000, cost time: 2.2836s
+epoch 13, avg. triple loss: 0.6089, cost time: 2.2673s
+epoch 13, sim loss: 16.0000, cost time: 2.2479s
+epoch 14, avg. triple loss: 0.5815, cost time: 2.3544s
+epoch 14, sim loss: 16.0000, cost time: 2.3869s
+epoch 15, avg. triple loss: 0.5568, cost time: 2.3495s
+epoch 15, sim loss: 16.0000, cost time: 2.2908s
+epoch 16, avg. triple loss: 0.5335, cost time: 2.4134s
+epoch 16, sim loss: 16.0000, cost time: 2.2342s
+epoch 17, avg. triple loss: 0.5126, cost time: 2.1756s
+epoch 17, sim loss: 16.0000, cost time: 2.3327s
+epoch 18, avg. triple loss: 0.4930, cost time: 2.5045s
+epoch 18, sim loss: 16.0000, cost time: 2.3268s
+epoch 19, avg. triple loss: 0.4746, cost time: 2.4143s
+epoch 19, sim loss: 16.0000, cost time: 2.3530s
+epoch 20, avg. triple loss: 0.4570, cost time: 2.4923s
+epoch 20, sim loss: 16.0000, cost time: 2.2746s
+epoch 21, avg. triple loss: 0.4413, cost time: 2.4241s
+epoch 21, sim loss: 16.0000, cost time: 2.4121s
+epoch 22, avg. triple loss: 0.4261, cost time: 2.3999s
+epoch 22, sim loss: 16.0000, cost time: 2.2370s
+epoch 23, avg. triple loss: 0.4120, cost time: 2.2729s
+epoch 23, sim loss: 16.0000, cost time: 2.2927s
+epoch 24, avg. triple loss: 0.3986, cost time: 2.5087s
+epoch 24, sim loss: 16.0000, cost time: 2.2203s
+epoch 25, avg. triple loss: 0.3855, cost time: 2.4621s
+epoch 25, sim loss: 16.0000, cost time: 2.3538s
+epoch 26, avg. triple loss: 0.3734, cost time: 2.4191s
+epoch 26, sim loss: 16.0000, cost time: 2.2418s
+epoch 27, avg. triple loss: 0.3621, cost time: 2.1823s
+epoch 27, sim loss: 16.0000, cost time: 2.1810s
+epoch 28, avg. triple loss: 0.3513, cost time: 2.4280s
+epoch 28, sim loss: 16.0000, cost time: 2.2076s
+epoch 29, avg. triple loss: 0.3409, cost time: 2.1208s
+epoch 29, sim loss: 16.0000, cost time: 2.2864s
+epoch 30, avg. triple loss: 0.3308, cost time: 2.3831s
+epoch 30, sim loss: 16.0000, cost time: 2.3629s
+epoch 31, avg. triple loss: 0.3216, cost time: 2.5764s
+epoch 31, sim loss: 16.0000, cost time: 2.3459s
+epoch 32, avg. triple loss: 0.3121, cost time: 2.4144s
+epoch 32, sim loss: 16.0000, cost time: 2.3119s
+epoch 33, avg. triple loss: 0.3034, cost time: 2.4120s
+epoch 33, sim loss: 16.0000, cost time: 2.3185s
+epoch 34, avg. triple loss: 0.2951, cost time: 2.3497s
+epoch 34, sim loss: 16.0000, cost time: 2.2958s
+epoch 35, avg. triple loss: 0.2868, cost time: 2.2623s
+epoch 35, sim loss: 16.0000, cost time: 1.9960s
+epoch 36, avg. triple loss: 0.2790, cost time: 2.4791s
+epoch 36, sim loss: 16.0000, cost time: 2.3261s
+epoch 37, avg. triple loss: 0.2715, cost time: 2.3578s
+epoch 37, sim loss: 16.0000, cost time: 2.3435s
+epoch 38, avg. triple loss: 0.2642, cost time: 2.4044s
+epoch 38, sim loss: 16.0000, cost time: 2.3235s
+epoch 39, avg. triple loss: 0.2574, cost time: 2.3386s
+epoch 39, sim loss: 16.0000, cost time: 2.2282s
+epoch 40, avg. triple loss: 0.2504, cost time: 2.3990s
+epoch 40, sim loss: 16.0000, cost time: 2.3167s
+epoch 41, avg. triple loss: 0.2438, cost time: 2.1916s
+epoch 41, sim loss: 16.0000, cost time: 2.2923s
+epoch 42, avg. triple loss: 0.2378, cost time: 2.3875s
+epoch 42, sim loss: 16.0000, cost time: 2.3134s
+epoch 43, avg. triple loss: 0.2315, cost time: 2.4014s
+epoch 43, sim loss: 16.0000, cost time: 2.1841s
+epoch 44, avg. triple loss: 0.2252, cost time: 2.1186s
+epoch 44, sim loss: 16.0000, cost time: 2.3012s
+epoch 45, avg. triple loss: 0.2196, cost time: 2.4066s
+epoch 45, sim loss: 16.0000, cost time: 2.2673s
+epoch 46, avg. triple loss: 0.2136, cost time: 2.3425s
+epoch 46, sim loss: 16.0000, cost time: 2.3447s
+epoch 47, avg. triple loss: 0.2087, cost time: 2.2591s
+epoch 47, sim loss: 16.0000, cost time: 2.3434s
+epoch 48, avg. triple loss: 0.2035, cost time: 2.5404s
+epoch 48, sim loss: 16.0000, cost time: 2.2506s
+epoch 49, avg. triple loss: 0.1979, cost time: 2.3863s
+epoch 49, sim loss: 16.0000, cost time: 2.3225s
+epoch 50, avg. triple loss: 0.1929, cost time: 2.4726s
+epoch 50, sim loss: 16.0000, cost time: 2.3129s
+epoch 51, avg. triple loss: 0.1881, cost time: 2.4992s
+epoch 51, sim loss: 16.0000, cost time: 2.2024s
+epoch 52, avg. triple loss: 0.1831, cost time: 2.2928s
+epoch 52, sim loss: 16.0000, cost time: 2.3294s
+epoch 53, avg. triple loss: 0.1786, cost time: 2.2184s
+epoch 53, sim loss: 16.0000, cost time: 2.2725s
+epoch 54, avg. triple loss: 0.1738, cost time: 2.4215s
+epoch 54, sim loss: 16.0000, cost time: 2.3215s
+epoch 55, avg. triple loss: 0.1695, cost time: 2.4346s
+epoch 55, sim loss: 16.0000, cost time: 2.3499s
+epoch 56, avg. triple loss: 0.1651, cost time: 2.4131s
+epoch 56, sim loss: 16.0000, cost time: 2.3164s
+epoch 57, avg. triple loss: 0.1607, cost time: 2.4574s
+epoch 57, sim loss: 16.0000, cost time: 2.3137s
+epoch 58, avg. triple loss: 0.1564, cost time: 2.4224s
+epoch 58, sim loss: 16.0000, cost time: 2.3313s
+epoch 59, avg. triple loss: 0.1523, cost time: 2.2192s
+epoch 59, sim loss: 16.0000, cost time: 2.2956s
+epoch 60, avg. triple loss: 0.1485, cost time: 2.2151s
+epoch 60, sim loss: 16.0000, cost time: 2.2934s
+epoch 61, avg. triple loss: 0.1447, cost time: 2.4660s
+epoch 61, sim loss: 16.0000, cost time: 2.2966s
+epoch 62, avg. triple loss: 0.1410, cost time: 2.5432s
+epoch 62, sim loss: 16.0000, cost time: 2.3873s
+epoch 63, avg. triple loss: 0.1368, cost time: 2.5457s
+epoch 63, sim loss: 16.0000, cost time: 2.3144s
+epoch 64, avg. triple loss: 0.1331, cost time: 2.4254s
+epoch 64, sim loss: 16.0000, cost time: 2.2662s
+epoch 65, avg. triple loss: 0.1299, cost time: 2.3461s
+epoch 65, sim loss: 16.0000, cost time: 2.7026s
+epoch 66, avg. triple loss: 0.1262, cost time: 2.8233s
+epoch 66, sim loss: 16.0000, cost time: 2.7443s
+epoch 67, avg. triple loss: 0.1228, cost time: 2.8282s
+epoch 67, sim loss: 16.0000, cost time: 2.6537s
+epoch 68, avg. triple loss: 0.1190, cost time: 2.4437s
+epoch 68, sim loss: 16.0000, cost time: 2.6408s
+epoch 69, avg. triple loss: 0.1154, cost time: 2.9149s
+epoch 69, sim loss: 16.0000, cost time: 2.6321s
+epoch 70, avg. triple loss: 0.1128, cost time: 3.0901s
+epoch 70, sim loss: 16.0000, cost time: 2.7083s
+epoch 71, avg. triple loss: 0.1092, cost time: 2.9137s
+epoch 71, sim loss: 16.0000, cost time: 2.6556s
+epoch 72, avg. triple loss: 0.1058, cost time: 2.8384s
+epoch 72, sim loss: 16.0000, cost time: 2.7411s
+epoch 73, avg. triple loss: 0.1031, cost time: 2.8945s
+epoch 73, sim loss: 16.0000, cost time: 2.6582s
+epoch 74, avg. triple loss: 0.0998, cost time: 3.0399s
+epoch 74, sim loss: 16.0000, cost time: 2.7827s
+epoch 75, avg. triple loss: 0.0972, cost time: 3.0384s
+epoch 75, sim loss: 16.0000, cost time: 2.2061s
+epoch 76, avg. triple loss: 0.0934, cost time: 2.2820s
+epoch 76, sim loss: 16.0000, cost time: 2.1262s
+epoch 77, avg. triple loss: 0.0910, cost time: 2.2752s
+epoch 77, sim loss: 16.0000, cost time: 2.0661s
+epoch 78, avg. triple loss: 0.0883, cost time: 2.1006s
+epoch 78, sim loss: 16.0000, cost time: 2.0188s
+epoch 79, avg. triple loss: 0.0851, cost time: 2.1427s
+epoch 79, sim loss: 16.0000, cost time: 2.0296s
+epoch 80, avg. triple loss: 0.0824, cost time: 2.3099s
+epoch 80, sim loss: 16.0000, cost time: 2.0977s
+epoch 81, avg. triple loss: 0.0796, cost time: 2.1713s
+epoch 81, sim loss: 16.0000, cost time: 2.0505s
+epoch 82, avg. triple loss: 0.0767, cost time: 2.2055s
+epoch 82, sim loss: 16.0000, cost time: 2.0487s
+epoch 83, avg. triple loss: 0.0745, cost time: 2.0468s
+epoch 83, sim loss: 16.0000, cost time: 2.0920s
+epoch 84, avg. triple loss: 0.0717, cost time: 2.2096s
+epoch 84, sim loss: 16.0000, cost time: 1.9944s
+epoch 85, avg. triple loss: 0.0694, cost time: 2.5873s
+epoch 85, sim loss: 16.0000, cost time: 2.3619s
+epoch 86, avg. triple loss: 0.0666, cost time: 2.4709s
+epoch 86, sim loss: 16.0000, cost time: 2.3660s
+epoch 87, avg. triple loss: 0.0642, cost time: 2.5590s
+epoch 87, sim loss: 16.0000, cost time: 2.3594s
+epoch 88, avg. triple loss: 0.0622, cost time: 2.5518s
+epoch 88, sim loss: 16.0000, cost time: 2.3779s
+epoch 89, avg. triple loss: 0.0593, cost time: 2.4546s
+epoch 89, sim loss: 16.0000, cost time: 2.4152s
+epoch 90, avg. triple loss: 0.0573, cost time: 2.5363s
+epoch 90, sim loss: 16.0000, cost time: 2.3430s
+epoch 91, avg. triple loss: 0.0543, cost time: 2.4965s
+epoch 91, sim loss: 16.0000, cost time: 2.3382s
+epoch 92, avg. triple loss: 0.0518, cost time: 2.5027s
+epoch 92, sim loss: 16.0000, cost time: 2.3855s
+epoch 93, avg. triple loss: 0.0499, cost time: 2.4757s
+epoch 93, sim loss: 16.0000, cost time: 2.2263s
+epoch 94, avg. triple loss: 0.0481, cost time: 2.0728s
+epoch 94, sim loss: 16.0000, cost time: 1.8883s
+epoch 95, avg. triple loss: 0.0452, cost time: 2.4121s
+epoch 95, sim loss: 16.0000, cost time: 2.3558s
+epoch 96, avg. triple loss: 0.0432, cost time: 2.4578s
+epoch 96, sim loss: 16.0000, cost time: 2.3293s
+epoch 97, avg. triple loss: 0.0411, cost time: 2.4323s
+epoch 97, sim loss: 16.0000, cost time: 2.4190s
+epoch 98, avg. triple loss: 0.0389, cost time: 2.4247s
+epoch 98, sim loss: 16.0000, cost time: 2.3298s
+epoch 99, avg. triple loss: 0.0369, cost time: 2.5346s
+epoch 99, sim loss: 16.0000, cost time: 2.3197s
+epoch 100, avg. triple loss: 0.0345, cost time: 2.4957s
+epoch 100, sim loss: 16.0000, cost time: 2.3666s
+quick results: hits@[1, 5, 10, 50] = [45.15  53.853 55.727 57.419]%, time = 2.211 s 
+epoch 101, avg. triple loss: 0.0328, cost time: 2.4588s
+epoch 101, sim loss: 16.0000, cost time: 2.3777s
+epoch 102, avg. triple loss: 0.0309, cost time: 2.4327s
+epoch 102, sim loss: 16.0000, cost time: 2.1667s
+epoch 103, avg. triple loss: 0.0283, cost time: 2.0628s
+epoch 103, sim loss: 16.0000, cost time: 1.8412s
+epoch 104, avg. triple loss: 0.0268, cost time: 2.4223s
+epoch 104, sim loss: 16.0000, cost time: 1.9121s
+epoch 105, avg. triple loss: 0.0248, cost time: 2.2605s
+epoch 105, sim loss: 16.0000, cost time: 1.8862s
+epoch 106, avg. triple loss: 0.0228, cost time: 2.2068s
+epoch 106, sim loss: 16.0000, cost time: 1.8785s
+epoch 107, avg. triple loss: 0.0209, cost time: 2.1057s
+epoch 107, sim loss: 16.0000, cost time: 1.8104s
+epoch 108, avg. triple loss: 0.0189, cost time: 2.1312s
+epoch 108, sim loss: 16.0000, cost time: 1.8745s
+epoch 109, avg. triple loss: 0.0171, cost time: 2.0944s
+epoch 109, sim loss: 16.0000, cost time: 1.8781s
+epoch 110, avg. triple loss: 0.0150, cost time: 2.2005s
+epoch 110, sim loss: 16.0000, cost time: 1.8720s
+quick results: hits@[1, 5, 10, 50] = [45.119 54.216 55.908 57.812]%, time = 1.765 s 
+epoch 111, avg. triple loss: 0.0137, cost time: 2.0938s
+epoch 111, sim loss: 16.0000, cost time: 1.9392s
+epoch 112, avg. triple loss: 0.0119, cost time: 2.0902s
+epoch 112, sim loss: 16.0000, cost time: 1.8483s
+epoch 113, avg. triple loss: 0.0095, cost time: 2.0740s
+epoch 113, sim loss: 16.0000, cost time: 1.8135s
+epoch 114, avg. triple loss: 0.0082, cost time: 2.0610s
+epoch 114, sim loss: 16.0000, cost time: 1.7960s
+epoch 115, avg. triple loss: 0.0062, cost time: 2.0784s
+epoch 115, sim loss: 16.0000, cost time: 1.9049s
+epoch 116, avg. triple loss: 0.0048, cost time: 2.2038s
+epoch 116, sim loss: 16.0000, cost time: 1.9092s
+epoch 117, avg. triple loss: 0.0031, cost time: 2.0314s
+epoch 117, sim loss: 16.0000, cost time: 1.8999s
+epoch 118, avg. triple loss: 0.0012, cost time: 2.0934s
+epoch 118, sim loss: 16.0000, cost time: 1.9613s
+epoch 119, avg. triple loss: -0.0001, cost time: 2.1333s
+epoch 119, sim loss: 16.0000, cost time: 1.9258s
+epoch 120, avg. triple loss: -0.0017, cost time: 2.2323s
+epoch 120, sim loss: 16.0000, cost time: 1.8764s
+quick results: hits@[1, 5, 10, 50] = [45.119 54.337 56.271 57.963]%, time = 1.783 s 
+
+ == should early stop == 
+
+Training ends. Total time = 563.590 s.
+accurate results: hits@[1, 5, 10, 50] = [47.049 55.263 56.616 58.173]%, mr = 1591.139, mrr = 0.506510, time = 6.603 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [50.102 58.475 59.692 60.704]%, mr = 1382.200, mrr = 0.536999, time = 13.711 s 
+Results saved!
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg1_ent_ids saved.
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg2_ent_ids saved.
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg1_rel_ids saved.
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg2_rel_ids saved.
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg1_attr_ids saved.
+../../output/results/Paper/Materials/JAPE/Materials-BigBasketProductsGold/721_5fold/1/20231201114031/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 817.369 s.

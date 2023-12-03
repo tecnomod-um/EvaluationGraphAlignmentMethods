@@ -1,0 +1,312 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/Materials/', 'dataset_division': '721_5fold', 'embedding_module': 'AliNet', 'alignment_module': 'mapping', 'search_module': 'greedy', 'layer_dims': [500, 400, 300], 'init': 'xavier', 'ent_l2_norm': True, 'rel_l2_norm': True, 'learning_rate': 0.001, 'optimizer': 'Adam', 'max_epoch': 2000, 'batch_size': 3000, 'neg_margin': 1.5, 'neg_margin_balance': 0.1, 'dropout': 0.0, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.98, 'truncated_freq': 10, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': False, 'eval_norm': False, 'min_rel_win': 50, 'start_augment': 2, 'rel_param': 0.01, 'num_features_nonzero': 0, 'sim_th': 0.0, 'k': 20}
+AliNet
+<openea.modules.args.args_hander.ARGs object at 0x7f27a1c51748>
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-Materials//721_5fold/1/test_links
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+../../output/results/Paper/Materials/ ../../datasets/Ontologies/Paper/Materials/Materials-Materials// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'Materials', 'Materials-Materials'] 721_5fold/1/ AliNet
+results output folder: ../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/
+triples num 77533
+head ent num 37953
+total ent num 37957
+ave outs: 2
+additional triples: 23670
+triples num 77533
+head ent num 37953
+total ent num 37957
+ave outs: 2
+additional triples: 23670
+before enhanced: 77533 77533
+after enhanced: 0 0
+before removing unlinked triples: 155066
+after removing unlinked triples: 79160
+generating one-adj costs time: 1.1446s
+before removing unlinked triples: 77533
+after removing unlinked triples: 39580
+total 2-hop neighbors: 14549
+total 2-hop relation patterns: 2
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+before removing unlinked triples: 77533
+after removing unlinked triples: 39580
+total 2-hop neighbors: 14549
+total 2-hop relation patterns: 2
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+generating one-adj costs time: 0.0623s
+save adj data to ../../datasets/Ontologies/Paper/Materials/Materials-Materials//721_5fold/1/alinet_saved_data.pkl
+Getting AliNet model...
+epoch 1, loss: 23748.4309, cost time: 195.1374s
+epoch 2, loss: 12033.9473, cost time: 186.7231s
+epoch 3, loss: 6911.6167, cost time: 177.6021s
+epoch 4, loss: 4163.1208, cost time: 166.1455s
+epoch 5, loss: 2687.4413, cost time: 162.0533s
+epoch 6, loss: 1847.5302, cost time: 174.1660s
+epoch 7, loss: 1340.2605, cost time: 175.2464s
+epoch 8, loss: 1006.3808, cost time: 184.7010s
+epoch 9, loss: 801.1318, cost time: 172.8443s
+epoch 10, loss: 650.5649, cost time: 168.8900s
+quick results: hits@[1, 5, 10, 50] = [52.622 74.018 76.653 79.473]%, time = 11.862 s 
+neighbors num 759
+finding neighbors for sampling costs time: 165.8670s
+epoch 11, loss: 2614.3175, cost time: 195.0320s
+epoch 12, loss: 1327.4243, cost time: 196.9196s
+epoch 13, loss: 1064.6118, cost time: 185.6817s
+epoch 14, loss: 926.1945, cost time: 177.1997s
+epoch 15, loss: 841.1505, cost time: 190.3040s
+epoch 16, loss: 766.1335, cost time: 191.5226s
+epoch 17, loss: 713.8801, cost time: 198.7997s
+epoch 18, loss: 674.2335, cost time: 199.9429s
+epoch 19, loss: 647.8705, cost time: 191.5281s
+epoch 20, loss: 619.7697, cost time: 192.3841s
+quick results: hits@[1, 5, 10, 50] = [55.573 75.125 77.418 78.92 ]%, time = 12.800 s 
+neighbors num 759
+finding neighbors for sampling costs time: 162.3323s
+epoch 21, loss: 706.2116, cost time: 180.1498s
+epoch 22, loss: 690.7680, cost time: 176.9604s
+epoch 23, loss: 672.5353, cost time: 163.3015s
+epoch 24, loss: 642.8413, cost time: 134.1329s
+epoch 25, loss: 621.0424, cost time: 134.1575s
+epoch 26, loss: 603.1851, cost time: 131.3819s
+epoch 27, loss: 594.3723, cost time: 135.5752s
+epoch 28, loss: 571.4334, cost time: 141.1856s
+epoch 29, loss: 552.6906, cost time: 143.7624s
+epoch 30, loss: 545.6707, cost time: 140.4050s
+quick results: hits@[1, 5, 10, 50] = [60.316 76.153 78.314 79.868]%, time = 11.840 s 
+neighbors num 759
+finding neighbors for sampling costs time: 135.5733s
+epoch 31, loss: 551.8141, cost time: 131.9005s
+epoch 32, loss: 538.2452, cost time: 134.8278s
+epoch 33, loss: 525.4996, cost time: 143.9822s
+epoch 34, loss: 516.8673, cost time: 154.9765s
+epoch 35, loss: 505.5692, cost time: 140.7378s
+epoch 36, loss: 502.7497, cost time: 138.3464s
+epoch 37, loss: 491.0569, cost time: 136.6086s
+epoch 38, loss: 488.9230, cost time: 120.3038s
+epoch 39, loss: 476.3838, cost time: 116.9051s
+epoch 40, loss: 475.9706, cost time: 123.7613s
+quick results: hits@[1, 5, 10, 50] = [62.134 76.785 79.078 80.922]%, time = 12.134 s 
+neighbors num 759
+finding neighbors for sampling costs time: 121.1406s
+epoch 41, loss: 470.5686, cost time: 123.4051s
+epoch 42, loss: 462.0901, cost time: 120.1458s
+epoch 43, loss: 464.0107, cost time: 116.8264s
+epoch 44, loss: 463.9188, cost time: 127.8754s
+epoch 45, loss: 452.5837, cost time: 121.5520s
+epoch 46, loss: 454.5696, cost time: 123.8902s
+epoch 47, loss: 447.5382, cost time: 126.6259s
+epoch 48, loss: 449.3264, cost time: 122.9126s
+epoch 49, loss: 448.1974, cost time: 123.0872s
+epoch 50, loss: 437.8867, cost time: 113.7942s
+quick results: hits@[1, 5, 10, 50] = [62.819 77.708 79.499 81.528]%, time = 12.257 s 
+neighbors num 759
+finding neighbors for sampling costs time: 118.1881s
+epoch 51, loss: 444.8635, cost time: 124.6200s
+epoch 52, loss: 436.2183, cost time: 126.0262s
+epoch 53, loss: 438.9778, cost time: 122.3320s
+epoch 54, loss: 432.0776, cost time: 116.0374s
+epoch 55, loss: 436.5996, cost time: 127.2209s
+epoch 56, loss: 434.5053, cost time: 121.6751s
+epoch 57, loss: 430.2151, cost time: 124.9314s
+epoch 58, loss: 427.0467, cost time: 125.9609s
+epoch 59, loss: 434.1954, cost time: 119.5002s
+epoch 60, loss: 418.0485, cost time: 122.1677s
+quick results: hits@[1, 5, 10, 50] = [63.531 78.182 80.079 82.055]%, time = 13.235 s 
+neighbors num 759
+finding neighbors for sampling costs time: 119.0925s
+epoch 61, loss: 437.5370, cost time: 129.5298s
+epoch 62, loss: 425.8028, cost time: 129.2259s
+epoch 63, loss: 428.1151, cost time: 127.8988s
+epoch 64, loss: 428.4528, cost time: 122.9371s
+epoch 65, loss: 429.5297, cost time: 114.8085s
+epoch 66, loss: 414.0667, cost time: 117.4977s
+epoch 67, loss: 419.7159, cost time: 122.2210s
+epoch 68, loss: 422.8791, cost time: 136.8026s
+epoch 69, loss: 415.2483, cost time: 138.9884s
+epoch 70, loss: 417.8152, cost time: 136.2203s
+quick results: hits@[1, 5, 10, 50] = [63.584 78.603 80.843 82.556]%, time = 11.900 s 
+neighbors num 759
+finding neighbors for sampling costs time: 115.7620s
+epoch 71, loss: 416.6338, cost time: 121.1484s
+epoch 72, loss: 415.2889, cost time: 121.5536s
+epoch 73, loss: 413.1359, cost time: 129.7407s
+epoch 74, loss: 421.6284, cost time: 120.6070s
+epoch 75, loss: 427.4191, cost time: 130.0348s
+epoch 76, loss: 415.7771, cost time: 130.1005s
+epoch 77, loss: 416.8510, cost time: 124.7944s
+epoch 78, loss: 422.7575, cost time: 119.2246s
+epoch 79, loss: 418.6701, cost time: 116.0348s
+epoch 80, loss: 413.0302, cost time: 121.7736s
+quick results: hits@[1, 5, 10, 50] = [63.267 78.972 81.212 82.767]%, time = 11.720 s 
+neighbors num 759
+finding neighbors for sampling costs time: 122.2201s
+epoch 81, loss: 407.9617, cost time: 138.0010s
+epoch 82, loss: 407.9389, cost time: 119.6685s
+epoch 83, loss: 413.3232, cost time: 117.4020s
+epoch 84, loss: 409.8056, cost time: 105.9486s
+epoch 85, loss: 410.8669, cost time: 100.1615s
+epoch 86, loss: 409.1525, cost time: 102.0553s
+epoch 87, loss: 412.9181, cost time: 100.8114s
+epoch 88, loss: 411.3540, cost time: 88.6311s
+epoch 89, loss: 404.2248, cost time: 89.5239s
+epoch 90, loss: 404.4838, cost time: 91.3494s
+quick results: hits@[1, 5, 10, 50] = [63.505 79.025 81.186 83.241]%, time = 8.359 s 
+neighbors num 759
+finding neighbors for sampling costs time: 89.8782s
+epoch 91, loss: 405.0292, cost time: 86.8345s
+epoch 92, loss: 406.3662, cost time: 88.6675s
+epoch 93, loss: 405.7204, cost time: 86.2949s
+epoch 94, loss: 403.1281, cost time: 82.1074s
+epoch 95, loss: 401.1994, cost time: 86.2780s
+epoch 96, loss: 406.8986, cost time: 88.7922s
+epoch 97, loss: 403.9769, cost time: 95.7508s
+epoch 98, loss: 402.8412, cost time: 97.7627s
+epoch 99, loss: 400.4670, cost time: 103.6061s
+epoch 100, loss: 392.0167, cost time: 105.2761s
+quick results: hits@[1, 5, 10, 50] = [63.61  79.578 81.792 83.663]%, time = 10.668 s 
+neighbors num 759
+finding neighbors for sampling costs time: 106.1260s
+epoch 101, loss: 404.6340, cost time: 102.7155s
+epoch 102, loss: 405.4390, cost time: 122.9788s
+epoch 103, loss: 392.8247, cost time: 122.8996s
+epoch 104, loss: 403.0612, cost time: 118.1808s
+epoch 105, loss: 392.8312, cost time: 106.1985s
+epoch 106, loss: 396.7488, cost time: 108.0976s
+epoch 107, loss: 407.8600, cost time: 103.7914s
+epoch 108, loss: 389.8406, cost time: 109.2561s
+epoch 109, loss: 382.3005, cost time: 113.1941s
+epoch 110, loss: 386.0970, cost time: 118.9733s
+quick results: hits@[1, 5, 10, 50] = [63.874 79.578 81.634 83.926]%, time = 10.964 s 
+neighbors num 759
+finding neighbors for sampling costs time: 113.0012s
+epoch 111, loss: 380.7467, cost time: 107.8370s
+epoch 112, loss: 384.9196, cost time: 104.7574s
+epoch 113, loss: 385.4447, cost time: 106.9784s
+epoch 114, loss: 385.7736, cost time: 103.7459s
+epoch 115, loss: 386.7912, cost time: 110.5760s
+epoch 116, loss: 381.2250, cost time: 113.8009s
+epoch 117, loss: 377.7665, cost time: 114.1148s
+epoch 118, loss: 379.7645, cost time: 110.3062s
+epoch 119, loss: 384.3274, cost time: 107.4626s
+epoch 120, loss: 381.8781, cost time: 103.4982s
+quick results: hits@[1, 5, 10, 50] = [63.531 79.42  81.924 83.847]%, time = 9.211 s 
+neighbors num 759
+finding neighbors for sampling costs time: 111.0398s
+epoch 121, loss: 379.3537, cost time: 108.5424s
+epoch 122, loss: 384.5992, cost time: 116.8373s
+epoch 123, loss: 373.4197, cost time: 119.8455s
+epoch 124, loss: 379.8463, cost time: 121.9580s
+epoch 125, loss: 376.3320, cost time: 110.8063s
+epoch 126, loss: 379.7446, cost time: 105.1805s
+epoch 127, loss: 369.1461, cost time: 106.7441s
+epoch 128, loss: 366.1303, cost time: 104.8726s
+epoch 129, loss: 375.9464, cost time: 104.6051s
+epoch 130, loss: 363.8956, cost time: 103.6603s
+quick results: hits@[1, 5, 10, 50] = [64.005 79.736 82.029 83.61 ]%, time = 9.681 s 
+neighbors num 759
+finding neighbors for sampling costs time: 104.5514s
+epoch 131, loss: 361.9342, cost time: 104.9702s
+epoch 132, loss: 364.8749, cost time: 95.2826s
+epoch 133, loss: 368.6375, cost time: 89.6255s
+epoch 134, loss: 361.8281, cost time: 89.2274s
+epoch 135, loss: 363.3582, cost time: 90.5360s
+epoch 136, loss: 366.8150, cost time: 92.3069s
+epoch 137, loss: 361.7675, cost time: 86.2771s
+epoch 138, loss: 351.9704, cost time: 86.6027s
+epoch 139, loss: 361.5064, cost time: 90.9035s
+epoch 140, loss: 352.7206, cost time: 88.9873s
+quick results: hits@[1, 5, 10, 50] = [63.953 79.895 81.897 83.584]%, time = 9.079 s 
+neighbors num 759
+finding neighbors for sampling costs time: 92.8016s
+epoch 141, loss: 349.5004, cost time: 90.6176s
+epoch 142, loss: 356.9734, cost time: 88.3248s
+epoch 143, loss: 347.2609, cost time: 92.8358s
+epoch 144, loss: 365.3698, cost time: 86.3672s
+epoch 145, loss: 351.2652, cost time: 88.5818s
+epoch 146, loss: 348.0368, cost time: 89.4369s
+epoch 147, loss: 342.6393, cost time: 88.7354s
+epoch 148, loss: 343.0894, cost time: 91.7524s
+epoch 149, loss: 346.1572, cost time: 87.3656s
+epoch 150, loss: 347.5291, cost time: 92.4037s
+quick results: hits@[1, 5, 10, 50] = [63.926 79.974 82.213 83.715]%, time = 9.961 s 
+
+ == should early stop == 
+
+
+ == training stop == 
+
+accurate results: hits@[1, 5, 10, 50] = [64.357 79.553 81.207 82.992]%, mr = 529.479, mrr = 0.710590, time = 22.364 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [65.154 81.161 83.084 85.62 ]%, mr = 253.438, mrr = 0.722792, time = 47.495 s 
+Results saved!
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg1_ent_ids saved.
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg2_ent_ids saved.
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg1_rel_ids saved.
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg2_rel_ids saved.
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg1_attr_ids saved.
+../../output/results/Paper/Materials/AliNet/Materials-Materials/721_5fold/1/20231127235602/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 21304.378 s.

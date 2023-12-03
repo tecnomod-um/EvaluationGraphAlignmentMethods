@@ -1,0 +1,195 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/Materials/', 'dataset_division': '721_5fold', 'embedding_module': 'AliNet', 'alignment_module': 'mapping', 'search_module': 'greedy', 'layer_dims': [500, 400, 300], 'init': 'xavier', 'ent_l2_norm': True, 'rel_l2_norm': True, 'learning_rate': 0.001, 'optimizer': 'Adam', 'max_epoch': 2000, 'batch_size': 3000, 'neg_margin': 1.5, 'neg_margin_balance': 0.1, 'dropout': 0.0, 'neg_sampling': 'truncated', 'neg_triple_num': 10, 'truncated_epsilon': 0.98, 'truncated_freq': 10, 'batch_threads_num': 2, 'test_threads_num': 4, 'ordered': True, 'start_valid': 10, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'inner', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': False, 'eval_norm': False, 'min_rel_win': 50, 'start_augment': 2, 'rel_param': 0.01, 'num_features_nonzero': 0, 'sim_th': 0.0, 'k': 20}
+AliNet
+<openea.modules.args.args_hander.ARGs object at 0x7f6a8d2af748>
+read relation triples: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//721_5fold/1/test_links
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+../../output/results/Paper/Materials/ ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'Materials', 'BigBasketProductsGold-BigBasketProductsGold'] 721_5fold/1/ AliNet
+results output folder: ../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/
+triples num 52106
+head ent num 33084
+total ent num 33086
+ave outs: 1
+additional triples: 18989
+triples num 52106
+head ent num 33084
+total ent num 33086
+ave outs: 1
+additional triples: 18989
+before enhanced: 52106 52106
+after enhanced: 0 0
+before removing unlinked triples: 104212
+after removing unlinked triples: 38044
+generating one-adj costs time: 1.4798s
+before removing unlinked triples: 52106
+after removing unlinked triples: 19022
+total 2-hop neighbors: 0
+total 2-hop relation patterns: 0
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+before removing unlinked triples: 52106
+after removing unlinked triples: 19022
+total 2-hop neighbors: 0
+total 2-hop relation patterns: 0
+selected relation patterns: 0
+selected 2-hop neighbors: 0
+generating one-adj costs time: 0.0449s
+save adj data to ../../datasets/Ontologies/Paper/Materials/BigBasketProductsGold-BigBasketProductsGold//721_5fold/1/alinet_saved_data.pkl
+Getting AliNet model...
+epoch 1, loss: 20956.7993, cost time: 55.0503s
+epoch 2, loss: 11570.4694, cost time: 50.5730s
+epoch 3, loss: 7045.0076, cost time: 49.5708s
+epoch 4, loss: 4256.5257, cost time: 44.7298s
+epoch 5, loss: 2806.8228, cost time: 42.7251s
+epoch 6, loss: 1911.9524, cost time: 49.5329s
+epoch 7, loss: 1362.6403, cost time: 52.5978s
+epoch 8, loss: 991.6044, cost time: 50.4754s
+epoch 9, loss: 800.0020, cost time: 51.2157s
+epoch 10, loss: 643.0348, cost time: 44.2961s
+quick results: hits@[1, 5, 10, 50] = [45.542 57.721 59.414 60.048]%, time = 3.933 s 
+neighbors num 661
+finding neighbors for sampling costs time: 51.3767s
+epoch 11, loss: 1858.5983, cost time: 49.3382s
+epoch 12, loss: 1030.4996, cost time: 54.6158s
+epoch 13, loss: 864.6356, cost time: 54.9255s
+epoch 14, loss: 753.1757, cost time: 54.6982s
+epoch 15, loss: 678.3419, cost time: 45.6340s
+epoch 16, loss: 618.5285, cost time: 47.4393s
+epoch 17, loss: 577.0404, cost time: 46.0431s
+epoch 18, loss: 545.7000, cost time: 48.2764s
+epoch 19, loss: 527.1067, cost time: 54.1461s
+epoch 20, loss: 503.6460, cost time: 53.3945s
+quick results: hits@[1, 5, 10, 50] = [46.57  57.842 59.625 60.109]%, time = 4.980 s 
+neighbors num 661
+finding neighbors for sampling costs time: 56.3348s
+epoch 21, loss: 526.3349, cost time: 46.7382s
+epoch 22, loss: 507.4306, cost time: 45.8435s
+epoch 23, loss: 497.2171, cost time: 49.5246s
+epoch 24, loss: 480.6520, cost time: 53.6168s
+epoch 25, loss: 467.8225, cost time: 53.8502s
+epoch 26, loss: 443.4239, cost time: 54.8185s
+epoch 27, loss: 419.6190, cost time: 46.4102s
+epoch 28, loss: 407.1121, cost time: 48.4702s
+epoch 29, loss: 404.4633, cost time: 45.2065s
+epoch 30, loss: 432.9922, cost time: 50.0080s
+quick results: hits@[1, 5, 10, 50] = [49.471 58.356 59.807 60.23 ]%, time = 6.957 s 
+neighbors num 661
+finding neighbors for sampling costs time: 61.4376s
+epoch 31, loss: 449.3146, cost time: 55.8269s
+epoch 32, loss: 442.4821, cost time: 46.6865s
+epoch 33, loss: 429.5265, cost time: 48.0897s
+epoch 34, loss: 419.4895, cost time: 46.7128s
+epoch 35, loss: 406.5080, cost time: 51.8690s
+epoch 36, loss: 384.8720, cost time: 58.5525s
+epoch 37, loss: 381.2271, cost time: 60.0081s
+epoch 38, loss: 363.7748, cost time: 56.9513s
+epoch 39, loss: 358.1618, cost time: 51.0705s
+epoch 40, loss: 344.0045, cost time: 51.7461s
+quick results: hits@[1, 5, 10, 50] = [49.864 58.326 59.595 60.32 ]%, time = 6.574 s 
+neighbors num 661
+finding neighbors for sampling costs time: 56.8976s
+epoch 41, loss: 347.6426, cost time: 53.8912s
+epoch 42, loss: 348.0583, cost time: 52.3496s
+epoch 43, loss: 348.6057, cost time: 50.2886s
+epoch 44, loss: 348.4861, cost time: 45.9784s
+epoch 45, loss: 353.1555, cost time: 47.9926s
+epoch 46, loss: 348.3957, cost time: 49.3241s
+epoch 47, loss: 336.1070, cost time: 50.2476s
+epoch 48, loss: 328.3140, cost time: 52.3651s
+epoch 49, loss: 320.1773, cost time: 50.1019s
+epoch 50, loss: 328.1016, cost time: 49.1080s
+quick results: hits@[1, 5, 10, 50] = [49.622 58.386 59.625 60.411]%, time = 5.771 s 
+neighbors num 661
+finding neighbors for sampling costs time: 51.8610s
+epoch 51, loss: 316.4959, cost time: 51.1993s
+epoch 52, loss: 318.5687, cost time: 51.0015s
+epoch 53, loss: 329.7564, cost time: 51.6572s
+epoch 54, loss: 322.6166, cost time: 49.0743s
+epoch 55, loss: 328.5966, cost time: 49.1417s
+epoch 56, loss: 321.6727, cost time: 46.8507s
+epoch 57, loss: 312.8103, cost time: 49.2479s
+epoch 58, loss: 318.4243, cost time: 51.6439s
+epoch 59, loss: 314.0137, cost time: 49.1039s
+epoch 60, loss: 312.1007, cost time: 49.0589s
+quick results: hits@[1, 5, 10, 50] = [49.411 58.658 59.716 60.441]%, time = 6.046 s 
+
+ == should early stop == 
+
+
+ == training stop == 
+
+accurate results: hits@[1, 5, 10, 50] = [51.424 59.858 60.871 61.362]%, mr = 1208.248, mrr = 0.550789, time = 14.100 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [51.266 59.896 60.954 61.543]%, mr = 977.635, mrr = 0.550555, time = 25.451 s 
+Results saved!
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg1_ent_ids saved.
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg2_ent_ids saved.
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg1_rel_ids saved.
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg2_rel_ids saved.
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg1_attr_ids saved.
+../../output/results/Paper/Materials/AliNet/BigBasketProductsGold-BigBasketProductsGold/721_5fold/1/20231129212108/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 3607.541 s.

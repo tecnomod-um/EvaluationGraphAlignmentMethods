@@ -1,0 +1,282 @@
+load arguments: {'training_data': '../../datasets/', 'output': '../../output/results/Paper/Materials/', 'dataset_division': '721_5fold', 'embedding_module': 'GCN_Align', 'alignment_module': 'mapping', 'search_module': 'greedy', 'dim': 100, 'neg_sampling': 'uniform', 'neg_triple_num': 5, 'learning_rate': 8, 'max_epoch': 2000, 'batch_size': 5000, 'batch_threads_num': 2, 'test_threads_num': 3, 'ordered': True, 'start_valid': 100, 'eval_freq': 10, 'stop_metric': 'hits1', 'eval_metric': 'manhattan', 'csls': 10, 'top_k': [1, 5, 10, 50], 'is_save': True, 'eval_norm': False, 'support_number': 1, 'se_dim': 100, 'ae_dim': 100, 'hidden1': 100, 'gamma': 3, 'early_stop': False, 'dropout': 0, 'test_method': 'sa', 'beta': 0.9}
+GCN_Align
+<openea.modules.args.args_hander.ARGs object at 0x7f71e40d77b8>
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//rel_triples_1
+read relation triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//rel_triples_2
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//attr_triples_1
+read attribute triples: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//attr_triples_2
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/train_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/valid_links
+read links: ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold//721_5fold/1/test_links
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+Number of rt_dict: 37953
+Number of hr_dict: 13377
+entity relations dict: 37953
+Number of av_dict: 37953
+entity attributes dict: 37953
+
+KG statistics:
+Number of entities: 37957
+Number of relations: 4
+Number of attributes: 12
+Number of relation triples: 77533
+Number of attribute triples: 122767
+Number of local relation triples: 77533
+Number of local attribute triples: 122767
+
+Number of rt_dict: 33084
+Number of hr_dict: 13367
+entity relations dict: 33084
+Number of av_dict: 13365
+entity attributes dict: 13365
+
+KG statistics:
+Number of entities: 33086
+Number of relations: 2
+Number of attributes: 2
+Number of relation triples: 52106
+Number of attribute triples: 26730
+Number of local relation triples: 52106
+Number of local attribute triples: 26730
+
+../../output/results/Paper/Materials/ ../../datasets/Ontologies/Paper/Materials/Materials-BigBasketProductsGold// ['..', '..', 'datasets', 'Ontologies', 'Paper', 'Materials', 'Materials-BigBasketProductsGold'] 721_5fold/1/ GCN_Align
+results output folder: ../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/
+[(0, 19719), (2, 19719), (4, 16495), (5, 13365), (6, 13365), (7, 13365), (1, 13365), (3, 13365), (8, 7537), (9, 4861), (10, 4861), (11, 4736), (12, 4736), (13, 8)]
+SparseTensor(indices=Tensor("Placeholder_5:0", shape=(?, ?), dtype=int64), values=Tensor("Placeholder_4:0", shape=(?,), dtype=float32), dense_shape=Tensor("Placeholder_3:0", shape=(?,), dtype=int64))
+SparseTensor(indices=Tensor("Placeholder_2:0", shape=(?, ?), dtype=int64), values=Tensor("Placeholder_1:0", shape=(?,), dtype=float32), dense_shape=Tensor("Placeholder:0", shape=(?,), dtype=int64))
+SparseTensor(indices=Tensor("Placeholder_2:0", shape=(?, ?), dtype=int64), values=Tensor("Placeholder_1:0", shape=(?,), dtype=float32), dense_shape=Tensor("Placeholder:0", shape=(?,), dtype=int64))
+SparseTensor(indices=Tensor("Placeholder_8:0", shape=(?, ?), dtype=int64), values=Tensor("Placeholder_7:0", shape=(?,), dtype=float32), dense_shape=Tensor("Placeholder_6:0", shape=(?,), dtype=int64))
+SparseTensor(indices=Tensor("Placeholder_8:0", shape=(?, ?), dtype=int64), values=Tensor("Placeholder_7:0", shape=(?,), dtype=float32), dense_shape=Tensor("Placeholder_6:0", shape=(?,), dtype=int64))
+epoch 1, avg. relation triple loss: 7.5062, cost time: 1.3814s
+epoch 2, avg. relation triple loss: 6.3734, cost time: 1.0368s
+epoch 3, avg. relation triple loss: 5.1409, cost time: 1.4825s
+epoch 4, avg. relation triple loss: 4.2868, cost time: 1.7656s
+epoch 5, avg. relation triple loss: 3.6534, cost time: 1.2163s
+epoch 6, avg. relation triple loss: 3.2479, cost time: 1.7925s
+epoch 7, avg. relation triple loss: 2.9030, cost time: 1.1426s
+epoch 8, avg. relation triple loss: 2.6380, cost time: 1.1254s
+epoch 9, avg. relation triple loss: 2.4999, cost time: 1.0015s
+epoch 10, avg. relation triple loss: 2.3494, cost time: 1.1719s
+epoch 11, avg. relation triple loss: 2.3896, cost time: 1.0223s
+epoch 12, avg. relation triple loss: 2.3209, cost time: 1.1206s
+epoch 13, avg. relation triple loss: 2.2537, cost time: 1.3516s
+epoch 14, avg. relation triple loss: 2.2030, cost time: 1.3457s
+epoch 15, avg. relation triple loss: 2.2150, cost time: 1.6417s
+epoch 16, avg. relation triple loss: 2.1659, cost time: 1.5266s
+epoch 17, avg. relation triple loss: 2.1607, cost time: 1.3529s
+epoch 18, avg. relation triple loss: 2.1401, cost time: 1.5328s
+epoch 19, avg. relation triple loss: 2.0975, cost time: 1.1516s
+epoch 20, avg. relation triple loss: 2.1118, cost time: 1.1390s
+epoch 21, avg. relation triple loss: 2.1989, cost time: 1.1861s
+epoch 22, avg. relation triple loss: 2.1799, cost time: 1.2855s
+epoch 23, avg. relation triple loss: 2.1435, cost time: 1.0886s
+epoch 24, avg. relation triple loss: 2.1396, cost time: 1.2725s
+epoch 25, avg. relation triple loss: 2.1175, cost time: 1.1908s
+epoch 26, avg. relation triple loss: 2.0932, cost time: 1.0900s
+epoch 27, avg. relation triple loss: 2.0882, cost time: 1.0891s
+epoch 28, avg. relation triple loss: 2.0505, cost time: 1.0820s
+epoch 29, avg. relation triple loss: 2.0332, cost time: 1.1148s
+epoch 30, avg. relation triple loss: 2.0269, cost time: 1.0473s
+epoch 31, avg. relation triple loss: 2.1070, cost time: 1.2006s
+epoch 32, avg. relation triple loss: 2.0956, cost time: 1.1179s
+epoch 33, avg. relation triple loss: 2.0953, cost time: 1.2321s
+epoch 34, avg. relation triple loss: 2.1106, cost time: 1.0470s
+epoch 35, avg. relation triple loss: 2.0954, cost time: 1.0757s
+epoch 36, avg. relation triple loss: 2.0920, cost time: 1.1561s
+epoch 37, avg. relation triple loss: 2.1015, cost time: 1.1541s
+epoch 38, avg. relation triple loss: 2.0800, cost time: 1.1777s
+epoch 39, avg. relation triple loss: 2.0371, cost time: 0.8439s
+epoch 40, avg. relation triple loss: 2.0168, cost time: 1.2410s
+epoch 41, avg. relation triple loss: 2.0859, cost time: 1.0991s
+epoch 42, avg. relation triple loss: 2.0974, cost time: 1.0422s
+epoch 43, avg. relation triple loss: 2.0737, cost time: 1.1039s
+epoch 44, avg. relation triple loss: 2.0506, cost time: 1.0316s
+epoch 45, avg. relation triple loss: 2.0244, cost time: 1.1257s
+epoch 46, avg. relation triple loss: 2.0155, cost time: 1.0595s
+epoch 47, avg. relation triple loss: 2.0307, cost time: 1.0924s
+epoch 48, avg. relation triple loss: 2.0389, cost time: 0.9494s
+epoch 49, avg. relation triple loss: 2.0087, cost time: 1.1067s
+epoch 50, avg. relation triple loss: 2.0085, cost time: 1.1975s
+epoch 51, avg. relation triple loss: 2.0669, cost time: 1.1423s
+epoch 52, avg. relation triple loss: 2.0523, cost time: 1.0371s
+epoch 53, avg. relation triple loss: 2.0507, cost time: 1.1671s
+epoch 54, avg. relation triple loss: 2.0312, cost time: 1.2598s
+epoch 55, avg. relation triple loss: 2.0108, cost time: 1.0534s
+epoch 56, avg. relation triple loss: 1.9900, cost time: 1.1036s
+epoch 57, avg. relation triple loss: 2.0031, cost time: 0.9939s
+epoch 58, avg. relation triple loss: 2.0216, cost time: 0.9897s
+epoch 59, avg. relation triple loss: 2.0067, cost time: 1.1672s
+epoch 60, avg. relation triple loss: 1.9865, cost time: 1.0621s
+epoch 61, avg. relation triple loss: 2.0575, cost time: 1.0470s
+epoch 62, avg. relation triple loss: 2.0481, cost time: 1.1400s
+epoch 63, avg. relation triple loss: 2.0325, cost time: 1.1722s
+epoch 64, avg. relation triple loss: 1.9997, cost time: 1.0921s
+epoch 65, avg. relation triple loss: 2.0132, cost time: 1.1305s
+epoch 66, avg. relation triple loss: 2.0059, cost time: 1.1878s
+epoch 67, avg. relation triple loss: 1.9868, cost time: 1.0151s
+epoch 68, avg. relation triple loss: 1.9788, cost time: 1.1929s
+epoch 69, avg. relation triple loss: 1.9718, cost time: 1.0464s
+epoch 70, avg. relation triple loss: 1.9681, cost time: 1.1148s
+epoch 71, avg. relation triple loss: 2.0335, cost time: 1.0753s
+epoch 72, avg. relation triple loss: 2.0307, cost time: 1.0067s
+epoch 73, avg. relation triple loss: 2.0253, cost time: 1.1136s
+epoch 74, avg. relation triple loss: 1.9844, cost time: 1.0732s
+epoch 75, avg. relation triple loss: 1.9927, cost time: 1.0371s
+epoch 76, avg. relation triple loss: 1.9974, cost time: 1.0676s
+epoch 77, avg. relation triple loss: 1.9888, cost time: 1.1628s
+epoch 78, avg. relation triple loss: 1.9749, cost time: 1.1119s
+epoch 79, avg. relation triple loss: 1.9597, cost time: 1.0837s
+epoch 80, avg. relation triple loss: 1.9818, cost time: 1.0415s
+epoch 81, avg. relation triple loss: 2.0307, cost time: 1.0783s
+epoch 82, avg. relation triple loss: 1.9968, cost time: 1.0087s
+epoch 83, avg. relation triple loss: 1.9915, cost time: 1.1579s
+epoch 84, avg. relation triple loss: 2.0030, cost time: 1.0109s
+epoch 85, avg. relation triple loss: 1.9928, cost time: 0.9882s
+epoch 86, avg. relation triple loss: 1.9842, cost time: 0.8719s
+epoch 87, avg. relation triple loss: 1.9685, cost time: 1.1377s
+epoch 88, avg. relation triple loss: 1.9700, cost time: 1.0429s
+epoch 89, avg. relation triple loss: 1.9698, cost time: 1.0476s
+epoch 90, avg. relation triple loss: 1.9612, cost time: 1.0309s
+epoch 91, avg. relation triple loss: 2.0036, cost time: 0.9612s
+epoch 92, avg. relation triple loss: 2.0108, cost time: 1.0139s
+epoch 93, avg. relation triple loss: 2.0067, cost time: 1.1108s
+epoch 94, avg. relation triple loss: 1.9944, cost time: 1.0795s
+epoch 95, avg. relation triple loss: 1.9738, cost time: 1.0107s
+epoch 96, avg. relation triple loss: 1.9736, cost time: 1.1230s
+epoch 97, avg. relation triple loss: 1.9719, cost time: 0.8819s
+epoch 98, avg. relation triple loss: 1.9713, cost time: 0.8482s
+epoch 99, avg. relation triple loss: 1.9563, cost time: 0.9025s
+epoch 100, avg. relation triple loss: 1.9639, cost time: 0.9136s
+quick results: hits@[1, 5, 10, 50] = [49.683 59.232 60.864 61.559]%, time = 12.136 s 
+epoch 101, avg. relation triple loss: 2.0114, cost time: 0.8818s
+epoch 102, avg. relation triple loss: 2.0017, cost time: 0.9397s
+epoch 103, avg. relation triple loss: 1.9937, cost time: 0.7844s
+epoch 104, avg. relation triple loss: 1.9898, cost time: 0.8528s
+epoch 105, avg. relation triple loss: 1.9736, cost time: 0.9289s
+epoch 106, avg. relation triple loss: 1.9675, cost time: 0.9315s
+epoch 107, avg. relation triple loss: 1.9726, cost time: 0.9112s
+epoch 108, avg. relation triple loss: 1.9582, cost time: 0.9106s
+epoch 109, avg. relation triple loss: 1.9499, cost time: 0.8459s
+epoch 110, avg. relation triple loss: 1.9630, cost time: 0.9527s
+quick results: hits@[1, 5, 10, 50] = [49.924 59.383 61.015 61.499]%, time = 9.654 s 
+epoch 111, avg. relation triple loss: 2.0074, cost time: 0.9499s
+epoch 112, avg. relation triple loss: 1.9912, cost time: 0.9352s
+epoch 113, avg. relation triple loss: 1.9799, cost time: 0.8577s
+epoch 114, avg. relation triple loss: 1.9850, cost time: 0.8476s
+epoch 115, avg. relation triple loss: 1.9838, cost time: 0.9049s
+epoch 116, avg. relation triple loss: 1.9697, cost time: 0.8728s
+epoch 117, avg. relation triple loss: 1.9671, cost time: 0.7559s
+epoch 118, avg. relation triple loss: 1.9673, cost time: 0.8865s
+epoch 119, avg. relation triple loss: 1.9544, cost time: 0.9068s
+epoch 120, avg. relation triple loss: 1.9541, cost time: 0.8790s
+quick results: hits@[1, 5, 10, 50] = [50.227 59.383 60.925 61.59 ]%, time = 11.070 s 
+epoch 121, avg. relation triple loss: 1.9888, cost time: 0.9864s
+epoch 122, avg. relation triple loss: 1.9840, cost time: 0.9075s
+epoch 123, avg. relation triple loss: 1.9946, cost time: 0.9489s
+epoch 124, avg. relation triple loss: 1.9922, cost time: 0.8911s
+epoch 125, avg. relation triple loss: 1.9707, cost time: 0.9120s
+epoch 126, avg. relation triple loss: 1.9650, cost time: 0.8354s
+epoch 127, avg. relation triple loss: 1.9744, cost time: 0.8308s
+epoch 128, avg. relation triple loss: 1.9740, cost time: 0.9144s
+epoch 129, avg. relation triple loss: 1.9494, cost time: 0.8958s
+epoch 130, avg. relation triple loss: 1.9358, cost time: 0.8528s
+quick results: hits@[1, 5, 10, 50] = [49.864 59.293 60.985 61.499]%, time = 23.214 s 
+epoch 131, avg. relation triple loss: 1.9968, cost time: 1.0385s
+epoch 132, avg. relation triple loss: 1.9904, cost time: 1.0217s
+epoch 133, avg. relation triple loss: 1.9817, cost time: 0.9542s
+epoch 134, avg. relation triple loss: 1.9609, cost time: 0.8453s
+epoch 135, avg. relation triple loss: 1.9702, cost time: 0.9850s
+epoch 136, avg. relation triple loss: 1.9721, cost time: 0.9188s
+epoch 137, avg. relation triple loss: 1.9541, cost time: 0.9036s
+epoch 138, avg. relation triple loss: 1.9430, cost time: 0.8612s
+epoch 139, avg. relation triple loss: 1.9623, cost time: 0.8787s
+epoch 140, avg. relation triple loss: 1.9581, cost time: 0.8679s
+quick results: hits@[1, 5, 10, 50] = [50.076 59.293 60.925 61.469]%, time = 19.124 s 
+epoch 141, avg. relation triple loss: 1.9717, cost time: 0.9289s
+epoch 142, avg. relation triple loss: 1.9613, cost time: 0.8598s
+epoch 143, avg. relation triple loss: 1.9749, cost time: 0.8988s
+epoch 144, avg. relation triple loss: 1.9693, cost time: 0.8271s
+epoch 145, avg. relation triple loss: 1.9488, cost time: 0.9449s
+epoch 146, avg. relation triple loss: 1.9419, cost time: 0.7989s
+epoch 147, avg. relation triple loss: 1.9528, cost time: 0.8772s
+epoch 148, avg. relation triple loss: 1.9463, cost time: 0.9146s
+epoch 149, avg. relation triple loss: 1.9355, cost time: 0.8859s
+epoch 150, avg. relation triple loss: 1.9252, cost time: 0.9008s
+quick results: hits@[1, 5, 10, 50] = [50.136 59.293 60.895 61.499]%, time = 22.208 s 
+epoch 151, avg. relation triple loss: 1.9929, cost time: 0.9428s
+epoch 152, avg. relation triple loss: 1.9911, cost time: 0.9195s
+epoch 153, avg. relation triple loss: 1.9732, cost time: 0.8675s
+epoch 154, avg. relation triple loss: 1.9564, cost time: 0.8559s
+epoch 155, avg. relation triple loss: 1.9689, cost time: 0.8975s
+epoch 156, avg. relation triple loss: 1.9650, cost time: 0.9571s
+epoch 157, avg. relation triple loss: 1.9543, cost time: 0.8700s
+epoch 158, avg. relation triple loss: 1.9357, cost time: 0.9651s
+epoch 159, avg. relation triple loss: 1.9557, cost time: 0.7984s
+epoch 160, avg. relation triple loss: 1.9531, cost time: 0.9434s
+quick results: hits@[1, 5, 10, 50] = [50.348 59.353 60.955 61.439]%, time = 10.703 s 
+epoch 161, avg. relation triple loss: 1.9867, cost time: 0.9022s
+epoch 162, avg. relation triple loss: 1.9687, cost time: 0.8883s
+epoch 163, avg. relation triple loss: 1.9769, cost time: 0.8852s
+epoch 164, avg. relation triple loss: 1.9748, cost time: 0.8809s
+epoch 165, avg. relation triple loss: 1.9635, cost time: 0.8606s
+epoch 166, avg. relation triple loss: 1.9458, cost time: 0.8534s
+epoch 167, avg. relation triple loss: 1.9607, cost time: 0.9175s
+epoch 168, avg. relation triple loss: 1.9572, cost time: 0.9288s
+epoch 169, avg. relation triple loss: 1.9387, cost time: 0.8865s
+epoch 170, avg. relation triple loss: 1.9295, cost time: 0.9625s
+quick results: hits@[1, 5, 10, 50] = [50.196 59.353 60.895 61.439]%, time = 15.748 s 
+epoch 171, avg. relation triple loss: 1.9907, cost time: 0.9508s
+epoch 172, avg. relation triple loss: 1.9875, cost time: 0.8277s
+epoch 173, avg. relation triple loss: 1.9684, cost time: 0.9078s
+epoch 174, avg. relation triple loss: 1.9524, cost time: 0.8058s
+epoch 175, avg. relation triple loss: 1.9721, cost time: 0.7424s
+epoch 176, avg. relation triple loss: 1.9641, cost time: 0.8995s
+epoch 177, avg. relation triple loss: 1.9463, cost time: 0.8462s
+epoch 178, avg. relation triple loss: 1.9444, cost time: 0.8658s
+epoch 179, avg. relation triple loss: 1.9500, cost time: 0.9587s
+epoch 180, avg. relation triple loss: 1.9496, cost time: 0.8535s
+quick results: hits@[1, 5, 10, 50] = [50.015 59.142 60.955 61.469]%, time = 18.922 s 
+
+ == should early stop == 
+
+Training ends. Total time = 337.811 s.
+accurate results: hits@[1, 5, 10, 50] = [51.251 59.918 60.893 61.324]%, mr = 1707.592, mrr = 0.549781, time = 35.244 s 
+accurate results with csls: csls=10, hits@[1, 5, 10, 50] = [51.334 59.903 60.946 61.611]%, mr = 1065.927, mrr = 0.550714, time = 40.765 s 
+Results saved!
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg1_ent_ids saved.
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg2_ent_ids saved.
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg1_rel_ids saved.
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg2_rel_ids saved.
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg1_attr_ids saved.
+../../output/results/Paper/Materials/GCN_Align/Materials-BigBasketProductsGold/721_5fold/1/20231201123934/kg2_attr_ids saved.
+Embeddings saved!
+Total run time = 427.341 s.
