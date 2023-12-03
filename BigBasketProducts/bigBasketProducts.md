@@ -473,8 +473,6 @@
 
 |Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Approach|Split|Aligned Ent|H@1 (%)|H@5 (%)|H@10 (%)|MR|MRR [0,1]|Run time | SalesArticle (#/%) |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |AlignE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AlignE/1/nohup_materials-llm_aligne.txt)|14.10|18.28|18.37|1444|0.16|6060|253 (7.71%)|
 |AliNet|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AliNet/1/error_output_materials-llm_alinet.txt)|E|r|r|o|r|||
 |AttrE|1|[3283](./Experiments/EntityAlignment/Materials-LLM/Output/AttrE/1/nohup_materials-llm_attre.txt)|13.89|18.31|18.86|818|0.16|5578|243 (7.40%)|
