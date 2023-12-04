@@ -286,7 +286,7 @@
 ## Merged methods
 
 |Pair|Approach|Invoice (#/%)|SalesArticle (#/%)|Product (#/%)|Material (#/%)|Indication (#/%)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |BigBasketProductsGold-BigBasketProductsGold|AttrE|4100 (52.40%)|4100 (75.81%)| - | - |
 |BigBasketProductsGold-BigBasketProductsGold|BootEA|3740 (47.80%)|3053 (56.45%)| - | - |
 |BigBasketProductsGold-BigBasketProductsGold|AlignE|3723 (47.58%)|3048 (56.36%)| - | - |
