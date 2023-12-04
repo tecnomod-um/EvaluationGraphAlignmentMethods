@@ -6,7 +6,7 @@
 
 ## Pipeline OpenEA
 
-![Entity Alignment OpenEA Pipeline](./FiguresAndTables/pipelineAlignmentOpenEA.png.png "Entity Alignment OpenEA Pipeline")
+![Entity Alignment OpenEA Pipeline](./FiguresAndTables/pipelineAlignmentOpenEA.png "Entity Alignment OpenEA Pipeline")
 
 
 ## Tables
