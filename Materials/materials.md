@@ -283,6 +283,46 @@
 
 ![BarChart Comparisons Modules E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Modules E-Commerce Data")
 
+## Merged methods
+
+|Pair|Approach|Invoice (#/%)|SalesArticle (#/%)|Product (#/%)|Material (#/%)|Indication (#/%)|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|BigBasketProductsGold-BigBasketProductsGold|AttrE|4100 (52.40%)|4100 (75.81%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|BootEA|3740 (47.80%)|3053 (56.45%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|AlignE|3723 (47.58%)|3048 (56.36%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|SEA|3733 (47.71%)|3048 (56.36%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|AttrE-BootEA|4491 (57.39%)|4103 (75.87%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|AttrE-AlignE|4479 (57.24%)|4101 (75.83%)| - | - |
+|BigBasketProductsGold-BigBasketProductsGold|AttrE-SEA|4465 (57.06%)|4101 (75.83%)| - | - |
+|EcommerceGold-EcommerceGold|AttrE|3984 (50.71%)|3921 (72.92%)| - | - |
+|EcommerceGold-EcommerceGold|BootEA|3733 (47.52%)|3044 (56.61%)| - | - |
+|EcommerceGold-EcommerceGold|AlignE|3737 (47.57%)|3045 (56.63%)| - | - |
+|EcommerceGold-EcommerceGold|SEA|3752 (47.76%)|3045 (56.63%)| - | - |
+|EcommerceGold-EcommerceGold|AttrE-BootEA|4353 (55.41%)|3923 (72.96%)| - | - |
+|EcommerceGold-EcommerceGold|AttrE-AlignE|4370 (55.63%)|3923 (72.96%)| - | - |
+|EcommerceGold-EcommerceGold|AttrE-SEA|4353 (55.41%)|3923 (72.96%)| - | - |
+|Materials-BigBasketsProductsGold|AttrE|3482 (44.61%)|3258 (60.03%)| - | - |
+|Materials-BigBasketsProductsGold|BootEA|3666 (46.96%)|3093 (56.99%)| - | - |
+|Materials-BigBasketsProductsGold|AlignE|3714 (47.58%)|3094 (57.01%)| - | - |
+|Materials-BigBasketsProductsGold|SEA|3677 (47.10%)|3093 (56.99%)| - | - |
+|Materials-BigBasketsProductsGold|AttrE-BootEA|4024 (51.55%)|3260 (60.07%)| - | - |
+|Materials-BigBasketsProductsGold|AttrE-AlignE|4042 (51.78%)|3261 (60.09%)| - | - |
+|Materials-BigBasketsProductsGold|AttrE-SEA|4026 (51.58%)|3259 (60.05%)| - | - |
+|Materials-EcommerceGold|AttrE|3277 (41.57%)|3162 (59.11%)| - | - |
+|Materials-EcommerceGold|BootEA|3725 (47.25%)|2956 (55.26%)| - | - |
+|Materials-EcommerceGold|AlignE|3719 (47.17%)|2956 (55.26%)| - | - |
+|Materials-EcommerceGold|SEA|3736 (47.39%)|2955 (55.24%)| - | - |
+|Materials-EcommerceGold|AttrE-BootEA|4059 (51.48%)|3164 (59.15%)| - | - |
+|Materials-EcommerceGold|AttrE-AlignE|4048 (51.34%)|3165 (59.17%)| - | - |
+|Materials-EcommerceGold|AttrE-SEA|4048 (51.34%)|3162 (59.11%)| - | - |
+|Materials-Materials|AttrE|7954 (99.67%)|5292 (99.70%)|1887 (99.95%)|5 (100%)|
+|Materials-Materials|BootEA|4678 (58.62%)|3941 (74.25%)|1585 (83.95%)|5 (100%)|
+|Materials-Materials|AlignE|4305 (53.95%)|3724 (70.16%)|1565 (82.89%)|5 (100%)|
+|Materials-Materials|SEA|4406 (55.21%)|3645 (68.67%)|1583 (83.85%)|5 (100%)|
+|Materials-Materials|AttrE-BootEA|7955 (99.69%)|5294 (99.74%)|1887 (99.95%)|5 (100%)|
+|Materials-Materials|AttrE-AlignE|7955 (99.69%)|5293 (99.72%)|1887 (99.95%)|5 (100%)|
+|Materials-Materials|AttrE-SEA|7955 (99.69%)|5292 (99.70%)|1887 (99.95%)|5 (100%)|
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
