@@ -283,6 +283,8 @@
 
 ![BarChart Methods-Experiments Materials](./Figures/barchartMethodsMaterials.png "BarChart Methods-Experiments Materials")
 
+![BarChart Merged Methods Materials](./Figures/barchartMethodsAccumulated.png "BarChart Merged Methods Materials")
+
 ## Merged methods
 
 |Pair|Approach|SalesArticle (#/%)|Product (#/%)|Material (#/%)|Indication (#/%)|
