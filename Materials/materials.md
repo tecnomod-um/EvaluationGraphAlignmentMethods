@@ -279,9 +279,9 @@
 
 ![Datasets Clusters E-Commerce Data](./Figures/clusterDataset.png "Datasets Clusters E-Commerce Data")
 
-![Datasets Cluster AttrE-BootEA E-Commerce Data](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA E-Commerce Data")
+![Plot Modules Means H@1, Runtime, Error Rate](./Figures/plotMeansModules.png "Plot Modules Means H@1, Runtime, Error Rate")
 
-![BarChart Comparisons Modules E-Commerce Data](./Figures/barComparison.png "BarChart Comparisons Modules E-Commerce Data")
+![BarChart Methods-Experiments Materials](./Figures/barchartMethodsMaterials.png "BarChart Methods-Experiments Materials")
 
 ## Merged methods
 
