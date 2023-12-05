@@ -325,6 +325,114 @@
 |Materials-Materials|AttrE-AlignE|7955 (99.69%)|5293 (99.72%)|1887 (99.95%)|5 (100%)|
 |Materials-Materials|AttrE-SEA|7955 (99.69%)|5292 (99.70%)|1887 (99.95%)|5 (100%)|
 
+## Tables
+
+### Table of alignments
+
+A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align.
+
+| Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
+|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
+| Basic-Basic | X | X | X | X | X | X |
+| Basic-Gold | X | X | X | X | X | X |
+| Basic-LLM | X | X | X | X | X | X |
+| Basic-AP |  | X | X |  |  |  |
+| Gold-Gold | X | X | X | X | X | X |
+| Gold-LLM | X | X | X | X | X | X |
+| Gold-AP |  | X | X | X | X |  |
+| LLM-LLM | X | X | X | X | X | X |
+| LLM-AP |  | X | X | X | X |  |
+| AP-AP |  | X | X | X | X |  |
+
+
+
+### Table mean Hits@1 ([0,100]) for each module
+|    | Approach       |   Materials |   meanH@1 |
+|---:|:---------------|------------:|----------:|
+|  0 | AlignE(0.0)    |     53.508  |   53.508  |
+|  1 | AliNet(0.0)    |     53.804  |   53.804  |
+|  2 | AttrE(0.0)     |     64.204  |   64.204  |
+|  3 | BootEA(0.0)    |     54.272  |   54.272  |
+|  4 | BootEA-R(0.0)  |     54.056  |   54.056  |
+|  5 | BootEA-T(1.0)  |    nan      |  nan      |
+|  6 | Conve(1.0)     |    nan      |  nan      |
+|  7 | GCN_Align(0.0) |     53.924  |   53.924  |
+|  8 | GMNN(0.2)      |     97.25   |   97.25   |
+|  9 | HolE(0.2)      |     40.7325 |   40.7325 |
+| 10 | IMUSE(0.2)     |     64.0725 |   64.0725 |
+| 11 | IPTransE(1.0)  |    nan      |  nan      |
+| 12 | JAPE(0.4)      |     49.7067 |   49.7067 |
+| 13 | KDCoE(1.0)     |    nan      |  nan      |
+| 14 | MTransE(0.0)   |     46.208  |   46.208  |
+| 15 | MultiKE(1.0)   |    nan      |  nan      |
+| 16 | ProjE(0.0)     |     30.28   |   30.28   |
+| 17 | RDGCN(0.2)     |     26.1375 |   26.1375 |
+| 18 | RotatE(0.0)    |     52.512  |   52.512  |
+| 19 | RSN4EA(0.0)    |     52.97   |   52.97   |
+| 20 | SEA(0.0)       |     53.562  |   53.562  |
+| 21 | SimplE(0.0)    |     47.54   |   47.54   |
+| 22 | TransD(0.0)    |     47.172  |   47.172  |
+| 23 | TransH(0.0)    |     50.988  |   50.988  |
+| 24 | TransR(0.0)    |      0.036  |    0.036  |
+
+### Table mean Runtime ([0,1]) for each module
+|    | Approach   |   Materials |    meanTime |
+|---:|:-----------|------------:|------------:|
+|  0 | AlignE     |   0.145153  |   0.145153  |
+|  1 | AliNet     |   0.16103   |   0.16103   |
+|  2 | AttrE      |   0.124801  |   0.124801  |
+|  3 | BootEA     |   0.143154  |   0.143154  |
+|  4 | BootEA-R   |   0.349665  |   0.349665  |
+|  5 | BootEA-T   | nan         | nan         |
+|  6 | Conve      | nan         | nan         |
+|  7 | GCN_Align  |   0.0019581 |   0.0019581 |
+|  8 | GMNN       |   0.37413   |   0.37413   |
+|  9 | HolE       |   0.236115  |   0.236115  |
+| 10 | IMUSE      |   0.0177119 |   0.0177119 |
+| 11 | IPTransE   | nan         | nan         |
+| 12 | JAPE       |   0.0371297 |   0.0371297 |
+| 13 | KDCoE      | nan         | nan         |
+| 14 | MTransE    |   0.0159933 |   0.0159933 |
+| 15 | MultiKE    | nan         | nan         |
+| 16 | ProjE      |   0.121973  |   0.121973  |
+| 17 | RDGCN      |   1         |   1         |
+| 18 | RotatE     |   0.121923  |   0.121923  |
+| 19 | RSN4EA     |   0.321735  |   0.321735  |
+| 20 | SEA        |   0.020878  |   0.020878  |
+| 21 | SimplE     |   0.0175208 |   0.0175208 |
+| 22 | TransD     |   0.0429551 |   0.0429551 |
+| 23 | TransH     |   0.0796866 |   0.0796866 |
+| 24 | TransR     |   0.0471544 |   0.0471544 |
+
+### Table mean Error ([0,1]) for each module
+|    | Approach   |   Materials |   meanError |
+|---:|:-----------|------------:|------------:|
+|  0 | AlignE     |         0   |         0   |
+|  1 | AliNet     |         0   |         0   |
+|  2 | AttrE      |         0   |         0   |
+|  3 | BootEA     |         0   |         0   |
+|  4 | BootEA-R   |         0   |         0   |
+|  5 | BootEA-T   |         1   |         1   |
+|  6 | Conve      |         1   |         1   |
+|  7 | GCN_Align  |         0   |         0   |
+|  8 | GMNN       |         0.2 |         0.2 |
+|  9 | HolE       |         0.2 |         0.2 |
+| 10 | IMUSE      |         0.2 |         0.2 |
+| 11 | IPTransE   |         1   |         1   |
+| 12 | JAPE       |         0.4 |         0.4 |
+| 13 | KDCoE      |         1   |         1   |
+| 14 | MTransE    |         0   |         0   |
+| 15 | MultiKE    |         1   |         1   |
+| 16 | ProjE      |         0   |         0   |
+| 17 | RDGCN      |         0.2 |         0.2 |
+| 18 | RotatE     |         0   |         0   |
+| 19 | RSN4EA     |         0   |         0   |
+| 20 | SEA        |         0   |         0   |
+| 21 | SimplE     |         0   |         0   |
+| 22 | TransD     |         0   |         0   |
+| 23 | TransH     |         0   |         0   |
+| 24 | TransR     |         0   |         0   |
+
 ## Metrics
 
 |Alignment|Approach|Split|h@1 (%)|h@5 (%)|h@10 (%)|MR|MRR [0,1]|Run Time (s)|
