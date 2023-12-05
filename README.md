@@ -130,6 +130,10 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 
 ## [BigBasketProducts](./BigBasketProducts/)
 
+## [BrazilianE-commerce](./BrazilianE-Commerce/)
+
 ## [CustomerComplaintDatabase](./CustomerComplaintDatabase/)
 
 ## [E-Commerce Data](./E-CommerceData/)
+
+## [Materials](./Materials/)
