@@ -320,7 +320,7 @@
 
 ![Boxplot Datasets CustomerComplaint Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets CustomerComplaint Data")
 
-![Heatmap CustomerComplaint Data](./Figures/heatmapApproaches.png "Heatmap CustomerComplaint Data")
+![Heatmap CustomerComplaint Data](./Figures/clusterApproaches.png "Heatmap CustomerComplaint Data")
 
 ![Boxplot Approaches CustomerComplaint Data](./Figures/boxplotApproaches.png "Boxplot Approaches CustomerComplaint Data")
 
