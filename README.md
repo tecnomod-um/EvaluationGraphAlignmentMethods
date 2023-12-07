@@ -2,18 +2,35 @@
 
 ## Overview
 
+
 ![Overview Figure](./FiguresAndTables/graphicalAbstract.png "Overview Figure")
 
+This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. The previous figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
+
+The datasets were represented in RDF using different ontologies, which have the following origin:
+
+* Basic ontology (B). Dataset-dependent ontology, created by a member of our team, which implements a canonical representation of the CSV file, in which the ontology has one class, and the columns are represented as datatype properties of the class, because they are strings, dates and numeric data.
+
+* Gold ontology (G). Dataset-dependent ontology, created by a member of our team. The gold ontology includes the definition of different classes that are related to each other through object properties, as well as attributes included as datatype properties.
+
+* LLM ontology (L). Dataset-dependent ontology. This ontology corresponds to the schema returned by OntoGenix \cite{ontogenix}, an LLM algorithm based on ChatGPT4.0 which has been given guidelines to generate an ontology from a CSV dataset.
+
+* Materials (M) and Transactions (T), dataset-independent ontologies. These ontologies, which are called BASF ontologies or application ontologies (AP), was previously developed by BASF SE domain experts for the modeling of business entities related to commercial activity.
+
 ## Pipeline OpenEA
+
+We have designed a pipeline for standardizing our process for obtaining the alignments between pairs of knowledge graphs, which is described in the next figure. 
+
+Each experiment consists of finding the alignment between two KGs generated from the information stored in the same CSV file (dataset) but structured with two different ontologies. 
+
+See the [instructions](./Scripts/README.md) for reproducing the experiments.
 
 ![Entity Alignment OpenEA Pipeline](./FiguresAndTables/pipelineAlignmentOpenEA.png "Entity Alignment OpenEA Pipeline")
 
 
-## Tables
+## Experiments performed
 
-### Table of alignments
-
-A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align.
+A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align. 
 
 | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
 |:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
@@ -30,7 +47,26 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 
 
 
-### Table mean Hits@1 ([0,100]) for each module
+## Results
+
+The detailed results by dataset can be accessed by clicking on the name of the dataset. 
+
+* [AirlinesCustomerSatisfaction](./AirlinesCustomerSatisfaction/)
+
+* [AmazonRatings](./AmazonRatings/)
+
+* [BigBasketProducts](./BigBasketProducts/)
+
+* [BrazilianE-commerce](./BrazilianE-Commerce/)
+
+* [CustomerComplaintDatabase](./CustomerComplaintDatabase/)
+
+* [E-Commerce Data](./E-CommerceData/)
+
+*  [Materials](./Materials/)
+
+Next, as a summary of the results, we present a table with the mean of the scores for the Hits@1 metric ([0,100]) obtained by each method
+
 |    | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   CustomerComplaintDatabase |    meanH@1 |
 |---:|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------------:|-----------:|
 |  0 | AlignE(0.0)    |                     15.1167    |         35.397  |             29.568  |              24.1625  |          31.8589 |                  22.8033    |  26.4844   |
@@ -124,16 +160,3 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 
 [Scripts](./Scripts)
 
-## [AirlinesCustomerSatisfaction](./AirlinesCustomerSatisfaction/)
-
-## [AmazonRatings](./AmazonRatings/)
-
-## [BigBasketProducts](./BigBasketProducts/)
-
-## [BrazilianE-commerce](./BrazilianE-Commerce/)
-
-## [CustomerComplaintDatabase](./CustomerComplaintDatabase/)
-
-## [E-Commerce Data](./E-CommerceData/)
-
-## [Materials](./Materials/)
