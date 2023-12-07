@@ -18,7 +18,7 @@ All the scripts needed are available in the [scripts](./) folder. Next, we expla
 
 Hay que añadir el nombre de los ficheros
 
-* RDF data generation ([csv2rdf-morph-kgc-rdflib.py](./csv2rdf-morph-kgc-rdflib.py): Generation of the RDF data using Morph-KGC with the previously defined mapping rules.
+* RDF data generation ([csv2rdf-morph-kgc-rdflib.py](./csv2rdf-morph-kgc-rdflib.py)): Generation of the RDF data using Morph-KGC with the previously defined mapping rules.
 
 * Data preparation: Splitting the RDF files required by OpenEA for the alignments, that is, files with triples representing the attributes (attr), the relations (rel) and the aligned entities (ent).
 
