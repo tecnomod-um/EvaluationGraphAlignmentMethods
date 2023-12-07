@@ -21,12 +21,12 @@ main_path_results = "$PATH"
 path_save = "../E-CommerceData/Experiments/EntityAlignment/merged_methods/AttrE-BootEA"
 methods = c("AttrE", "BootEA") 
 pairs = c("LLM-LLM")
-merge_entity_align(main_path_results, methods, pairs)
+merge_entity_align(main_path_results, methods, pairs, path_save)
 
 path_save = "../E-CommerceData/Experiments/EntityAlignment/merged_methods/AttrE-AlignE"
 methods = c("AttrE", "AlignE") 
-merge_entity_align(main_path_results, methods, pairs)
+merge_entity_align(main_path_results, methods, pairs, path_save)
 
 path_save = "../E-CommerceData/Experiments/EntityAlignment/merged_methods/AttrE-SEA"
 methods = c("AttrE", "SEA") 
-merge_entity_align(main_path_results, methods, pairs)
+merge_entity_align(main_path_results, methods, pairs, path_save)
