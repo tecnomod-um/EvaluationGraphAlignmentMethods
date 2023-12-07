@@ -31,5 +31,58 @@ Hay que añadir el nombre de los ficheros
 
 ### The commands
 
+* RDF data generation:
+  1. Indicate the YML file ([config.ini](./config.ini))
+  2. Indicate the output RDF nt file ([csv2rdf-morph-kgc-rdflib.py](./csv2rdf-morph-kgc-rdflib.py))
+	3. Generates the RDF nt file for each ontology-csv:
+  ```
+  nohup python3 csv2rdf-morph-kgc-rdflib.py &
+  ```
 
+* Data preparation ([processingRDF.py](processingRDF.py)):
+  1. Indicate the two RDF nt files and the CSV file
+	2. Indicate the Entities to be aligned
+	3. Indicate the Object properties for each knowledge graph
+	4. Indicate the output directory and files
+  ```
+  nohup python3 processingRDF.py &
+  ```
 
+* Training sets ([randomPairs.py](randomPairs.py)):
+  1. Indicate the input directory and "ent_links" file
+	2. Indicate the output directories
+	3. Indicate the ratios of training, testing and validations
+  ```
+  nohup python3 randomPairs.py &
+  ```
+
+* Entity alignment:
+  1. Edit arg file: "training_data", "output", "dataset_division"
+  ```
+  nohup python main_from_args.py ./args/<attre_args_15K.json> <training_data>/<LLM-LLM> 451_1fold/<1>/ &
+  ```
+  2. nohup.out indicates the statistics
+ 
+* Evaluation
+  1. ([countingAlignment.py](countingAlignment.py))	
+		1. Indicate the inputs: dataset, approach, test_links result, alignment_results_12 result, rel_triples1 result, kg1_ent_ids result and kg2_ent_ids result
+		2. Indicate the outputs: count_aligned_ent file and ent_match file
+	2. Generates the count file by class and the entity matching
+    ```
+    nohup python3 countingAlignment.py &
+		```
+  3. Merge results to combine ([merge_entity_alignments](./merge_entity_alignments.R))
+    1. Indicate the inputs: the path of results for each method (main_path_results), methods and pairwise alignments to combine (methods and pairs)
+    2. Indicate the outputs: the path to save the results (path_save)
+    2. Generate the merger:
+    ```
+    Rscript merge_entity_alignments.R
+    ```
+  4. Count of merged entities by class ([merge_entity_alignments](./merge_entity_alignments.R))
+    1. Indicate the inputs: the previously merged file (input_file), and the original file with relations(rel_triples1) and test file (test_links)
+    2. Indicate the output (file with count): output_path
+    3. Generate the count:
+    ```
+    Rscript count_merge_entity_alignments.R
+    ```
+    
