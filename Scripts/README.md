@@ -52,7 +52,7 @@ Hay que añadir el nombre de los ficheros
   1. Indicate the input directory and "ent_links" file
   2. Indicate the output directories
   3. Indicate the ratios of training, testing and validation
-  4. Create the corresponding split folders:
+  4. Create the corresponding split folders and and code execution:
   ```
   nohup python3 randomPairs.py &
   ```
