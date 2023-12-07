@@ -70,7 +70,7 @@ Hay que añadir el nombre de los ficheros
 	2. Generates the count file by class and the entity matching
     ```
     nohup python3 countingAlignment.py &
-		```
+    ```
   3. Merge results to combine ([merge_entity_alignments](./merge_entity_alignments.R))
     1. Indicate the inputs: the path of results for each method (main_path_results), methods and pairwise alignments to combine (methods and pairs)
     2. Indicate the outputs: the path to save the results (path_save)
