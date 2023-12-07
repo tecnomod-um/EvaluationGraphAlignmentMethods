@@ -64,10 +64,10 @@ Hay que añadir el nombre de los ficheros
   2. nohup.out indicates the statistics
  
 * Evaluation
-  1. ([countingAlignment.py](countingAlignment.py))	
-		1. Indicate the inputs: dataset, approach, test_links result, alignment_results_12 result, rel_triples1 result, kg1_ent_ids result and kg2_ent_ids result
-		2. Indicate the outputs: count_aligned_ent file and ent_match file
-	2. Generates the count file by class and the entity matching
+  1. Entity count per class([countingAlignment.py](countingAlignment.py))	
+	1. Indicate the inputs: dataset, approach, test_links result, alignment_results_12 result, rel_triples1 result, kg1_ent_ids result and kg2_ent_ids result
+	2. Indicate the outputs: count_aligned_ent file and ent_match file
+	3. Generates the count file by class and the entity matching
     ```
     nohup python3 countingAlignment.py &
     ```
@@ -78,7 +78,7 @@ Hay que añadir el nombre de los ficheros
     ```
     Rscript merge_entity_alignments.R
     ```
-  4. Count of merged entities by class ([merge_entity_alignments](./merge_entity_alignments.R))
+  4. Merged entity count per class ([merge_entity_alignments](./merge_entity_alignments.R))
     1. Indicate the inputs: the previously merged file (input_file), and the original file with relations(rel_triples1) and test file (test_links)
     2. Indicate the output (file with count): output_path
     3. Generate the count:
