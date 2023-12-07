@@ -72,7 +72,9 @@ The detailed results by dataset can be accessed by clicking on the name of the d
 
 *  [Materials](./Materials/materials.md)
 
-Next, as a summary of the results, we present a table with the mean of the scores for the Hits@1 metric ([0,100]) obtained by each method
+Next, we present some tables that summarize the results obtained in terms of Hits@1, runtime and errors 
+
+### Table mean Hits@1 metric ([0,100]) obtained by each method
 
 |    | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   CustomerComplaintDatabase |    meanH@1 |
 |---:|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------------:|-----------:|
