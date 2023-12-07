@@ -50,8 +50,9 @@ Hay que añadir el nombre de los ficheros
 
 * Training sets ([randomPairs.py](randomPairs.py)):
   1. Indicate the input directory and "ent_links" file
-	2. Indicate the output directories
-	3. Indicate the ratios of training, testing and validations
+  2. Indicate the output directories
+  3. Indicate the ratios of training, testing and validation
+  4. Create the corresponding split folders.
   ```
   nohup python3 randomPairs.py &
   ```
@@ -59,6 +60,7 @@ Hay que añadir el nombre de los ficheros
 * Entity alignment:
   1. Edit arg file: "training_data", "output", "dataset_division"
   ```
+  cd ~/OpenEA/run
   nohup python main_from_args.py ./args/<attre_args_15K.json> <training_data>/<LLM-LLM> 451_1fold/<1>/ &
   ```
   2. nohup.out indicates the statistics
