@@ -58,10 +58,14 @@ Hay que añadir el nombre de los ficheros
   ```
 
 * Entity alignment:
-  1. Edit arg file: "training_data", "output", "dataset_division"
+  1. Edit arg file: "training_data", "output", "dataset_division". [Example](./attre_args_15K.json)
   ```
   cd ~/OpenEA/run
-  nohup python main_from_args.py ./args/<attre_args_15K.json> <training_data>/<LLM-LLM> 451_1fold/<1>/ &
+  nohup python main_from_args.py <arg.json> <training_data> <dataset_division> &
+  ```
+  Example:
+  ```
+  nohup python main_from_args.py ./args/attre_args_15K.json LLM-LLM/Input 451_1fold/1/ &
   ```
   2. nohup.out indicates the statistics
  
