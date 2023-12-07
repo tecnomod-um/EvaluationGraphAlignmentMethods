@@ -1,11 +1,9 @@
-# OntologyTesting
+## Evaluation of 25 OpenEA knowledge graph alignment methods
 
 ## Overview
 
 
-![Overview Figure](./FiguresAndTables/graphicalAbstract.png "Overview Figure")
-
-This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. The previous figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
+This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. The next figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
 
 The datasets were represented in RDF using different ontologies, which have the following origin:
 
@@ -16,6 +14,8 @@ The datasets were represented in RDF using different ontologies, which have the 
 * LLM ontology (L). Dataset-dependent ontology. This ontology corresponds to the schema returned by OntoGenix \cite{ontogenix}, an LLM algorithm based on ChatGPT4.0 which has been given guidelines to generate an ontology from a CSV dataset.
 
 * Materials (M) and Transactions (T), dataset-independent ontologies. These ontologies, which are called BASF ontologies or application ontologies (AP), was previously developed by BASF SE domain experts for the modeling of business entities related to commercial activity.
+
+![Overview Figure](./FiguresAndTables/graphicalAbstract.png "Overview Figure")
 
 ## Pipeline OpenEA
 
@@ -152,11 +152,4 @@ Next, as a summary of the results, we present a table with the mean of the score
 | 22 | TransD     |                       0        |             0   |                 0   |                 0     |         0.111111 |                    0        |        0.02 |
 | 23 | TransH     |                       0        |             0   |                 0   |                 0     |         0        |                    0        |        0    |
 | 24 | TransR     |                       0        |             0   |                 0   |                 0     |         0        |                    0        |        0    |
-
-
-
-
-## Scripts
-
-[Scripts](./Scripts)
 
