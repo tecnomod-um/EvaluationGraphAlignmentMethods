@@ -78,7 +78,7 @@ Hay que añadir el nombre de los ficheros
     ```
     Rscript merge_entity_alignments.R
     ```
-  3. Merged entity count per class ([merge_entity_alignments](./merge_entity_alignments.R))
+  3. Merged entity count per class ([count_merge_entity_alignments](./count_merge_entity_alignments.R))
      1. Indicate the inputs: the previously merged file (input_file), and the original file with relations(rel_triples1) and test file (test_links)
      2. Indicate the output (file with count): output_path
      3. Generate the count:
