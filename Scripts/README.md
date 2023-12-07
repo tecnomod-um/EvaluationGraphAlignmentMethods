@@ -52,7 +52,7 @@ Hay que añadir el nombre de los ficheros
   1. Indicate the input directory and "ent_links" file
   2. Indicate the output directories
   3. Indicate the ratios of training, testing and validation
-  4. Create the corresponding split folders.
+  4. Create the corresponding split folders:
   ```
   nohup python3 randomPairs.py &
   ```
@@ -73,7 +73,7 @@ Hay que añadir el nombre de los ficheros
   1. Entity count per class([countingAlignment.py](countingAlignment.py))
      1. Indicate the inputs: dataset, approach, test_links result, alignment_results_12 result, rel_triples1 result, kg1_ent_ids result and kg2_ent_ids result
      2. Indicate the outputs: count_aligned_ent file and ent_match file
-     3. Generates the count file by class and the entity matching
+     3. Generates the count file by class and the entity matching:
     ```
     nohup python3 countingAlignment.py &
     ```
