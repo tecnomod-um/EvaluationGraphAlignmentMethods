@@ -3,7 +3,14 @@
 ## Overview
 
 
-This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. The next figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
+This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. Through this study we aim to identify:
+
+* Which methods give the best performance in our domain of interest?
+* Which is the impact of the structure of the ontologies in the results?
+* Which is the impact of combining the best performing methods in the results?
+
+
+ The next figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
 
 The datasets were represented in RDF using different ontologies, which have the following origin:
 
