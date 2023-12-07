@@ -3,6 +3,6 @@ import rdflib
 
 graph = morph_kgc.materialize('config.ini')
 
-graph.serialize(destination='eCommerce_1982.nt', format='ntriples', encoding="utf-8")
+graph.serialize(destination='../E-CommerceData/Mappings/ecommercedataLLM.nt', format='ntriples', encoding="utf-8")
 
 
