@@ -58,19 +58,19 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 
 The detailed results by dataset can be accessed by clicking on the name of the dataset. 
 
-* [AirlinesCustomerSatisfaction](./AirlinesCustomerSatisfaction/)
+* [AirlinesCustomerSatisfaction](./AirlinesCustomerSatisfaction/AirlinesCustomerSatisfaction.md)
 
-* [AmazonRatings](./AmazonRatings/)
+* [AmazonRatings](./AmazonRatings/AmazonRatings.md)
 
-* [BigBasketProducts](./BigBasketProducts/)
+* [BigBasketProducts](./BigBasketProducts/bigBasketProducts.md)
 
-* [BrazilianE-commerce](./BrazilianE-Commerce/)
+* [BrazilianE-commerce](./BrazilianE-Commerce/brazilianEcommerce.md)
 
-* [CustomerComplaintDatabase](./CustomerComplaintDatabase/)
+* [CustomerComplaintDatabase](./CustomerComplaintDatabase/CustomerComplaintDatabase.md)
 
-* [E-Commerce Data](./E-CommerceData/)
+* [E-Commerce Data](./E-CommerceData/eCommerceData.md)
 
-*  [Materials](./Materials/)
+*  [Materials](./Materials/materials.md)
 
 Next, as a summary of the results, we present a table with the mean of the scores for the Hits@1 metric ([0,100]) obtained by each method
 
