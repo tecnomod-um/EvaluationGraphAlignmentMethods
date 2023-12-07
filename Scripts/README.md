@@ -1,6 +1,6 @@
 # Instructions for reproducing the experiments
 
-The scripts for the execution of the experiments have been implemented in Python. You will require to have [OpenEA](https://github.com/nju-websoft/OpenEA) installed.
+The scripts for the execution of the experiments have been implemented in Python. You will require to have [Morph-KGC](https://github.com/morph-kgc/morph-kgc) and [OpenEA](https://github.com/nju-websoft/OpenEA) installed.
 
 ## Python packages required
 The file [requirements.txt](./requirements.txt) include the Python packages needed for executing the experiments.
