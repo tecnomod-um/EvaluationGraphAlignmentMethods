@@ -32,7 +32,7 @@ Each experiment consists of finding the alignment between two KGs generated from
 
 See the [instructions](./Scripts/README.md) for reproducing the experiments.
 
-![Entity Alignment OpenEA Pipeline](./FiguresAndTables/pipelineAlignmentOpenEA.png "Entity Alignment OpenEA Pipeline")
+![Entity Alignment OpenEA Pipeline](./FiguresAndTables/graphicalAlignment-pipeline.png "Entity Alignment OpenEA Pipeline")
 
 
 ## Experiments performed
