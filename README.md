@@ -22,7 +22,7 @@ The datasets were represented in RDF using different ontologies, which have the 
 
 * Materials (M) and Transactions (T), dataset-independent ontologies. These ontologies, which are called BASF ontologies or application ontologies (AP), was previously developed by BASF SE domain experts for the modeling of business entities related to commercial activity.
 
-<figcaption><strong>Figura 1.</strong> Method Overview.</figcaption>
+<figcaption><strong>Figure 1.</strong> Method Overview.</figcaption>
 
 ![Overview Figure](./FiguresAndTables/graphicalAbstract.png "Overview Figure")
 
@@ -34,7 +34,7 @@ Each experiment consists of finding the alignment between two KGs generated from
 
 See the [instructions](./Scripts/README.md) for reproducing the experiments.
 
-<figcaption><strong>Figura 2.</strong> Entity Alignment OpenEA Pipeline .</figcaption>
+<figcaption><strong>Figure 2.</strong> Entity Alignment OpenEA Pipeline .</figcaption>
 
 ![Entity Alignment OpenEA Pipeline](./FiguresAndTables/graphicalAlignment-pipeline.png "Entity Alignment OpenEA Pipeline")
 
@@ -80,7 +80,7 @@ The detailed results by dataset can be accessed by clicking on the name of the d
 
 Next, we present some tables and figures that summarize the results obtained in terms of Hits@1, runtime and errors 
 
-<figcaption><strong>Figura 3.</strong> Distribution of OpenEA methods according to the average Hits@1 score obtained between datasets and the average execution time obtained between datasets, scaled between 0 and 1 for each experiment. The average percentage of failed experiments between datasets is included in the label. Modules with an error rate of 1 are not shown.</figcaption>
+<figcaption><strong>Figure 3.</strong> Distribution of OpenEA methods according to the average Hits@1 score obtained between datasets and the average execution time obtained between datasets, scaled between 0 and 1 for each experiment. The average percentage of failed experiments between datasets is included in the label. Modules with an error rate of 1 are not shown.</figcaption>
 
 ![Modules distribution by averages](./FiguresAndTables/plotMeansModules.png "Modules distribution by averages")
 
