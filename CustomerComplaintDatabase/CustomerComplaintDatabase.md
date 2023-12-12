@@ -318,17 +318,21 @@
 
 ## Results
 
-![Boxplot Datasets CustomerComplaint Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets CustomerComplaint Data")
-
-![Heatmap CustomerComplaint Data](./Figures/clusterApproaches.png "Heatmap CustomerComplaint Data")
+<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 6 pairwise comparisons of the KGs generated from the Customer Complaint Database dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
 
 ![Boxplot Approaches CustomerComplaint Data](./Figures/boxplotApproaches.png "Boxplot Approaches CustomerComplaint Data")
 
-![BarChart Comparisons Approaches CustomerComplaint Data](./Figures/barComparison.png "BarChart Comparisons Approaches CustomerComplaint Data")
+<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 6 pairwise comparisons of the KGs generated from the Customer Complaint Database dataset.</figcaption>
 
-![Heatmap Datasets CustomerComplaint Data](./Figures/heatmapDataset.png "Heatmap Datasets CustomerComplaint Data")
+![Heatmap CustomerComplaint Data](./Figures/clusterApproaches.png "Heatmap CustomerComplaint Data")
 
-![Heatmap Datasets AttrE-BootEA CustomerComplaint Data](./Figures/heatmapDatasetAttBoot.png "Heatmap Datasets AttrE-BootEA CustomerComplaint Data")
+<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 6 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the 25 methods carried out in the Customer Complaint Database dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
+
+![Boxplot Datasets CustomerComplaint Data](./Figures/boxplotDatasetsPairs.png "Boxplot Datasets CustomerComplaint Data")
+
+<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 6 types of pairwise comparison experiments of KG, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Customer Complaint Database dataset.</figcaption>
+
+![Clustering Datasets CustomerComplaint Data](./Figures/clusterDataset.png "Clustering Datasets CustomerComplaint Data")
 
 ## Merged methods
 
