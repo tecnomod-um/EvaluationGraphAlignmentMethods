@@ -271,17 +271,31 @@
 
 ## Results
 
+<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 5 pairwise comparisons of the KGs generated from the Materials dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
+
 ![Modules Boxplot E-Commerce Data](./Figures/boxplotApproaches.png "Modules Boxplot E-Commerce Data")
+
+<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 5 pairwise comparisons of the KGs generated from the Materials dataset.</figcaption>
 
 ![Modules Clusters E-Commerce Data](./Figures/clusterApproaches.png "Modules Clusters Brazilian E-Commerce Data")
 
+<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 5 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the 25 methods carried out in the Materials dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
+
 ![Datasets Boxplot E-Commerce Data](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot E-Commerce Data")
+
+<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 5 types of pairwise comparison experiments of KG, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Materials dataset.</figcaption>
 
 ![Datasets Clusters E-Commerce Data](./Figures/clusterDataset.png "Datasets Clusters E-Commerce Data")
 
+<figcaption><strong>Figure Distribution of OpenEA methods</strong>, according to the average Hits@1 score obtained between datasets and the average execution time obtained between datasets, scaled between 0 and 1 for each experiment. The average percentage of failed experiments between datasets is included in the label. Modules with an error rate of 1 are not shown.</figcaption>
+
 ![Plot Modules Means H@1, Runtime, Error Rate](./Figures/plotMeansModules.png "Plot Modules Means H@1, Runtime, Error Rate")
 
+<figcaption><strong>Figure Bar Chart mean Hits@1</strong>, showing for each OpenEA method, the mean Hits@1 metric for each of the four types of graph pairwise self-alignment experiment (M-M, BG-BG, EG-EG and M-EB) considering the Materials datasets. The average has been calculated only taking into account the non-failed experiments. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1.</figcaption>
+
 ![BarChart Methods-Experiments Materials](./Figures/barchartMethodsMaterials.png "BarChart Methods-Experiments Materials")
+
+<figcaption><strong>Figure Bar Chart Combined Methods.</strong> Bar chart containing the average increase in Hits@1 value when combining the AttrE module with either BootEA or Align-E or SEA, with respect to the module of each pair with the highest Hits@1 value. For the 5 types of experiments M-M, EG-EG, BG-BG, M-EG and M-BG. This is the average obtained from the averages obtained from all the classes aligned in the Materials dataset.</figcaption>
 
 ![BarChart Merged Methods Materials](./Figures/barchartMethodsAccumulated.png "BarChart Merged Methods Materials")
 
