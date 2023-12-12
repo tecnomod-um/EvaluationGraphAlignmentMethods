@@ -517,8 +517,6 @@
 
 ![Datasets Clusters BigBasket Products](./Figures/clusterDataset.png "Datasets Clusters BigBasket Products")
 
-
-
 ## Merged methods
 
 |Pair|Approach|SalesArticle (#/%) | Product (#/%) | Category (#/%) | SubCategory (#/%) | SalesSpecification (#/%) |
