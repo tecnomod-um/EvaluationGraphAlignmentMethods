@@ -22,6 +22,8 @@ The datasets were represented in RDF using different ontologies, which have the 
 
 * Materials (M) and Transactions (T), dataset-independent ontologies. These ontologies, which are called BASF ontologies or application ontologies (AP), was previously developed by BASF SE domain experts for the modeling of business entities related to commercial activity.
 
+<figcaption><strong>Figura 1.</strong> Method Overview.</figcaption>
+
 ![Overview Figure](./FiguresAndTables/graphicalAbstract.png "Overview Figure")
 
 ## Pipeline OpenEA
@@ -32,12 +34,16 @@ Each experiment consists of finding the alignment between two KGs generated from
 
 See the [instructions](./Scripts/README.md) for reproducing the experiments.
 
+<figcaption><strong>Figura 2.</strong> Entity Alignment OpenEA Pipeline .</figcaption>
+
 ![Entity Alignment OpenEA Pipeline](./FiguresAndTables/graphicalAlignment-pipeline.png "Entity Alignment OpenEA Pipeline")
 
 
 ## Experiments performed
 
 A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align. 
+
+<figcaption><strong>Table 1.</strong> Experiments Performed.</figcaption>
 
 | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
 |:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
@@ -72,9 +78,13 @@ The detailed results by dataset can be accessed by clicking on the name of the d
 
 *  [Materials](./Materials/materials.md)
 
-Next, we present some tables that summarize the results obtained in terms of Hits@1, runtime and errors 
+Next, we present some tables and figures that summarize the results obtained in terms of Hits@1, runtime and errors 
 
-### Table mean Hits@1 metric ([0,100]) obtained by each method
+<figcaption><strong>Figura 3.</strong> Distribution of OpenEA methods according to the average Hits@1 score obtained between datasets and the average execution time obtained between datasets, scaled between 0 and 1 for each experiment. The average percentage of failed experiments between datasets is included in the label. Modules with an error rate of 1 are not shown.</figcaption>
+
+![Modules distribution by averages](./FiguresAndTables/plotMeansModules.png "Modules distribution by averages")
+
+<figcaption><strong>Table 2.</strong> Mean Hits@1 metric ([0,100]) obtained by each method</figcaption>
 
 |    | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   CustomerComplaintDatabase |    meanH@1 |
 |---:|:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------------:|-----------:|
@@ -104,7 +114,8 @@ Next, we present some tables that summarize the results obtained in terms of Hit
 | 23 | TransH(0.0)    |                     13.3217    |         33.702  |             26.211  |              21.3675  |          29.2789 |                  21.4       |  24.2135   |
 | 24 | TransR(0.0)    |                      0.015     |          0.036  |              0.08   |               0.03875 |           0.39   |                   0.0466667 |   0.101069 |
 
-### Table mean Runtime ([0,1]) for each module
+<figcaption><strong>Table 3.</strong> Mean Runtime ([0,1]) for each module.</figcaption>
+
 |    | Approach   |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   CustomerComplaintDatabase |    meanTime |
 |---:|:-----------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------------:|------------:|
 |  0 | AlignE     |                     0.383452   |       0.398477  |          0.140399   |            0.217742   |       0.308854   |                  0.420449   |   0.311562  |
@@ -133,7 +144,8 @@ Next, we present some tables that summarize the results obtained in terms of Hit
 | 23 | TransH     |                     0.11547    |       0.0678725 |          0.0253032  |            0.0604899  |       0.0898547  |                  0.151213   |   0.0850337 |
 | 24 | TransR     |                     0.182317   |       0.122178  |          0.066497   |            0.0796253  |       0.126292   |                  0.144497   |   0.120235  |
 
-### Table mean Error ([0,1]) for each module
+<figcaption><strong>Table 4.</strong> Mean Error rate ([0,1]) for each module.</figcaption>
+
 |   | Approach   |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData |   CustomerComplaintDatabase |   meanError |
 |---:|:-----------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------------:|------------:|
 |  0 | AlignE     |                       0        |             0   |                 0   |                 0     |         0        |                    0        |        0    |
