@@ -299,7 +299,7 @@
 
 ![BarChart Merged Methods Materials](./Figures/barchartMethodsAccumulated.png "BarChart Merged Methods Materials")
 
-## Merged methods
+<figcaption><strong>Table Merged Methods.</strong></figcaption>
 
 |Pair|Approach|SalesArticle (#/%)|Product (#/%)|Material (#/%)|Indication (#/%)|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -341,9 +341,7 @@
 
 ## Tables
 
-### Table of alignments
-
-A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align.
+<figcaption><strong>Table of Alignments.</strong> A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align.</figcaption>
 
 | Approach       |   AirlinesCustomerSatisfaction |   AmazonRatings |   BigBasketProducts |   BrazilianE-commerce |   E-CommerceData | Customer Satisfaction |
 |:---------------|-------------------------------:|----------------:|--------------------:|----------------------:|-----------------:|----------------------:|
@@ -358,9 +356,8 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 | LLM-AP |  | X | X | X | X |  |
 | AP-AP |  | X | X | X | X |  |
 
+<figcaption><strong>Table Mean Hits@1.</strong> Mean Hits@1 metric ([0,100]) obtained by each method.</figcaption>
 
-
-### Table mean Hits@1 ([0,100]) for each module
 |    | Approach       |   Materials |   meanH@1 |
 |---:|:---------------|------------:|----------:|
 |  0 | AlignE(0.0)    |     53.508  |   53.508  |
@@ -389,7 +386,8 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 | 23 | TransH(0.0)    |     50.988  |   50.988  |
 | 24 | TransR(0.0)    |      0.036  |    0.036  |
 
-### Table mean Runtime ([0,1]) for each module
+<figcaption><strong>Table Mean Runtime.</strong> Mean Runtime ([0,1]) for each module.</figcaption>
+
 |    | Approach   |   Materials |    meanTime |
 |---:|:-----------|------------:|------------:|
 |  0 | AlignE     |   0.145153  |   0.145153  |
@@ -418,7 +416,8 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 | 23 | TransH     |   0.0796866 |   0.0796866 |
 | 24 | TransR     |   0.0471544 |   0.0471544 |
 
-### Table mean Error ([0,1]) for each module
+<figcaption><strong>Table Mean Error Rate.</strong> Mean Error rate ([0,1]) for each module.</figcaption>
+
 |    | Approach   |   Materials |   meanError |
 |---:|:-----------|------------:|------------:|
 |  0 | AlignE     |         0   |         0   |
