@@ -501,17 +501,23 @@
 
 ## Results
 
+<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 10 pairwise comparisons of the KGs generated from the Bigbasket Products dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
+
 ![Modules Boxplot BigBasket Products](./Figures/boxplotApproaches.png "Modules Boxplot BigBasket Products")
+
+<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 10 pairwise comparisons of the KGs generated from the Bigbasket Products dataset.</figcaption>
 
 ![Modules Clusters BigBasket Products](./Figures/clusterApproaches.png "Modules Clusters BigBasket Products")
 
+<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 10 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the 25 methods carried out in the Bigbasket Products dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
+
 ![Datasets Boxplot BigBasket Products](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot BigBasket Products")
+
+<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 10 types of pairwise comparison experiments of KG, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Bigbasket Products dataset.</figcaption>
 
 ![Datasets Clusters BigBasket Products](./Figures/clusterDataset.png "Datasets Clusters BigBasket Products")
 
-![Datasets Cluster AttrE-BootEA BigBasket Products](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA BigBasket Products")
 
-![BarChart Comparisons Modules BigBasket Products](./Figures/barComparison.png "BarChart Comparisons Modules BigBasket Products")
 
 ## Merged methods
 
