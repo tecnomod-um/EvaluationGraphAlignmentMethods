@@ -496,18 +496,21 @@
 
 ## Results
 
+<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 10 pairwise comparisons of the KGs generated from the Amazon Ratings dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
+
 ![Modules Boxplot Amazon Ratings](./Figures/boxplotApproaches.png "Modules Boxplot Amazon Ratings")
+
+<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 10 pairwise comparisons of the KGs generated from the Amazon Ratings dataset.</figcaption>
 
 ![Modules Clusters Amazon Ratings](./Figures/clusterApproaches.png "Modules Clusters Amazon Ratings")
 
+<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 10 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the 25 methods carried out in the Amazon Ratings dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
+
 ![Datasets Boxplot Amazon Ratings](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot Amazon Ratings")
 
+<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 10 types of pairwise comparison experiments of KG, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Amazon Ratings dataset.</figcaption>
+
 ![Datasets Clusters Amazon Ratings](./Figures/clusterDataset.png "Datasets Clusters Amazon Ratings")
-
-![Datasets Cluster AttrE-BootEA Amazon Ratings](./Figures/clusterDatasetAttBoot.png "Datasets Cluster AttrE-BootEA Amazon Ratings")
-
-![BarChart Comparisons Modules Amazon Ratings](./Figures/barComparison.png "BarChart Comparisons Modules Amazon Ratings")
-
 
 ## Merged methods
 
