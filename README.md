@@ -38,7 +38,6 @@ See the [instructions](./Scripts/README.md) for reproducing the experiments.
 
 ![Entity Alignment OpenEA Pipeline](./FiguresAndTables/graphicalAlignment-pipeline.png "Entity Alignment OpenEA Pipeline")
 
-
 ## Experiments performed
 
 A total of 49 alignment experiments were carried out using 25 different methods. Alignments were carried out whenever the schemas had compatible entities to align. 
@@ -55,10 +54,8 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 | Gold-LLM | X | X | X | X | X | X |
 | Gold-AP |  | X | X | X | X |  |
 | LLM-LLM | X | X | X | X | X | X |
-| LLM-AP |  | X | X | X | X |  |
+| LLM-AP |  | X | X |  | X |  |
 | AP-AP |  | X | X | X | X |  |
-
-
 
 ## Results
 
