@@ -73,7 +73,7 @@
 |BootEA_RotatE|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/BootEA_RotatE/1/nohup_gold-gold_bootea_rotate.txt)|81.33|95.66|96.95 |10|0.88|146977|-|-|-|-|-
 |BootEA_TransH|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/BootEA_TransH/1/error_output_gold-gold_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/ConvE/1/error_output_gold-gold_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/GCN_Align/1/nohup_gold-gold_gcnalign.txt)|79.97|90.28 |91.39|124|0.85|15364|-|-|-|-|-
+|GCN_Align|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/GCN_Align/1/nohup_gold-gold_gcnalign.txt)|79.97|90.28 |91.39|124|0.85|15364|6394 (79.78%)|5893 (74.57%)|3135 (89.24%)|834 (92.67%)|12 (100%)
 |GMNN|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/GMNN/1/error_output_gold-gold_gmnn.txt)|E|r|r|o|r|||
 |HolE|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/HolE/1/nohup_gold-gold_hole.txt)|63.89|73.10|75.70|489|0.68|179720|-|-|-|-|-
 |IMUSE|1|[20343](./Experiments/EntityAlignment/Gold-Gold/Output/IMUSE/1/nohup_gold-gold_imuse.txt)|95.07|98.85|99.10|2|0.97|11628|-|-|-|-|-
@@ -256,7 +256,7 @@
 |BootEA_RotatE|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_RotatE/1/nohup_gold-basic_bootea_rotate.txt)|0.00|0.05|0.10 |3993|0.00|21939|-|
 |BootEA_TransH|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/BootEA_TransH/1/error_output_gold-basic_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/ConvE/1/error_output_gold-basic_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/GCN_Align/1/nohup_gold-basic_gcnalign.txt)|0.01|0.06|0.10|3993|0.00|1051|-|
+|GCN_Align|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/GCN_Align/1/nohup_gold-basic_gcnalign.txt)|0.01|0.06|0.10|3993|0.00|1051|1 (0.01)|
 |GMNN|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/GMNN/1/error_output_gold-basic_gmnn.txt)|E|r|r|o|r|||
 |HolE|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/HolE/1/nohup_gold-basic_hole.txt)|0.00|0.06 |0.16|4017|0.00|12261|-|
 |IMUSE|1|[8000](./Experiments/EntityAlignment/Gold-Basic/Output/IMUSE/1/nohup_gold-basic_imuse.txt)|95.86|96.65|96.90|185|0.96|2383|-|
@@ -304,7 +304,7 @@
 |BootEA_RotatE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_RotatE/1/nohup_gold-llm_bootea_rotate.txt)|62.48|87.05|90.62|24|0.73|37592|-|-|-|-|
 |BootEA_TransH|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/BootEA_TransH/1/error_output_gold-llm_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/ConvE/1/error_output_gold-llm_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/GCN_Align/1/nohup_gold-llm_gcnalign.txt)|60.25|81.81|83.99|326|0.70|2570|-|-|-|-|
+|GCN_Align|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/GCN_Align/1/nohup_gold-llm_gcnalign.txt)|60.25|81.81|83.99|326|0.70|2570|4001 (50.07%)|2694 (76.36%)|768 (87.77%)|11 (100%)|
 |GMNN|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/GMNN/1/error_output_gold-llm_gmnn.txt)|E|r|r|o|r|||
 |HolE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/HolE/1/nohup_gold-llm_hole.txt)|40.70|59.28|63.52|572|0.49|41036|-|-|-|-|
 |IMUSE|1|[12405](./Experiments/EntityAlignment/Gold-LLM/Output/IMUSE/1/error_output_gold-llm_imuse.txt)|E|r|r|o|r|||
@@ -350,7 +350,7 @@
 |BootEA_RotatE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/BootEA_RotatE/1/nohup_gold-transactions_bootea_rotate.txt)|0.00|0.04|0.10|3995|0.00|12665|-|
 |BootEA_TransH|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/BootEA_TransH/1/)|E|r|r|o|r|||
 |Conve|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/ConvE/1/error_output_gold-transactions_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/GCN_Align/1/nohup_gold-transactions_gcnalign.txt)|0.03|0.09|0.14|3983|0.00|374|-|
+|GCN_Align|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/GCN_Align/1/nohup_gold-transactions_gcnalign.txt)|0.03|0.09|0.14|3983|0.00|374|2 (0.03%)|
 |GMNN|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/GMNN/1/nohup_gold-transactions_gmnn.txt)|100|100|100|1|1.00|36384|-|
 |HolE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/HolE/1/nohup_gold-transactions_hole.txt)|0.01|0.03|0.08|3935|0.00|4755|-|
 |IMUSE|1|[7937](./Experiments/EntityAlignment/Gold-Transactions/Output/IMUSE/1/nohup_gold-transactions_imuse.txt)|100|100|100|1|1.00|684|-|
@@ -396,7 +396,7 @@
 |BootEA_RotatE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_RotatE/1/nohup_basic-llm_bootea_rotate.txt)|0.00|0.09|0.15|3989|0.00|8743|-|
 |BootEA_TransH|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/BootEA_TransH/1/error_output_basic-llm_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/ConvE/1/error_output_basic-llm_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.00|0.11|0.19|4012|0.00|126|-|
+|GCN_Align|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/GCN_Align/1/nohup_basic-llm_gcnalign.txt)|0.00|0.11|0.19|4012|0.00|126|0 (0.00%)|
 |GMNN|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/GMNN/1/nohup_basic-llm_gmnn.txt)|100|100 |100|1|1.00|45951|-|
 |HolE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/HolE/1/nohup_basic-llm_hole.txt)|0.01|0.08|0.18|3986|0.00|2762|-|
 |IMUSE|1|[8000](./Experiments/EntityAlignment/Basic-LLM/Output/IMUSE/1/error_output_basic-llm_imuse.txt)|E|r|r|o|r|||
