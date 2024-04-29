@@ -118,7 +118,7 @@
 |BootEA_RotatE|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/BootEA_RotatE/1/nohup_basic-basic_bootea_rotate.txt)|0.01|0.08|0.14 |4003|0.00|6949|-|
 |BootEA_TransH|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/BootEA_TransH/1/error_output_basic-basic_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/ConvE/1/error_output_basic-basic_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/GCN_Align/1/nohup_basic-basic_gcnalign.txt)|0.00|0.04 |0.06|3994|0.00|300|-|
+|GCN_Align|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/GCN_Align/1/nohup_basic-basic_gcnalign.txt)|0.00|0.04 |0.06|3994|0.00|300|0 (0.00%)|
 |GMNN|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/GMNN/1/nohup_basic-basic_gmnn.txt)|100|100 |100|1|1.00|69502|-|
 |HolE|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/HolE/1/nohup_basic-basic_hole.txt)|0.04|0.09 |0.15|3989|0.00|1852|-|
 |IMUSE|1|[8000](./Experiments/EntityAlignment/Basic-Basic/Output/IMUSE/1/nohup_basic-basic_imuse.txt)|49.01|49.03|49.04|2075|0.49|1076|-|
@@ -166,7 +166,7 @@
 |BootEA_RotatE|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/BootEA_RotatE/1/nohup_llm-llm_bootea_rotate.txt)|62.28|87.35|90.79|22|0.73|35216|-|-|-|-|
 |BootEA_TransH|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/BootEA_TransH/1/error_output_llm-llm_bootea_transh.txt)|E|r|r|o|r|||
 |Conve|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/ConvE/1/error_output_llm-llm_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/GCN_Align/1/nohup_llm-llm_gcnalign.txt)|60.94|82.90|84.96|105|0.70|588|-|-|-|-|
+|GCN_Align|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/GCN_Align/1/nohup_llm-llm_gcnalign.txt)|60.94|82.90|84.96|105|0.70|588|4111 (51.25%)|2672 (76.30%)|766 (87.94%)|11 (100%)|
 |GMNN|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/GMNN/1/error_output_llm-llm_gmnn.txt)|E|r|r|o|r|||
 |HolE|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/HolE/1/nohup_llm-llm_hole.txt)|48.26|66.72|70.65|387|0.57|12489|-|-|-|-|
 |IMUSE|1|[12405](./Experiments/EntityAlignment/LLM-LLM/Output/IMUSE/1/nohup_llm-llm_imuse.txt)|99.61|99.96|99.98|1|1.00|948|-|-|-|-|
@@ -211,7 +211,7 @@
 |BootEA_RotatE|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/BootEA_RotatE/1/nohup_transactions-transactions_bootea_rotate.txt)|0.01|0.06|0.14|3973|0.00|6975|-|
 |BootEA_TransH|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/BootEA_TransH/1/)|E|r|r|o|r|||
 |Conve|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/ConvE/1/error_output_transactions-transactions_conve.txt)|E|r|r|o|r|||
-|GCN_Align|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/GCN_Align/1/nohup_transactions-transactions_gcnalign.txt)|0.01|0.04|0.13|3987|0.0|90|-|
+|GCN_Align|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/GCN_Align/1/nohup_transactions-transactions_gcnalign.txt)|0.01|0.04|0.13|3987|0.0|90|1 (0.01%)|
 |GMNN|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/GMNN/1/nohup_transactions-transactions_gmnn.txt)|100|100|100|1|1.00|23309|-|
 |HolE|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/HolE/1/nohup_transactions-transactions_hole.txt)|0.01|0.10|0.16|3987|0.00|1320|-|
 |IMUSE|1|[7937](./Experiments/EntityAlignment/Transactions-Transactions/Output/IMUSE/1/nohup_transactions-transactions_imuse.txt)|100|100|100|1|1.00|224|-|
