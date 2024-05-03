@@ -48,6 +48,10 @@
   * One object property
   * Two data properties
 
+Mapping of the classes, their relationships and attributes between the different ontologies, as well as the Hits@1 metric obtained in the alignment experiments for the AttrE, BootEA, Aligne, GCN_Align and SEA methods.
+
+[Class mapping](../FiguresAndTables/mappingClasses.xlsx)
+
 ## Mapping
 
 |Mapping |Dataset| RDF | attr_triples | rel_triples |
@@ -59,7 +63,9 @@
 
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
-![Graph Gold](./Figures/eCommerce-Gold.JPG "Graph Gold")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it is (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Gold](./Figures/eCommerceGraphs_Gold.png "Graph Gold")
 
 ### [Input](./Experiments/EntityAlignment/Gold-Gold/Input/)
 
