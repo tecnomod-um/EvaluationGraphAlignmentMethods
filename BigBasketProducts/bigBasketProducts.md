@@ -16,7 +16,7 @@
 * No field has null values
 * "Absolute_Url" is the only field that has all unique values
 
-![Fields cardinality data20K.csv](./Figures/counts_data.JPG "Fields cardinality data20K.csv")
+![Fields cardinality data20K.csv](./Figures/card_data.JPG "Fields cardinality data20K.csv")
 
 * (0,0) No relationship between values in the row and column fields
 * (0,1) One value in the row field is related to at most one value in the column field
@@ -32,6 +32,10 @@
 * [Gold standard](./Ontologies/BigBasketProductsOntologyGold.owl)
 * [Materials](../)
 
+Mapping of the classes, their relationships and attributes between the different ontologies, as well as the Hits@1 metric obtained in the alignment experiments for the AttrE, BootEA, Aligne, GCN_Align and SEA methods.
+
+[Class mapping](../FiguresAndTables/mappingClasses.xlsx)
+
 ## Mapping
 
 |Mapping |Dataset| RDF | attr_triples | rel_triples |
@@ -43,7 +47,9 @@
 
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
-![Graph Gold](./Figures/bigBasketProducts-Gold.png "Graph Gold")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Gold](./Figures/bigBasketGraphs_Gold.png "Graph Gold")
 
 ### [Input](./Experiments/EntityAlignment/Gold-Gold/Input/)
 
