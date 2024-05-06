@@ -115,7 +115,9 @@ High level graph generated for the Gold ontology. Nodes of the same color repres
 
 ## [Basic - Basic](./Experiments/EntityAlignment/Basic-Basic/)
 
-![Graph Basic](./Figures/eCommerce-Basic.JPG "Graph Basic")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it is (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Basic](./Figures/eCommerceGraphs_Basic.png "Graph Basic")
 
 ### [Input](./Experiments/EntityAlignment/Basic-Basic/Input/)
 
