@@ -147,7 +147,7 @@ High level graph generated for the Gold ontology. Nodes of the same color repres
 
 High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
 
-![Graph LLM](./Figures/bigBasketProducts-LLM.png "Graph LLM")
+![Graph LLM](./Figures/bigBasketGraphs_LLM.png "Graph LLM")
 
 ### [Input](./Experiments/EntityAlignment/LLM-LLM/Input/)
 
@@ -193,7 +193,9 @@ High level graph generated for the Gold ontology. Nodes of the same color repres
 
 ## [Materials - Materials](./Experiments/EntityAlignment/Materials-Materials/)
 
-![Graph Materials](./Figures/bigBasketProducts-Materials.png "Graph Materials")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Materials](./Figures/bigBasketGraphs_Materials.png "Graph Materials")
 
 ### [Input](./Experiments/EntityAlignment/Materials-Materials/Input/)
 
