@@ -98,7 +98,9 @@ High level graph generated for the Gold ontology. Nodes of the same color repres
 
 ## [Basic - Basic](./Experiments/EntityAlignment/Basic-Basic/)
 
-![Graph Basic](./Figures/bigBasketProducts-Basic.png "Graph Basic")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Basic](./Figures/bigBasketGraphs_Basic.png "Graph Basic")
 
 ### [Input](./Experiments/EntityAlignment/Basic-Basic/Input/)
 
@@ -142,6 +144,8 @@ High level graph generated for the Gold ontology. Nodes of the same color repres
 |TransR|1|[3283](./Experiments/EntityAlignment/Basic-Basic/Output/TransR/1/nohup_basic-basic_transr.txt)|0.03|0.27|0.46|1633|0.01|572|1 (0.03%)|
 
 ## [LLM - LLM](./Experiments/EntityAlignment/LLM-LLM/)
+
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
 
 ![Graph LLM](./Figures/bigBasketProducts-LLM.png "Graph LLM")
 
