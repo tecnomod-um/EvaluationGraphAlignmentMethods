@@ -34,6 +34,10 @@
 * [Gold standard](./Ontologies//)
 * [Transactions](./Ontologies/)
 
+Mapping of the classes, their relationships and attributes between the different ontologies, as well as the Hits@1 metric obtained in the alignment experiments for the AttrE, BootEA, Aligne, GCN_Align and SEA methods.
+
+[Class mapping](../FiguresAndTables/mappingClasses.xlsx)
+
 ## Mapping
 
 |Mapping |Dataset| RDF | attr_triples | rel_triples |
@@ -45,7 +49,9 @@
 
 ## [Gold - Gold](./Experiments/EntityAlignment/Gold-Gold/)
 
-![Graph Gold](./Figures/BrazilianEcommerce-Gold.png "Graph Gold")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Gold](./Figures/brazilianGraphs_Gold.png "Graph Gold")
 
 ### [Input](./Experiments/EntityAlignment/Gold-Gold/Input/)
 
@@ -94,7 +100,9 @@
 
 ## [Basic - Basic](./Experiments/EntityAlignment/Basic-Basic/)
 
-![Graph Basic](./Figures/BrazilianEcommerce-Basic.png "Graph Basic")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Basic](./Figures/brazilianGraphs_Basic.png "Graph Basic")
 
 ### [Input](./Experiments/EntityAlignment/Basic-Basic/Input/)
 
@@ -139,7 +147,9 @@
 
 ## [LLM - LLM](./Experiments/EntityAlignment/LLM-LLM/)
 
-![Graph LLM](./Figures/BrazilianEcommerce-LLM.png "Graph LLM")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph LLM](./Figures/brazilianGraphs_LLM.png "Graph LLM")
 
 ### [Input](./Experiments/EntityAlignment/LLM-LLM/Input/)
 
@@ -187,7 +197,9 @@
 
 ## [Transactions - Transactions](./Experiments/EntityAlignment/Transactions-Transactions/)
 
-![Graph Transactions](./Figures/BrazilianEcommerce-Transactions.png "Graph Transactions")
+High level graph generated for the Gold ontology. Nodes of the same color represent the instance, class type and attributes of the same class. The instance node indicates the number of entities in the test set. Blue arrows indicate attributes and black arrows indicate relationships. The cardinality is determined for each arrow. If it is not (1,1), the probability that it was (1,1) is indicated. The names in parentheses indicate the referenced column in the CSV source file.
+
+![Graph Transactions](./Figures/brazilianGraphs_Transactions.png "Graph Transactions")
 
 ### [Input](./Experiments/EntityAlignment/Transactions-Transactions/Input/)
 
