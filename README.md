@@ -59,6 +59,7 @@ A total of 49 alignment experiments were carried out using 25 different methods.
 
 ## Results
 
+The results have been analyzed at three levels, from higher to lower resolution. At the individual class level, at the method level and at the experiment type level. 
 The detailed results by dataset can be accessed by clicking on the name of the dataset. 
 
 * [AirlinesCustomerSatisfaction](./AirlinesCustomerSatisfaction/AirlinesCustomerSatisfaction.md)
