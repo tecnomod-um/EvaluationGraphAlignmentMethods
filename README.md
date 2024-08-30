@@ -1,14 +1,12 @@
-## Evaluation of 25 OpenEA knowledge graph alignment methods
+# Evaluation of 25 OpenEA knowledge graph alignment methods
 
 ## Overview
-
 
 This repository contains the data, scripts and results of evaluating 25 methods offered by the OpenEA package for the alignment of datasets related to product, sales and user satisfaction. Through this study we aim to identify:
 
 * Which methods give the best performance in our domain of interest?
 * Which is the impact of the structure of the ontologies in the results?
 * Which is the impact of combining the best performing methods in the results?
-
 
  The next figure describes the approach followed. The experiments included seven datasets related to our domain of interest: six datasets have been selected from Kaggle and the other one was provided by the chemical company BASF SE as an RDF knowledge graph. 
 
@@ -74,7 +72,7 @@ The detailed results by dataset can be accessed by clicking on the name of the d
 
 * [E-Commerce Data](./E-CommerceData/eCommerceData.md)
 
-*  [Materials](./Materials/materials.md)
+* [Materials](./Materials/materials.md)
 
 Next, we present some tables and figures that summarize the results obtained in terms of Hits@1, runtime and errors 
 
