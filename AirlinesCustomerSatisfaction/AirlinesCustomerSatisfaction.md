@@ -333,6 +333,10 @@
 
 ![Datasets Clusters Airlines Customer Satisfaction](./Figures/clusterDataset.png "Datasets Clusters Airlines Customer Satisfaction")
 
+<figcaption><strong>Figure Experiments Boxplot for AttrE & BootEA.</strong> Boxplot of the 6 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the two methods AttrE and BootEA carried out in the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error.</figcaption>
+
+![Datasets Boxplot (AttrE & BootEA) Airlines Customer Satisfaction](./Figures/boxplotExperimentsAirlinesAttrEBootEA.png "Datasets Boxplot (AttrE & BootEA) Airlines Customer Satisfaction")
+
 ## Merged methods
 
 |Pair|Approach|CustomerFeedback (%)|TravelDetails (%)|Customer (%)|
