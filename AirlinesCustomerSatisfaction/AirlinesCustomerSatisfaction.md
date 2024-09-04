@@ -317,23 +317,23 @@
 
 ## Results
 
-<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 6 pairwise comparisons of the KGs generated from the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
+<figcaption><strong>Figure Methods Boxplot.</strong> Boxplot of the OpenEA methods according to the Hits@1 metric of the 3 trivial and 3  pairwise graph alignement experiments between the KGs generated from the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of experiments without error is shown in brackets next to the name of the method. BootEA-TransH, ConvE, KDCoE and MultiKE are not shown because their error rate is equal to 1 for all datasets.</figcaption>
 
 ![Modules Boxplot Airlines Customer Satisfaction](./Figures/boxplotApproaches.png "Modules Boxplot Airlines Customer Satisfaction")
 
-<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 6 pairwise comparisons of the KGs generated from the Airlines Customer Satisfaction dataset.</figcaption>
+<figcaption><strong>Figure Methods Clustering.</strong> Hierarchical clustering (Ward algorithm) of 25 OpenEA methods according to the 5 metrics for the 3 trivial and 3 pairwise graph alignement experiments between the KGs generated from the Airlines Customer Satisfaction dataset.</figcaption>
 
 ![Modules Clusters Airlines Customer Satisfaction](./Figures/clusterApproaches.png "Modules Clusters Brazilian Airlines Customer Satisfaction")
 
-<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 6 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the 25 methods carried out in the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
+<figcaption><strong>Figure Experiments Boxplot.</strong> Boxplot of the 3 trivial and 3 pairwise graph alignement experiments between KGs based on the Hits@1 score obtained by the 25 methods carried out in the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error. The number of modules that did not generate an error is shown in brackets under the name of the experiment represented.</figcaption>
 
 ![Datasets Boxplot Airlines Customer Satisfaction](./Figures/boxplotDatasetsPairs.png "Datasets Boxplot Airlines Customer Satisfaction")
 
-<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 6 types of pairwise comparison experiments of KG, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Airlines Customer Satisfaction dataset.</figcaption>
+<figcaption><strong>Figure Experiments Clustering.</strong> Hierarchical clustering, with method Ward, of the 3 trivial and 3 pairwise graph alignement experiments between KGs, according to the 5 metrics, with all the values scaled to the range [0,1], of the 25 (at most) OpenEA modules carried out in the Airlines Customer Satisfaction dataset.</figcaption>
 
 ![Datasets Clusters Airlines Customer Satisfaction](./Figures/clusterDataset.png "Datasets Clusters Airlines Customer Satisfaction")
 
-<figcaption><strong>Figure Experiments Boxplot for AttrE & BootEA.</strong> Boxplot of the 6 types of pairwise comparison experiments of KGs based on the Hits@1 score obtained by the two methods AttrE and BootEA carried out in the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error.</figcaption>
+<figcaption><strong>Figure Experiments Boxplot for AttrE & BootEA.</strong> Boxplot of the 3 trivial and 3  pairwise graph alignement experiments between KGs based on the Hits@1 score obtained by the two methods AttrE and BootEA carried out in the Airlines Customer Satisfaction dataset. The orange solid line represents the median and the red diamond the mean of the experiments that did not lead to an error.</figcaption>
 
 ![Datasets Boxplot (AttrE & BootEA) Airlines Customer Satisfaction](./Figures/boxplotExperimentsAirlinesAttrEBootEA.png "Datasets Boxplot (AttrE & BootEA) Airlines Customer Satisfaction")
 
