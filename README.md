@@ -170,3 +170,22 @@ Next, we present some tables and figures that summarize the results obtained in 
 | 23 | TransH     |                       0        |             0   |                 0   |                 0     |         0        |                    0        |        0    |
 | 24 | TransR     |                       0        |             0   |                 0   |                 0     |         0        |                    0        |        0    |
 
+<figcaption><strong>Table 5.</strong> P-value of the two-sided t-test statistic between trivial graph alignment experiments, considering the Hits@1 of all methods. Assuming normality, sample independence and not considering Nan values.</figcaption>
+
+|   | G-G | B-B | L-L | AP-AP |
+|:-:|:---:|:---:|:---:|:-----:|
+|G-G|1.0|7.491E-30|3.835E-07|3.062E-08|
+|B-B|7.491E-30|1.0|9.901e-14|6.982E-08|
+|L-L|3.835E-07|9.901e-14|1.0|0.195|
+|AP-AP|3.062E-08|6.982E-08|0.195|1.0|
+
+<figcaption><strong>Table 6.</strong> P-value of the two-sided t-test statistic between pairwise graph alignment experiments, considering the Hits@1 of all methods. Assuming normality, sample independence and not considering Nan values.</figcaption>
+
+|   | G-B | G-L | G-AP | B-L | B-AP | L-AP |
+|:-:|:---:|:---:|:---:|:-----:|:---:|:-----:|
+|G-B|1.0|8.569E-07|4.595E-09|0.198|0.648|1.765E-05|
+|G-L|8.569E-07|1.0|0.050|1.230E-11|1.925E-04|0.743|
+|G-AP|4.595E-09|0.050|1.0|1.320E-12|2.500E-06|0.032|
+|B-L|0.198|1.230E-11|1.320E-12|1.0|0.724|1.001E-08|
+|B-AP|0.648|1.925E-04|2.500E-06|0.724|1.0|5.583E-04|
+|L-AP|1.765E-05|0.743|0.032|1.001E-08|5.583E-04|1.0|
