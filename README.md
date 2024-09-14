@@ -210,3 +210,7 @@ Next, we present some tables and figures that summarize the results obtained in 
 |B-L||0.025|6.13E-25||0.198|1.23E-11||1.0|||
 |B-AP||0.236||7.99E-08|0.648||2.50E-06|0.724|1.0||
 |L-AP|||2.35E-07|1.20E-03||0.743|0.032|1.00E-08|5.58E-04|1.0|
+
+<figcaption><strong>Figure 4.</strong> Bar chart containing the average increase in Hits@1 value when combining the AttrE module with either BootEA or Align-E or SEA, with respect to the module of each pair with the highest Hits@1 value. For the 4 types of experiments G-G, B-B, L-L and AP-AP. This is the average obtained from the averages obtained from all the classes aligned in each of the six datasets individually.</figcaption>
+
+![Modules distribution by averages](./FiguresAndTables/barchartMethodsAccumulated.png "Combined Improvement Hits@1")
