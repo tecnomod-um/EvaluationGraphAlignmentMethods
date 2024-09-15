@@ -301,6 +301,10 @@
 
 <figcaption><strong>Table Merged Methods.</strong></figcaption>
 
+![Boxplots AttrE & BootEA - Experiments Materials](./Figures/boxplotExperimentsmaterialsAttrEBootEA.png "Boxplots AttrE & BootEA - Experiments Materials")
+
+<figcaption><strong>Figure Boxplots AttrE & BootEA Materials.</strong> Boxplot of the 3 trivial (first three on the left) and 2 pairwise graph alignment experiments of KGs based on the Hits@1 score obtained by the two selected methods AttrE and BootEA for the Materials dataset. The orange solid line represents the median and the red diamond the mean.</figcaption>
+
 |Pair|Approach|SalesArticle (#/%)|Product (#/%)|Material (#/%)|Indication (#/%)|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |BigBasketProductsGold-BigBasketProductsGold|AttrE|4100 (52.40%)|4100 (75.81%)| - | - |
