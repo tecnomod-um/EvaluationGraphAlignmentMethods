@@ -1,0 +1,355 @@
+@prefix : <https://ontology.basf.net/ontology/BASF/Materials/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix umo: <https://ontology.basf.net/ontology/BASF_Units/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix Materials: <https://ontology.basf.net/ontology/BASF/Materials/> .
+@prefix GomoMetadata: <https://ontology.basf.net/ontology/BASF/Core/GomoMetadata/> .
+@prefix Transactions: <https://ontology.basf.net/ontology/BASF/Transactions/> .
+@prefix CustomerFeedback: <https://ontology.basf.net/ontology/BASF/CustomerFeedback/> .
+@base <https://ontology.basf.net/ontology/BASF/Materials/> .
+
+<https://ontology.basf.net/ontology/BASF/Materials/> rdf:type owl:Ontology ;
+                                                      dc:creator "Jose Antonio Bernabe Diaz (jose-antonio.bernabe-diaz@basf.com)" ,
+                                                                 "Paola Espinoza Arias (paola.espinoza@basf.com)" ,
+                                                                 "Prashant Deshmukh (prashant.deshmukh@basf.com)" ;
+                                                      dc:title "Transactions Ontology" ;
+                                                      terms:created "2022-10-01T12:00:00"^^xsd:dateTime ;
+                                                      terms:description "The Materials ontology represents the information related to the products domain (TODO: to improve the description)" ;
+                                                      terms:license "BASF Internal" ;
+                                                      vann:preferredNamespacePrefix "TBD" ;
+                                                      vann:preferredNamespaceUri <https://ontology.basf.net/ontology/BASF/Materials/> ;
+                                                      owl:versionInfo "1.0.0" ;
+                                                      GomoMetadata:confidentialityLevel GomoMetadata:internal ;
+                                                      GomoMetadata:ontologyOwner "TBD" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://ontology.basf.net/ontology/BASF/Core/GomoMetadata/confidentialityLevel
+GomoMetadata:confidentialityLevel rdf:type owl:AnnotationProperty .
+
+
+###  https://ontology.basf.net/ontology/BASF/Core/GomoMetadata/ontologyOwner
+GomoMetadata:ontologyOwner rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  https://ontology.basf.net/ontology/BASF_Units/EUR
+umo:EUR rdf:type rdfs:Datatype .
+
+
+###  https://ontology.basf.net/ontology/BASF_Units/kg
+umo:kg rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ontology.basf.net/ontology/BASF/Materials/containsProduct
+Materials:containsProduct rdf:type owl:ObjectProperty ;
+                          rdfs:label "contains product" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/hasIndication
+Materials:hasIndication rdf:type owl:ObjectProperty ;
+                        rdfs:label "has indication" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/soldAsProduct
+Materials:soldAsProduct rdf:type owl:ObjectProperty ;
+                        rdfs:label "sold as product" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://ontology.basf.net/ontology/BASF/Materials/BASNumber
+Materials:BASNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain Materials:sales_product ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "BAS number" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/BIName
+Materials:BIName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain Materials:material ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "BI name" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/BINumber
+Materials:BINumber rdf:type owl:DatatypeProperty ;
+                   rdfs:domain Materials:material ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "BI number" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/GTIN_EAN
+Materials:GTIN_EAN rdf:type owl:DatatypeProperty ;
+                   rdfs:domain Materials:SalesArticle ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "GTIN EAN" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/PBGName
+Materials:PBGName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain Materials:material ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "PBG name" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/PBGNumber
+Materials:PBGNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain Materials:material ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "PBG number" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/PRDName
+Materials:PRDName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain Materials:sales_product ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "PRD name" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/PRDNumber
+Materials:PRDNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain Materials:sales_product ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "PRD number" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/articleName
+Materials:articleName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain Materials:SalesArticle ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "article name" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/articleNumber
+Materials:articleNumber rdf:type owl:DatatypeProperty ;
+                        rdfs:domain Materials:SalesArticle ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "article number" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/brandName
+Materials:brandName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain Materials:sales_product ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "brand name" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/code
+Materials:code rdf:type owl:DatatypeProperty ;
+               rdfs:domain Materials:Indication ;
+               rdfs:range xsd:string ;
+               rdfs:label "code" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication
+Materials:Indication rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty Materials:code ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:string
+                                     ] ;
+                     terms:description "Represents the different categories of crop protection products according to the type of pest they control or for which the use of a crop protection product is permitted." ;
+                     rdfs:label "indication" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/SalesArticle
+Materials:SalesArticle rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty Materials:containsProduct ;
+                                         owl:someValuesFrom Materials:sales_product
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty Materials:GTIN_EAN ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty Materials:articleName ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty Materials:articleNumber ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ;
+                       terms:description "Represents the saleable unit of a certain sales product." ;
+                       rdfs:label "sales article" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/material
+Materials:material rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty Materials:soldAsProduct ;
+                                     owl:someValuesFrom Materials:sales_product
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty Materials:BIName ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty Materials:BINumber ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty Materials:PBGName ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty Materials:PBGNumber ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ;
+                   terms:description "Represents the basic compounds used in the production of a product, which can be an intermediate or final." ;
+                   rdfs:label "material" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/sales_product
+Materials:sales_product rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty Materials:hasIndication ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass Materials:Indication
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty Materials:BASNumber ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty Materials:PRDName ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty Materials:PRDNumber ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty Materials:brandName ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ;
+                        terms:description "Represents a product which includes details of trading and marketing." ;
+                        rdfs:label "sales product" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_D
+Materials:Indication_D rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "D" ;
+                       rdfs:label "Fertilizer" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_F
+Materials:Indication_F rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "F" ;
+                       rdfs:label "Fungicide" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_H
+Materials:Indication_H rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "H" ;
+                       rdfs:label "Herbicide" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_I
+Materials:Indication_I rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "I" ;
+                       rdfs:label "Insecticide" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_N
+Materials:Indication_N rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "N" ;
+                       rdfs:label "Nematicide" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_S
+Materials:Indication_S rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "S" ;
+                       rdfs:label "Special Products" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_U
+Materials:Indication_U rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "U" ;
+                       rdfs:label "Inoculant" .
+
+
+###  https://ontology.basf.net/ontology/BASF/Materials/Indication_W
+Materials:Indication_W rdf:type owl:NamedIndividual ,
+                                Materials:Indication ;
+                       Materials:code "W" ;
+                       rdfs:label "Grow Regulator" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

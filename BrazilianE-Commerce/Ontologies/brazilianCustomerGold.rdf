@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vocab.um.es/ontology/bre#"
+     xml:base="http://vocab.um.es/ontology/bre"
+     xmlns:bre="http://vocab.um.es/ontology/bre#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bredt="https://vocab.um.es/data/bre/">
+    <owl:Ontology rdf:about="http://vocab.um.es/ontology/bre"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasCity -->
+
+    <owl:ObjectProperty rdf:about="https://vocab.um.es/ontology/bre/hasCity">
+        <rdfs:range rdf:resource="https://vocab.um.es/ontology/bre/City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasCustomerAccount -->
+
+    <owl:ObjectProperty rdf:about="https://vocab.um.es/ontology/bre/hasCustomerAccount">
+        <rdfs:range rdf:resource="https://vocab.um.es/ontology/bre/CustomerAccount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasState -->
+
+    <owl:ObjectProperty rdf:about="https://vocab.um.es/ontology/bre/hasState">
+        <rdfs:range rdf:resource="https://vocab.um.es/ontology/bre/State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasZipCodePrefix -->
+
+    <owl:ObjectProperty rdf:about="https://vocab.um.es/ontology/bre/hasZipCodePrefix">
+        <rdfs:range rdf:resource="https://vocab.um.es/ontology/bre/ZipCodePrefix"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/cityName -->
+
+    <owl:DatatypeProperty rdf:about="https://vocab.um.es/ontology/bre/cityName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">City name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasCode -->
+
+    <owl:DatatypeProperty rdf:about="https://vocab.um.es/ontology/bre/hasCode">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/hasID -->
+
+    <owl:DatatypeProperty rdf:about="https://vocab.um.es/ontology/bre/hasID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/stateName -->
+
+    <owl:DatatypeProperty rdf:about="https://vocab.um.es/ontology/bre/stateName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">State name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/City -->
+
+    <owl:Class rdf:about="https://vocab.um.es/ontology/bre/City">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasState"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://vocab.um.es/ontology/bre/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/cityName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/CustomerAccount -->
+
+    <owl:Class rdf:about="https://vocab.um.es/ontology/bre/CustomerAccount">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Customer account</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/CustomerIdOrder -->
+
+    <owl:Class rdf:about="https://vocab.um.es/ontology/bre/CustomerIdOrder">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasCustomerAccount"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://vocab.um.es/ontology/bre/CustomerAccount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasZipCodePrefix"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://vocab.um.es/ontology/bre/ZipCodePrefix"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Customer ID order</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/State -->
+
+    <owl:Class rdf:about="https://vocab.um.es/ontology/bre/State">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/stateName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://vocab.um.es/ontology/bre/ZipCodePrefix -->
+
+    <owl:Class rdf:about="https://vocab.um.es/ontology/bre/ZipCodePrefix">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasCity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://vocab.um.es/ontology/bre/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://vocab.um.es/ontology/bre/hasCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Zip code prefix</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
